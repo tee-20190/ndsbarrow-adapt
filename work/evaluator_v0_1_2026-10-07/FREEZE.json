@@ -1,0 +1,38 @@
+{
+ "schema": "evaluator_v0_1_freeze_v1",
+ "evaluator": "v0.1",
+ "utc": "2026-10-07T22:36:36Z",
+ "files_sha256": {
+  "SPEC.md": "f22a239c4fee72f784b1b4710aa904d6b39e7348e9eb1b81ce894e4f516440a4",
+  "eval_v01.py": "fbd5818325e02521e9b907d2f1fcebf4a048ed11e149848e776dc0e18b496c90",
+  "VOIDS.json": "1a07777ddd4952fc509c566296bdeea1510a89efdec98ab8997c19b3d91973b3",
+  "run_checks.py": "f6268fded9770aed3b1f7093488c739f9d00d507c2e5f2f81659d0127ad5148e",
+  "CHECKS.json": "4137ae9ab4abc9625dc118ddda235617582d224b54d8ee2684c2e1b67fa0fa3e",
+  "tests/test_eval_v01.py": "9931d9873ec0cc2384eb4211ed4db8fc6b63be521fe8fe95862846d8400d2fc2",
+  "freeze_v01.py": "906b871c72bdf704ae9685079961d27a6cb0c2abaea0b1b2c51dbcac8dae7e47"
+ },
+ "depends_sha256": {
+  "work/holdout_region_2026-10/step2/region_score.py": "b3337741071da6e85d41849f4f420a71494fc5ebd376c88d1a1933fccbada442",
+  "work/next_experiment_2026-09-23/r3_curation.py": "f0aac704d2a74bd03868c6a94950e9a613fa0bc7c0afd9958bd734af201a1b9c"
+ },
+ "tests": "6 passed in 5.50s",
+ "checks": {
+  "stage1_reproduction": {
+   "values_checked": 440,
+   "mismatches": 0,
+   "identical": true,
+   "first_mismatches": []
+  },
+  "v01_equals_reading_i": {
+   "RAW": true,
+   "NMS60": true
+  },
+  "oldenburg_adaf_barrow_equals_bench_v0": true
+ },
+ "archive_gate": {
+  "utc": "2026-10-07T22:36:35Z",
+  "pending_archives": [],
+  "status": "PASS"
+ },
+ "use": "Sensitivity for Stage 2 (work/stage2_d1_controls_2026-10-07) and the Oldenburg transfer check (work/oldenburg_transfer_2026-10-07); primary for experiments frozen after this file."
+}

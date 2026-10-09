@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or these protocols, please cite the paper and this repository."
+title: "ndsbarrow-adapt: code and frozen protocols for 'Adapting a public LiDAR barrow detector to a new region: specialist-start fine-tuning, an equal-update replay comparison, and evaluation choices that move apparent gains'"
+type: software
+authors:
+  - family-names: Shanahan
+    given-names: Thomas
+    email: tomshan08@gmail.com
+license: Apache-2.0
+repository-code: "https://github.com/tee-20190/ndsbarrow-adapt"
+keywords:
+  - archaeology
+  - LiDAR
+  - barrows
+  - object detection
+  - domain adaptation
+  - Lower Saxony
+preferred-citation:
+  type: article
+  title: "Adapting a public LiDAR barrow detector to a new region: specialist-start fine-tuning, an equal-update replay comparison, and evaluation choices that move apparent gains"
+  authors:
+    - family-names: Shanahan
+      given-names: Thomas
+  year: 2026

@@ -1,0 +1,17 @@
+BENCH-1 futility gate G: result (2026-10-07T12:13:14Z). Freeze e1a69394. Scorer: D1's frozen path (score_d1 / score_match / score_adapt).
+Verdict: FUTILE -> NO_LAUNCH. D3 start implied: ADAF barrow + F1.
+Rule: LAUNCH iff 0 collapsed and J_L 5-seed mean > 0.699778; ties FUTILE.
+
+Seed        J_L primary  BARROW_L (D1)  J_L - BARROW_L  proposals  detector_on_end  collapse
+2026092805  0.691111     0.705556       -0.014445         3410     False            none
+2026092806  0.615556     0.694444       -0.078888         4886     False            none
+2026092807  0.673333     0.690000       -0.016667         4973     False            none
+2026092808  0.695556     0.693333       +0.002223         2895     False            none
+2026092809  0.693333     0.715556       -0.022223         5445     False            none
+
+J_L mean 0.673778 (SD 0.0337) vs BARROW_L mean 0.699778; paired difference mean -0.026000, range [-0.078888, +0.002223]; collapsed 0/5.
+Final-epoch losses per seed (mean positive / background loss used): 2026092805: 0.3622 / 0.0056; 2026092806: 0.3627 / 0.0072; 2026092807: 0.3590 / 0.0063; 2026092808: 0.3638 / 0.0054; 2026092809: 0.3736 / 0.0071
+D1 BARROW_L re-scored through the same path: 2026092805 0.705556 (reproduces), 2026092806 0.694444 (reproduces), 2026092807 0.690000 (reproduces), 2026092808 0.693333 (reproduces), 2026092809 0.715556 (reproduces)
+Environment check (G1, BARROW_L seed 05, first 10 of 64 updates vs D1's curve): DIFFERS, max |d loss_used| = 0.00042919814586639404.
+Forecast P(LAUNCH) 0.25, P(STOP_COLLAPSE) 0.08, P(FUTILE) 0.67; Brier per outcome {'LAUNCH': 0.0625, 'STOP_COLLAPSE': 0.0064, 'FUTILE': 0.1089}.
+Evidence class: development (Verden used by FRESH-1, ADAPT-MATCH-0 and D1's recipe selection); F1 was selected on ADAF starts only, which leans toward BARROW_L.

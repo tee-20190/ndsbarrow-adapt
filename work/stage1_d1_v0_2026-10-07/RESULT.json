@@ -1,0 +1,834 @@
+{
+ "schema": "stage1_d1_v0_result_v1",
+ "freeze": "work/stage1_d1_v0_2026-10-07/FREEZE.md (commit 1ea377ca)",
+ "individual_manifest_sha256": "a97b6124310b22f05d441ae0937aa17386aec0704fa5689841c03124222873d2",
+ "inference_manifest_sha256": "c1e1ba018bf1f510baec56331dd65d0c0fa80b6059258f0c65c4cd09c374d305",
+ "region_score_sha256": "b3337741071da6e85d41849f4f420a71494fc5ebd376c88d1a1933fccbada442",
+ "entities_N": 728,
+ "total_scored_km2": 422.84319333092424,
+ "K": {
+  "0.5": 211,
+  "1.0": 422,
+  "2.0": 845
+ },
+ "provenance": {
+  "ADAF_barrow": {
+   "path": "outputs/fresh_region_2026-10-03/step2/score/individual/PROPOSALS_ADAF_barrow_PRIVATE.json",
+   "sha256": "7228b9388d0f0df5f819ffa9c6e4755b9b5e3111bd991644279220916f34ac46",
+   "checkpoint_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216"
+  },
+  "D1F1_BARROW_L_2026092805": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092805_PRIVATE.json",
+   "sha256": "35436a3fb54132ab19188c73fb9e6960edac6f53e07866e36d0069b0b192fad7",
+   "checkpoint_sha256": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e"
+  },
+  "D1F1_BARROW_L_2026092806": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092806_PRIVATE.json",
+   "sha256": "884ddd85c84c48d2b85a2953cb6a1de2095eb3780f8039f9455a7177329b6c0b",
+   "checkpoint_sha256": "f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade"
+  },
+  "D1F1_BARROW_L_2026092807": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092807_PRIVATE.json",
+   "sha256": "3bf824d61e30064fd85df5c107c718332a433d9164422b58019de6c8ac5f2f6c",
+   "checkpoint_sha256": "d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511"
+  },
+  "D1F1_BARROW_L_2026092808": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092808_PRIVATE.json",
+   "sha256": "a8bf716aa9749ecb9594da4c918144a1342557ca9cc983e24398b7b6e1456ce3",
+   "checkpoint_sha256": "61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5"
+  },
+  "D1F1_BARROW_L_2026092809": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092809_PRIVATE.json",
+   "sha256": "451edf1c88cef230674fb1623790285966dfd1e8df843aa20930efe40658d68b",
+   "checkpoint_sha256": "38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d"
+  },
+  "D1F1_BARROW_L_2026092810": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092810_PRIVATE.json",
+   "sha256": "c74352c0db6f346838512ca10e05bbe7f0b9f7ca96c72198d48d37655ca45de8",
+   "checkpoint_sha256": "6b294645c62a074f864b6fe2ab8df4e9796e69b25a9abd6993093b53b78f21a5"
+  },
+  "D1F1_BARROW_L_2026092811": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092811_PRIVATE.json",
+   "sha256": "be6946fb8711e10642d4549c42279ca4633b114f6905694497236834953bdb06",
+   "checkpoint_sha256": "ed12f627ec5975fb7cfde6565f9af6eab7b30b7f89423f49da97c1001bf69229"
+  },
+  "D1F1_BARROW_L_2026092812": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092812_PRIVATE.json",
+   "sha256": "b5de6fa50ec37c53ccf5a59b8495ed970f8ca7651fa7640b9b1a6e47a2e23e51",
+   "checkpoint_sha256": "5437f281701203d9295e1f3b1da9a80261e2681cdecfe94b51ee4c7e54a815eb"
+  },
+  "D1F1_BARROW_L_2026092813": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092813_PRIVATE.json",
+   "sha256": "7e1426f57fa23add844158dc948e6350cfc57d262ec428d0ac93cbbcc7435d62",
+   "checkpoint_sha256": "3a1c2643ef26a336ba8915780328f1af27bf32a52b24905cb3ccb3f19c18a044"
+  },
+  "D1F1_BARROW_L_2026092814": {
+   "path": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/dev/PROPOSALS_D1F1_BARROW_L_2026092814_PRIVATE.json",
+   "sha256": "3f26138903ae3a2a52c855145cca717f1a9720e7fa7a5497f4529da0a1b1626a",
+   "checkpoint_sha256": "24db9082f55fe2f8cbd45e265b6164d73ec01823858c3ebd4630fe6b0b5f0858"
+  }
+ },
+ "systems": {
+  "ADAF_barrow": {
+   "RAW": {
+    "supply": 794,
+    "0.5": {
+     "K": 211,
+     "matches": 123,
+     "recall": 0.16895604395604397,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 58.29383886255924,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 212,
+     "recall": 0.29120879120879123,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 50.23696682464455,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 289,
+     "recall": 0.39697802197802196,
+     "ceiling_c": 1.0,
+     "per_100_slots": 34.201183431952664,
+     "slots_filled": 794
+    },
+    "primary": 0.28571428571428575
+   },
+   "NMS60": {
+    "supply": 688,
+    "0.5": {
+     "K": 211,
+     "matches": 119,
+     "recall": 0.16346153846153846,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 56.39810426540284,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 184,
+     "recall": 0.25274725274725274,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 43.60189573459716,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 213,
+     "recall": 0.2925824175824176,
+     "ceiling_c": 1.0,
+     "per_100_slots": 25.207100591715978,
+     "slots_filled": 688
+    },
+    "primary": 0.23626373626373623
+   }
+  },
+  "D1F1_BARROW_L_2026092805": {
+   "RAW": {
+    "supply": 2531,
+    "0.5": {
+     "K": 211,
+     "matches": 164,
+     "recall": 0.22527472527472528,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 77.72511848341232,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 274,
+     "recall": 0.37637362637362637,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 64.92890995260663,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 369,
+     "recall": 0.5068681318681318,
+     "ceiling_c": 1.0,
+     "per_100_slots": 43.66863905325444,
+     "slots_filled": 845
+    },
+    "primary": 0.3695054945054945
+   },
+   "NMS60": {
+    "supply": 2135,
+    "0.5": {
+     "K": 211,
+     "matches": 153,
+     "recall": 0.21016483516483517,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 72.51184834123222,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 225,
+     "recall": 0.3090659340659341,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 53.317535545023695,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 270,
+     "recall": 0.3708791208791209,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.952662721893493,
+     "slots_filled": 845
+    },
+    "primary": 0.2967032967032967
+   }
+  },
+  "D1F1_BARROW_L_2026092806": {
+   "RAW": {
+    "supply": 2633,
+    "0.5": {
+     "K": 211,
+     "matches": 164,
+     "recall": 0.22527472527472528,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 77.72511848341232,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 284,
+     "recall": 0.3901098901098901,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 67.29857819905213,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 376,
+     "recall": 0.5164835164835165,
+     "ceiling_c": 1.0,
+     "per_100_slots": 44.49704142011834,
+     "slots_filled": 845
+    },
+    "primary": 0.3772893772893773
+   },
+   "NMS60": {
+    "supply": 2167,
+    "0.5": {
+     "K": 211,
+     "matches": 153,
+     "recall": 0.21016483516483517,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 72.51184834123222,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 227,
+     "recall": 0.3118131868131868,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 53.791469194312796,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 264,
+     "recall": 0.3626373626373626,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.242603550295858,
+     "slots_filled": 845
+    },
+    "primary": 0.2948717948717949
+   }
+  },
+  "D1F1_BARROW_L_2026092807": {
+   "RAW": {
+    "supply": 3509,
+    "0.5": {
+     "K": 211,
+     "matches": 169,
+     "recall": 0.23214285714285715,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 80.09478672985782,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 269,
+     "recall": 0.3695054945054945,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 63.74407582938389,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 372,
+     "recall": 0.510989010989011,
+     "ceiling_c": 1.0,
+     "per_100_slots": 44.023668639053255,
+     "slots_filled": 845
+    },
+    "primary": 0.3708791208791209
+   },
+   "NMS60": {
+    "supply": 2831,
+    "0.5": {
+     "K": 211,
+     "matches": 158,
+     "recall": 0.21703296703296704,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 74.88151658767772,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 217,
+     "recall": 0.2980769230769231,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 51.4218009478673,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 261,
+     "recall": 0.3585164835164835,
+     "ceiling_c": 1.0,
+     "per_100_slots": 30.88757396449704,
+     "slots_filled": 845
+    },
+    "primary": 0.29120879120879123
+   }
+  },
+  "D1F1_BARROW_L_2026092808": {
+   "RAW": {
+    "supply": 3471,
+    "0.5": {
+     "K": 211,
+     "matches": 166,
+     "recall": 0.22802197802197802,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 78.67298578199052,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 275,
+     "recall": 0.37774725274725274,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 65.16587677725119,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 376,
+     "recall": 0.5164835164835165,
+     "ceiling_c": 1.0,
+     "per_100_slots": 44.49704142011834,
+     "slots_filled": 845
+    },
+    "primary": 0.3740842490842491
+   },
+   "NMS60": {
+    "supply": 2821,
+    "0.5": {
+     "K": 211,
+     "matches": 158,
+     "recall": 0.21703296703296704,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 74.88151658767772,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 220,
+     "recall": 0.3021978021978022,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 52.132701421800945,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 267,
+     "recall": 0.36675824175824173,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.597633136094675,
+     "slots_filled": 845
+    },
+    "primary": 0.29532967032967034
+   }
+  },
+  "D1F1_BARROW_L_2026092809": {
+   "RAW": {
+    "supply": 2882,
+    "0.5": {
+     "K": 211,
+     "matches": 171,
+     "recall": 0.2348901098901099,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 81.04265402843602,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 297,
+     "recall": 0.40796703296703296,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 70.37914691943128,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 402,
+     "recall": 0.5521978021978022,
+     "ceiling_c": 1.0,
+     "per_100_slots": 47.57396449704142,
+     "slots_filled": 845
+    },
+    "primary": 0.3983516483516483
+   },
+   "NMS60": {
+    "supply": 2301,
+    "0.5": {
+     "K": 211,
+     "matches": 157,
+     "recall": 0.21565934065934067,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 74.40758293838863,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 232,
+     "recall": 0.31868131868131866,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 54.976303317535546,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 269,
+     "recall": 0.3695054945054945,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.83431952662722,
+     "slots_filled": 845
+    },
+    "primary": 0.30128205128205127
+   }
+  },
+  "D1F1_BARROW_L_2026092810": {
+   "RAW": {
+    "supply": 2841,
+    "0.5": {
+     "K": 211,
+     "matches": 171,
+     "recall": 0.2348901098901099,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 81.04265402843602,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 286,
+     "recall": 0.39285714285714285,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 67.77251184834124,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 392,
+     "recall": 0.5384615384615384,
+     "ceiling_c": 1.0,
+     "per_100_slots": 46.3905325443787,
+     "slots_filled": 845
+    },
+    "primary": 0.3887362637362637
+   },
+   "NMS60": {
+    "supply": 2303,
+    "0.5": {
+     "K": 211,
+     "matches": 156,
+     "recall": 0.21428571428571427,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 73.93364928909952,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 232,
+     "recall": 0.31868131868131866,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 54.976303317535546,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 270,
+     "recall": 0.3708791208791209,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.952662721893493,
+     "slots_filled": 845
+    },
+    "primary": 0.30128205128205127
+   }
+  },
+  "D1F1_BARROW_L_2026092811": {
+   "RAW": {
+    "supply": 2470,
+    "0.5": {
+     "K": 211,
+     "matches": 172,
+     "recall": 0.23626373626373626,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 81.51658767772511,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 282,
+     "recall": 0.3873626373626374,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 66.82464454976304,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 379,
+     "recall": 0.5206043956043956,
+     "ceiling_c": 1.0,
+     "per_100_slots": 44.85207100591716,
+     "slots_filled": 845
+    },
+    "primary": 0.3814102564102564
+   },
+   "NMS60": {
+    "supply": 2039,
+    "0.5": {
+     "K": 211,
+     "matches": 161,
+     "recall": 0.22115384615384615,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 76.30331753554502,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 228,
+     "recall": 0.3131868131868132,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 54.02843601895734,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 268,
+     "recall": 0.36813186813186816,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.715976331360945,
+     "slots_filled": 845
+    },
+    "primary": 0.3008241758241758
+   }
+  },
+  "D1F1_BARROW_L_2026092812": {
+   "RAW": {
+    "supply": 2358,
+    "0.5": {
+     "K": 211,
+     "matches": 161,
+     "recall": 0.22115384615384615,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 76.30331753554502,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 270,
+     "recall": 0.3708791208791209,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 63.981042654028435,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 365,
+     "recall": 0.5013736263736264,
+     "ceiling_c": 1.0,
+     "per_100_slots": 43.19526627218935,
+     "slots_filled": 845
+    },
+    "primary": 0.3644688644688645
+   },
+   "NMS60": {
+    "supply": 1967,
+    "0.5": {
+     "K": 211,
+     "matches": 153,
+     "recall": 0.21016483516483517,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 72.51184834123222,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 216,
+     "recall": 0.2967032967032967,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 51.18483412322275,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 258,
+     "recall": 0.3543956043956044,
+     "ceiling_c": 1.0,
+     "per_100_slots": 30.532544378698226,
+     "slots_filled": 845
+    },
+    "primary": 0.2870879120879121
+   }
+  },
+  "D1F1_BARROW_L_2026092813": {
+   "RAW": {
+    "supply": 2624,
+    "0.5": {
+     "K": 211,
+     "matches": 170,
+     "recall": 0.23351648351648352,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 80.56872037914692,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 280,
+     "recall": 0.38461538461538464,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 66.35071090047393,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 380,
+     "recall": 0.521978021978022,
+     "ceiling_c": 1.0,
+     "per_100_slots": 44.97041420118343,
+     "slots_filled": 845
+    },
+    "primary": 0.38003663003663
+   },
+   "NMS60": {
+    "supply": 2172,
+    "0.5": {
+     "K": 211,
+     "matches": 158,
+     "recall": 0.21703296703296704,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 74.88151658767772,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 227,
+     "recall": 0.3118131868131868,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 53.791469194312796,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 270,
+     "recall": 0.3708791208791209,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.952662721893493,
+     "slots_filled": 845
+    },
+    "primary": 0.2999084249084249
+   }
+  },
+  "D1F1_BARROW_L_2026092814": {
+   "RAW": {
+    "supply": 2588,
+    "0.5": {
+     "K": 211,
+     "matches": 177,
+     "recall": 0.24313186813186813,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 83.88625592417061,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 285,
+     "recall": 0.3914835164835165,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 67.53554502369668,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 386,
+     "recall": 0.5302197802197802,
+     "ceiling_c": 1.0,
+     "per_100_slots": 45.680473372781066,
+     "slots_filled": 845
+    },
+    "primary": 0.38827838827838823
+   },
+   "NMS60": {
+    "supply": 2124,
+    "0.5": {
+     "K": 211,
+     "matches": 154,
+     "recall": 0.21153846153846154,
+     "ceiling_c": 0.28983516483516486,
+     "per_100_slots": 72.98578199052133,
+     "slots_filled": 211
+    },
+    "1.0": {
+     "K": 422,
+     "matches": 222,
+     "recall": 0.30494505494505497,
+     "ceiling_c": 0.5796703296703297,
+     "per_100_slots": 52.60663507109005,
+     "slots_filled": 422
+    },
+    "2.0": {
+     "K": 845,
+     "matches": 266,
+     "recall": 0.36538461538461536,
+     "ceiling_c": 1.0,
+     "per_100_slots": 31.4792899408284,
+     "slots_filled": 845
+    },
+    "primary": 0.29395604395604397
+   }
+  }
+ },
+ "summaries": {
+  "RAW_0.5": {
+   "adaf_barrow": 0.16895604395604397,
+   "mean_run": 0.23145604395604397,
+   "mean_diff": 0.062499999999999986,
+   "min_diff": 0.05219780219780218,
+   "max_diff": 0.07417582417582416,
+   "positive": 10
+  },
+  "RAW_1.0": {
+   "adaf_barrow": 0.29120879120879123,
+   "mean_run": 0.38489010989010985,
+   "mean_diff": 0.09368131868131865,
+   "min_diff": 0.0782967032967033,
+   "max_diff": 0.11675824175824173,
+   "positive": 10
+  },
+  "RAW_2.0": {
+   "adaf_barrow": 0.39697802197802196,
+   "mean_run": 0.5215659340659341,
+   "mean_diff": 0.12458791208791212,
+   "min_diff": 0.10439560439560441,
+   "max_diff": 0.15521978021978028,
+   "positive": 10
+  },
+  "NMS60_0.5": {
+   "adaf_barrow": 0.16346153846153846,
+   "mean_run": 0.21442307692307694,
+   "mean_diff": 0.05096153846153846,
+   "min_diff": 0.046703296703296704,
+   "max_diff": 0.05769230769230768,
+   "positive": 10
+  },
+  "NMS60_1.0": {
+   "adaf_barrow": 0.25274725274725274,
+   "mean_run": 0.30851648351648353,
+   "mean_diff": 0.05576923076923077,
+   "min_diff": 0.043956043956043966,
+   "max_diff": 0.06593406593406592,
+   "positive": 10
+  },
+  "NMS60_2.0": {
+   "adaf_barrow": 0.2925824175824176,
+   "mean_run": 0.36579670329670333,
+   "mean_diff": 0.0732142857142857,
+   "min_diff": 0.061813186813186816,
+   "max_diff": 0.0782967032967033,
+   "positive": 10
+  }
+ },
+ "gate": {
+  "b": "0.5",
+  "decoder": "RAW",
+  "mean_diff_min": 0.03,
+  "positive_min": 8,
+  "adaf_barrow_recall": 0.16895604395604397,
+  "per_run_diff": {
+   "2026092805": 0.05631868131868131,
+   "2026092806": 0.05631868131868131,
+   "2026092807": 0.06318681318681318,
+   "2026092808": 0.05906593406593405,
+   "2026092809": 0.06593406593406592,
+   "2026092810": 0.06593406593406592,
+   "2026092811": 0.06730769230769229,
+   "2026092812": 0.05219780219780218,
+   "2026092813": 0.06456043956043955,
+   "2026092814": 0.07417582417582416
+  },
+  "mean_diff": 0.062499999999999986,
+  "positive_diffs": 10,
+  "verdict": "PASS"
+ },
+ "week1_reproduction": {
+  "identical": true,
+  "values": {
+   "RAW": {
+    "0.5": {
+     "week1": 0.16895604395604397,
+     "here": 0.16895604395604397
+    },
+    "1.0": {
+     "week1": 0.29120879120879123,
+     "here": 0.29120879120879123
+    },
+    "2.0": {
+     "week1": 0.39697802197802196,
+     "here": 0.39697802197802196
+    },
+    "primary": {
+     "week1": 0.28571428571428575,
+     "here": 0.28571428571428575
+    },
+    "supply": {
+     "week1": 794,
+     "here": 794
+    }
+   },
+   "NMS60": {
+    "0.5": {
+     "week1": 0.16346153846153846,
+     "here": 0.16346153846153846
+    },
+    "1.0": {
+     "week1": 0.25274725274725274,
+     "here": 0.25274725274725274
+    },
+    "2.0": {
+     "week1": 0.2925824175824176,
+     "here": 0.2925824175824176
+    },
+    "primary": {
+     "week1": 0.23626373626373623,
+     "here": 0.23626373626373623
+    },
+    "supply": {
+     "week1": 688,
+     "here": 688
+    }
+   }
+  },
+  "source": "work/gpt6_pro_collab_2026-10-07/detector_week1/BENCH_V0.json",
+  "source_sha256": "c283d37df3c5a8ac9c7d9a6e9d97061326b1dc4c2c93226f0f89c93ed3755f87"
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "schema": "evaluator_v0_1_checks_v1",
+ "evaluator": "v0.1",
+ "eval_v01_sha256": "fbd5818325e02521e9b907d2f1fcebf4a048ed11e149848e776dc0e18b496c90",
+ "inputs_sha256": {
+  "outputs/fresh_region_2026-10-03/step0/INDIVIDUAL_MANIFEST_PRIVATE.json": "a97b6124310b22f05d441ae0937aa17386aec0704fa5689841c03124222873d2",
+  "outputs/fresh_region_2026-10-03/labels/denkmale_Verden_20261003T084547Z.geojson": "62bf37cafcd302e7b95a9089a7e45d9733b679c3423116f317bde10fab897ba4",
+  "outputs/fresh_region_2026-10-03/step0/EDGE_SUPPLEMENT_PRIVATE.json": "5971bab7eacd02cdd59800796011bd2ca8e4211a8ad257ea7a2c69e46d8ce248",
+  "outputs/adapt_nds_2026-10-05/confirm/run/INDIVIDUAL_MANIFEST_PRIVATE.json": "3531675cf1323801f1674ee0448c9ff3099da880ed348e1807bc6b3037b92863",
+  "outputs/adapt_nds_2026-10-05/register/denkmale_Oldenburg_20261005T010102Z.geojson": "a3b4e390edf4c5a5399f195ddb0124b6f4901912367347ac5779ca277ea0d18b",
+  "outputs/adapt_nds_2026-10-05/register/supplement_Oldenburg_20261005T010102Z.json": "85c18d7038eac54b7f9acc0bd272ec0669337b8669c51d3441f626eda6ed9ef0",
+  "work/stage1_d1_v0_2026-10-07/RESULT.json": "3818ac2d9db21c1c14159b8f66b536c8d38a9b254b2387c58fc945174c3a9aa9",
+  "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/IGNORE_V0.json": "88d9b0f840cab1491e92e674f53f071b3f04dff80fccf6bd3bc85e1249861fc1",
+  "work/gpt6_pro_collab_2026-10-07/detector_week1/BENCH_V0.json": "c283d37df3c5a8ac9c7d9a6e9d97061326b1dc4c2c93226f0f89c93ed3755f87"
+ },
+ "regions": {
+  "verden": {
+   "N": 728,
+   "scored_km2": 422.84319333092424,
+   "K": {
+    "0.5": 211,
+    "1.0": 422,
+    "2.0": 845
+   },
+   "voids": {
+    "voids": 0,
+    "void_km2_in_cores": 0.0,
+    "unreachable_targets": 0
+   },
+   "inventory": {
+    "records": 2263,
+    "roles": {
+     "container": 73,
+     "other": 1462,
+     "target": 728
+    },
+    "targets_in_register": 728,
+    "complexes": {
+     "container_records": 73,
+     "valid_geometry": 71,
+     "no_extent_geometry": 2,
+     "available_complexes": 57,
+     "available_without_extent": 0,
+     "unavailable_complexes": 16,
+     "eligible_targets": 728,
+     "membership": {
+      "site_number_link": 55,
+      "containment": 376,
+      "containment_overlaps_resolved": 0,
+      "unassigned": 297
+     },
+     "members_per_available_complex": {
+      "min": 2,
+      "median": 7.0,
+      "max": 20
+     }
+    }
+   },
+   "stage1_reproduction": {
+    "values_checked": 440,
+    "mismatches": 0,
+    "identical": true,
+    "first_mismatches": []
+   },
+   "readings_adaf_barrow": {
+    "RAW": {
+     "v01": {
+      "0.5": 0.16895604395604397,
+      "1.0": 0.29120879120879123,
+      "2.0": 0.39697802197802196
+     },
+     "reading_i": {
+      "0.5": 0.16895604395604397,
+      "1.0": 0.29120879120879123,
+      "2.0": 0.39697802197802196
+     },
+     "reading_iii": {
+      "0.5": 0.17307692307692307,
+      "1.0": 0.29120879120879123,
+      "2.0": 0.39697802197802196
+     },
+     "v01_equals_reading_i": true,
+     "v01_minus_reading_iii_points": {
+      "0.5": -0.4120879120879106,
+      "1.0": 0.0,
+      "2.0": 0.0
+     }
+    },
+    "NMS60": {
+     "v01": {
+      "0.5": 0.16346153846153846,
+      "1.0": 0.25274725274725274,
+      "2.0": 0.2925824175824176
+     },
+     "reading_i": {
+      "0.5": 0.16346153846153846,
+      "1.0": 0.25274725274725274,
+      "2.0": 0.2925824175824176
+     },
+     "reading_iii": {
+      "0.5": 0.16758241758241757,
+      "1.0": 0.2554945054945055,
+      "2.0": 0.2925824175824176
+     },
+     "v01_equals_reading_i": true,
+     "v01_minus_reading_iii_points": {
+      "0.5": -0.4120879120879106,
+      "1.0": -0.27472527472527375,
+      "2.0": 0.0
+     }
+    },
+    "reading_iii_K": {
+     "0.5": 211,
+     "1.0": 422,
+     "2.0": 844
+    },
+    "v01_K": {
+     "0.5": 211,
+     "1.0": 422,
+     "2.0": 845
+    }
+   }
+  },
+  "oldenburg": {
+   "N": 959,
+   "scored_km2": 451.1168676104303,
+   "K": {
+    "0.5": 225,
+    "1.0": 451,
+    "2.0": 902
+   },
+   "voids": {
+    "voids": 0,
+    "void_km2_in_cores": 0.0,
+    "unreachable_targets": 0
+   },
+   "inventory": {
+    "records": 2162,
+    "roles": {
+     "container": 101,
+     "legal": 1,
+     "other": 1101,
+     "target": 959
+    },
+    "targets_in_register": 959,
+    "complexes": {
+     "container_records": 101,
+     "valid_geometry": 49,
+     "no_extent_geometry": 52,
+     "available_complexes": 93,
+     "available_without_extent": 45,
+     "unavailable_complexes": 8,
+     "eligible_targets": 959,
+     "membership": {
+      "site_number_link": 91,
+      "containment": 572,
+      "containment_overlaps_resolved": 3,
+      "unassigned": 296
+     },
+     "members_per_available_complex": {
+      "min": 1,
+      "median": 2.0,
+      "max": 109
+     }
+    }
+   },
+   "adaf_barrow_bench_v0_reproduction": {
+    "identical_to_bench_v0": true,
+    "values": {
+     "RAW": {
+      "0.5": [
+       0.09906152241918666,
+       0.09906152241918666
+      ],
+      "1.0": [
+       0.18039624608967675,
+       0.18039624608967675
+      ],
+      "2.0": [
+       0.2669447340980188,
+       0.2669447340980188
+      ]
+     },
+     "NMS60": {
+      "0.5": [
+       0.09384775808133472,
+       0.09384775808133472
+      ],
+      "1.0": [
+       0.15954118873826903,
+       0.15954118873826903
+      ],
+      "2.0": [
+       0.21584984358706985,
+       0.21584984358706985
+      ]
+     }
+    },
+    "proposals_sha256": "21421a9c7e99cf337c64467349878e7062571768147a459164b6ddd92b3afef6"
+   }
+  }
+ }
+}

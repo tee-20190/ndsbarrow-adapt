@@ -1,0 +1,30 @@
+ndsbarrow-adapt
+Copyright 2026 Thomas Shanahan
+
+The code written for this project is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This code builds on ADAF (Automatic Detection of Archaeological Features):
+  ADAF code: Apache License 2.0, (c) 2024 ZRC SAZU. https://github.com/EarthObservation/adaf
+  The released code loads the unedited ADAF model definitions and the AiTLAS package distributed with ADAF.
+  Neither is redistributed here; both keep their own licence, copyright and licence notices.
+
+Model weights (deposited separately on Zenodo, ZENODO_WEIGHTS_DOI):
+  Every released checkpoint is derived from the ADAF weights and is licensed under CC BY-SA 4.0,
+  as required by the ADAF weights licence.
+  ADAF weights: CC BY-SA 4.0 (Čož et al. 2026; Zenodo, doi:10.5281/zenodo.15848662).
+
+Data attribution (as in the paper's Acknowledgements):
+  LGLN DGM1 (CC BY 4.0), modified; Denkmalatlas Niedersachsen (CC BY-SA 4.0), modified; ADAF weights CC BY-SA 4.0
+  (Čož et al. 2026); adapted weights remain CC BY-SA 4.0.
+  English data: Environment Agency LiDAR and Historic England NHLE, both under the Open Government Licence v3.
+  Welsh data: Welsh Government LiDAR 2020–23 DTM, Open Government Licence as stated on its download-map page (the
+  tile-catalogue page states "Not Specified"); Designated Historic Asset GIS Data, The Welsh Historic Environment
+  Service (Cadw), received 30 September 2026, licensed under the Open Government Licence for Public Sector Information
+  (OGL) v3; NMRW data produced by RCAHMW, © Crown Database Right RCAHMW, OGL 3.0.
+  Irish data: Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0
+  International (CC BY 4.0) licence; National Monuments Service Sites and Monuments Record open data, CC BY 4.0.
+  All replay data were modified (windowed and converted to relief and masks).
+
+Entity manifests in this repository (outputs/fresh_region_2026-10-03/, outputs/adapt_nds_2026-10-05/) are derivatives
+of the Denkmalatlas Niedersachsen (Niedersächsisches Landesamt für Denkmalpflege) and of LGLN tile indexes and
+administrative boundaries (LGLN, CC BY 4.0). They are licensed under CC BY-SA 4.0 with attribution to these sources.

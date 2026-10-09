@@ -1,0 +1,146 @@
+{
+ "schema": "oldenburg_transfer_legitimacy_v1",
+ "inputs_sha256": {
+  "outputs/adapt_nds_2026-10-05/fit/FIT_TABLE_PRIVATE.json": "58d6aa16a87f396a04eeb03719e0cd7f87beb872584838fc1c7f49d95b48e28f",
+  "outputs/adapt_nds_2026-10-05/fit/FIT_STAGING_PINNED_PRIVATE.json": "f02763a9a4b13247dc665ae0b19732c31a08aa68ab115e8489f40a6dafee0f3c",
+  "outputs/adapt_nds_2026-10-05/confirm/run/INDIVIDUAL_MANIFEST_PRIVATE.json": "3531675cf1323801f1674ee0448c9ff3099da880ed348e1807bc6b3037b92863",
+  "outputs/adapt_nds_2026-10-05/confirm/run/INFER_MANIFEST_PRIVATE.json": "8fce717eea156a9a00ec1bcdea4a936b4b89454c166b1bf4b878f702dc31f411",
+  "outputs/adapt_nds_2026-10-05/confirm/run/STAGING_PLAN_PRIVATE.json": "e37e3e018d722c87f5688c2d75b6fa5306491104113eea7d500114fa0c40a2b0",
+  "outputs/adapt_nds_2026-10-05/register/denkmale_Oldenburg_20261005T010102Z.geojson": "a3b4e390edf4c5a5399f195ddb0124b6f4901912367347ac5779ca277ea0d18b",
+  "outputs/adapt_nds_2026-10-05/chain_runs/run_s1_20261005T043612Z/v1/results/CONFIRM_FETCH_LOG.jsonl": "7970b1ec9f4eb5a96020026cfa93a047f3b351c53a692a6d599f9086d8ba0fc7",
+  "work/d1_collapse_2026-10-06/freeze/PINS_FREEZE.json": "9eb1af7c566cf6cffcdee36850ed56c51a4da13f482c9d3b52620b7ea9fea195"
+ },
+ "training": {
+  "table_region": "Lower Saxony FIT (Uelzen, Harburg, Heidekreis)",
+  "table_role": "FIT",
+  "positive_windows": 852,
+  "background_windows": 852,
+  "positive_window_districts": [
+   "Harburg",
+   "Heidekreis",
+   "Uelzen"
+  ],
+  "window_union_km2": 280.25115,
+  "terrain_rule": "pixel centres outside the FIT union are NoData; >= 2 km from Verden and CONFIRM",
+  "every_run_trained_on_this_table": true,
+  "every_run_all_updates_lower_saxony_fit": true,
+  "every_run_session_pin_matches": true,
+  "runs": {
+   "session_status": "PASS",
+   "runs": {
+    "D1F1_BARROW_L_2026092805": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092806": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092807": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092808": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092809": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092810": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "6b294645c62a074f864b6fe2ab8df4e9796e69b25a9abd6993093b53b78f21a5",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092811": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "ed12f627ec5975fb7cfde6565f9af6eab7b30b7f89423f49da97c1001bf69229",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092812": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "5437f281701203d9295e1f3b1da9a80261e2681cdecfe94b51ee4c7e54a815eb",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092813": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "3a1c2643ef26a336ba8915780328f1af27bf32a52b24905cb3ccb3f19c18a044",
+     "session_pin_matches": true
+    },
+    "D1F1_BARROW_L_2026092814": {
+     "ls_table_ok": true,
+     "updates": 5116,
+     "lower_saxony_updates": 5116,
+     "start_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+     "checkpoint_sha256": "24db9082f55fe2f8cbd45e265b6164d73ec01823858c3ebd4630fe6b0b5f0858",
+     "session_pin_matches": true
+    }
+   }
+  }
+ },
+ "separation": {
+  "fit_windows_intersecting_oldenburg_district": 0,
+  "min_m_fit_windows_to_oldenburg_district": 48281.23221657099,
+  "min_m_fit_windows_to_oldenburg_scored_cores": 50065.96522588973,
+  "min_m_fit_windows_to_oldenburg_inference_read_windows": 49288.70468981712,
+  "min_m_fit_windows_to_oldenburg_entity_footprints": 50668.66147653307,
+  "shared_register_record_ids_fit_members_vs_oldenburg_entities": 0,
+  "shared_register_record_ids_fit_members_and_incidentals_vs_oldenburg_register": 0,
+  "shared_1km_squares_fit_pins_vs_oldenburg_staging_plan": 0,
+  "shared_1km_squares_training_fetch_log_vs_oldenburg_staging_plan": 0,
+  "shared_1km_squares_training_fetch_log_vs_oldenburg_confirm_fetch_log": 0,
+  "training_fetch_log_files": 2806,
+  "oldenburg_staging_plan_tiles": 1011,
+  "oldenburg_confirm_fetch_squares_1km": 847
+ },
+ "selection": {
+  "d1_chain_logs_mentioning_oldenburg_staging": {
+   "run_s1_20261006T200408Z": 0,
+   "run_s3_20261006T222546Z": 0,
+   "run_s4_20261007T030004Z": 0
+  },
+  "d1_freeze_pins_naming_confirm_or_oldenburg": 0,
+  "d1_freeze_pins_total": 148,
+  "recipe_selection_source": "work/d1_collapse_2026-10-06/RECIPE_SELECTION.json (Verden DEV, seeds 02-04)"
+ },
+ "oldenburg_eval_set": {
+  "tiles": 699,
+  "entities": 959,
+  "scored_km2": 451.1168676104303
+ },
+ "rule": "PASS iff every run trained only on the Lower Saxony FIT table (5,116 of 5,116 updates), no FIT window meets the Oldenburg district, the read windows are separated from the FIT union, no register record and no 1 km DGM1 square is shared, no D1 session staged Oldenburg and no D1 freeze pin is an Oldenburg CONFIRM or register file. Training pixels are confined to the 423 m FIT windows (NoData outside), so any context buffer up to the measured separation leaves every Oldenburg tile eligible.",
+ "legitimacy": "PASS"
+}

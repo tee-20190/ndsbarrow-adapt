@@ -1,0 +1,24 @@
+{
+ "schema": "bench1_gate_g1_collapse_v1",
+ "utc": "2026-10-07T09:47:19Z",
+ "freeze_sha256": "e1a69394e4fe4aa4e49f78b53b2e43f720397aa20b4c640f048e7ac30488a231",
+ "collapsed": false,
+ "runs": {
+  "2026092805": {
+   "run": "G_J_L_2026092805",
+   "proposals": 3410,
+   "collapse_reasons": [],
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   }
+  }
+ },
+ "note": "collapse conditions only; primaries are reported with the verdict after G2 (no early futility stop on one seed)",
+ "top": "outputs/bench1_2026-10-07/gate/chain_runs/run_s1_20261007T083435Z"
+}

@@ -1,0 +1,261 @@
+{
+ "schema": "bench1_gate_result_v1",
+ "utc": "2026-10-07T12:13:14Z",
+ "freeze_sha256": "e1a69394e4fe4aa4e49f78b53b2e43f720397aa20b4c640f048e7ac30488a231",
+ "verdict": "FUTILE",
+ "decision": "NO_LAUNCH",
+ "d3_start": "ADAF barrow + F1",
+ "rule": "LAUNCH iff 0 collapsed and J_L 5-seed mean > 0.699778; ties FUTILE",
+ "j_l": {
+  "per_seed": {
+   "2026092805": 0.6911111111111111,
+   "2026092806": 0.6155555555555555,
+   "2026092807": 0.6733333333333333,
+   "2026092808": 0.6955555555555556,
+   "2026092809": 0.6933333333333334
+  },
+  "mean": 0.6737777777777778,
+  "sd": 0.03371631835560923,
+  "collapsed": 0
+ },
+ "barrow_l_reference": {
+  "2026092805": 0.705556,
+  "2026092806": 0.694444,
+  "2026092807": 0.69,
+  "2026092808": 0.693333,
+  "2026092809": 0.715556
+ },
+ "barrow_l_mean": 0.699778,
+ "paired_differences": {
+  "2026092805": -0.01444488888888884,
+  "2026092806": -0.07888844444444443,
+  "2026092807": -0.016666666666666607,
+  "2026092808": 0.0022225555555556165,
+  "2026092809": -0.022222666666666613
+ },
+ "paired_difference_mean": -0.026000022222222176,
+ "paired_difference_range": [
+  -0.07888844444444443,
+  0.0022225555555556165
+ ],
+ "runs": {
+  "2026092805": {
+   "run": "G_J_L_2026092805",
+   "registry_id": "BENCH1-G-J_L_2026092805",
+   "session": 1,
+   "seed": 2026092805,
+   "checkpoint_sha256": "ae173de6b339bbe2cca4375d301599c922e2fc126e256ff8d3af30b068823b5f",
+   "proposals": 3410,
+   "primary": 0.6911111111111111,
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.3621543100152914,
+    "mean_background_loss": 1.002772427379572,
+    "mean_positive_loss_used": 0.3621543100152914,
+    "mean_background_loss_used": 0.00564248124132856,
+    "mean_positive_dice": 0.7292546849606626,
+    "mean_background_sum_p": 692.7784484761875
+   },
+   "collapse_reasons": [],
+   "collapsed": false
+  },
+  "2026092806": {
+   "run": "G_J_L_2026092806",
+   "registry_id": "BENCH1-G-J_L_2026092806",
+   "session": 2,
+   "seed": 2026092806,
+   "checkpoint_sha256": "c29e7cb5dc81d3e3f8f3409c51df7908598a5762d10cabc0838387e45a5554de",
+   "proposals": 4886,
+   "primary": 0.6155555555555555,
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.36270036996555727,
+    "mean_background_loss": 1.00318012384045,
+    "mean_positive_loss_used": 0.36270036996555727,
+    "mean_background_loss_used": 0.007158159301135264,
+    "mean_positive_dice": 0.7060636068753957,
+    "mean_background_sum_p": 911.7055376875298
+   },
+   "collapse_reasons": [],
+   "collapsed": false
+  },
+  "2026092807": {
+   "run": "G_J_L_2026092807",
+   "registry_id": "BENCH1-G-J_L_2026092807",
+   "session": 2,
+   "seed": 2026092807,
+   "checkpoint_sha256": "9bb550d17587b1ffe63d0b93120079f6991b1fa0389501a09b2da5a87c38ad96",
+   "proposals": 4973,
+   "primary": 0.6733333333333333,
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.3590293901360119,
+    "mean_background_loss": 0.9952191558386915,
+    "mean_positive_loss_used": 0.3590293901360119,
+    "mean_background_loss_used": 0.006312187773266524,
+    "mean_positive_dice": 0.7181503297381072,
+    "mean_background_sum_p": 827.2166009068117
+   },
+   "collapse_reasons": [],
+   "collapsed": false
+  },
+  "2026092808": {
+   "run": "G_J_L_2026092808",
+   "registry_id": "BENCH1-G-J_L_2026092808",
+   "session": 2,
+   "seed": 2026092808,
+   "checkpoint_sha256": "a8897a21a51045176ad7bbc97eb1343000eda2fbec0fa4eec0263c8fca8724fa",
+   "proposals": 2895,
+   "primary": 0.6955555555555556,
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.3637748455391147,
+    "mean_background_loss": 1.0021141581231912,
+    "mean_positive_loss_used": 0.3637748455391147,
+    "mean_background_loss_used": 0.005400775549540333,
+    "mean_positive_dice": 0.7127374707772669,
+    "mean_background_sum_p": 644.1288302826453
+   },
+   "collapse_reasons": [],
+   "collapsed": false
+  },
+  "2026092809": {
+   "run": "G_J_L_2026092809",
+   "registry_id": "BENCH1-G-J_L_2026092809",
+   "session": 2,
+   "seed": 2026092809,
+   "checkpoint_sha256": "28a553f8e10828fde0e76533cfcc488cc6935fecc01d435ea6acc8b8544d6d4c",
+   "proposals": 5445,
+   "primary": 0.6933333333333334,
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.3735723060339631,
+    "mean_background_loss": 1.0016903697765263,
+    "mean_positive_loss_used": 0.3735723060339631,
+    "mean_background_loss_used": 0.0071391036101141605,
+    "mean_positive_dice": 0.7210687172001677,
+    "mean_background_sum_p": 891.480361972776
+   },
+   "collapse_reasons": [],
+   "collapsed": false
+  }
+ },
+ "d1_barrow_l_rescored": {
+  "2026092805": {
+   "proposals": 2531,
+   "primary": 0.7055555555555556,
+   "frozen": 0.705556,
+   "reproduces": true
+  },
+  "2026092806": {
+   "proposals": 2633,
+   "primary": 0.6944444444444443,
+   "frozen": 0.694444,
+   "reproduces": true
+  },
+  "2026092807": {
+   "proposals": 3509,
+   "primary": 0.69,
+   "frozen": 0.69,
+   "reproduces": true
+  },
+  "2026092808": {
+   "proposals": 3471,
+   "primary": 0.6933333333333334,
+   "frozen": 0.693333,
+   "reproduces": true
+  },
+  "2026092809": {
+   "proposals": 2882,
+   "primary": 0.7155555555555555,
+   "frozen": 0.715556,
+   "reproduces": true
+  }
+ },
+ "environment_check": {
+  "updates_logged": 64,
+  "compared_first": 10,
+  "tolerance": 0.0001,
+  "max_abs_diff_loss_used_first10": 0.00042919814586639404,
+  "roles_equal": true,
+  "max_abs_diff_first10": {
+   "loss_used": 0.00042919814586639404,
+   "bce": 1.0406889487057924e-05,
+   "dice": 0.0004222989082336426,
+   "sum_p": 1.57373046875,
+   "z_max": 0.0730750560760498
+  },
+  "max_abs_diff_all64": {
+   "loss_used": 2.3751043656957336,
+   "bce": 2.371471405029297,
+   "dice": 0.9593351145740598,
+   "sum_p": 86437.7138671875,
+   "z_max": 77.33533048629761
+  },
+  "status": "DIFFERS",
+  "role": "environment diagnostic; does not change the frozen verdict",
+  "reference": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/runs/D1F1_BARROW_L_2026092805/curves.jsonl",
+  "reference_sha256": "432ab947d7e5facb18210db0c792cbe1f0e700cb543f92f0f6808f70a5501b47"
+ },
+ "forecast": {
+  "LAUNCH": 0.25,
+  "STOP_COLLAPSE": 0.08,
+  "FUTILE": 0.67
+ },
+ "forecast_brier": {
+  "LAUNCH": 0.0625,
+  "STOP_COLLAPSE": 0.0064,
+  "FUTILE": 0.1089
+ },
+ "evidence_class": "development (Verden used by FRESH-1, ADAPT-MATCH-0 and D1's recipe selection); F1 was selected on ADAF starts only, which leans toward BARROW_L",
+ "sessions": [
+  "outputs/bench1_2026-10-07/gate/chain_runs/run_s1_20261007T083435Z",
+  "outputs/bench1_2026-10-07/gate/chain_runs/run_s2_20261007T094729Z"
+ ],
+ "attribution": {
+  "terrain": "LGLN (2026), DGM1, CC BY 4.0; modified (resampled to 0.5 m, SLRM)",
+  "register": "Niedersächsisches Landesamt für Denkmalpflege, Denkmalatlas Niedersachsen, CC BY-SA 4.0, modified",
+  "adaf_weights": "ADAF AO and barrow HRNets: Čož, Corns, Curran, Kocev, Kokalj 2026, J. Archaeol. Sci. Rep. 71:105733; weights CC BY-SA 4.0 (Zenodo 10.5281/zenodo.15848662), code Apache-2.0",
+  "adapted_weights": "BENCH1-G J_L runs adapt JOINT1-J_2026092803 (a descendant of the ADAF weights in adaf_weights, CC BY-SA 4.0) by continued training on Lower Saxony register labels; any shared copy keeps CC BY-SA 4.0 with this attribution"
+ }
+}

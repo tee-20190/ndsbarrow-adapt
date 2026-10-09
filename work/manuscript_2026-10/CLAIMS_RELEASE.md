@@ -1,0 +1,281 @@
+# CLAIMS (public release): quantitative claims cited in DRAFT_v7.md
+
+Public-release copy of the manuscript's internal claim ledger, prepared 2026-10-09. One row per claim tag [Cnnn]
+cited in `DRAFT_v7.md` (215 IDs). Ledger rows not cited in v7 are omitted (listed in `CLAIMS_RELEASE_SCRUB_LOG.md`).
+Paths are relative to the repository root. Line numbers refer to the working tree on 2026-10-09 at the ledger
+revision named in the row (v0/v1 ~02:10Z; v4, v5 and v7 later the same day). JSON values are cited by line where a
+unique line exists, otherwise by JSON path plus line range. Short hexadecimal IDs (e.g. `1ea377ca`) are git commits
+of the project repository; truncated hexadecimal values with an ellipsis are SHA-256 file hashes.
+
+Provenance: this ledger was compiled and checked by AI-assisted sessions working under the author's direction (see
+the paper's AI statement). "This session" in a row means the AI-assisted session that made that row's revision
+(v0, v1, v4, v5 or v7). Edits made for public release (removed internal names, local paths and identifiers) are
+listed in `CLAIMS_RELEASE_SCRUB_LOG.md`; no claim, value, status, receipt path or commit hash was changed.
+
+Status:
+- **VERIFIED**: the value was checked against the cited source in the ledger session (by reading the line, or by
+  extracting it from the JSON with Python; "derived" means computed from the cited JSON by simple aggregation).
+- **UNCHECKED**: taken from the cited text but not checked against a primary receipt or external source (reason given).
+  No released row is UNCHECKED.
+
+Abbreviations: S1 = `work/stage1_d1_v0_2026-10-07/`; S2 = `work/stage2_d1_controls_2026-10-07/`;
+OT = `work/oldenburg_transfer_2026-10-07/`; VD = `work/d1_verden_descriptive_2026-10-07/RESULT.md`;
+EV = `work/evaluator_v0_1_2026-10-07/`; W1 = `work/gpt6_pro_collab_2026-10-07/detector_week1/RESULT.md`;
+VU = `work/gpt6_pro_collab_2026-10-07/v0_uncertainty/RESULT.md`; GP = `work/gpt6_pro_collab_2026-10-07/`;
+CA = `work/benchmark_plan_2026-10-05/COMPETITOR_AUDIT.md`; DH = `DETECTOR_HISTORY.md`;
+VC = `work/validation_cont_2026-09-26/RESULT.md`; SR = `work/seeds_2026-09-26/RESULT.md`.
+
+| ID | Claim | Value | Source | Status |
+|---|---|---|---|---|
+| C001 | Bounded audit; few public detectors meet reuse conditions (weights, licence, framework, class) | rule (a)-(d); ADAF 8 models included; most others excluded | CA:20-25, CA:29-46 | VERIFIED; v5: paper now says "found two" (ADAF and tumulus-lidar-detector both meet (a)-(d), CA:31-32); see C197 |
+| C002 | Start checkpoint is public ADAF barrow | ADAF barrow tar `51b679fa…` | S1/RESULT.md:30-31 | VERIFIED |
+| C003 | Verden D1 − ADAF barrow, RAW b=0.5, 10/10 runs | +6.25 pts; 10/10 | S1/RESULT.md:16-17; S2/RESULT.md:28 | VERIFIED |
+| C004 | Oldenburg D1 − ADAF barrow, RAW b=0.5; runs; joint LB | +3.86 pts; 10/10; +1.37 | OT/RESULT.md:14-17; OT/RESULT.json:672-673,681 | VERIFIED |
+| C005 | Stage 2 D1 − control, RAW b=0.5, Verden; paired joint 2 km interval (v4: 2 dp) | +12.34 pts [+8.37, +17.21] (unrounded 0.123352 [0.083671, 0.172125]) | S2/BOOT_S2.json:122,124-125; S2/RESULT.md:14-16 | VERIFIED (v4: precision harmonised from BOOT_S2.json, read this session) |
+| C006 | Control − ADAF barrow, RAW b=0.5 | −6.09 pts (abstract now −6.09, v4) | S2/RESULT.md:28; S2/RESULT.json:1574 (−0.060852) | VERIFIED (v4: abstract harmonised from −6.1) |
+| C007 | ADAF release: 8 models (Faster R-CNN ×4, HRNet ×4; AO, barrow, enclosure, ringfort); SLRM 512 px; Apache-2.0 / CC BY-SA 4.0; Čož et al. 2026 JAS Reports 71:105733; Zenodo 10.5281/zenodo.15848662 | as stated | CA:31; DH:54 | VERIFIED |
+| C008 | Kazimi and Sester 2023, JCAA 6(1), doi 10.5334/jcaa.110; Lower Saxony pretext; no detector weights | as stated | CA:33 | VERIFIED |
+| C009 | Archaeoscape: 888 km² Cambodia; 31,141 annotated features; best U-Net (ImageNet1K pretraining, 512 px) 52.8 mIoU | 31,141; 52.8 | Perron et al. 2024 (NeurIPS D&B), abstract and Table 2 (papers.neurips.cc PDF) [R09]; GP/ROUND2_PROMPT.md:16 | VERIFIED (v1: external paper checked by AI-assisted web-research sub-session) |
+| C010 | Elevation source LGLN DGM1, CC BY 4.0 | CC BY 4.0 | OT/PACKET.md:210 | VERIFIED |
+| C011 | Training windows 846 × 846 px at 0.5 m (423 m); inference is NOT on 846 px windows (see C175) | 846 px; 0.5 m; 423 m | S2/PACKET.md:55; work/adapt_nds_2026-10-05/nds_common.py:74 | VERIFIED (v1: wording corrected; v0 called these "model input windows") |
+| C012 | Labels: Denkmalatlas Niedersachsen, CC BY-SA 4.0 | CC BY-SA 4.0 | OT/PACKET.md:211 | VERIFIED |
+| C013 | Register carries cemetery polygons (Grabhügelfeld) and one Oldenburg protection polygon (Grabungsschutzgebiet) | 1 legal polygon in Oldenburg | EV/SPEC.md:58-59,166; VU:354-357 | VERIFIED |
+| C014 | ADAF barrow tar size and hash | 861,530,273 B; `51b679fa…` | S2/PACKET.md:48 | VERIFIED |
+| C015 | FIT table: 852 positive + 852 background 423 m windows, three districts, union 280.3 km² | 852+852; 280.3 km² | S1/RESULT.md:32-33 | VERIFIED |
+| C016 | Verden: 717 tiles, 728 barrows, 422.84 km²; previously evaluated (FRESH-1, ADAPT-MATCH-0); recipe selected there | as stated | S1/RESULT.md:48-54 | VERIFIED; v5: Table 1 adds that the ten D1 runs were scored on Verden under the legacy metric before Stage 1 (C193) |
+| C017 | Oldenburg: 699 tile cores, 451.117 km², N = 959; ADAPT-NDS-1 CONFIRM district, rescored/inspected since | as stated | OT/PACKET.md:3-6,31 | VERIFIED |
+| C018 | Replay updates English / Welsh / Irish | 2,558 / 1,280 / 1,278 | S2/PACKET.md:76-78 | VERIFIED |
+| C019 | English validation: 45 blocks, 1,119.75 km², 265 common-class parts; prior use = 14 earlier VALIDATION reservations ("charges"), one per evaluation run (one model arm each); 11 produced results, 3 failed after reservation | 14; 11 | VC:13,53; targets/lidar-archaeology/v3_pro/LEDGER.jsonl:71-301 (validation_seq 1-14; results at 82, 85, 87, 92, 101, 111, 176, 179, 182, 279-280, 301; failed after reservation at 74, 75, 173); work/validation_cont_2026-09-26/PACKET.md:102,183 (one reservation per arm; "the charge stands" on failure) | VERIFIED (v4: "used 14 times in earlier evaluations" → "reserved for 14 earlier evaluation runs (11 completed)"; ledger read this session) |
+| C020 | Sealed TEST not used | not opened | S1/RESULT.md:3-4; VC:55 | VERIFIED |
+| C021 | FIT → Verden distances: district 2,036 m; cores 2,213 m; read windows 463 m; entities 2,880 m; 0 intersections | as stated | S1/RESULT.md:40-44 | VERIFIED |
+| C022 | FIT → Oldenburg district minimum distance | 48,281 m | OT/PACKET.md:80 | VERIFIED |
+| C023 | Shared register records and 1 km DGM1 squares, training vs evaluation | 0 (both districts) | S1/RESULT.md:45-46; OT/PACKET.md:84-85 | VERIFIED |
+| C024 | Context buffer up to 2.2 km leaves all Verden cores/entities eligible; NoData outside FIT; no split | 2.2 km | S1/RESULT.md:33-34,48-49 | VERIFIED |
+| C025 | ADAF training: Irish ALS rasterised to 0.5 m; labels anchored in Irish SMR; barrow class augmented with UK barrows citing Historic England "Scheduled monuments GIS data"; Table 4: Barrows 522, Barrows (UK) 1,939 → 1,939/2,461 = 78.8 % (our calculation; "79 %" is not in the paper); no LiDAR source or areas for UK barrows found | 1,939; 522; 78.8 % | Čož et al. 2026 [R01], §3.3 and Table 4 (full text tii.ie PDF, text-extracted this session; terms "Environment Agency", "DEFRA", "Britain" absent) | VERIFIED (v1: external paper; wording corrected) |
+| C026 | Lower Saxony has no recorded ADAF exposure | — | GP/ROUND2_PROMPT.md:71 | VERIFIED (against prompt text) |
+| C027 | Same inference script and same per-district manifest for every system | `infer_irl.py` `f3855551…`; manifest `c1e1ba01…` | S1/RESULT.md:58-62; S2/PACKET.md:57 | VERIFIED |
+| C028 | D1 positives are register barrows only | 100 % barrow | S2/PACKET.md:56,115,141 | VERIFIED |
+| C029 | Schedule and recipe F1 (5,116 updates, two epochs, 2,558+2,558 alternation, ±160 px, 8 dihedral, batch 1; BCE + 1 − soft Dice, BCE only on empty targets; AdamW 1e-4, wd 1e-4; cosine 1e-4 → 1e-6; frozen BN; fp32, TF32 off; final weights) | as stated | S2/PACKET.md:49-55 | VERIFIED |
+| C030 | Old recipe: ADAF barrow fine-tune collapsed on all 3 seeds | 3/3 | DH:100 | VERIFIED |
+| C031 | First AdamW step: positive Dice 0.92 → 0.001 by update 2; F1 recovers by ~update 36 | 0.92; 0.001; 2; ~36 | DH:104 | VERIFIED |
+| C032 | F1 selected on Verden development seeds 02–04 | 3 runs | DH:104; S1/RESULT.md:52-53 | VERIFIED; v7: the selection rule is now stated in 4.2 (see C214). |
+| C033 | Ten confirmation seeds 05–14; 0/10 collapsed; one-sided 95 % upper bound collapse rate | 0/10; 0.26 per arm | DH:106 | VERIFIED |
+| C034 | Deployable checkpoint = earliest run ID (seed 05), fixed before Oldenburg scoring, not by score | seed 05 | OT/PACKET.md:149-155; DH:108 | VERIFIED; v7: "deployable checkpoint" renamed "checkpoint chosen in advance for use" (REFEREE_v6 P2); claim unchanged. |
+| C035 | Seed 05 ties seed 06 for second-lowest of ten on Verden | rank | OT/PACKET.md:156-158 | VERIFIED |
+| C036 | Control: same start, recipe, updates, schedule, crops, seed; Welsh/Irish 30-monument subsets | as stated | S2/PACKET.md:46-57,77-78 | VERIFIED |
+| C037 | No Lower Saxony data in controls; code guard refuses LS paths | 0 LS updates | S2/PACKET.md:79 | VERIFIED |
+| C038 | Control positive steps barrow / enclosure share | 49.1–58.6 % / 33.4–43.2 % | S2/PACKET.md:115 | VERIFIED |
+| C039 | Mean foreground fraction of positive crops, control vs D1 | 5.90–7.92 % vs 1.80–1.98 % | S2/PACKET.md:112 | VERIFIED |
+| C040 | Positive-role crops with empty target, control vs D1 | 4.1–4.9 % vs 0.0 % | S2/PACKET.md:109 | VERIFIED |
+| C041 | Stage 2 question wording; does not answer locality | — | S2/PACKET.md:24-28; S2/RESULT.md:43-49 | VERIFIED |
+| C042 | Benchmark v0 is retrospective (defined after earlier German experiments) | — | DIRECTION.md:91; W1:196-256 | VERIFIED |
+| C043 | Entities N = 728 Verden, 959 Oldenburg (individual manifests) | 728; 959 | W1:204; S1/RESULT.md:67; OT/RESULT.json:6 | VERIFIED |
+| C044 | Source register defines no barrow groups | — | W1:198 | VERIFIED |
+| C045 | Earlier group unit: centroids ≤ 60 m single-linkage | 60 m | W1:159-160 | VERIFIED |
+| C046 | v0 matching (15 m reach, one-to-one max-cardinality) and total budget K = floor(b × A), every in-core proposal | as stated | W1:209-210; S1/FREEZE.md:23-27 | VERIFIED |
+| C047 | K and A per district | Verden 211/422/845, 422.84 km²; Oldenburg 225/451/902, 451.12 km² | W1:211-212 | VERIFIED |
+| C048 | RAW order (score, mean prob, area desc, id asc); NMS60 frozen ranked pool | as stated | S1/RESULT.md:65-66; EV/SPEC.md:92-94 | VERIFIED |
+| C049 | Ceiling c | Verden 0.290/0.580/1.000; Oldenburg 0.235/0.470/0.941 | W1:214-216 | VERIFIED |
+| C050 | Pool term definitions C, G_pool = N − C, G_ranking = min(K, C) − M | — | EV/SPEC.md:97-102; VD:67 | VERIFIED |
+| C051 | Registered IGNORE rule: other records +30 m, "neither hits nor false alarms", Grabhügelfeld named | 30 m | W1:179; VU:284,338 | VERIFIED |
+| C052 | Implementation: IGNORE excluded from background boxes; no IGNORE test in positive cores | — | W1:180 | VERIFIED |
+| C053 | No contemporaneous precedence statement found | — | VU:331-347 | VERIFIED |
+| C054 | Three IGNORE readings (i)/(ii)/(iii) | — | VU:281-285 | VERIFIED |
+| C055 | Stage 1 scorer keeps legacy IGNORE handling; Stage 2 and Oldenburg primary = exact Stage 1 scorer | — | S1/FREEZE.md:28; EV/SPEC.md:45-46 | VERIFIED |
+| C056 | v0.1 roles; only void changes scoring; no proximity removal before K; frozen 2026-10-07T22:36Z | — | EV/SPEC.md:53-64; EV/FREEZE.md:1 | VERIFIED |
+| C057 | Verden and Oldenburg have no void | 0 voids | EV/SPEC.md:83 | VERIFIED |
+| C058 | v0.1 reproduces Stage 1 exactly; equals reading (i) at every cell | 440/440 | EV/SPEC.md:192-196; EV/FREEZE.md:17-19 | VERIFIED |
+| C059 | v0.1 sensitivity for Stage 2/Oldenburg, primary for later experiments | — | EV/SPEC.md:43-47 | VERIFIED |
+| C060 | Frozen block bootstrap engine | `v0_uncertainty/engine.py` | VD:26 | VERIFIED |
+| C061 | Blocks: 2 km primary, 4 km and 2 km offset (1000,1000); anchoring, 15 m reach merge, union-find; all cells kept | — | VU:45-51; VD:27-28 | VERIFIED |
+| C062 | Multinomial(J;1/J); K* = floor(b·A*); J Verden 126 (48 labelled), Oldenburg 146 (79 labelled) | 126/48; 146/79 | VU:52-54,88,91 | VERIFIED |
+| C063 | Training resampling of ten runs; joint; score then average | 10 draws | VD:32-38 | VERIFIED |
+| C064 | Run draws shared Verden/Oldenburg | — | VD:35-36 | VERIFIED; v7: wording only ("pairs each run drawn in Verden with the same run in Oldenburg"; REFEREE_v6 P2). |
+| C065 | Stage 2 paired design; independent sensitivity | — | S2/BOOT_S2.json:44 (analysis.designs) | VERIFIED |
+| C066 | 5,000 replicates; pointwise percentile intervals | 5,000 | VD:29; VU:62-64 | VERIFIED |
+| C067 | Checks verify reproduction/combinatorics, not coverage | — | VU:36 | VERIFIED |
+| C068 | Stage 1 gate: mean ≥ +0.030 at RAW b=0.5 and ≥ 8/10 positive; no best-seed, ensemble, threshold change; point-estimate gate | +0.030; 8/10 | S1/FREEZE.md:30-32,41; S1/RESULT.md:131 | VERIFIED |
+| C069 | Verden bootstrap is descriptive, does not re-decide gate (v4: also cited in 4.6 for the Verden D1 − ADAF barrow interval) | — | VD:3-4 | VERIFIED |
+| C070 | Stage 2 gate terms; collapsed controls stay in gate | +0.030; 8/10; LB > 0 | S2/RESULT.md:12-19 | VERIFIED |
+| C071 | Oldenburg gate and "clear transfer improvement" rule | +0.030; 8/10; joint LB > 0 | OT/PACKET.md:33,35 | VERIFIED |
+| C072 | Oldenburg scored once | — | OT/RESULT.md:1 | VERIFIED |
+| C073 | Stage 1 verdict PASS | PASS | S1/RESULT.md:12 | VERIFIED |
+| C074 | Verden RAW b=0.5: ADAF 123/728 (0.169); D1 161–177 matches; mean 0.231; +6.25 | as stated | S1/RESULT.md:16,90-101 | VERIFIED |
+| C075 | Verden per-run range | +5.2 to +7.4 pts | S1/RESULT.md:17; VD:63 | VERIFIED |
+| C076 | Verden joint 95 %: 2 km [+3.89, +8.58]; 4 km [+3.74, +8.73]; offset [+3.38, +9.03] | as stated | VD:50,59 | VERIFIED |
+| C077 | Each run's geography interval excludes zero | lowest LB +2.91 | VD:63-64 | VERIFIED |
+| C078 | Seed 05 on Verden | +5.63 [+3.56, +8.11] | VD:64 | VERIFIED |
+| C079 | Table 2 values (recalls, Δ, joint intervals, runs) | see table | S1/RESULT.md:90-102,108-120; VD:50-56; S2/RESULT.md:28-33 | VERIFIED |
+| C080 | 60/60 run × b × decoder cells favour D1 | 60/60 | S1/RESULT.md:124 | VERIFIED |
+| C081 | 60 cells are not independent replications | — | GP/ROUND4_REPLY.md:249 | VERIFIED |
+| C082 | Slot filling at b=0.5: D1 76–84 %, ADAF 58 %; c = 0.290 | as stated | S1/RESULT.md:126-127 | VERIFIED |
+| C083 | ADAF barrow Verden supply 794 RAW / 688 NMS60 < K = 845; D1 supply 2,358–3,509 | as stated | S1/RESULT.md:128-129 | VERIFIED |
+| C084 | Oldenburg verdict: gate PASS, clear transfer improvement | — | OT/RESULT.md:3; OT/RESULT.json:653-680 | VERIFIED |
+| C085 | Oldenburg ADAF barrow RAW b=0.5: 95 matches, recall 0.099 (v4: 3 dp, as in abstract and Table 3); K = 225 | 0.09906 | OT/RESULT.md:11-13; OT/RESULT.json:18-21,659 | VERIFIED (v4: 5.2 harmonised from 0.0991) |
+| C086 | Oldenburg mean +3.86; ~37 additional matches; 10/10; range +3.0 to +4.5 | +3.86; 37.0 (derived: 132.0 − 95) | OT/RESULT.md:14-16; OT/RESULT.json exact_scorer (derived) | VERIFIED |
+| C087 | Oldenburg primary joint LB | +1.37 pts | OT/RESULT.json:681; OT/RESULT.md:17 | VERIFIED |
+| C088 | Seed 05 Oldenburg D1 − ADAF barrow at b = 0.5/1/2; geography 95 % at b=0.5 (v4: 2 dp) | +3.86 / +2.82 / +4.38; [+1.79, +6.26] | OT/RESULT.json:685-687,692-693; OT/RESULT.md:18-19 | VERIFIED (v4: precision harmonised from RESULT.json, read this session) |
+| C089 | Table 3 values (ADAF and D1-mean recalls, Δ, 2 km joint intervals, runs > 0) | see table | OT/RESULT.json exact_scorer (lines 14-650, derived means) and bootstrap.2km.decoders (lines 1217-1610) | VERIFIED (derived) |
+| C090 | Oldenburg RAW b=0.5 joint: 4 km [+1.87, +6.63]; offset [+1.46, +7.23] | as stated | OT/RESULT.json:2239 (4 km), 2884 (offset) and following line | VERIFIED |
+| C091 | Oldenburg v0.1 barrow sensitivity identical to primary | identical (all systems, decoders, b) | OT/RESULT.json:3284+ (v0_1_sensitivity.barrow; compared in Python) | VERIFIED |
+| C092 | ADAF parity PASS; match counts identical | PASS | OT/RESULT.json:3904-3908; OT/RESULT.md:8-9 | VERIFIED |
+| C093 | Oldenburg ADAF barrow RAW supply 1,164 > K 902 | 1,164 | OT/RESULT.json:16 | VERIFIED |
+| C094 | Two-district RAW b=0.5 equal-weight summary | +5.05 [+3.27, +7.02] | OT/RESULT.json:3221, 3265-3266 (joint_two_district.RAW) | VERIFIED |
+| C095 | Stage 2 verdict PASS, clear advantage | — | S2/RESULT.md:7 | VERIFIED |
+| C096 | Stage 2 mean +12.34 (89.8 matches); 10/10; range +8.1 to +15.2; paired joint [+8.37, +17.21] (v4: 2 dp; range kept at 1 dp like other per-run ranges) | as stated | S2/BOOT_S2.json:122,124-125; S2/RESULT.json:1449,1452-1453 (mean 0.123352, min 0.081044, max 0.152473); S2/RESULT.md:14-16 | VERIFIED (v4) |
+| C097 | Stage 2 sensitivities: lower bounds +7.67 to +8.48 (2 km independent 8.48; 4 km paired 8.35, independent 8.47; offset paired 7.67, independent 7.75); sign never differs; v0.1 identical (+0.1234) | as stated | S2/BOOT_S2.json:130,237,243,350,356; S2/RESULT.md:17-18 | VERIFIED (v4: precision harmonised, read this session) |
+| C098 | 0/10 controls collapsed; control supply 2,583–5,197 | as stated | S2/RESULT.md:19,36 | VERIFIED |
+| C099 | Stage 2 cost 43.89 CU of 60 | 43.89; 60 | S2/RESULT.md:58 | VERIFIED; v7: sentence moved from 5.3 to Supplement S6 (REFEREE_v6 P3); value unchanged. |
+| C100 | Controls below ADAF at every b and decoder; 0/10 above in every cell | 0/10 | S2/RESULT.md:28-33,41-42 | VERIFIED |
+| C101 | 12.34 = 6.25 + 6.09 | arithmetic; BOOT_S2 point 0.123352 | S2/RESULT.md:40-41; S2/BOOT_S2.json:122 | VERIFIED (v4: 12.3 → 12.34 in 5.3, 6, 8) |
+| C102 | Table 4 values | see table | S2/RESULT.md:26-33 | VERIFIED |
+| C103 | Enclosure-weighted replay moves specialist away from barrows: hypothesis, untested | — | S2/RESULT.md:50-51 | VERIFIED |
+| C104 | What Stage 2 licenses / does not | — | S2/RESULT.md:43-49 | VERIFIED |
+| C105 | ADAPT-NDS-1: same FIT table; started from J (ADAF AO lineage); non-LS steps interleaved; old recipe | — | S1/RESULT.md:28-29; VU:67-71; DH:55,100 | VERIFIED |
+| C106 | ADAPT-NDS-1 A − ADAF barrow, Oldenburg v0 RAW b=0.5 | +1.0; geo [−0.4, +2.5]; joint [−0.7, +2.9] | VU:118; OT/RESULT.md:23 | VERIFIED |
+| C107 | A − J +3.5 (RAW b=0.5); C − J +0.1 | as stated | VU:401,403 | VERIFIED |
+| C108 | BENCH-1 gate: J_L 0.674 vs BARROW_L 0.700; paired −0.026; J_L lower 4/5 | as stated | bench1/gate/GATE_RESULT.txt:5-12 | VERIFIED; v5: legacy metric now defined in the sentence (barrow-group recall, mean of 0.5/1/2 background proposals per km²; work/d1_collapse_2026-10-06/PACKET.md:68; gate scorer = D1 frozen path, GATE_RESULT.txt:1); "not rescored under v0": no J_L/BENCH1 entry in S1, VU, W1, VD or work/independent_rescore_2026-10-09 (grep, this session); futility rule GATE_RESULT.txt:3 |
+| C109 | Development evidence; F1 selected on ADAF barrow starts only (v5 correction of "ADAF starts": development selection used BARROW_L runs only) | — | bench1/gate/GATE_RESULT.txt:17; work/d1_collapse_2026-10-06/PACKET.md:122-128; work/d1_collapse_2026-10-06/RECIPE_SELECTION.json (development_runs all arm BARROW_L) | VERIFIED (v5: wording corrected from "ADAF starts", which GATE_RESULT.txt:17 uses; no number changed) |
+| C110 | Supported explanation = specialist-start adaptation package; recipe alone not isolated | — | OT/RESULT.md:23-25; GP/ROUND5_REPLY.md:10 | VERIFIED; v5: wording "D1's package as a whole" replaces repeated "specialist-start adaptation package" |
+| C111 | Verden RAW C: ADAF 289, D1 459–487 (+170 to +198); G_pool 439 → 241–269 | as stated | VD:71-72,85-86 | VERIFIED; v7: also cited in 5.5 for the Verden unrecoverable share (see C117). |
+| C112 | Verden G_ranking b=0.5: D1 34–50; ADAF 88 | as stated | VD:71-72 | VERIFIED |
+| C113 | D1 mean G_ranking b=0.5 | 42.5 slots (5.8 pts) | VD:76 | VERIFIED |
+| C114 | ADAF barrow G_ranking = 0 at b = 2 | 0 | VD:71,82-83 | VERIFIED |
+| C115 | NMS60: D1 C 459–487 → 293–311; ADAF 289 → 213 | as stated | VD:89-91 | VERIFIED |
+| C116 | Oldenburg RAW: C ADAF 285, D1 445–486; G_pool 674 vs 473–514; G_ranking b=0.5 130 vs 87–101 | as stated | OT/RESULT.json:709+ (pool_terms; ranges derived) | VERIFIED (derived); v7: also cited in 5.5 for the Oldenburg unrecoverable share (see C117). |
+| C117 | Unrecoverable share is register recovery, not mound detection; recording incomplete | 33–37 % (Verden) | VD:87-88 | VERIFIED; v7: "about a third or more ... outside every D1 pool" replaced (REFEREE_v6 A7) by 33–37 % (Verden: G_pool 241–269 of 728 = 33.1–37.0 %) and 49–54 % (Oldenburg: 473–514 of 959 = 49.3–53.6 %), "cannot be recovered from any single D1 run's pool"; derived from C111 and C116 (this session). |
+| C118 | Table 5 contrasts (legacy group / individual / v0 NMS60 / v0 RAW) | see table | W1:239-245 | VERIFIED; v5: also supports "one earlier contrast's point estimate changes sign": across the 4 rows x 4 conventions of W1:239-245 only row 2 changes sign (+4.5, +1.5, +0.4 → −0.2 at v0 RAW); rows 1 and 3 stay positive, row 4 stays negative (checked this session) |
+| C119 | Under group units one proposal can credit more than one group | — | W1:192 | VERIFIED |
+| C120 | Positive cores free under legacy budget: 122 of 423 km² (Verden), 151 of 451 km² (Oldenburg) | as stated | W1:191 | VERIFIED |
+| C121 | Budget cap K < entity count at b ≤ 1 explains part of shrinkage | — | W1:253 | VERIFIED |
+| C122 | ADAF barrow v0 primary NMS60 → RAW: Verden 0.236 → 0.286; Oldenburg 0.156 → 0.182 | as stated | W1:224,229 | VERIFIED (see GAPS conflict 2: W1:255 says "+0.05 in both regions"); v7: also cited in 4.7 ("raw decoding raised ADAF barrow's recall in both districts"); W1:255. |
+| C123 | D1 RAW − NMS60 mean | +1.7 / +7.6 / +15.6 pts at b = 0.5/1/2 | S1/RESULT.md:130 | VERIFIED |
+| C124 | Verden ADAF barrow underfilled at b=2 in replicates | 78.7 % RAW; 99.9 % NMS60 | VU:154-156 | VERIFIED |
+| C125 | Reading (ii) unreachable entities | Verden 445/728 (61 %); Oldenburg 665/959 (69 %) | VU:293,296,317-318 | VERIFIED |
+| C126 | Under (ii): A − C +4.1 → +2.3 (NMS60 three-budget mean); A − ADAF barrow, NMS60 three-budget mean: (i) +0.4 geography [−0.6, +1.9] → (ii) +1.0 geography [+0.1, +2.0], joint [−0.0, +2.2] | as stated | VU:305 ((i) and (ii) mean columns), VU:319-321 | VERIFIED (v4: decoder/budget and the (i) comparison stated; joint interval added) |
+| C127 | (iii) reproduces (i) within 0.4 pts, same interval conclusions | 0.4 | VU:325-326 | VERIFIED |
+| C128 | No sign flip on legacy-decisive contrasts under v0 | — | W1:249 | VERIFIED; v5: paired in text with the one sign change (C118) |
+| C129 | English comparison: CONT e41 (one seed, epoch selected on English TRAIN holdout, ADAF AO lineage) vs ADAF AO | — | VC:7; DH:21,55,66 | VERIFIED |
+| C130 | English protocol: global 60 m NMS; greedy nearest unclaimed ≤ 60 m; K = round(d × A) all charged; min(K, own supply); 90 % paired block bootstrap, 45 blocks, 2,000 draws | as stated | W1:159-167 (column a); VC:7-9 | VERIFIED |
+| C131 | Table 7 values (v4: renumbered from Table 6; v6: moved to Supplement S7 as Table S7) | 125 vs 90 (+35, +13.21, [+21, +50]); 146 vs 114 (+32, +12.08, [+20, +45]); 157 vs 132 (+25, +9.43, [+14, +37]); K 560/1,120/2,240 | VC:21-25 | VERIFIED |
+| C132 | ADAF supply 2,117 < K 2,240; equal-K +22 [+11, +35] | as stated | VC:18,41,63-67 | VERIFIED |
+| C133 | Barrow-tagged 155 vs 130 of 251; enclosure-tagged 2 vs 2 of 15 | as stated | VC:61-63 | VERIFIED |
+| C134 | Replication seeds vs ADAF at d=2: +31 [+19, +43], +4 [−3, +11]; spread 27 parts (~10 pts) | as stated | SR:23-24,30 | VERIFIED |
+| C135 | Validation population reserved for 14 earlier evaluation runs (11 completed); not untouched; ADAF English barrow overlap risk | 14; 11 | VC:53-54; targets/lidar-archaeology/v3_pro/LEDGER.jsonl:71-301 (see C019) | VERIFIED (v4: wording, see C019) |
+| C136 | Locality not isolated; class-matched control is a separate design | — | GP/ROUND4_REPLY.md:262; S2/PACKET.md:146-147 | VERIFIED |
+| C137 | Features found with other detectors in this project (separate English discovery workflow, not D1 or ADAF barrow on German terrain) have been submitted to county HERs | submitted (no counts in the v5 paper) | work/screening_feedback/CUSTODIAN_FEEDBACK.md:5-35; DIRECTION.md:213,488 | VERIFIED (v5: HER counts removed from the paper per referee M5; "other detectors" because the receipts describe a separate English workflow with different detectors) |
+| C138 | No detector output in this paper has been verified archaeologically | — | paper scope: German results are register recall only (Sections 4.4, 5); DISCOVERY_REGISTRY.json `archaeological_discovery_verified` false for 9/9 features of the separate workflow; DIRECTION.md:211 | VERIFIED (v5: restated for this paper's outputs) |
+| C140 | Ten confirmation runs establish repeatability conditional on recipe | — | S2/RESULT.md:52-53; S1/RESULT.md:51-54 | VERIFIED |
+| C141 | Oldenburg prior use; did not select recipe; scored once | — | OT/PACKET.md:3-6; OT/RESULT.md:1 | VERIFIED; v7: the Limitations bullet now also discloses that v0 was developed partly on saved Oldenburg proposals of earlier systems (C213, C217). |
+| C142 | "New to this project" not "unseen by the model" | — | GP/ROUND5_REPLY.md:197 | VERIFIED |
+| C143 | Provenance/Table 5 questions sent to ADAF authors 8 Oct 2026; no reply recorded | sent 18:56–18:58Z | LOG.md:4232; sent-mail record; no later ADAF reply in LOG.md:4233-4250 | VERIFIED (v1; "auto-acknowledgement" detail dropped as unsourced) |
+| C144 | Oldenburg: 83 cemetery records state a mound count; stated > recorded in 54; stated sum 1,534 vs 540 individual records inside (sum over all 83) | 83; 54; 1,534; 540 | VU:362,380; v0_uncertainty/register_semantics.py:58-62; REGISTER_SEMANTICS.json:147-148; EV/SPEC.md:206 | VERIFIED (v1: scope of the sums checked in code) |
+| C145 | Inherited background sampling > 30 m from register records, shared by all systems | 30 m | EV/SPEC.md:173-174,211-212 | VERIFIED |
+| C147 | D1 scope: Lower Saxony barrow surveys; not English/Irish/mixed-class policy | — | DH:28; OT/PACKET.md:159-162 | VERIFIED; v7: wording now "D1 is evidence for Lower Saxony barrows only; it is not an English, Irish or mixed-class result"; the deployment phrase "scoped default" (DH:28) removed (REFEREE_v6 N3). |
+| C148 | Intervals pointwise, conditional | — | VU:418-419 | VERIFIED |
+| C149 | Release list: weights of every trained checkpoint evaluated in the paper, to be deposited (Zenodo) before publication (v5; nothing deposited yet, RESOLVE_LOG_v4 item 2) under CC BY-SA 4.0 as ADAF derivatives: D1 seeds 05-14 (10); Stage 2 controls seeds 05-14 (10); earlier adaptation A seeds 02-04 and control C seeds 02-04 (6); BENCH-1 J_L seeds 05-09 (5); CONT e41 and replication seeds S2-e44, S3-e43 (3); JOINT1-J_2026092803 (fused-system component). All descend from ADAF-AO or ADAF-barrow; no non-ADAF checkpoint | 35 checkpoints | OT/RESULT.md:44-45; DETECTOR_REGISTRY.json:3161,3180 (D1 05; same fields 3212-3605 for 06-14), 4175,4192 (S2-CTL 05; same 4211-4516 for 06-14), 1980,1996 / 2001,2030 / 2193,2222 (A 02/03/04), 2035,2051 / 2056,2085 / 2227,2256 (C 02/03/04), 3995,4012 (BENCH1 05; same 4031-4156 for 06-09), 463 (CONT parent R2-e38), 499, 513 (S2-e44, S3-e43 parent R2-e38), 448 (R2-e38 parent ADAF-AO), 1516 (J_03 parent CONT-e41); DH:54-57 (lineage licence) | VERIFIED (v4). Availability at registry snapshot 2026-10-09T00:20Z: D1 ×10 via verified local copies (registry `verified_local_copies`; outputs/oldenburg_transfer_2026-10-07/weights/, sizes checked this session); CONT, S2-e44, S3-e43, J_03, A_02, C_02 local; S2 controls ×10, A_03/04, C_03/04, BENCH1 ×5 `archived_verified_receipt` (private cloud archive, not on local disk; see RESOLVE_LOG_v4 item 2); v5: AO_L x10 added (C211); total 45 checkpoints |
+| C150 | Attribution lines (LGLN CC BY 4.0; Denkmalatlas CC BY-SA 4.0; ADAF CC BY-SA 4.0) | — | OT/PACKET.md:208-212 | VERIFIED; v5: also supports "released entity manifests derived from the Denkmalatlas carry CC BY-SA 4.0 and attribution" (work/fresh_region_2026-10-03/FRESH1_PREPIXEL.md:16: manifests are adaptations, private or shared under CC BY-SA 4.0) |
+| C151 | English data under OGL v3 (EA, NHLE) | OGL v3 | VC:3 | VERIFIED |
+| C152 | S1 per-run Verden table (supply, matches, recall, Δ) | see table | S1/RESULT.md:90-100 | VERIFIED |
+| C153 | Oldenburg RAW b=0.5: D1 124–138 matches (mean 132.0); 55.1–61.3 per 100 slots vs 42.2; supply 2,722–4,177 | as stated | OT/RESULT.json exact_scorer (derived) | VERIFIED (derived) |
+| C154 | Oldenburg per-run differences 05–14 | +3.86, +3.02, +4.07, +3.75, +3.44, +3.55, +3.96, +4.38, +4.48, +4.07 | OT/RESULT.json:659-669 | VERIFIED |
+| C155 | Verden mean over budgets: NMS60 +6.00 [+4.56, +7.53]; RAW +9.36 [+6.71, +12.25] | as stated | VD:53,57 | VERIFIED |
+| C156 | Lowest Verden lower bound anywhere | +3.08 (NMS60, b=0.5, offset) | VD:60 | VERIFIED |
+| C157 | Oldenburg RAW mean3 | +4.65 [+1.65, +7.96] (unrounded 0.046542; the mean of rounded Table 3 values, 4.657, is a rounding artefact) | OT/RESULT.json:1553,1606-1607 | VERIFIED (v4: point re-read this session) |
+| C158 | Stage 2 RAW b=1, 2 (paired, 2 km) (v4: 2 dp) | +21.00 [+16.51, +26.24]; +26.44 [+20.82, +32.23] | S2/BOOT_S2.json:137,139-140,152,154-155 | VERIFIED (v4) |
+| C159 | Verden 4 km/offset grids: effective number of labelled blocks (Σn_j)²/Σn_j² (n_j = references anchored in block j) 8.3 and 11.2; largest label share 0.261 / 0.251; fragile | 8.3; 11.2 | VU:92-93,96; work/gpt6_pro_collab_2026-10-07/v0_uncertainty/engine.py:258-259,272 | VERIFIED (v4: J_labels defined from engine.py) |
+| C160 | S4 IGNORE table | see table | VU:290-297 | VERIFIED |
+| C161 | v0.1 = (i) on Verden ADAF barrow; v0.1 − (iii) 0 to −0.41 | as stated | EV/SPEC.md:183-192; EV/FREEZE.md:19 | VERIFIED |
+| C162 | Complex endpoint definition (site-number link, then containment ≥ 200 m²) | 200 m² | EV/SPEC.md:104-128 | VERIFIED |
+| C163 | Oldenburg 93 available complexes; 45 site-link only; members median 2, max 109 | as stated | EV/SPEC.md:159-165; OT/RESULT.json:3883-3903 | VERIFIED |
+| C164 | Complexes recovered RAW b=0.5: ADAF 22; D1 29–35 (mean 31.9); RAW 10/10 at b=0.5, 1; 9/10 at b=2 | as stated | OT/RESULT.json:3419-3882 (v0_1_sensitivity.complex; derived) | VERIFIED (derived) |
+| C165 | Large complexes are weaker evidence | — | EV/SPEC.md:209-210 | VERIFIED |
+| C169 | D1-COLLAPSE-1 compute | 91.70 CU | DH:106 | VERIFIED; v5: S6 now names both arms (BARROW_L and AO_L; work/d1_collapse_2026-10-06/RESULT.md:6-11, 18-21) |
+| C170 | Oldenburg compute | 1.75 + 30.63 CU | OT/RESULT.md:33 | VERIFIED |
+| C171 | Decoder: threshold 0.5; 4-connected polygons (rasterio `shapes`); keep area > 30 m² and roundness 4πA/hull-perimeter² > 0.4; proposal = centroid, score = max prob, mean prob over polygon pixels, area | as stated | work/campaign_2026-09-22/adaf_configs.py:180-198 | VERIFIED (v1, read) |
+| C172 | Pixels outside the valid elevation area set to probability 0 before decoding | 0 | work/tta_ensemble_2026-09-24/tta_run.py:121-129 | VERIFIED (v1, read) |
+| C173 | Window keeps proposals whose centroid is in a tile core; half-open box test | x0 ≤ x < x1 | work/hr3_ireland_2026-10-02/step2/chain/infer_irl.py:44-46,89-94; work/hr3_ireland_2026-10-02/step2/chain/irl_common.py:147-149 | VERIFIED (v1, read) |
+| C174 | RAW = all in-core, sorted (−score, −mean prob, −area, id); NMS60 = greedy global on centroids, order (−score, id), keep only if > 60 m from all kept, then same sort | 60 m | work/stage1_d1_v0_2026-10-07/score_v0.py:56-60; work/next_experiment_2026-09-23/r3_curation.py:41,164-174; work/holdout_region_2026-10/step2/region_score.py:157-162 | VERIFIED (v1, read) |
+| C175 | Tiling: 1,024 px tiles, halo 64 px, SLRM radius 20 → read 1,192 px, model input 1,152 px; 8 px output trim; overlaps merged by pixelwise max | 1,024; 64; 1,152; 8 | work/tta_ensemble_2026-09-24/tta_run.py:80-111; work/campaign_2026-09-22/adaf_configs.py:141-142 | VERIFIED (v1, read) |
+| C176 | Single relief band repeated to 3 channels; probability = channel 1 of sigmoid output | — | work/aim_train_audit_2026-09-24/holdout_eval.py:44-48 (imported as `he` by infer_irl.py:63) | VERIFIED (v1, read) |
+| C177 | SLRM radius 20 cells (= 10 m at 0.5 m, derived); SLRM = DEM − mean filter; clip ±0.5 m scaled to [0,1]; NaN → 0 | 20 cells; ±0.5 m | work/tta_ensemble_2026-09-24/tta_run.py:100-102; installed rvt-py 2.2.1 package, rvt/vis.py:471-473 | VERIFIED (v1, read) |
+| C178 | DGM1 tiles: EPSG:25832, 1,000 × 1,000 px, 1 m, float32; −9999/nodata/non-finite → NaN; no resampling at 1 m; outside district → NaN | as stated | work/fresh_region_2026-10-03/step2/lgln_reader.py:155-177,194-196 | VERIFIED (v1, read) |
+| C179 | 1 m → 0.5 m by rasterio WarpedVRT, Resampling.bilinear, nodata NaN, same CRS; locked pipeline statement | bilinear | work/adaf_head_to_head_2026-09-19/adapter.py:98-102; work/fresh_region_2026-10-03/FRESH1_PREPIXEL.md:77 | VERIFIED (v1, read) |
+| C180 | Inference window = core + 512 m halo (positive: group's full core; background: 1 km cell); one window per tile | 512 m | work/fresh_region_2026-10-03/step2/fresh_common.py:72,210-213; work/adapt_nds_2026-10-05/confirm_build.py:15-16,66,252-254 (Oldenburg) | VERIFIED (v1, read) |
+| C181 | Training input: same bilinear view, SLRM radius 20, ±0.5 m clip over the whole window padded by the radius; voids → 0.5 (0 m relief) with label IGNORE; D1 uses this loader | as stated | work/amazon_adapt_2026-09-28/adapt_train.py:37-65; work/d1_collapse_2026-10-06/d1_train.py:7-8 | VERIFIED (v1; adapt_train.py read; d1_train.py import per an AI-assisted sub-session) |
+| C182 | D1 − ADAF barrow under IGNORE readings (i)/(ii)/(iii), both districts, RAW/NMS60, b = 0.5/1/2; joint 2 km 95 %; 10/10 positive everywhere; proposals removed; reachable-N rescaling (+10.21, +6.26); self-checks reproduce published (i) and IGNORE_V0 ADAF (ii)/(iii) exactly; 204 s CPU | see Table 6 (v4: renumbered from Table 5b), S4 | work/manuscript_2026-10/ignore_rescore/D1_IGNORE_RESCORE.json; RESULT.md; run.log | VERIFIED (v1, computed this session; all_checks_pass = true) |
+| C183 | Verden complex endpoint: 57 complexes, 2–20 members (median 7); RAW b=0.5 ADAF 0.596 (34) vs D1 0.712, +11.58 (+5.26 to +14.04, 10/10); b=1 +3.86 (9/10; min 0.00); b=2 +4.74 (10/10) | as stated | VD:97-108 | VERIFIED (v1, read) |
+| C184 | FIT districts Uelzen, Harburg, Heidekreis; 852 distinct primary monuments in positive draws; register snapshots 2026-10-03 (Verden) and 2026-10-05 (Oldenburg, FIT) | as stated | work/adapt_nds_2026-10-05/PACKET.md:31; S2/PACKET.md:106; snapshot file names in v0_uncertainty/v0data.py:28-29 and the outputs/adapt_nds_2026-10-05/register/ listing | VERIFIED (v1; dates from snapshot file-name timestamps) |
+| C185 | Legacy group counts: Verden 300, Oldenburg 272 | 300; 272 | W1:95; DH:27 | VERIFIED (v1, read) |
+| C186 | English 90 % intervals in points: d=0.5 [+8.33, +18.45]; d=1 [+7.81, +16.79]; d=2 [+5.76, +13.31] | as stated | VC:21-25 | VERIFIED (v1, read) |
+| C187 | GPU: Colab G4, one VM at a time; D1 BARROW_L confirmation session (run_s3: ten runs + Verden scoring) 37.09 CU | 37.09 | work/d1_collapse_2026-10-06/PACKET.md:169,176-182; work/d1_collapse_2026-10-06/RESULT.md:6-11; S1/RESULT.json provenance (all ten D1 proposal sets under run_s3) | VERIFIED (v1, read); v5: "G4 instances" reworded to "virtual machines of the G4 runtime type" |
+| C188 | English class tags 251 barrow + 15 enclosure on 265 common parts → at least one part double-tagged | 266 vs 265 | VC:13 | VERIFIED (v1, arithmetic) |
+| C189 | The BENCH-1 start ("my best jointly trained project model") is JOINT1-J_2026092803, the start of the seed-03 earlier-adaptation run; the seed-02 and seed-04 runs started from JOINT1-J_2026092802 and _04 (same joint training, other seeds) | identity | DETECTOR_REGISTRY.json:3995,4031,4067,4103,4139 (BENCH1-G-J_L parents = JOINT1-J_2026092803); DETECTOR_REGISTRY.json:1980,2001,2193 (ADAPT-NDS-A parents J_02/J_03/J_04); DH:105 | VERIFIED (v4, read this session) |
+| C190 | Earlier fused project system = INTERLEAVE(ADAF AO, S*), S* = JOINT1-J_2026092803 (same checkpoint as C189); alternates the two ranked pools at one total review budget; a system, not a new set of weights | definition | DH:25-26,50; VU:73-75; work/fusion_2026-10-03/fuse_eval.py:1-4,8-9 | VERIFIED (v4, read this session) |
+| C191 | Oldenburg decision rule frozen before any D1 output existed there; the only test whose data no D1 output had touched when its rule was frozen | freeze 2026-10-07T22:55:20Z; D1 inference session started 2026-10-08T20:35:51Z | OT/FREEZE.md:1 ("frozen 2026-10-07T22:55Z … before any Oldenburg D1 proposal exists"); OT/FREEZE.json:3 (`utc`); OT/PACKET.md:11,149; OT/LEGITIMACY.json:144 (rule: no D1 session staged Oldenburg; PASS); OT/RESULT.md:7-8 (run session (identifier withheld; start time as given in the Value column)); git e6cf35cb 2026-10-07 18:55:58 −0400; Verden-only scoring in work/d1_collapse_2026-10-06/RESULT.md:18-21 and S1, S2 | VERIFIED (v5, read this session; M1 precondition holds); v7: Section 6 no longer says Oldenburg did not select "the decoder"; pre-freeze v0 work on saved Oldenburg proposals of earlier systems is disclosed (C213, C217, C218). The claim of this row (no D1 output there before the freeze) is unchanged. |
+| C192 | Freeze files and commits: Stage 1 rule committed 1ea377ca (21:03 UTC), Stage 1 scores 70fd2e03 (21:09 UTC); Oldenburg FREEZE.json sha256 19289f9d…, commit e6cf35cb (22:55 UTC); Stage 2 freeze/FREEZE.json sha256 b5fdd0a9…, commit bd144db0 (23:33 UTC); no external registry | hashes, commit IDs, times (2026-10-07 UTC) | `git log --format='%h %ci %s'` on work/stage1_d1_v0_2026-10-07, work/oldenburg_transfer_2026-10-07, work/stage2_d1_controls_2026-10-07 (this session); sha256sum OT/FREEZE.json = 19289f9d5c2c…, S2/freeze/FREEZE.json = b5fdd0a9b59a… (equals S2/FREEZE.md:3); OT/RESULT.md:7 (packet freeze 19289f9d…); `git diff HEAD` empty for all three freeze files; no external-registry record in any packet | VERIFIED (v5, computed this session); v7: Stage 1 timing now cited as the result-file write time: work/stage1_d1_v0_2026-10-07/RESULT.json mtime 2026-10-07 17:07:15 −0400 (21:07Z), after the rule commit 1ea377ca (21:03Z) (REFEREE_v6 A9; mtime read this session). |
+| C193 | Ten D1 (BARROW_L) confirmation runs first scored on Verden under the legacy group metric in the collapse check: mean 0.701 (0.682–0.717) vs ADAF barrow 0.556; AO_L arm (ADAF AO start, same seeds 05–14) 0/10 collapsed, 0.662 (0.636–0.694); frozen verdict 07:16 UTC; exit rule (b) "primary below half the reference" used Verden scores; both arms planned in the same packet to test F1 from both ADAF starts | 0.701; 0.556; 0.662; ranges; 07:16 UTC | work/d1_collapse_2026-10-06/RESULT.md:3,18-21,24-29,43; work/d1_collapse_2026-10-06/PACKET.md:1,68,100,117-119,136-143; git 108f9000 2026-10-07 03:18:41 −0400 | VERIFIED (v5, read this session) |
+| C194 | Benchmark v0 and the Stage 1 criterion specified after the collapse-check result was known | v0 rescoring commit 2026-10-07 20:03 UTC; Stage 1 freeze 21:03 UTC; collapse verdict 07:16 UTC | git a7296c05 2026-10-07 16:03:13 −0400 (work/gpt6_pro_collab_2026-10-07/detector_week1, "v0 rescoring"); git 1ea377ca 17:03:12 −0400; C193; C042 | VERIFIED (v5) |
+| C195 | A gentler recipe not compared; warm-up variant (F2) specified in advance as fallback, not needed because F1 met the selection rule | — | work/d1_collapse_2026-10-06/RESULT.md:74; work/d1_collapse_2026-10-06/PACKET.md:127-129 | VERIFIED (v5) |
+| C196 | English points intervals = percentiles of per-replicate parts difference / that replicate's resampled part count (hence not the parts interval / 265) | method | work/validation_cont_2026-09-26/validation_run.py:372-381 | VERIFIED (v5, code read); v6: re-read, `interval()` computes pts = 100 × delta / den per replicate with den = that replicate's resampled part count (replicates with den = 0 dropped); Δ points column = parts / 265 |
+| C197 | Audit: two detectors meet (a)-(d) (ADAF; tumulus-lidar-detector); the latter: small CNN on 128 px windows at 2 m effective, matched filter + morphometric noisy-OR fusion; not evaluated here | 2; 128 px; 2 m | CA:22-25,31-32 | VERIFIED (v5) |
+| C198 | Pipeline follows the ADAF case-study configuration (SLRM 10 m, ±0.5; 1,024 px tiles, 32 m context; 8 px trim; p 0.5; area > 30 m²; roundness > 0.4); adapter loads unedited official definitions; synthetic qualification max abs error 0.0; max-probability ranking is an adaptation | 0.0 | work/adaf_head_to_head_2026-09-19/PLAN.md:7,23; work/adaf_head_to_head_2026-09-19/receipts/qualification.json:2,4; work/adaf_head_to_head_2026-09-19/adapter.py:1; work/holdout_region_2026-10/chain/infer_dev.py:3-5 (pipeline descends from adapter.source_view / adaf_configs) | VERIFIED (v5; the qualification ran on ADAF AO with the same adapter) |
+| C199 | D1 schedule: each of the 852 positive windows drawn 3 or 4 times (850 x3, 2 x4) | 850; 2 | S2/PACKET.md:104 | VERIFIED (v5) |
+| C200 | Control exposure: each Welsh / Irish subset monument drawn 20–22 times; English monuments mostly 1–2; D1 3/3/4 (median/95th/max) | 20–22 | S2/PACKET.md:107 | VERIFIED (v5) |
+| C201 | Welsh and Irish replay data attribution and licences: Welsh Government LiDAR 2020–23 DTM (OGL per download-map page; tile catalogue "Not Specified"); Cadw Designated Historic Asset GIS Data (OGL v3, required attribution, received 2026-09-30); Coflein/RCAHMW NMRW terrestrial sites (© Crown Database Right RCAHMW, OGL 3.0); GSI LiDAR ("Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence"); NMS SMR open data CC BY 4.0; replay data modified | strings | work/stage2_d1_controls_2026-10-07/s2_common.py:98-105; S2/PACKET.md:498; work/holdout_region_2026-10/step1/STEP1_RESULT.md:30-37; work/hr3_ireland_2026-10-02/PACKET_PREPIXEL.md:21,26-27; work/holdout_region_2026-10/chain/candidates/FIT_TABLES_CANDIDATE.json `inputs` (cadw_sam and coflein_terrestrial sources) | VERIFIED (v5). JOINT-1 has no separate attribution record (grep of work/joint_campaign_2026-10-03); it reused HR1/HR3/R2 data |
+| C202 | Scored-area design: cores of 300 scorable groups (122.40 km² Verden) + background 1 km cells from 2 km squares in seeded order to ≥ 300 km² net (300.45 km²; 51 of 130 squares); background > 30 m from IGNORE records, ≥ 251 m from evaluated barrows; Oldenburg copies the design; Verden density 728 / 422.84 = 1.72 per km² | 122.40; 300.45; 51/130; 1.72 | work/fresh_region_2026-10-03/FRESH1_PREPIXEL.md:40; work/fresh_region_2026-10-03/STEP0_REPORT.md:8,75,149,159; work/adapt_nds_2026-10-05/PACKET.md:37-38; W1:95; arithmetic (728/422.84 = 1.7217) | VERIFIED (v5; 1.72 derived); v7: the clause "the comparison between systems is unaffected because all systems share the same area" removed (REFEREE_v6 N2); replaced by a conditional statement with core shares (C215). |
+| C203 | Bootstrap weighting: block j copied w_j times (proposals, references, area); copies in original rank order then copy id; first K* copies form the top-K list; maximum matching on the copied graph | method | work/gpt6_pro_collab_2026-10-07/v0_uncertainty/engine.py:5-16,85-90,290-292 | VERIFIED (v5, code read) |
+| C204 | Effective number of labelled blocks, 2 km grid: Verden 20.3, Oldenburg 23.8 | 20.3; 23.8 | VU:88,91 | VERIFIED (v5) |
+| C205 | Ten runs share one training table (identical windows across seeds) and differ in initialisation and draws; ADAF barrow a single fixed checkpoint with no retraining variance | — | S2/PACKET.md:100,104 (D1 column single-valued over ten seeds); VD:139 | VERIFIED (v5) |
+| C206 | Independent rescore: written from protocol text without reading the project scoring code; reproduced every headline value and all 96 K/matches/recall cells (32 systems x 3 budgets) | 96; 32 x 3 | work/independent_rescore_2026-10-09/RESCORE.md:3-6,17-27,85; git 01a2142d (Co-Authored-By an AI model) | VERIFIED (v5); v7: decoder scope added: RAW only; "NMS60 and the bootstrap intervals were not re-implemented" (work/independent_rescore_2026-10-09/RESCORE.md:110; REFEREE_v6 P4). |
+| C207 | Inference-equivalence tolerance EQ-1: position < 1e-6 m, abs(Δscore) ≤ 2e-6 | 1e-6 m; 2e-6 | OT/PACKET.md:57; OT/RESULT.json:3904-3906 (adaf_parity PASS) | VERIFIED (v5) |
+| C208 | "Strongest of my earlier jointly trained models" = JOINT1-J_2026092803: J family trained jointly on English, Welsh and Irish data from the ADAF AO lineage; selected as the highest region-macro confirmation seed (0.699) and frozen as S* for FRESH-1 | 0.699 (not in paper) | DH:12,24,26,55,89 | VERIFIED (v5) |
+| C209 | AO_L not carried forward: Stage 1 rule names the ten ADAF-barrow runs with ADAF barrow as comparator; Round 3 prompt presented only those runs; no separate decision record found | — | S1/FREEZE.md:5; GP/ROUND3_PROMPT.md:141; GP/ROUND3_REPLY.md:279,285; grep for AO_L / BARROW_L / D1 over decisions/ and DIRECTION.md (only decisions/2026-10-06-roadmap-confirmed.md:23 and DIRECTION.md:131,141,152,176-177,220-221 mention the arms; none gives a reason) | VERIFIED (v5; absence of a record = search result) |
+| C210 | Pool terms at b = 1 and 2, Verden RAW: ADAF G_ranking 77 / 0; D1 125–153 / 83–110 (larger pool partly offset by more unranked recoverable barrows; ADAF pool-limited at b = 2) | 77/0; 125–153/83–110 | VD:71-72 | VERIFIED (v5) |
+| C211 | AO_L checkpoints (D1-F1_AO_L_2026092805-14) are ADAF-derived, CC BY-SA 4.0, archived with verified receipts (private cloud archive bundle), to be released | 10 checkpoints | DETECTOR_REGISTRY.json:3633-3652 (seed 05: parent ADAF-AO, archived_verified_receipt, licence), same fields through 3957 (seed 14); work/d1_collapse_2026-10-06/RESULT.md:101-107 | VERIFIED (v5) |
+| C212 | ADAF code licence Apache License 2.0, © 2024 ZRC SAZU; no NOTICE file in the release; project code loads unedited ADAF/AiTLAS definitions from the bundled wheel; the project repository has no LICENSE file (own-code licence undecided) | Apache-2.0 | work/adaf_head_to_head_2026-09-19/vendor/adaf/LICENSE.txt:189; vendor/adaf/README.md:140-143; work/adaf_head_to_head_2026-09-19/adapter.py:1,32,43-50; LICENSE*/NOTICE* search at repo root and under vendor/adaf (this session); AiTLAS wheel METADATA has no licence field | VERIFIED (v5); v6: own-code licence Apache-2.0 = author decision (instruction of 2026-10-09), not a receipt; the ADAF release has no NOTICE file, so the paper says its copyright and licence notices are retained |
+| C213 | Benchmark v0 developed and first applied by rescoring saved proposals of earlier systems in both districts (Oldenburg: ADAF AO, ADAF barrow, CONT e41, earlier adaptation A seeds 02–04, its control C, J); entity units, budget accounting and NMS60 vs RAW compared there; ADAF barrow Oldenburg v0 RAW recall at b = 0.5 = 0.099 (95/959), with all budgets and both decoders, known before the Oldenburg freeze; the frozen Oldenburg rule document lists these comparator values and the earlier adaptation's tie | 0.09906; 19:55Z; 20:03Z; 22:55Z | W1:196-255 (Task 3, "Oldenburg CONFIRM and Verden"); work/gpt6_pro_collab_2026-10-07/detector_week1/BENCH_V0.json oldenburg.systems.ADAF_barrow.v0_individual.RAW["0.5"] = 0.09906152, supply 1,164 (mtime 2026-10-07 15:55:30 −0400 = 19:55Z); git a7296c05 2026-10-07 16:03:13 −0400 (20:03Z); OT/FREEZE.json mtime 18:55:21 −0400 and git e6cf35cb 18:55:58 −0400 (22:55Z); OT/PACKET.md:3-6 ("rescored and inspected since (v0, IGNORE readings, register semantics)"), :62-70 (comparator recall table, C = 285, G_ranking 130), :180-182 (A tie +1.0; v0 RAW b = 0.5: 0.099) | VERIFIED (v7, read and extracted this session; REFEREE_v6 N1) |
+| C214 | F1 selection rule, written in advance (development only): F1 selected iff 0 of its 3 development runs is collapsed and their mean Verden primary (legacy group metric) ≥ 0.519 = ADAF barrow 0.556 − δ 0.037 | 0.519; 0.556; 0.037 | work/d1_collapse_2026-10-06/PACKET.md:113-119 (δ, reference, threshold), :126-128 (rule) | VERIFIED (v7; REFEREE_v6 A3) |
+| C215 | Positive-core share of the scored area: Verden 122.40 of 422.84 km² (28.9 %), Oldenburg 150.59 of 451.12 km² (33.4 %) | 29 %; 33 % | detector_week1/BENCH_V0.json total_scored_km2 − background_km2 per district (derived this session); consistent with C120 and C202 | VERIFIED (v7, derived; REFEREE_v6 N2) |
+| C216 | Change of primary statistic: the first v0 rescoring's primary was the mean over b = 0.5 / 1 / 2; the Stage 1 rule made b = 0.5 (RAW) primary; D1 margin at b = 0.5 vs three-budget mean: Verden +6.25 vs +9.36, Oldenburg +3.86 vs +4.65 | as stated | W1:219 ("Each cell is the mean over b = 0.5 / 1 / 2"); S1/FREEZE.md:30 (gate at b = 0.5, RAW); GP/ROUND3_REPLY.md:44; C074, C155 (Verden), C084, C157 (Oldenburg) | VERIFIED (v7; REFEREE_v6 A4) |
+| C217 | RAW chosen as primary decoder after a review of the week-1 v0 rescorings, which covered both districts; D1's Oldenburg margin is larger under RAW than NMS60 at every budget | RAW +3.86 / +4.07 / +6.04 vs NMS60 +3.46 / +2.92 / +3.10 | GP/ROUND3_PROMPT.md:76-104 (section 3c, Verden and Oldenburg v0 tables; committed a7296c05, 20:03Z); GP/ROUND3_REPLY.md:79 (raw ADAF barrow output as "the development-selected incumbent", "informed by development results"); S1/FREEZE.md:3,18 (rule source R3-3; primary decoder RAW; committed 1ea377ca, 21:03Z); W1:255; Table 3 (C089) | VERIFIED (v7; REFEREE_v6 N1) |
+| C218 | v0 block bootstrap, IGNORE readings and register semantics run on saved Oldenburg proposals of earlier systems before the Oldenburg freeze | finished 21:26Z; commit 21:32Z | VU:11 ("Finished 2026-10-07T21:26Z"), VU:88 (Oldenburg blocks), VU:118 (A − ADAF barrow RAW b = 0.5), VU:223 (ADAF barrow Oldenburg RAW: supply 1164, C 285, recall 0.099 / 0.180 / 0.267), VU:293 (reading (ii) 665 of 959), VU:349-383 (register semantics); git 426c8be9 2026-10-07 17:32:43 −0400 | VERIFIED (v7; REFEREE_v6 N1) |
+| C219 | English three-seed ensemble ENS3 (pixelwise mean of the sigmoid maps of CONT e41, S2*, S3*) scored on the same 45 blocks in the same session as the replication seeds (VALIDATION seq 17–19): +17 parts [+8, +27] (90 %) vs ADAF AO at d = 2; ENS3 − CONT −8 parts [−15, −2] | +17 [+8, +27]; −8 | SR:6,12,25; work/seeds_2026-09-26/PACKET.md:15-16 | VERIFIED (v7; REFEREE_v6 A5) |
+| C220 | Void and district-edge effect on proposals not measured: inference NaN → 0 in [0, 1] (clip floor) and cells outside the district are NaN, whereas training fills voids at 0 m relief; no receipt counts proposals near voids or district edges per system | — | work/manuscript_2026-10/FIX_LOG_v6.md:111-133 (code reading and search of result directories, v6 session); C177, C178, C181 | VERIFIED (v7; absence = v6 search result, not re-run; REFEREE_v6 A8) |
+
+**Count (v1):** 188 claims, all VERIFIED (6 derived by aggregation; C182 computed in this session). v0's six UNCHECKED claims (C009, C025, C137, C138, C139, C143) were checked against receipts or the external paper and reworded where the source was narrower. Rows changed in v1: C009, C011, C025, C137, C138, C139, C143, C144; new rows C171-C188. The other v0 rows were not re-verified (by instruction during the v1 ledger session); the draft text they support is unchanged.
+
+**v4 (2026-10-09, RESOLVE_LOG_v4.md):** rows changed C005, C006, C019, C069, C085, C088, C096, C097, C101, C126, C131, C135, C139, C149, C157, C158, C159, C182; new rows C189, C190 (190 claims). Line numbers in changed rows refer to the working tree on 2026-10-09 during the v4 pass; draft references are to DRAFT_v4.md.
+
+**v5 (2026-10-09, FIX_LOG_v5.md):** rows changed C001, C016, C108, C109, C110, C118, C128, C137, C138, C139 (removed from the paper), C149, C150, C169, C187; new rows C191-C212 (212 claims). Line numbers in new rows refer to the working tree on 2026-10-09.
+
+**Release (2026-10-09):** 215 rows released (all VERIFIED), 5 internal rows not cited in DRAFT_v7.md omitted
+(C139, C146, C166, C167, C168). The count paragraphs above describe the internal ledger's revision history and are retained unchanged apart
+from the edits listed in the scrub log.
+
+Numbers that appear in the draft without their own tag are restatements of a tagged value in the same paragraph or
+table (for example "+12.3" in the Discussion = C005; "about 43 matches" = C113; "half" = C101).
+
+## References (v1)
+
+Bibliographic fields checked in this session by an AI-assisted web-research sub-session against Crossref (api.crossref.org), the
+publisher, the Zenodo API, NeurIPS proceedings or GitHub; the ADAF paper was also text-extracted and read here (C025).
+
+| ID | Reference | Checked at | Content claim in draft | Status |
+|---|---|---|---|---|
+| R01 | Čož, Corns, Curran, Kocev, Kokalj 2026, JAS: Reports 71:105733, doi 10.1016/j.jasrep.2026.105733 | Crossref; tii.ie full-text PDF | C007, C025 | VERIFIED |
+| R02 | Kazimi, Sester 2023, JCAA 6(1):155-173, doi 10.5334/jcaa.110 | Crossref | C008 | VERIFIED |
+| R03 | Landauer, Maddison, Fontana, Posluschny 2025, JCAA 8(1):42-58, doi 10.5334/jcaa.178 | Crossref | screened, excluded (CA:36) | VERIFIED |
+| R04 | Verschoof-van der Vaart, Lambers 2019, JCAA 2(1):31-40, doi 10.5334/jcaa.32 (names WODAN) | journal page | WODAN no public weights (CA:35); possible unrecorded barrows excluded from datasets (§4.1) | VERIFIED (§4.1 content per the reading of an AI-assisted sub-session) |
+| R05 | Olivier, Verschoof-van der Vaart 2021, JCAA 4(1):274-289, doi 10.5334/jcaa.78 | Crossref | no licensed weights (CA:34) | VERIFIED (YOLOv4 content not checked) |
+| R06 | Berganzo-Besga, Orengo, Lumbreras, Carrero-Pazos, Fonte, Vilas-Estévez 2021, Remote Sensing 13(20):4181, doi 10.3390/rs13204181 | Crossref | screened, excluded (CA:38) | VERIFIED |
+| R07 | Chiper-Leferman, A. 2026, tumulus-lidar-detector, github.com/ObuObuHub/tumulus-lidar-detector | GitHub README | small CNN, Danish/Romanian register positives, weights in repo (CA:32) | VERIFIED as software; no DOI or paper |
+| R08 | Lidberg, Westphal, Brax, Sandström, Östlund 2024, J. Field Archaeology 49(6):395-405, doi 10.1080/00934690.2024.2364428 | Crossref | screened, excluded (CA:42) | VERIFIED |
+| R09 | Perron, Sydorov, Wijker, Evans, Pottier, Landrieu 2024, Archaeoscape, NeurIPS 2024 D&B, arXiv 2412.05203 | NeurIPS PDF | C009 | VERIFIED |
+| R10 | Trier, Reksten, Løseth 2021, JAG 95:102241, doi 10.1016/j.jag.2020.102241 (CultSearcher) | Crossref; nr.no project page | screened, excluded (CA:37) | VERIFIED |
+| R11 | Hoiem, Chodpathumwan, Dai 2012 ECCV, doi 10.1007/978-3-642-33712-3_25; Lin et al. 2014 COCO ECCV, doi 10.1007/978-3-319-10602-1_48; Padilla et al. 2021 Electronics 10(3):279, doi 10.3390/electronics10030279 | Crossref | general: matching, thresholds and duplicate handling change scores | VERIFIED (bibliographic; content general) |
+| R12 | Verschoof-van der Vaart, Lambers, Kowalczyk, Bourgeois 2020, ISPRS IJGI 9(5):293, doi 10.3390/ijgi9050293; Fiorucci, Verschoof-van der Vaart, Soleni, Le Saux, Traviglia 2022, Remote Sensing 14(7):1694, doi 10.3390/rs14071694 | Crossref; abstracts | object-level measures on test areas; new evaluation measures | VERIFIED (abstract level; full texts not read) |
+| R13 | Kostovska, Kocev, Čož, Kokalj, Curran, Corns 2025, ADAF ML model weights v1.0.0, Zenodo concept doi 10.5281/zenodo.15848662 (version 10.5281/zenodo.15848663), CC BY-SA 4.0 | Zenodo API | C007 | VERIFIED |
+
+Removed rather than cited: a source for "register incompleteness turns correct detections into false alarms" (none
+confirmed); the draft states the point as reasoning and cites R04 only for the curation practice.

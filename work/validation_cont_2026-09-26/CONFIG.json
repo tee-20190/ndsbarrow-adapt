@@ -1,0 +1,101 @@
+{
+ "packet": "work/validation_cont_2026-09-26/PACKET.md",
+ "hypothesis": "CONT e41 recovers more common-class (barrow + enclosure) catalogue parts than public ADAF AO on the fixed 45 VALIDATION blocks; success iff CONT - ADAF >= 5 points of common-class recovery at 2 proposals/km2 and the paired 90% block-bootstrap interval lies strictly above zero.",
+ "owner_go": "Owner in chat on 2026-09-26, answering the coordinator's question and relayed by the coordinator: 'Yes, run it' - a one-time VALIDATION check of CONT e41 vs public ADAF HRNet (AO), using 2 of the 26 remaining VALIDATION reservations, no retry.",
+ "arms": [
+  "AO",
+  "CONT"
+ ],
+ "weights": {
+  "AO": {
+   "path": "work/adaf_head_to_head_2026-09-19/weights/AO_HRNet_SLRM_512px_pretrained_train_12_val_124_with_Transformation.tar",
+   "sha256": "a2232cc15d5849d75c79c35af9b8b72cbd512766b880851c9c72493a36c79dbb",
+   "md5_pinned": "fba3667a886b7b55d6e745f836951919",
+   "licence": "CC BY-SA 4.0 (Zenodo 15848663)"
+  },
+  "CONT": {
+   "path": "outputs/aim_train_audit_2026-09-24/training/CONT/epoch41.pt",
+   "sha256": "91091fc6d3b7640bd300c8f7820626ea4ccc5ea3ee8f9f89425000f958bdc383",
+   "selection": "outputs/aim_train_audit_2026-09-24/HOLDOUT_SELECTION_CONT.json"
+  }
+ },
+ "validation_labels": {
+  "path": "targets/lidar-archaeology/v3_pro/results/G015_frozen_e0099_validation_eval/labels_VALIDATION.geojson",
+  "sha256": "f10253ca92eead06cac43484768edeb64e0947988b2d595ad9f0cfdb486e5196",
+  "e0097_copy_path": "targets/lidar-archaeology/v3_pro/results/E0097_fixed_e0075_family_validation_eval/labels_VALIDATION.geojson",
+  "e0097_copy_sha256": "69cd44c925e7501093d938d6208681e669b6e114362afe9a0d79e7e892c0cbd9",
+  "access": "bytes hashed only in Phase A; parsed in Phase B step 0 (cell membership and class tags, derive_blocks.py) and by the scorer/recount only after PROPOSALS_LOCK.json verifies"
+ },
+ "census": {
+  "blocks": 45,
+  "common_parts": 265,
+  "all_parts": 275,
+  "min_common_per_block": 3
+ },
+ "densities_per_km2": [
+  0.5,
+  1.0,
+  2.0
+ ],
+ "primary_density_per_km2": 2.0,
+ "budget_rule": "K_d = round(d * sum of run-block interior areas in km2), pooled over all run blocks as stage 2. Primary: each arm at min(K_d, its own supply) (pool after global 60 m NMS), per CAMPAIGN_AMENDMENT_2 C.3.3 and COORDINATOR_B0_DECISION.md item 2; every supply is reported. Descriptive only: both arms at K = min(K_d, supply_AO, supply_CONT).",
+ "matching": "v3_frozen_mixture.match_greedy: proposals in rank order claim the nearest unclaimed label within <= 60 m, label-id tie; hits attributed to the label's owner block",
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 20260924,
+  "code": "work/stage2_2026-09-24/stage2_run.py lines 209-238 (paired, blocks as units, percentile 5/95)"
+ },
+ "success_rule": {
+  "min_margin_points": 5.0,
+  "interval": "lower bound of the paired 90% block-bootstrap interval of CONT - AO hits (parts, stage 2's code) must be > 0",
+  "denominator": "all common-class parts owned by the 45 blocks (raw labels)"
+ },
+ "gpu_ceiling_hours": 3.0,
+ "smoke_gpu_ceiling_hours": 0.25,
+ "gpu_busy_mib_refuse": 2500,
+ "disk_floor_gb": 20.0,
+ "phase_b_projection": {
+  "seconds_per_block": 100,
+  "basis": "stage 2 pass 1: 6,264 s for 73 blocks with two arms (86 s/block) including fetch"
+ },
+ "output_dir": "outputs/validation_cont_2026-09-26",
+ "log_forecast_marker": "VALCMP-2026-09-26 forecast",
+ "smoke": {
+  "blocks": [
+   "SCREEN_100_44",
+   "SCREEN_100_57"
+  ],
+  "rule": "first stage-2 block (numeric order) whose pass-1 and pass-2 source hashes matched and where both recorded AO and CONT hit >= 1 common part at d = 2; first SCREEN-26 block (numeric order) where both recorded AO (AO_regression) and CONT hit >= 1 common part at K = 1,294",
+  "dir": "smoke_stageB",
+  "phase_a_dir": "smoke"
+ },
+ "reservation": {
+  "decision": "decisions/2026-09-26-validation-bucket-reallocation.md",
+  "allocations": {
+   "baseline": 11,
+   "family": 3,
+   "improvement": 16,
+   "redteam": 4,
+   "final": 6
+  },
+  "reason": "D2609 reallocation: one unused family slot moves to baseline for the public ADAF AO charge of the owner-approved exploratory VALIDATION comparison CONT e41 vs ADAF AO (work/validation_cont_2026-09-26/PACKET.md); allocations baseline=11, family=3, improvement=16, redteam=4, final=6; total 40 and six final slots unchanged; a failed execution stays charged; no retry.",
+  "experiments": {
+   "AO": {
+    "id": "VALCMP-2026-09-26-ADAF-AO",
+    "bucket": "baseline"
+   },
+   "CONT": {
+    "id": "VALCMP-2026-09-26-CONT-E41",
+    "bucket": "improvement"
+   }
+  }
+ },
+ "stage": "B (COORDINATOR_B0_DECISION.md, 2026-09-26): items 1-3 applied",
+ "test_guard": {
+  "enforced": "no fetched pixel within 500 m of any TEST square; footprint = fetch rectangle + 64 m (64 px tile halo counted at 1 m)",
+  "hard_m": 500.0,
+  "footprint_margin_m": 64.0,
+  "descriptive_boundary_m": 5040.0,
+  "exclusion": "a block failing the enforced guard is excluded at B0 before any charge, reported with its census counts; K follows the remaining area"
+ }
+}

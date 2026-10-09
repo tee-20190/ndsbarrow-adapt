@@ -1,0 +1,281 @@
+{
+ "schema": "bench1_gate_freeze_v1",
+ "utc": "2026-10-07T08:30:22Z",
+ "gate_text": {
+  "path": "work/bench1_2026-10-07/FUTILITY_GATE.txt",
+  "sha256": "b90a960717822e000e0723632b675d377a024cb94667774e2fa0df44a5b4ddd9"
+ },
+ "pins_inputs": {
+  "ls_fit": {
+   "path": "outputs/adapt_nds_2026-10-05/fit/FIT_TABLE_PRIVATE.json",
+   "sha256": "58d6aa16a87f396a04eeb03719e0cd7f87beb872584838fc1c7f49d95b48e28f"
+  },
+  "ls_plan": {
+   "path": "outputs/adapt_nds_2026-10-05/fit/FIT_STAGING_PINNED_PRIVATE.json",
+   "sha256": "f02763a9a4b13247dc665ae0b19732c31a08aa68ab115e8489f40a6dafee0f3c"
+  },
+  "ls_masks": {
+   "path": "outputs/adapt_nds_2026-10-05/fit/FIT_INSIDE_MASKS_PRIVATE.npz",
+   "sha256": "a6c9b894ebbed7e6a2471904e25648e44740ed9d4b51273ab92085afd79bd280"
+  },
+  "dev_infer_manifest": {
+   "path": "outputs/fresh_region_2026-10-03/step2/INFER_MANIFEST_PRIVATE.json",
+   "sha256": "c1e1ba018bf1f510baec56331dd65d0c0fa80b6059258f0c65c4cd09c374d305"
+  },
+  "dev_enc_manifest": {
+   "path": "outputs/fresh_region_2026-10-03/step2/ENCLOSURE_MANIFEST_PRIVATE.json",
+   "sha256": "fa7877c2458370e524bb8f7c3ff64d98cf221aa595801049a59eb5ce5f955bda"
+  },
+  "dev_plan": {
+   "path": "outputs/fresh_region_2026-10-03/step2/STAGING_PLAN_PRIVATE.json",
+   "sha256": "c42df46604d5915cdf4727843c0fa6866ff35c54524cf89268519471f5feec7b"
+  },
+  "dev_masks": {
+   "path": "outputs/fresh_region_2026-10-03/step2/INSIDE_MASKS_PRIVATE.npz",
+   "sha256": "868925d385bafbe9c6ac2aab859b2ee1ee237e8dd1a748aca26a2f19d9071cd5"
+  },
+  "dev_tile_index": {
+   "path": "outputs/fresh_region_2026-10-03/step0/TILE_INDEX_PRIVATE.json",
+   "sha256": "789e85113587eca9b496a7d91ad0096abf15d563dcc5ac6646f8206396de2382"
+  },
+  "dev_tile_ledger": {
+   "path": "outputs/fresh_region_2026-10-03/step0/TILE_LEDGER_PRIVATE.jsonl",
+   "sha256": "28805a1cc523d157411eca63c2f5e8c05d6f37c761783a600cb41195b47fa624"
+  },
+  "dev_group_manifest": {
+   "path": "outputs/fresh_region_2026-10-03/step0/GROUP_MANIFEST_PRIVATE.json",
+   "sha256": "70ef0920816f3d656b19cf62b73d43dd12f63105d570fd290751ee35fa6c498c"
+  },
+  "dev_individual_manifest": {
+   "path": "outputs/fresh_region_2026-10-03/step0/INDIVIDUAL_MANIFEST_PRIVATE.json",
+   "sha256": "a97b6124310b22f05d441ae0937aa17386aec0704fa5689841c03124222873d2"
+  },
+  "score_d1": {
+   "path": "work/d1_collapse_2026-10-06/score_d1.py",
+   "sha256": "4a89d5bdbc48c337d3ef1a4aa0b74ecc311138db6d7c769fb739da26c1218377"
+  },
+  "score_match": {
+   "path": "work/adapt_match_2026-10-05/score_match.py",
+   "sha256": "b9f69c71940612507aae35c9def25e8ae698c59f42c96cfa21ad1a4faae35137"
+  },
+  "score_adapt": {
+   "path": "work/adapt_nds_2026-10-05/score_adapt.py",
+   "sha256": "c2ae6c421e65b4571993f2c862a0b848254bb175551a3021114a2a95a8edc4e2"
+  },
+  "match_common": {
+   "path": "work/adapt_match_2026-10-05/match_common.py",
+   "sha256": "6a20572da9277a2a3fb15822f317d7868e70ec4e59611631c3daac963f5c80a3"
+  },
+  "region_score": {
+   "path": "work/holdout_region_2026-10/step2/region_score.py",
+   "sha256": "b3337741071da6e85d41849f4f420a71494fc5ebd376c88d1a1933fccbada442"
+  },
+  "hier_uncertainty": {
+   "path": "work/holdout_region_2026-10/step2/hier_uncertainty.py",
+   "sha256": "f73d47b9130147170ce2990d629ea750ea23b1d4d6199edeebd8b68c67809ec4"
+  },
+  "fuse_eval": {
+   "path": "work/fusion_2026-10-03/fuse_eval.py",
+   "sha256": "b6664bf34b6642a53c16846ce313bd7ab116160b889a841f83543b27ed7d790d"
+  },
+  "fresh1_result": {
+   "path": "work/fresh_region_2026-10-03/step2/STEP2_RESULT.json",
+   "sha256": "dfb152792f6676e15605954ff0884e77cd81e3ffbd4b154744b13346c285303a"
+  }
+ },
+ "d1": {
+  "freeze_sha256": "f323e17e58e996c3f9ea62c5d3a684ea4e05d25be6dc6f76063b4ee05ed86ae6",
+  "result_sha256": "e3faec92c8a45a47d3d98bb1ef144d9c2ccd0953e0d8234491619d0b3a8a743a",
+  "s3_top": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z",
+  "d1_files_checked": 123
+ },
+ "starts": {
+  "J_L": {
+   "registry_id": "JOINT1-J_2026092803",
+   "bytes": 319970119,
+   "path": "outputs/joint_campaign_2026-10-03/weights/J_2026092803/final.pt",
+   "sha256": "3e1626583ff074e47451c2fc635b4f78e76099f00f431ccde854af998986a152"
+  },
+  "BARROW_L": {
+   "registry_id": "ADAF-barrow",
+   "md5": "8c2cf34634c1bc45874a324a92d2096b",
+   "bytes": 861530273,
+   "path": "work/campaign_2026-09-22/adaf_weights/barrow_HRNet_SLRM_512px_pretrained_train_12_val_124_with_Transformation.tar",
+   "sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216"
+  }
+ },
+ "plan_checks": {
+  "2026092805": {
+   "path": "outputs/d1_collapse_2026-10-06/plans/PLAN_CHECK_2026092805.json",
+   "sha256": "313ac2fdd47eba35d73aad2e41a171941eadc3d1de4e2e7197794c6ea1c2bfc6",
+   "plan_digest": "ec2b9bf447e944778b42b6c847cdfdfc4ec6bd80667b4f1329cbc45d2f80cfb8",
+   "epoch_digests": {
+    "4": "68ca76f21919912c6e54bc73ae264f686601fc4302ee2b96f1f467ce349cbf58",
+    "5": "5c711d059f5709f1150a2a511e20f6f90a7cbab84ee3a0bcbd50ab7cad9280e4"
+   },
+   "d1_barrow_l_train_result_digests": {
+    "4": "68ca76f21919912c6e54bc73ae264f686601fc4302ee2b96f1f467ce349cbf58",
+    "5": "5c711d059f5709f1150a2a511e20f6f90a7cbab84ee3a0bcbd50ab7cad9280e4"
+   },
+   "d1_barrow_l_checkpoint": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e"
+  },
+  "2026092806": {
+   "path": "outputs/d1_collapse_2026-10-06/plans/PLAN_CHECK_2026092806.json",
+   "sha256": "c0d308d540fbcc046cab34b020db255488d03028f8622b75fff9d5b71dd8db42",
+   "plan_digest": "edb606904c20305d17576d4e8e83fac199d62c11ac3f069726296f2f9eae4c38",
+   "epoch_digests": {
+    "4": "aa364b4aee0c21c99a8a77f31d64c4672b2a8756889a062f5162e1d0e1dab885",
+    "5": "b49331aae9a46d833ac7ea2839972d160e690cdcd36644a8cfe4bb40069cf8c0"
+   },
+   "d1_barrow_l_train_result_digests": {
+    "4": "aa364b4aee0c21c99a8a77f31d64c4672b2a8756889a062f5162e1d0e1dab885",
+    "5": "b49331aae9a46d833ac7ea2839972d160e690cdcd36644a8cfe4bb40069cf8c0"
+   },
+   "d1_barrow_l_checkpoint": "f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade"
+  },
+  "2026092807": {
+   "path": "outputs/d1_collapse_2026-10-06/plans/PLAN_CHECK_2026092807.json",
+   "sha256": "6ed4c5b72a7e49517c94dd5a4f05846febf2cf14fa28d5f83bb90a9eb237d0f2",
+   "plan_digest": "e26aae78f2ca99ca8bfdf1d39ece26e2d48447d5ec8f28d45db905c579f3065e",
+   "epoch_digests": {
+    "4": "4ea7bad4d7424b93b566beadbbc465069fed86bd7c10ae3468caa516b507e0e8",
+    "5": "a8d0f2afce6faac435ddb5528e03da4862804b6f79998ac1b3a3adb4d5defc61"
+   },
+   "d1_barrow_l_train_result_digests": {
+    "4": "4ea7bad4d7424b93b566beadbbc465069fed86bd7c10ae3468caa516b507e0e8",
+    "5": "a8d0f2afce6faac435ddb5528e03da4862804b6f79998ac1b3a3adb4d5defc61"
+   },
+   "d1_barrow_l_checkpoint": "d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511"
+  },
+  "2026092808": {
+   "path": "outputs/d1_collapse_2026-10-06/plans/PLAN_CHECK_2026092808.json",
+   "sha256": "4eeb1afa156fac2ed60dcb555a700e666e044a17e5cb781c10e0e3d8277b8655",
+   "plan_digest": "0e2f6e24fb11b70d11fb162c5f24cffef52bddbe5b0ee3104741e45268443ff9",
+   "epoch_digests": {
+    "4": "25171061478b9451ea0936070b7c6d2c1b1cd15342ab6372e8a97513d9393829",
+    "5": "4484f719ce1c9f71b8648772479ad1d2c66ddf1844b59470f95b3c9bd7c612a5"
+   },
+   "d1_barrow_l_train_result_digests": {
+    "4": "25171061478b9451ea0936070b7c6d2c1b1cd15342ab6372e8a97513d9393829",
+    "5": "4484f719ce1c9f71b8648772479ad1d2c66ddf1844b59470f95b3c9bd7c612a5"
+   },
+   "d1_barrow_l_checkpoint": "61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5"
+  },
+  "2026092809": {
+   "path": "outputs/d1_collapse_2026-10-06/plans/PLAN_CHECK_2026092809.json",
+   "sha256": "2af1e402eeec9b884e737c038412a5d13d5cc04d89689bb0d4b3c97e326043ef",
+   "plan_digest": "296b7da1af3f6ac4c34117f9feb7db9194fcb2b82471d36c0486d9c38195cb4f",
+   "epoch_digests": {
+    "4": "3a7917bc49c19101fb409d6cd744cb91ff0052c4fb5fb0816aaae29a9a16486e",
+    "5": "5e743fb3dd50dddbd4a1c7881845a423aef236a2db44b216e6e4e0009f1bd8f4"
+   },
+   "d1_barrow_l_train_result_digests": {
+    "4": "3a7917bc49c19101fb409d6cd744cb91ff0052c4fb5fb0816aaae29a9a16486e",
+    "5": "5e743fb3dd50dddbd4a1c7881845a423aef236a2db44b216e6e4e0009f1bd8f4"
+   },
+   "d1_barrow_l_checkpoint": "38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d"
+  }
+ },
+ "rule": {
+  "arms": {
+   "J_L": "trained, seeds 05-09",
+   "BARROW_L": "D1-F1_BARROW_L_<seed> scores, not retrained"
+  },
+  "barrow_l_reference": {
+   "2026092805": 0.705556,
+   "2026092806": 0.694444,
+   "2026092807": 0.69,
+   "2026092808": 0.693333,
+   "2026092809": 0.715556
+  },
+  "barrow_l_d1_exact": {
+   "2026092805": 0.7055555555555556,
+   "2026092806": 0.6944444444444443,
+   "2026092807": 0.69,
+   "2026092808": 0.6933333333333334,
+   "2026092809": 0.7155555555555555
+  },
+  "launch": "0 collapsed AND J_L 5-seed mean Verden primary > 0.699778",
+  "stop_collapse": "any J_L run collapsed (G1 collapse stops before G2)",
+  "futile": "otherwise (ties count as FUTILE)",
+  "collapse": {
+   "a": "zero proposals on the 717 tiles",
+   "b": "Verden primary < 0.278",
+   "c": "online detector ON at the end"
+  },
+  "check": {
+   "arm": "BARROW_L",
+   "seed": 2026092805,
+   "updates": 64,
+   "compare": 10,
+   "tol": 0.0001,
+   "d1_run": "D1F1_BARROW_L_2026092805"
+  },
+  "check_role": "environment identity: recorded and reported; it does not change the verdict",
+  "forecast": {
+   "LAUNCH": 0.25,
+   "STOP_COLLAPSE": 0.08,
+   "FUTILE": 0.67
+  },
+  "d3_start_if_not_launch": "ADAF barrow + F1"
+ },
+ "tests": {
+  "path": "work/bench1_2026-10-07/gate/TESTS.json",
+  "utc": "2026-10-07T08:29:57Z",
+  "passed": 75
+ },
+ "cu_projection": {
+  "cu_per_h": 8.724,
+  "per_window_base_s": 2.38,
+  "per_model_s": 1.25,
+  "train_run_s": 509,
+  "dev_windows": 717,
+  "sessions": {
+   "1": {
+    "runs": [
+     "G_J_L_2026092805"
+    ],
+    "check": true,
+    "dev_models": 1,
+    "train_s": 629,
+    "dev_pass_s": 2603,
+    "chain_s": 4860,
+    "wall_s": 6577,
+    "wall_cap_s": 6075,
+    "cu": 15.94,
+    "local_peak_gb": 2.0
+   },
+   "2": {
+    "runs": [
+     "G_J_L_2026092806",
+     "G_J_L_2026092807",
+     "G_J_L_2026092808",
+     "G_J_L_2026092809"
+    ],
+    "check": false,
+    "dev_models": 4,
+    "train_s": 2036,
+    "dev_pass_s": 5291,
+    "chain_s": 8955,
+    "wall_s": 10513,
+    "wall_cap_s": 11193,
+    "cu": 25.48,
+    "local_peak_gb": 2.0
+   }
+  },
+  "ceiling": 45.0,
+  "gate_text_projection": {
+   "1": 12.0,
+   "2": 22.2
+  }
+ },
+ "shipped_files": 137,
+ "pinned_files": 169,
+ "attribution": {
+  "terrain": "LGLN (2026), DGM1, CC BY 4.0; modified (resampled to 0.5 m, SLRM)",
+  "register": "Niedersächsisches Landesamt für Denkmalpflege, Denkmalatlas Niedersachsen, CC BY-SA 4.0, modified",
+  "adaf_weights": "ADAF AO and barrow HRNets: Čož, Corns, Curran, Kocev, Kokalj 2026, J. Archaeol. Sci. Rep. 71:105733; weights CC BY-SA 4.0 (Zenodo 10.5281/zenodo.15848662), code Apache-2.0",
+  "adapted_weights": "BENCH1-G J_L runs adapt JOINT1-J_2026092803 (a descendant of the ADAF weights in adaf_weights, CC BY-SA 4.0) by continued training on Lower Saxony register labels; any shared copy keeps CC BY-SA 4.0 with this attribution"
+ },
+ "pins_freeze_sha256": "3923710332fa7a1c648191f65a1885bcad36220020e78d12a34c471d422a23db"
+}

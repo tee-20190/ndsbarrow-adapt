@@ -1,0 +1,473 @@
+# PATH_SHIM.patch: replaces the hard-coded roots of the original runs with environment variables.
+# Apply with: python release_paths.py OUT_DIR   (copies the verified tree to OUT_DIR, then applies this patch there).
+# NDSBARROW_ROOT = repository root; NDSBARROW_PY = Python interpreter; NDSBARROW_VM_BASE = remote GPU VM base directory.
+# Files patched: 32 (infer_irl.py: a relative WIN_DIR is made absolute, as tta_run.py needs). The released originals stay byte-identical; only OUT_DIR is modified.
+--- a/work/adapt_match_2026-10-05/match_common.py
++++ b/work/adapt_match_2026-10-05/match_common.py
+@@ -35,5 +35,5 @@
+ SMOKE_RECEIPT = HERE / "SMOKE_RECEIPT.json"
+ RESULT = HERE / "RESULT.json"
+-VM_ROOT = "/content/DB/outputs/adapt_match_2026-10-05/vm"
++VM_ROOT = __import__("os").environ.get("NDSBARROW_VM_BASE", "NDSBARROW_VM_BASE_UNSET") + "/DB/outputs/adapt_match_2026-10-05/vm"
+ 
+ # ---------------------------------------------------------------- ADAPT-NDS-1 (reference arm A; FIT data, by hash)
+--- a/work/adapt_nds_2026-10-05/chain/sessions_adapt.py
++++ b/work/adapt_nds_2026-10-05/chain/sessions_adapt.py
+@@ -23,5 +23,5 @@
+ import nds_schedule as SCH  # noqa: E402
+ 
+-DB = "/content/DB"
++DB = __import__("os").environ.get("NDSBARROW_VM_BASE", "NDSBARROW_VM_BASE_UNSET") + "/DB"
+ REQUIRE_MARGIN, CAP_MARGIN, WI_MARGIN = 1.10, 1.25, 1.10
+ 
+--- a/work/adapt_nds_2026-10-05/nds_common.py
++++ b/work/adapt_nds_2026-10-05/nds_common.py
+@@ -138,5 +138,5 @@
+ CHAIN_RUNS = PRIV / "chain_runs"                            # one TOP per session attempt (driver)
+ WEIGHTS_DIR = PRIV / "weights"                              # verified local copies of A / C final weights
+-VM_ROOT = "/content/DB/outputs/adapt_nds_2026-10-05/vm"
++VM_ROOT = __import__("os").environ.get("NDSBARROW_VM_BASE", "NDSBARROW_VM_BASE_UNSET") + "/DB/outputs/adapt_nds_2026-10-05/vm"
+ WEIGHT_BYTES = 319_970_119                                  # a J-family final.pt (registry size)
+ 
+--- a/work/bgscale_2026-09-26/bg_eval.py
++++ b/work/bgscale_2026-09-26/bg_eval.py
+@@ -16,5 +16,5 @@
+   python -B work/bgscale_2026-09-26/bg_eval.py holdout   # GPU
+   python -B work/bgscale_2026-09-26/bg_eval.py score     # CPU -> RESULT.json (+ RESULT_PRIVATE.json with part ids)
+-(WSL /home/tee-/adaf-h2h-venv, from the repo root)
++($NDSBARROW_PY, from the repo root)
+ """
+ from __future__ import annotations
+--- a/work/bgscale_2026-09-26/bg_train.py
++++ b/work/bgscale_2026-09-26/bg_train.py
+@@ -18,5 +18,5 @@
+   python -B work/bgscale_2026-09-26/bg_train.py NEG    # NEG arm, epochs 42-45
+   python -B work/bgscale_2026-09-26/bg_train.py CTRL   # fresh control arm; refused unless the gate did not PASS
+-(WSL /home/tee-/adaf-h2h-venv, from the repo root)
++($NDSBARROW_PY, from the repo root)
+ """
+ from __future__ import annotations
+--- a/work/colab_assessment_2026-09-29/env/setup_env.sh
++++ b/work/colab_assessment_2026-09-29/env/setup_env.sh
+@@ -3,19 +3,20 @@
+ # Usage: bash setup_env.sh ENVDIR RESDIR   (idempotent; writes RESDIR/colab_freeze.txt)
+ set -uo pipefail
++: "${NDSBARROW_VM_BASE:?set NDSBARROW_VM_BASE (VM base directory)}"  # PATH_SHIM
+ ENVDIR=$1
+ RES=$2
+-if [ -f /content/venv/.complete ] && cmp -s "$ENVDIR/freeze.txt" /content/venv/.freeze; then
+-  echo "env: reusing /content/venv"
++if [ -f $NDSBARROW_VM_BASE/venv/.complete ] && cmp -s "$ENVDIR/freeze.txt" $NDSBARROW_VM_BASE/venv/.freeze; then
++  echo "env: reusing $NDSBARROW_VM_BASE/venv"
+ else
+-  rm -rf /content/venv
++  rm -rf $NDSBARROW_VM_BASE/venv
+   pip install -q uv
+-  uv venv -q /content/venv --python 3.12.14 || { echo "UV PYTHON FAILED"; exit 3; }
++  uv venv -q $NDSBARROW_VM_BASE/venv --python 3.12.14 || { echo "UV PYTHON FAILED"; exit 3; }
+   DRIVER_CUDA=$(nvidia-smi | grep -oP 'CUDA Version: \K[0-9]+' | head -1)
+   [ "${DRIVER_CUDA:-0}" -ge 13 ] || { echo "DRIVER LACKS CUDA 13 ($DRIVER_CUDA)"; exit 5; }
+-  uv pip install -q --no-deps --python /content/venv/bin/python -r "$ENVDIR/freeze.txt" || { echo "PIP FAILED"; exit 4; }
+-  cp "$ENVDIR/freeze.txt" /content/venv/.freeze
+-  touch /content/venv/.complete
++  uv pip install -q --no-deps --python $NDSBARROW_VM_BASE/venv/bin/python -r "$ENVDIR/freeze.txt" || { echo "PIP FAILED"; exit 4; }
++  cp "$ENVDIR/freeze.txt" $NDSBARROW_VM_BASE/venv/.freeze
++  touch $NDSBARROW_VM_BASE/venv/.complete
+   echo "env: built exact local freeze (cu130)"
+ fi
+-uv pip freeze --python /content/venv/bin/python > "$RES/colab_freeze.txt" 2>/dev/null || true
+-/content/venv/bin/python -c "import torch,rasterio,timm,rvt;print('env check', torch.__version__, torch.version.cuda, torch.backends.cudnn.version(), torch.cuda.get_device_name(0), rasterio.__gdal_version__)"
++uv pip freeze --python $NDSBARROW_VM_BASE/venv/bin/python > "$RES/colab_freeze.txt" 2>/dev/null || true
++$NDSBARROW_VM_BASE/venv/bin/python -c "import torch,rasterio,timm,rvt;print('env check', torch.__version__, torch.version.cuda, torch.backends.cudnn.version(), torch.cuda.get_device_name(0), rasterio.__gdal_version__)"
+--- a/work/colab_cli_2026-09-30/cli_common.sh
++++ b/work/colab_cli_2026-09-30/cli_common.sh
+@@ -1,7 +1,7 @@
+ #!/bin/bash
+ # COLAB-CLI-1 helpers, sourced by the stage drivers (WSL). Caller sets RUN_DIR (local output dir) and SESSION.
+-COLAB_BIN=${COLAB_BIN:-/home/tee-/.local/bin/colab}
+-CLI_STATE=${CLI_STATE:-/home/tee-/.config/colab-cli/db_colab_cli1.json}
+-LEDGER=${LEDGER:-/mnt/c/Users/15516/DISCOVERYBREAKTHROUGH/work/colab_cli_2026-09-30/CU_LEDGER.jsonl}
++COLAB_BIN=${COLAB_BIN:-$HOME/.local/bin/colab}
++CLI_STATE=${CLI_STATE:-$HOME/.config/colab-cli/db_colab_cli1.json}
++LEDGER=${LEDGER:-$NDSBARROW_ROOT/work/colab_cli_2026-09-30/CU_LEDGER.jsonl}
+ 
+ ts() { date -u +%FT%TZ; }
+--- a/work/colab_cli_2026-09-30/upload_part.sh
++++ b/work/colab_cli_2026-09-30/upload_part.sh
+@@ -1,4 +1,4 @@
+ #!/bin/bash
+-# split --filter target: stage stdin to a temp file, upload it as /content/cli/parts/$FILE (one retry), log wall time.
++# split --filter target: stage stdin to a temp file, upload it as $NDSBARROW_VM_BASE/cli/parts/$FILE (one retry), log wall time.
+ set -uo pipefail
+ tmp=$(mktemp)
+@@ -7,5 +7,5 @@
+ for attempt in 1 2; do
+   t0=$(date +%s.%N)
+-  timeout -k 10 900 "$COLAB_BIN" --config "$CLI_STATE" upload -s "$SESSION" "$tmp" "/content/cli/parts/$FILE" >/dev/null 2>>"$RUN_DIR/driver.log"
++  timeout -k 10 900 "$COLAB_BIN" --config "$CLI_STATE" upload -s "$SESSION" "$tmp" "$NDSBARROW_VM_BASE/cli/parts/$FILE" >/dev/null 2>>"$RUN_DIR/driver.log"
+   rc=$?
+   t1=$(date +%s.%N)
+--- a/work/counterfactual_2026-09-28/paired_train.py
++++ b/work/counterfactual_2026-09-28/paired_train.py
+@@ -8,5 +8,5 @@
+   python -B work/counterfactual_2026-09-28/paired_train.py smoke            # 32 updates per arm + 16-window inference
+   python -B work/counterfactual_2026-09-28/paired_train.py train SEED ARM   # ARM = C | T (resumable)
+-(WSL /home/tee-/adaf-h2h-venv, repo root)
++($NDSBARROW_PY, repo root)
+ """
+ from __future__ import annotations
+--- a/work/counterfactual_2026-09-28/plans.py
++++ b/work/counterfactual_2026-09-28/plans.py
+@@ -4,5 +4,5 @@
+   python -B work/counterfactual_2026-09-28/plans.py roughness   # ROUGHNESS_PRIVATE.json (CPU, parallel)
+   python -B work/counterfactual_2026-09-28/plans.py build       # plans/PLAN_<seed>_PRIVATE.json for all 9 seeds
+-(WSL /home/tee-/adaf-h2h-venv, repo root)
++($NDSBARROW_PY, repo root)
+ """
+ from __future__ import annotations
+--- a/work/counterfactual_2026-09-28/score_pairs.py
++++ b/work/counterfactual_2026-09-28/score_pairs.py
+@@ -14,5 +14,5 @@
+   python -B work/counterfactual_2026-09-28/score_pairs.py holdout SEED   # GPU
+   python -B work/counterfactual_2026-09-28/score_pairs.py score SEED     # CPU -> results/SCORES_<SEED>_PRIVATE.json
+-(WSL /home/tee-/adaf-h2h-venv, repo root)
++($NDSBARROW_PY, repo root)
+ """
+ from __future__ import annotations
+--- a/work/d1_collapse_2026-10-06/chain/driver_d1.sh
++++ b/work/d1_collapse_2026-10-06/chain/driver_d1.sh
+@@ -23,5 +23,5 @@
+   *) echo "usage: driver_d1.sh run INDEX [PREV_TOP] | rescue TOP | export-check TOP" >&2; exit 2 ;;
+ esac
+-ROOT=${D1_ROOT:-/mnt/c/Users/15516/DISCOVERYBREAKTHROUGH}
++ROOT=${D1_ROOT:-$NDSBARROW_ROOT}
+ REL=work/d1_collapse_2026-10-06/chain
+ CHAIN=$ROOT/$REL
+@@ -29,5 +29,5 @@
+ HR1_CHAIN=$ROOT/work/holdout_region_2026-10/chain
+ CLI=$ROOT/work/colab_cli_2026-09-30
+-PY=${LOCAL_PY:-/home/tee-/adaf-h2h-venv/bin/python}
++PY=${LOCAL_PY:-"$NDSBARROW_PY"}
+ export PYTHONDONTWRITEBYTECODE=1
+ OUTV=${D1_OUTV:-$ROOT/outputs}
+@@ -47,5 +47,5 @@
+ # shellcheck source=/dev/null
+ source "$CLI/cli_common.sh"                        # ts, log, cb, tcb, wait_ready, timed, ledger
+-CLI_STATE=${CLI_STATE:-/home/tee-/.config/colab-cli/d1_collapse_v1.json}
++CLI_STATE=${CLI_STATE:-$HOME/.config/colab-cli/d1_collapse_v1.json}
+ SESSION_BASE=${SESSION_BASE:-d1-collapse-$MODE${SESSION_INDEX:+-s$SESSION_INDEX}-$(date -u +%m%d%H%M)}
+ SESSION=${SESSION:-$SESSION_BASE-v1}
+@@ -61,5 +61,5 @@
+ LOCAL_PEAK_GB=${LOCAL_PEAK_GB:-}              # run: sessions_d1.py plan (session weights + 0.5 GB)
+ FREEZE=${FREEZE:-$D1/freeze/FREEZE.json}
+-VM_ROOT=${VM_ROOT:-/content/DB/outputs/d1_collapse_2026-10-06/vm}
++VM_ROOT=${VM_ROOT:-$NDSBARROW_VM_BASE/DB/outputs/d1_collapse_2026-10-06/vm}
+ VM_RESULTS=$VM_ROOT/results
+ WEIGHT_BYTES_HINT=${WEIGHT_BYTES_HINT:-330000000}
+@@ -268,5 +268,5 @@
+ }
+ 
+-stream_bundle() {  # stream_bundle NAME: repo files -> gzip tar stream -> 48 MiB parts -> VM /content/cli/parts/
++stream_bundle() {  # stream_bundle NAME: repo files -> gzip tar stream -> 48 MiB parts -> VM $NDSBARROW_VM_BASE/cli/parts/
+   local name=$1 t0 rcs
+   t0=$(date +%s)
+@@ -279,5 +279,5 @@
+ 
+ write_env() {
+-  local d=/content/DB
++  local d=$NDSBARROW_VM_BASE/DB
+   cat >"$RUN_DIR/job.env" <<EOF
+ MODE=run
+@@ -351,5 +351,5 @@
+   for name in INDEX.sha256 RES_TAR.sha256; do
+     rm -f "$RUN_DIR/parts/$name"
+-    if ! dl index "/content/res_parts/$name" "$RUN_DIR/parts/$name" 1000000 300; then
++    if ! dl index "$NDSBARROW_VM_BASE/res_parts/$name" "$RUN_DIR/parts/$name" 1000000 300; then
+       log "no result index on the VM ($name)"
+       return 15
+@@ -358,5 +358,5 @@
+   while read -r sha name; do
+     [[ $name == res.tar.part_* ]] || continue
+-    fetch_verified res_part "/content/res_parts/$name" "$RUN_DIR/parts/$name" "$sha" 52000000 || return 16
++    fetch_verified res_part "$NDSBARROW_VM_BASE/res_parts/$name" "$RUN_DIR/parts/$name" "$sha" 52000000 || return 16
+   done <"$RUN_DIR/parts/INDEX.sha256"
+   cat "$RUN_DIR"/parts/res.tar.part_* >"$RUN_DIR/res.tar"
+@@ -429,5 +429,5 @@
+     while read -r sha name; do
+       [[ $name == w_"$r".pt.part_* ]] || continue
+-      fetch_verified w_part "/content/res_parts/$name" "$RUN_DIR/parts/$name" "$sha" 52000000 \
++      fetch_verified w_part "$NDSBARROW_VM_BASE/res_parts/$name" "$RUN_DIR/parts/$name" "$sha" 52000000 \
+         || { exec {lock}>&-; return 16; }
+     done <"$RUN_DIR/parts/INDEX.sha256"
+@@ -729,10 +729,10 @@
+   ledger "d1-collapse $MODE allocated ($SESSION)" >/dev/null
+   wait_ready "$SESSION" || die "kernel not ready" 11
+-  echo 'import os; os.makedirs("/content/cli/parts", exist_ok=True); print("dirs ok")' \
++  echo "import os; os.makedirs('$NDSBARROW_VM_BASE/cli/parts', exist_ok=True); print('dirs ok')" \
+     | vm_exec >>"$RUN_DIR/driver.log" 2>&1 || die "exec failed" 11
+   stream_bundle code
+   write_env
+-  for f in "$CHAIN/vm_job_d1.sh:/content/cli/vm_job.sh" "$HR1_CHAIN/cat_parts.py:/content/cli/cat_parts.py" \
+-    "$RUN_DIR/job.env:/content/cli/job.env"; do
++  for f in "$CHAIN/vm_job_d1.sh:$NDSBARROW_VM_BASE/cli/vm_job.sh" "$HR1_CHAIN/cat_parts.py:$NDSBARROW_VM_BASE/cli/cat_parts.py" \
++    "$RUN_DIR/job.env:$NDSBARROW_VM_BASE/cli/job.env"; do
+     timed tcb 300 upload -s "$SESSION" "${f%%:*}" "${f#*:}" >>"$RUN_DIR/driver.log" 2>&1 || die "upload ${f%%:*} failed" 12
+   done
+@@ -741,5 +741,5 @@
+   start_harvest
+   timed tcb $((WALL_CAP_S + 2400)) exec -s "$SESSION" -f "$CLI/remote_run.py" --timeout $((WALL_CAP_S + 2300)) \
+-    --env "DB_CMD=bash /content/cli/vm_job.sh" >"$RUN_DIR/job.log" 2>&1
++    --env "DB_CMD=bash $NDSBARROW_VM_BASE/cli/vm_job.sh" >"$RUN_DIR/job.log" 2>&1
+   stop_harvest
+   grep -aq '^REMOTE_EXIT=0' "$RUN_DIR/job.log" || { rc=14; log "remote chain did not complete (see job.log)"; }
+--- a/work/d1_collapse_2026-10-06/chain/vm_job_d1.sh
++++ b/work/d1_collapse_2026-10-06/chain/vm_job_d1.sh
+@@ -5,12 +5,13 @@
+ # unchanged), runs the chain through HR1's frozen launcher step2/run_chain.sh inside storage_guard, then packages
+ # results and every final.pt for download in 48 MiB parts with ADAPT-NDS-1's package_results.sh (index with sha256).
+-# Settings: /content/cli/job.env (written by driver_d1.sh write_env; no secrets).
++# Settings: $NDSBARROW_VM_BASE/cli/job.env (written by driver_d1.sh write_env; no secrets).
+ set -uo pipefail
++NDSBARROW_VM_BASE=${NDSBARROW_VM_BASE:-$(cd "$(dirname "$0")/.." && pwd)}; export NDSBARROW_VM_BASE  # PATH_SHIM
+ unset MPLBACKEND PYTHONPATH PYTHONSTARTUP        # the Colab kernel exports an inline matplotlib backend
+ export NVIDIA_TF32_OVERRIDE=0                     # TF32 off (COLAB-ASSESS-1 rule)
+ export PYTHONDONTWRITEBYTECODE=1
+-J=/content/cli
+-DB=/content/DB
+-PARTS_OUT=/content/res_parts
++J=$NDSBARROW_VM_BASE/cli
++DB=$NDSBARROW_VM_BASE/DB
++PARTS_OUT=$NDSBARROW_VM_BASE/res_parts
+ set -a
+ # shellcheck source=/dev/null
+@@ -23,5 +24,5 @@
+ lscpu | grep -E '^Model name|^CPU\(s\)'
+ free -g | awk 'NR == 2 { print "ram_total_gb=" $2 }'
+-df -B1 /content | awk 'NR == 2 { printf "disk_start total_gb=%.1f free_gb=%.1f\n", $2 / 1e9, $4 / 1e9 }'
++df -B1 $NDSBARROW_VM_BASE | awk 'NR == 2 { printf "disk_start total_gb=%.1f free_gb=%.1f\n", $2 / 1e9, $4 / 1e9 }'
+ mkdir -p "$DB"
+ for B in $BUNDLES; do
+@@ -46,5 +47,5 @@
+ cd "$DB" || exit 2
+ D1=$DB/work/d1_collapse_2026-10-06
+-export PY=/content/venv/bin/python CHAIN_DIR=$D1/chain D1_DIR=$D1 NDS_DIR=$DB/work/adapt_nds_2026-10-05 VM RESULTS
++export PY=$NDSBARROW_VM_BASE/venv/bin/python CHAIN_DIR=$D1/chain D1_DIR=$D1 NDS_DIR=$DB/work/adapt_nds_2026-10-05 VM RESULTS
+ export HR1_CHAIN=$DB/work/holdout_region_2026-10/chain HR3_CHAIN=$DB/work/hr3_ireland_2026-10-02/step2/chain
+ export FRESH_DIR=$DB/work/fresh_region_2026-10-03/step2
+@@ -58,5 +59,5 @@
+ PY
+ stamp "chain $MODE"
+-"$PY" "$DB/verify/v3/storage_guard.py" run --path /content --peak-gb 60 -- \
++"$PY" "$DB/verify/v3/storage_guard.py" run --path $NDSBARROW_VM_BASE --peak-gb 60 -- \
+   bash "$DB/work/holdout_region_2026-10/step2/run_chain.sh" "$CHAIN_FILE"
+ rc=$?
+@@ -64,8 +65,8 @@
+ cp "$RESULTS/colab_freeze.txt" "$RESULTS/env_freeze.txt" 2>/dev/null || true
+ cp "$VM/state/"*.json* "$RESULTS/" 2>/dev/null || true
+-df -B1 /content | awk 'NR == 2 { printf "disk_chain_end total_gb=%.1f free_gb=%.1f\n", $2 / 1e9, $4 / 1e9 }'
++df -B1 $NDSBARROW_VM_BASE | awk 'NR == 2 { printf "disk_chain_end total_gb=%.1f free_gb=%.1f\n", $2 / 1e9, $4 / 1e9 }'
+ # ---------------------------------------------------------------- package for download (partial results included)
+ bash "$DB/work/adapt_nds_2026-10-05/chain/package_results.sh" "$VM" "$PARTS_OUT" "${WEIGHTS_SINK:-keep}"
+-df -B1 /content | awk 'NR == 2 { printf "disk_end total_gb=%.1f free_gb=%.1f\n", $2 / 1e9, $4 / 1e9 }'
++df -B1 $NDSBARROW_VM_BASE | awk 'NR == 2 { printf "disk_end total_gb=%.1f free_gb=%.1f\n", $2 / 1e9, $4 / 1e9 }'
+ stamp "packaged $(wc -l < "$PARTS_OUT/INDEX.sha256") parts"
+ exit $rc
+--- a/work/d1_collapse_2026-10-06/d1_common.py
++++ b/work/d1_collapse_2026-10-06/d1_common.py
+@@ -31,5 +31,5 @@
+ CU_SPEND = CHAIN / "CU_SPEND.jsonl"
+ RESULT = HERE / "RESULT.json"
+-VM_ROOT = "/content/DB/outputs/d1_collapse_2026-10-06/vm"
++VM_ROOT = __import__("os").environ.get("NDSBARROW_VM_BASE", "NDSBARROW_VM_BASE_UNSET") + "/DB/outputs/d1_collapse_2026-10-06/vm"
+ 
+ # ---------------------------------------------------------------- data and references (ADAPT-MATCH-0, by hash)
+--- a/work/d1_verden_descriptive_2026-10-07/desc_verden.py
++++ b/work/d1_verden_descriptive_2026-10-07/desc_verden.py
+@@ -18,6 +18,6 @@
+ Aggregates only (no ids, no coordinates) go to RESULT.json.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/d1_verden_descriptive_2026-10-07/desc_verden.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/d1_verden_descriptive_2026-10-07/desc_verden.py
+ """
+ from __future__ import annotations
+--- a/work/evaluator_v0_1_2026-10-07/run_checks.py
++++ b/work/evaluator_v0_1_2026-10-07/run_checks.py
+@@ -8,6 +8,6 @@
+ 4. Register role table and complex inventory (register + manifest only; no detector output) for Verden and Oldenburg.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/evaluator_v0_1_2026-10-07/run_checks.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/evaluator_v0_1_2026-10-07/run_checks.py
+ """
+ from __future__ import annotations
+--- a/work/gpt6_pro_collab_2026-10-07/detector_week1/bench_v0.py
++++ b/work/gpt6_pro_collab_2026-10-07/detector_week1/bench_v0.py
+@@ -10,6 +10,6 @@
+ pool (in-core, 60 m greedy NMS, rank_key); RAW = every in-core proposal in rank_key order (no NMS).
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/gpt6_pro_collab_2026-10-07/detector_week1/bench_v0.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/gpt6_pro_collab_2026-10-07/detector_week1/bench_v0.py
+ """
+ from __future__ import annotations
+--- a/work/gpt6_pro_collab_2026-10-07/detector_week1/decomp.py
++++ b/work/gpt6_pro_collab_2026-10-07/detector_week1/decomp.py
+@@ -5,6 +5,6 @@
+ Writes aggregate counts only (no part ids, no coordinates) to UNION_DECOMP.json beside this file.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/gpt6_pro_collab_2026-10-07/detector_week1/decomp.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/gpt6_pro_collab_2026-10-07/detector_week1/decomp.py
+ """
+ from __future__ import annotations
+--- a/work/gpt6_pro_collab_2026-10-07/detector_week1/ignore_check.py
++++ b/work/gpt6_pro_collab_2026-10-07/detector_week1/ignore_check.py
+@@ -5,6 +5,6 @@
+ NODATA-failed members are covered because they are not eligible members). Aggregate counts only.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/gpt6_pro_collab_2026-10-07/detector_week1/ignore_check.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/gpt6_pro_collab_2026-10-07/detector_week1/ignore_check.py
+ """
+ from __future__ import annotations
+--- a/work/gpt6_pro_collab_2026-10-07/v0_uncertainty/boot_v0.py
++++ b/work/gpt6_pro_collab_2026-10-07/v0_uncertainty/boot_v0.py
+@@ -4,6 +4,6 @@
+ no coordinates).
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/gpt6_pro_collab_2026-10-07/v0_uncertainty/boot_v0.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/gpt6_pro_collab_2026-10-07/v0_uncertainty/boot_v0.py
+ """
+ from __future__ import annotations
+--- a/work/gpt6_pro_collab_2026-10-07/v0_uncertainty/ignore_v0.py
++++ b/work/gpt6_pro_collab_2026-10-07/v0_uncertainty/ignore_v0.py
+@@ -13,6 +13,6 @@
+       remaining IGNORE zone. A fixed geographical mask; no proposal-label outcome is used.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/gpt6_pro_collab_2026-10-07/v0_uncertainty/ignore_v0.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/gpt6_pro_collab_2026-10-07/v0_uncertainty/ignore_v0.py
+ """
+ from __future__ import annotations
+--- a/work/gpt6_pro_collab_2026-10-07/v0_uncertainty/register_semantics.py
++++ b/work/gpt6_pro_collab_2026-10-07/v0_uncertainty/register_semantics.py
+@@ -4,6 +4,6 @@
+ test whether a cemetery and its member barrows share a register site number).
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/gpt6_pro_collab_2026-10-07/v0_uncertainty/register_semantics.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/gpt6_pro_collab_2026-10-07/v0_uncertainty/register_semantics.py
+ """
+ from __future__ import annotations
+--- a/work/holdout_region_2026-10/chain/welsh_train.py
++++ b/work/holdout_region_2026-10/chain/welsh_train.py
+@@ -29,5 +29,5 @@
+   python -B welsh_train.py holdout-check N OUT.json [--checkpoint PT --name NAME]   (smoke of the retention path)
+ GPU commands call common.torch_flags() (cuDNN/matmul TF32 off; CUDNN_ALLOW_TF32=1 restores the PyTorch default).
+-(repo root; Colab: /content/venv/bin/python with NVIDIA_TF32_OVERRIDE=0)
++(repo root; Colab: $NDSBARROW_VM_BASE/venv/bin/python with NVIDIA_TF32_OVERRIDE=0)
+ """
+ from __future__ import annotations
+--- a/work/holdout_region_2026-10/step2/run_chain.sh
++++ b/work/holdout_region_2026-10/step2/run_chain.sh
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env bash
+ # HOLDOUT-REGION-1 Step 2a (d): chain launcher (packet "Steps" 2).
+-#   OUT_DIR=/content/out bash run_chain.sh CHAIN_FILE
++#   OUT_DIR=$NDSBARROW_VM_BASE/out bash run_chain.sh CHAIN_FILE
+ # CHAIN_FILE is sourced after the helpers are defined and calls, in order:
+ #   gate NAME CMD...            non-zero exit stops the chain with that exit code
+--- a/work/hr3_ireland_2026-10-02/step2/chain/infer_irl.py
++++ b/work/hr3_ireland_2026-10-02/step2/chain/infer_irl.py
+@@ -136,5 +136,5 @@
+     a = ap.parse_args()
+     if a.cmd == "run":
+-        print(json.dumps(run(Path(a.args[0]), Path(a.args[1]), Path(a.args[2]), a.model, a.shard)))
++        print(json.dumps(run(Path(a.args[0]), Path(a.args[1]).absolute(), Path(a.args[2]), a.model, a.shard)))
+     else:
+         print(assemble(Path(a.args[0]), Path(a.args[1]), a.args[2], Path(a.args[3])))
+--- a/work/manuscript_2026-10/figures/make_figures.py
++++ b/work/manuscript_2026-10/figures/make_figures.py
+@@ -2,6 +2,6 @@
+ locations. Run in the WSL venv that has matplotlib 3.11 (the v3venv has no matplotlib):
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/manuscript_2026-10/figures/make_figures.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/manuscript_2026-10/figures/make_figures.py
+ 
+ v6 (2026-10-09): files numbered in order of first citation in DRAFT_v6 (F1 design, F2 block bootstrap, F3 main
+--- a/work/manuscript_2026-10/ignore_rescore/rescore_d1_ignore.py
++++ b/work/manuscript_2026-10/ignore_rescore/rescore_d1_ignore.py
+@@ -15,6 +15,6 @@
+ and ADAF barrow under (ii)/(iii) must reproduce IGNORE_V0.json. Aggregates only (no ids, no coordinates) are written.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/manuscript_2026-10/ignore_rescore/rescore_d1_ignore.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/manuscript_2026-10/ignore_rescore/rescore_d1_ignore.py
+ """
+ from __future__ import annotations
+--- a/work/oldenburg_transfer_2026-10-07/score_oldenburg.py
++++ b/work/oldenburg_transfer_2026-10-07/score_oldenburg.py
+@@ -15,6 +15,6 @@
+ ADAF barrow parity check.
+ 
+-  run:      MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-              /home/tee-/adaf-h2h-venv/bin/python -B work/oldenburg_transfer_2026-10-07/score_oldenburg.py \
++  run:      cd "$NDSBARROW_ROOT" && \
++              "$NDSBARROW_PY" -B work/oldenburg_transfer_2026-10-07/score_oldenburg.py \
+               outputs/oldenburg_transfer_2026-10-07/chain_runs/<run>
+   fixture:  ... score_oldenburg.py --fixture     (software check: ten synthetic re-rankings of ADAF barrow's
+--- a/work/stage1_d1_v0_2026-10-07/score_v0.py
++++ b/work/stage1_d1_v0_2026-10-07/score_v0.py
+@@ -8,6 +8,6 @@
+ Legacy IGNORE handling: unchanged (manifest geometry as built). Aggregates only go to RESULT.json.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/stage1_d1_v0_2026-10-07/score_v0.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/stage1_d1_v0_2026-10-07/score_v0.py
+ """
+ from __future__ import annotations
+--- a/work/stage1_d1_v0_2026-10-07/step0.py
++++ b/work/stage1_d1_v0_2026-10-07/step0.py
+@@ -2,6 +2,6 @@
+ on Verden terrain or labels? CPU, read-only. Writes aggregates only (no coordinates, no record ids) to STEP0.json.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/stage1_d1_v0_2026-10-07/step0.py
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/stage1_d1_v0_2026-10-07/step0.py
+ """
+ from __future__ import annotations
+--- a/work/stage2_d1_controls_2026-10-07/s2_common.py
++++ b/work/stage2_d1_controls_2026-10-07/s2_common.py
+@@ -41,5 +41,5 @@
+ CU_SPEND = CHAIN / "CU_SPEND.jsonl"
+ RESULT = HERE / "RESULT.json"
+-VM_ROOT = "/content/DB/outputs/stage2_d1_controls_2026-10-07/vm"
++VM_ROOT = __import__("os").environ.get("NDSBARROW_VM_BASE", "NDSBARROW_VM_BASE_UNSET") + "/DB/outputs/stage2_d1_controls_2026-10-07/vm"
+ 
+ # ---------------------------------------------------------------- the paired D1 runs (STAGE1-D1-V0 PASS)
+--- a/work/stage2_d1_controls_2026-10-07/score_s2.py
++++ b/work/stage2_d1_controls_2026-10-07/score_s2.py
+@@ -25,6 +25,6 @@
+ sensitivity is refused (recorded) and the primary is unaffected.
+ 
+-  MSYS_NO_PATHCONV=1 wsl -d Ubuntu-22.04 --cd /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH -- \
+-      /home/tee-/adaf-h2h-venv/bin/python -B work/stage2_d1_controls_2026-10-07/score_s2.py FREEZE S1_TOP
++  cd "$NDSBARROW_ROOT" && \
++      "$NDSBARROW_PY" -B work/stage2_d1_controls_2026-10-07/score_s2.py FREEZE S1_TOP
+ """
+ from __future__ import annotations

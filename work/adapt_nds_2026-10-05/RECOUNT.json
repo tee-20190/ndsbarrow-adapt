@@ -1,0 +1,457 @@
+{
+ "schema": "adapt_nds_recount_v1",
+ "implementation": {
+  "recount.py": "978455778f2f324d8be7d407948f512c1cd7499b0a72d7ed7facb4b2cf71c399",
+  "this": "e06dc02d36e2a4e5de5acc1a75c4ffdba55f1b07c9521abadb23a6fab0df24a7"
+ },
+ "result_sha256": "a4fb82aaf5131d82c5159bd30a7b82d58d5ac7195c0a75a424d028c621c2f163",
+ "regions": {
+  "confirm": {
+   "primaries": {
+    "A_NDS_2026092802": 0.6029411764705882,
+    "C_NDS_2026092802": 0.42892156862745096,
+    "J_2026092802": 0.41911764705882354,
+    "J_2026092803": 0.4325980392156863,
+    "J_2026092804": 0.36764705882352944,
+    "ADAF_barrow": 0.5294117647058824,
+    "ADAF_AO": 0.3284313725490196,
+    "CONT": 0.428921568627451,
+    "A_NDS_2026092803": 0.5906862745098039,
+    "C_NDS_2026092803": 0.4754901960784314,
+    "A_NDS_2026092804": 0.5306372549019608,
+    "C_NDS_2026092804": 0.39828431372549017
+   },
+   "n_parts": 272,
+   "background_km2": 300.5239,
+   "adapt_effect_A_minus_C": {
+    "mean": 0.14052287581699346,
+    "lo95": 0.08989076967592591,
+    "hi95": 0.18085951591810964,
+    "label": "ADAPT_GAIN"
+   },
+   "milestone_A_minus_ADAF_barrow": {
+    "mean": 0.045343137254901945,
+    "lo95": -0.010755610098176816,
+    "hi95": 0.0964415141100278,
+    "label": "NOT_DISTINGUISHED"
+   }
+  },
+  "dev": {
+   "primaries": {
+    "A_NDS_2026092802": 0.6155555555555555,
+    "C_NDS_2026092802": 0.43777777777777777,
+    "A_NDS_2026092803": 0.67,
+    "C_NDS_2026092803": 0.5122222222222222,
+    "A_NDS_2026092804": 0.5111111111111111,
+    "C_NDS_2026092804": 0.42333333333333334,
+    "J_2026092802": 0.4177777777777778,
+    "J_2026092803": 0.48444444444444446,
+    "J_2026092804": 0.36999999999999994,
+    "ADAF_barrow": 0.5555555555555557,
+    "ADAF_AO": 0.29777777777777775,
+    "CONT": 0.4155555555555555
+   },
+   "n_parts": 300,
+   "background_km2": 300.44609999999994,
+   "adapt_effect_A_minus_C": {
+    "mean": 0.1411111111111111,
+    "lo95": 0.07072971910190551,
+    "hi95": 0.191773288439955,
+    "label": "ADAPT_GAIN"
+   },
+   "milestone_A_minus_ADAF_barrow": {
+    "mean": 0.04333333333333319,
+    "lo95": -0.041423640070428994,
+    "hi95": 0.12163847222015331,
+    "label": "NOT_DISTINGUISHED"
+   }
+  }
+ },
+ "english_retention": {
+  "A": [
+   0.660737812911726,
+   0.6100131752305665,
+   0.714756258234519
+  ],
+  "C": [
+   0.7463768115942028,
+   0.7239789196310934,
+   0.730566534914361
+  ],
+  "A_minus_C_mean": -0.0718050065876152
+ },
+ "checks": [
+  {
+   "check": "freeze equals FREEZE_LOCK",
+   "ok": true
+  },
+  {
+   "check": "RESULT.json equals SCORE_RECEIPT",
+   "ok": true
+  },
+  {
+   "check": "RESULT freeze",
+   "ok": true
+  },
+  {
+   "check": "session 1 verified",
+   "ok": true,
+   "top": "run_s1_20261005T043612Z"
+  },
+  {
+   "check": "session 2 verified",
+   "ok": true,
+   "top": "run_s2_20261005T092024Z"
+  },
+  {
+   "check": "session 3 verified",
+   "ok": true,
+   "top": "run_s3_20261005T124915Z"
+  },
+  {
+   "check": "binding confirm/A_NDS_2026092802",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/C_NDS_2026092802",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/J_2026092802",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/J_2026092803",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/J_2026092804",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/ADAF_barrow",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/ADAF_AO",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/CONT",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/A_NDS_2026092803",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/C_NDS_2026092803",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/A_NDS_2026092804",
+   "ok": true
+  },
+  {
+   "check": "binding confirm/C_NDS_2026092804",
+   "ok": true
+  },
+  {
+   "check": "confirm primary A_NDS_2026092802",
+   "ok": true,
+   "recount": 0.6029411764705882,
+   "result": 0.6029411764705882
+  },
+  {
+   "check": "confirm primary C_NDS_2026092802",
+   "ok": true,
+   "recount": 0.42892156862745096,
+   "result": 0.42892156862745096
+  },
+  {
+   "check": "confirm primary J_2026092802",
+   "ok": true,
+   "recount": 0.41911764705882354,
+   "result": 0.41911764705882354
+  },
+  {
+   "check": "confirm primary J_2026092803",
+   "ok": true,
+   "recount": 0.4325980392156863,
+   "result": 0.4325980392156863
+  },
+  {
+   "check": "confirm primary J_2026092804",
+   "ok": true,
+   "recount": 0.36764705882352944,
+   "result": 0.36764705882352944
+  },
+  {
+   "check": "confirm primary ADAF_barrow",
+   "ok": true,
+   "recount": 0.5294117647058824,
+   "result": 0.5294117647058824
+  },
+  {
+   "check": "confirm primary ADAF_AO",
+   "ok": true,
+   "recount": 0.3284313725490196,
+   "result": 0.3284313725490196
+  },
+  {
+   "check": "confirm primary CONT",
+   "ok": true,
+   "recount": 0.428921568627451,
+   "result": 0.428921568627451
+  },
+  {
+   "check": "confirm primary A_NDS_2026092803",
+   "ok": true,
+   "recount": 0.5906862745098039,
+   "result": 0.5906862745098039
+  },
+  {
+   "check": "confirm primary C_NDS_2026092803",
+   "ok": true,
+   "recount": 0.4754901960784314,
+   "result": 0.4754901960784314
+  },
+  {
+   "check": "confirm primary A_NDS_2026092804",
+   "ok": true,
+   "recount": 0.5306372549019608,
+   "result": 0.5306372549019608
+  },
+  {
+   "check": "confirm primary C_NDS_2026092804",
+   "ok": true,
+   "recount": 0.39828431372549017,
+   "result": 0.39828431372549017
+  },
+  {
+   "check": "confirm adapt_effect_A_minus_C mean",
+   "ok": true,
+   "recount": 0.14052287581699346,
+   "result": 0.14052287581699346
+  },
+  {
+   "check": "confirm adapt_effect_A_minus_C lo95",
+   "ok": true,
+   "recount": 0.08989076967592591,
+   "result": 0.08989076967592591
+  },
+  {
+   "check": "confirm adapt_effect_A_minus_C hi95",
+   "ok": true,
+   "recount": 0.18085951591810964,
+   "result": 0.18085951591810964
+  },
+  {
+   "check": "confirm adapt_effect_A_minus_C label",
+   "ok": true,
+   "recount": "ADAPT_GAIN",
+   "result": "ADAPT_GAIN"
+  },
+  {
+   "check": "confirm milestone_A_minus_ADAF_barrow mean",
+   "ok": true,
+   "recount": 0.045343137254901945,
+   "result": 0.045343137254901945
+  },
+  {
+   "check": "confirm milestone_A_minus_ADAF_barrow lo95",
+   "ok": true,
+   "recount": -0.010755610098176816,
+   "result": -0.010755610098176816
+  },
+  {
+   "check": "confirm milestone_A_minus_ADAF_barrow hi95",
+   "ok": true,
+   "recount": 0.0964415141100278,
+   "result": 0.0964415141100278
+  },
+  {
+   "check": "confirm milestone_A_minus_ADAF_barrow label",
+   "ok": true,
+   "recount": "NOT_DISTINGUISHED",
+   "result": "NOT_DISTINGUISHED"
+  },
+  {
+   "check": "binding dev/A_NDS_2026092802",
+   "ok": true
+  },
+  {
+   "check": "binding dev/C_NDS_2026092802",
+   "ok": true
+  },
+  {
+   "check": "binding dev/A_NDS_2026092803",
+   "ok": true
+  },
+  {
+   "check": "binding dev/C_NDS_2026092803",
+   "ok": true
+  },
+  {
+   "check": "binding dev/A_NDS_2026092804",
+   "ok": true
+  },
+  {
+   "check": "binding dev/C_NDS_2026092804",
+   "ok": true
+  },
+  {
+   "check": "FRESH-1 DEV reference J_2026092802 hash",
+   "ok": true
+  },
+  {
+   "check": "FRESH-1 DEV reference J_2026092803 hash",
+   "ok": true
+  },
+  {
+   "check": "FRESH-1 DEV reference J_2026092804 hash",
+   "ok": true
+  },
+  {
+   "check": "FRESH-1 DEV reference ADAF_barrow hash",
+   "ok": true
+  },
+  {
+   "check": "FRESH-1 DEV reference ADAF_AO hash",
+   "ok": true
+  },
+  {
+   "check": "FRESH-1 DEV reference CONT hash",
+   "ok": true
+  },
+  {
+   "check": "dev primary A_NDS_2026092802",
+   "ok": true,
+   "recount": 0.6155555555555555,
+   "result": 0.6155555555555555
+  },
+  {
+   "check": "dev primary C_NDS_2026092802",
+   "ok": true,
+   "recount": 0.43777777777777777,
+   "result": 0.43777777777777777
+  },
+  {
+   "check": "dev primary A_NDS_2026092803",
+   "ok": true,
+   "recount": 0.67,
+   "result": 0.67
+  },
+  {
+   "check": "dev primary C_NDS_2026092803",
+   "ok": true,
+   "recount": 0.5122222222222222,
+   "result": 0.5122222222222222
+  },
+  {
+   "check": "dev primary A_NDS_2026092804",
+   "ok": true,
+   "recount": 0.5111111111111111,
+   "result": 0.5111111111111111
+  },
+  {
+   "check": "dev primary C_NDS_2026092804",
+   "ok": true,
+   "recount": 0.42333333333333334,
+   "result": 0.42333333333333334
+  },
+  {
+   "check": "dev primary J_2026092802",
+   "ok": true,
+   "recount": 0.4177777777777778,
+   "result": 0.4177777777777778
+  },
+  {
+   "check": "dev primary J_2026092803",
+   "ok": true,
+   "recount": 0.48444444444444446,
+   "result": 0.48444444444444446
+  },
+  {
+   "check": "dev primary J_2026092804",
+   "ok": true,
+   "recount": 0.36999999999999994,
+   "result": 0.36999999999999994
+  },
+  {
+   "check": "dev primary ADAF_barrow",
+   "ok": true,
+   "recount": 0.5555555555555557,
+   "result": 0.5555555555555557
+  },
+  {
+   "check": "dev primary ADAF_AO",
+   "ok": true,
+   "recount": 0.29777777777777775,
+   "result": 0.29777777777777775
+  },
+  {
+   "check": "dev primary CONT",
+   "ok": true,
+   "recount": 0.4155555555555555,
+   "result": 0.4155555555555555
+  },
+  {
+   "check": "dev adapt_effect_A_minus_C mean",
+   "ok": true,
+   "recount": 0.1411111111111111,
+   "result": 0.1411111111111111
+  },
+  {
+   "check": "dev adapt_effect_A_minus_C lo95",
+   "ok": true,
+   "recount": 0.07072971910190551,
+   "result": 0.07072971910190551
+  },
+  {
+   "check": "dev adapt_effect_A_minus_C hi95",
+   "ok": true,
+   "recount": 0.191773288439955,
+   "result": 0.191773288439955
+  },
+  {
+   "check": "dev adapt_effect_A_minus_C label",
+   "ok": true,
+   "recount": "ADAPT_GAIN",
+   "result": "ADAPT_GAIN"
+  },
+  {
+   "check": "dev milestone_A_minus_ADAF_barrow mean",
+   "ok": true,
+   "recount": 0.04333333333333319,
+   "result": 0.04333333333333319
+  },
+  {
+   "check": "dev milestone_A_minus_ADAF_barrow lo95",
+   "ok": true,
+   "recount": -0.041423640070428994,
+   "result": -0.041423640070428994
+  },
+  {
+   "check": "dev milestone_A_minus_ADAF_barrow hi95",
+   "ok": true,
+   "recount": 0.12163847222015331,
+   "result": 0.12163847222015331
+  },
+  {
+   "check": "dev milestone_A_minus_ADAF_barrow label",
+   "ok": true,
+   "recount": "NOT_DISTINGUISHED",
+   "result": "NOT_DISTINGUISHED"
+  },
+  {
+   "check": "english A_minus_C mean",
+   "ok": true,
+   "recount": -0.0718050065876152,
+   "result": -0.0718050065876152
+  }
+ ],
+ "n_checks": 71,
+ "n_failed": 0,
+ "verdict": "MATCH"
+}

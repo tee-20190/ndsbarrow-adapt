@@ -1,0 +1,494 @@
+{
+ "schema": "s2_boot_v1",
+ "freeze_sha256": "b5fdd0a9b59a62f2151da1adcd16e4187223420e135f012ad9244ac23445cb5a",
+ "analysis": {
+  "scorer": "work/stage1_d1_v0_2026-10-07/score_v0.py (benchmark v0, legacy IGNORE)",
+  "engine": "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/engine.py",
+  "master_seed": 2026100702,
+  "streams": [
+   "geo",
+   "train_paired",
+   "train_independent_d1",
+   "train_independent_ctl"
+  ],
+  "reps": 5000,
+  "budgets_per_km2": [
+   0.5,
+   1.0,
+   2.0
+  ],
+  "grids": {
+   "2km": {
+    "size_m": 2000.0,
+    "offset_m": [
+     0.0,
+     0.0
+    ]
+   },
+   "4km": {
+    "size_m": 4000.0,
+    "offset_m": [
+     0.0,
+     0.0
+    ]
+   },
+   "2km_offset1000": {
+    "size_m": 2000.0,
+    "offset_m": [
+     1000.0,
+     1000.0
+    ]
+   }
+  },
+  "designs": {
+   "paired": "ten prespecified (D1_s, CTL_s) pairs resampled with replacement (one index draws both arms); shared geography",
+   "independent": "ten D1 runs and ten controls resampled independently; shared geography"
+  },
+  "primary": {
+   "grid": "2km",
+   "design": "paired",
+   "decoder": "RAW",
+   "b": "0.5"
+  },
+  "interval": "percentile 2.5 / 97.5, numpy linear interpolation, unrounded",
+  "clear_rule": "primary lower95 > 0 (strict, unrounded)",
+  "n_star_zero": "replicate undefined: dropped and counted (expected 0)",
+  "incomplete": "fewer than ten valid pairs -> NOT_EVALUATED; no smaller denominator"
+ },
+ "pairs": [
+  [
+   "D1F1_BARROW_L_2026092805",
+   "S2CTL_BARROW_2026092805"
+  ],
+  [
+   "D1F1_BARROW_L_2026092806",
+   "S2CTL_BARROW_2026092806"
+  ],
+  [
+   "D1F1_BARROW_L_2026092807",
+   "S2CTL_BARROW_2026092807"
+  ],
+  [
+   "D1F1_BARROW_L_2026092808",
+   "S2CTL_BARROW_2026092808"
+  ],
+  [
+   "D1F1_BARROW_L_2026092809",
+   "S2CTL_BARROW_2026092809"
+  ],
+  [
+   "D1F1_BARROW_L_2026092810",
+   "S2CTL_BARROW_2026092810"
+  ],
+  [
+   "D1F1_BARROW_L_2026092811",
+   "S2CTL_BARROW_2026092811"
+  ],
+  [
+   "D1F1_BARROW_L_2026092812",
+   "S2CTL_BARROW_2026092812"
+  ],
+  [
+   "D1F1_BARROW_L_2026092813",
+   "S2CTL_BARROW_2026092813"
+  ],
+  [
+   "D1F1_BARROW_L_2026092814",
+   "S2CTL_BARROW_2026092814"
+  ]
+ ],
+ "N": 728,
+ "total_scored_km2": 422.84319333092424,
+ "grids": {
+  "2km": {
+   "blocks": {
+    "J": 126,
+    "blocks_with_labels": 48,
+    "background_only_blocks": 78,
+    "zero_area_blocks": 0,
+    "total_area_km2": 422.84319333092424,
+    "total_labels": 728,
+    "largest_area_share": 0.03746480850304792,
+    "largest_label_share": 0.09615384615384616,
+    "J_area": 83.45740541977075,
+    "J_labels": 20.341751746372918,
+    "cells_with_scored_area": 142,
+    "cells_total": 142,
+    "cell_merges": 16
+   },
+   "decoders": {
+    "RAW": {
+     "0.5": {
+      "point": 0.12335164835164832,
+      "paired": {
+       "lower95": 0.08367089880859245,
+       "upper95": 0.172124796460177,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.0847728066079038,
+       "upper95": 0.1721699224812981,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "1.0": {
+      "point": 0.21002747252747253,
+      "paired": {
+       "lower95": 0.16513116822740254,
+       "upper95": 0.2624190624933595,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.1656120601416846,
+       "upper95": 0.26268845892913056,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "2.0": {
+      "point": 0.2644230769230769,
+      "paired": {
+       "lower95": 0.20824652395254714,
+       "upper95": 0.3223014082087333,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.20851340416549394,
+       "upper95": 0.32291666666666663,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     }
+    },
+    "NMS60": {
+     "0.5": {
+      "point": 0.10906593406593405,
+      "paired": {
+       "lower95": 0.08216067084539307,
+       "upper95": 0.13965593455727932,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.0828144461492027,
+       "upper95": 0.14004158465164881,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "1.0": {
+      "point": 0.14148351648351648,
+      "paired": {
+       "lower95": 0.1098167095092934,
+       "upper95": 0.17264041289592755,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.1118542688008422,
+       "upper95": 0.1719027440909307,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "2.0": {
+      "point": 0.13118131868131866,
+      "paired": {
+       "lower95": 0.09760584170299896,
+       "upper95": 0.16705482826426135,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.09783948822332068,
+       "upper95": 0.16758786609572304,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     }
+    }
+   }
+  },
+  "4km": {
+   "blocks": {
+    "J": 51,
+    "blocks_with_labels": 25,
+    "background_only_blocks": 26,
+    "zero_area_blocks": 0,
+    "total_area_km2": 422.84319333092424,
+    "total_labels": 728,
+    "largest_area_share": 0.12018245121895504,
+    "largest_label_share": 0.260989010989011,
+    "J_area": 24.215978840727526,
+    "J_labels": 8.292921074043939,
+    "cells_with_scored_area": 59,
+    "cells_total": 59,
+    "cell_merges": 8
+   },
+   "decoders": {
+    "RAW": {
+     "0.5": {
+      "point": 0.12335164835164832,
+      "paired": {
+       "lower95": 0.08351086618526067,
+       "upper95": 0.18174674430958432,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.08470514284241844,
+       "upper95": 0.18302767868655165,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "1.0": {
+      "point": 0.21002747252747253,
+      "paired": {
+       "lower95": 0.16437476427150768,
+       "upper95": 0.2675230987917554,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.16603096830996458,
+       "upper95": 0.26644414832391844,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "2.0": {
+      "point": 0.2644230769230769,
+      "paired": {
+       "lower95": 0.2096607424717627,
+       "upper95": 0.31446119240912146,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.21057357594936701,
+       "upper95": 0.3151814281840718,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     }
+    },
+    "NMS60": {
+     "0.5": {
+      "point": 0.10906593406593405,
+      "paired": {
+       "lower95": 0.08157524698631378,
+       "upper95": 0.14862287968441804,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.08243850594430105,
+       "upper95": 0.14899183403222238,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "1.0": {
+      "point": 0.14148351648351648,
+      "paired": {
+       "lower95": 0.11056229456545803,
+       "upper95": 0.17030862068965516,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.11150568351556431,
+       "upper95": 0.16915133196690468,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "2.0": {
+      "point": 0.13118131868131866,
+      "paired": {
+       "lower95": 0.09804472327372406,
+       "upper95": 0.16147125723738626,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.09806829559617786,
+       "upper95": 0.16187715804866967,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     }
+    }
+   }
+  },
+  "2km_offset1000": {
+   "blocks": {
+    "J": 191,
+    "blocks_with_labels": 57,
+    "background_only_blocks": 134,
+    "zero_area_blocks": 0,
+    "total_area_km2": 422.8431933309243,
+    "total_labels": 728,
+    "largest_area_share": 0.06474574112204912,
+    "largest_label_share": 0.25137362637362637,
+    "J_area": 87.154716889911,
+    "J_labels": 11.194795319166913,
+    "cells_with_scored_area": 209,
+    "cells_total": 209,
+    "cell_merges": 18
+   },
+   "decoders": {
+    "RAW": {
+     "0.5": {
+      "point": 0.12335164835164832,
+      "paired": {
+       "lower95": 0.07668688392810079,
+       "upper95": 0.17381065976008722,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.07752163037701308,
+       "upper95": 0.17311857742829057,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "1.0": {
+      "point": 0.21002747252747253,
+      "paired": {
+       "lower95": 0.15981963721109743,
+       "upper95": 0.2595019419306184,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.16064495977255394,
+       "upper95": 0.25851977401129944,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "2.0": {
+      "point": 0.2644230769230769,
+      "paired": {
+       "lower95": 0.20705516664422946,
+       "upper95": 0.30875175716648284,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.20614025912060488,
+       "upper95": 0.30776513406567435,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     }
+    },
+    "NMS60": {
+     "0.5": {
+      "point": 0.10906593406593405,
+      "paired": {
+       "lower95": 0.07534918144237404,
+       "upper95": 0.14170864682528667,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.07635652485176006,
+       "upper95": 0.14129897402358518,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "1.0": {
+      "point": 0.14148351648351648,
+      "paired": {
+       "lower95": 0.10626113026749436,
+       "upper95": 0.17043749210303055,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.1070815191157182,
+       "upper95": 0.17017903329281467,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     },
+     "2.0": {
+      "point": 0.13118131868131866,
+      "paired": {
+       "lower95": 0.0979512469043368,
+       "upper95": 0.1615885477511682,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      },
+      "independent": {
+       "lower95": 0.09826165500975124,
+       "upper95": 0.16091816405189727,
+       "dropped_undefined": 0,
+       "replicates": 5000
+      }
+     }
+    }
+   }
+  }
+ },
+ "primary": {
+  "grid": "2km",
+  "design": "paired",
+  "decoder": "RAW",
+  "b": "0.5",
+  "point": 0.12335164835164832,
+  "lower95": 0.08367089880859245,
+  "upper95": 0.172124796460177,
+  "dropped_undefined": 0,
+  "replicates": 5000,
+  "clear": true
+ },
+ "sensitivity_raw_0.5": {
+  "2km/paired": {
+   "lower95": 0.08367089880859245,
+   "upper95": 0.172124796460177,
+   "dropped_undefined": 0,
+   "replicates": 5000
+  },
+  "2km/independent": {
+   "lower95": 0.0847728066079038,
+   "upper95": 0.1721699224812981,
+   "dropped_undefined": 0,
+   "replicates": 5000
+  },
+  "4km/paired": {
+   "lower95": 0.08351086618526067,
+   "upper95": 0.18174674430958432,
+   "dropped_undefined": 0,
+   "replicates": 5000
+  },
+  "4km/independent": {
+   "lower95": 0.08470514284241844,
+   "upper95": 0.18302767868655165,
+   "dropped_undefined": 0,
+   "replicates": 5000
+  },
+  "2km_offset1000/paired": {
+   "lower95": 0.07668688392810079,
+   "upper95": 0.17381065976008722,
+   "dropped_undefined": 0,
+   "replicates": 5000
+  },
+  "2km_offset1000/independent": {
+   "lower95": 0.07752163037701308,
+   "upper95": 0.17311857742829057,
+   "dropped_undefined": 0,
+   "replicates": 5000
+  }
+ },
+ "wall_s": 187.5
+}

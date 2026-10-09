@@ -1,0 +1,146 @@
+{
+ "index": 3,
+ "phase": "confirm",
+ "recipe": "F1",
+ "status": "PASS",
+ "violations": [],
+ "freeze_sha256": "f323e17e58e996c3f9ea62c5d3a684ea4e05d25be6dc6f76063b4ee05ed86ae6",
+ "selection_sha256": "87f645b010dff081a5c14a0808fb2e00f8a2729788d87d14795ba518ce404477",
+ "trained": {
+  "D1F1_BARROW_L_2026092805": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e",
+  "D1F1_BARROW_L_2026092806": "f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade",
+  "D1F1_BARROW_L_2026092807": "d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511",
+  "D1F1_BARROW_L_2026092808": "61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5",
+  "D1F1_BARROW_L_2026092809": "38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d",
+  "D1F1_BARROW_L_2026092810": "6b294645c62a074f864b6fe2ab8df4e9796e69b25a9abd6993093b53b78f21a5",
+  "D1F1_BARROW_L_2026092811": "ed12f627ec5975fb7cfde6565f9af6eab7b30b7f89423f49da97c1001bf69229",
+  "D1F1_BARROW_L_2026092812": "5437f281701203d9295e1f3b1da9a80261e2681cdecfe94b51ee4c7e54a815eb",
+  "D1F1_BARROW_L_2026092813": "3a1c2643ef26a336ba8915780328f1af27bf32a52b24905cb3ccb3f19c18a044",
+  "D1F1_BARROW_L_2026092814": "24db9082f55fe2f8cbd45e265b6164d73ec01823858c3ebd4630fe6b0b5f0858"
+ },
+ "detectors": {
+  "D1F1_BARROW_L_2026092805": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092806": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092807": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092808": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092809": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092810": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092811": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092812": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092813": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  },
+  "D1F1_BARROW_L_2026092814": {
+   "window": 256,
+   "dice_below": 0.05,
+   "background_mass_below": 1.0,
+   "first_on": null,
+   "updates_on": 0,
+   "on_at_end": false,
+   "last_update": 5115
+  }
+ },
+ "dev_models": [
+  "D1F1_BARROW_L_2026092805",
+  "D1F1_BARROW_L_2026092806",
+  "D1F1_BARROW_L_2026092807",
+  "D1F1_BARROW_L_2026092808",
+  "D1F1_BARROW_L_2026092809",
+  "D1F1_BARROW_L_2026092810",
+  "D1F1_BARROW_L_2026092811",
+  "D1F1_BARROW_L_2026092812",
+  "D1F1_BARROW_L_2026092813",
+  "D1F1_BARROW_L_2026092814"
+ ],
+ "proposals": {
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092805_PRIVATE.json": "35436a3fb54132ab19188c73fb9e6960edac6f53e07866e36d0069b0b192fad7",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092806_PRIVATE.json": "884ddd85c84c48d2b85a2953cb6a1de2095eb3780f8039f9455a7177329b6c0b",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092807_PRIVATE.json": "3bf824d61e30064fd85df5c107c718332a433d9164422b58019de6c8ac5f2f6c",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092808_PRIVATE.json": "a8bf716aa9749ecb9594da4c918144a1342557ca9cc983e24398b7b6e1456ce3",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092809_PRIVATE.json": "451edf1c88cef230674fb1623790285966dfd1e8df843aa20930efe40658d68b",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092810_PRIVATE.json": "c74352c0db6f346838512ca10e05bbe7f0b9f7ca96c72198d48d37655ca45de8",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092811_PRIVATE.json": "be6946fb8711e10642d4549c42279ca4633b114f6905694497236834953bdb06",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092812_PRIVATE.json": "b5de6fa50ec37c53ccf5a59b8495ed970f8ca7651fa7640b9b1a6e47a2e23e51",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092813_PRIVATE.json": "7e1426f57fa23add844158dc948e6350cfc57d262ec428d0ac93cbbcc7435d62",
+  "dev/PROPOSALS_D1F1_BARROW_L_2026092814_PRIVATE.json": "3f26138903ae3a2a52c855145cca717f1a9720e7fa7a5497f4529da0a1b1626a"
+ },
+ "top": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z",
+ "previous": null,
+ "utc": "2026-10-07T02:42:11Z",
+ "attribution": {
+  "terrain": "LGLN (2026), DGM1, CC BY 4.0; modified (resampled to 0.5 m, SLRM)",
+  "register": "Niedersächsisches Landesamt für Denkmalpflege, Denkmalatlas Niedersachsen, CC BY-SA 4.0, modified",
+  "adaf_weights": "ADAF AO and barrow HRNets: Čož, Corns, Curran, Kocev, Kokalj 2026, J. Archaeol. Sci. Rep. 71:105733; weights CC BY-SA 4.0 (Zenodo 10.5281/zenodo.15848662), code Apache-2.0",
+  "adapted_weights": "D1 AO_L / BARROW_L runs are adaptations of the ADAF weights above (modified by continued training on Lower Saxony register labels); any shared copy stays CC BY-SA 4.0 with this attribution"
+ }
+}

@@ -1,0 +1,232 @@
+{
+ "schema": "v0_register_semantics_v1",
+ "regions": {
+  "verden": {
+   "register_records": 2061,
+   "grabhuegel_records": 759,
+   "eligible_entities": 728,
+   "types": {
+    "Grabhügelfeld": {
+     "records": 60,
+     "attributes": {
+      "fachbereich": {
+       "Archäologie": 60
+      },
+      "ausweisung": {
+       "Archäologie": 60
+      },
+      "ausweisung_code": {
+       "1": 60
+      },
+      "siteProtectionClassification": {
+       "archaeological": 60
+      },
+      "siteDesignation.designation.title": {
+       "archaeologischesDenkmal": 60
+      },
+      "legalFoundationDocument.title": {
+       "DSchG ND": 60
+      }
+     },
+     "geometry_types": {
+      "Polygon": 60
+     },
+     "area_ha": {
+      "median": 0.8387062911193127,
+      "p90": 2.4097388810858367,
+      "max": 10.574681781224852,
+      "sum": 71.29135394657175
+     },
+     "intersecting_scored_area": 59,
+     "eligible_barrow_centroids_per_polygon": {
+      "0": 3,
+      "1": 0,
+      "2-4": 17,
+      "5-9": 25,
+      ">=10": 15,
+      "max": 20
+     },
+     "all_grabhuegel_centroids_per_polygon": {
+      "0": 0,
+      "1": 1,
+      "2-4": 17,
+      "5-9": 27,
+      ">=10": 15,
+      "max": 20
+     },
+     "eligible_inside_any_polygon": 431,
+     "eligible_inside_any_polygon_plus_30m": 432,
+     "descriptions_present": 2,
+     "descriptions_stating_a_barrow_count": 2,
+     "descriptions_citing_protection_law": 0,
+     "stated_count_vs_individual_records": {
+      "with_stated_count": 2,
+      "stated_equals_records_inside": 1,
+      "stated_more_than_inside": 1,
+      "stated_fewer_than_inside": 0,
+      "sum_stated": 10,
+      "sum_grabhuegel_records_inside": 5
+     },
+     "area_ha_of_polygons_without_any_grabhuegel_record": {
+      "n": 0,
+      "median": null,
+      "max": 0.0
+     },
+     "polygons_with_parsable_site_number": 60,
+     "eligible_inside_sharing_the_polygon_site_number": 55
+    },
+    "Grabungsschutzgebiet": {
+     "records": 0
+    }
+   }
+  },
+  "oldenburg": {
+   "register_records": 1914,
+   "grabhuegel_records": 967,
+   "eligible_entities": 959,
+   "types": {
+    "Grabhügelfeld": {
+     "records": 96,
+     "attributes": {
+      "fachbereich": {
+       "Archäologie": 96
+      },
+      "ausweisung": {
+       "Archäologie": 96
+      },
+      "ausweisung_code": {
+       "1": 96
+      },
+      "siteProtectionClassification": {
+       "archaeological": 96
+      },
+      "siteDesignation.designation.title": {
+       "archaeologischesDenkmal": 96
+      },
+      "legalFoundationDocument.title": {
+       "DSchG ND": 96
+      }
+     },
+     "geometry_types": {
+      "Polygon": 94,
+      "MultiPolygon": 2
+     },
+     "area_ha": {
+      "median": 0.034595185952007924,
+      "p90": 2.85977546966349,
+      "max": 38.28455314550426,
+      "sum": 142.06018579223422
+     },
+     "intersecting_scored_area": 96,
+     "eligible_barrow_centroids_per_polygon": {
+      "0": 46,
+      "1": 3,
+      "2-4": 17,
+      "5-9": 10,
+      ">=10": 20,
+      "max": 109
+     },
+     "all_grabhuegel_centroids_per_polygon": {
+      "0": 46,
+      "1": 3,
+      "2-4": 17,
+      "5-9": 10,
+      ">=10": 20,
+      "max": 109
+     },
+     "eligible_inside_any_polygon": 617,
+     "eligible_inside_any_polygon_plus_30m": 688,
+     "descriptions_present": 85,
+     "descriptions_stating_a_barrow_count": 83,
+     "descriptions_citing_protection_law": 1,
+     "stated_count_vs_individual_records": {
+      "with_stated_count": 83,
+      "stated_equals_records_inside": 23,
+      "stated_more_than_inside": 54,
+      "stated_fewer_than_inside": 6,
+      "sum_stated": 1534,
+      "sum_grabhuegel_records_inside": 540
+     },
+     "area_ha_of_polygons_without_any_grabhuegel_record": {
+      "n": 46,
+      "median": 0.011237206511168319,
+      "max": 0.011237261689971679
+     },
+     "polygons_with_parsable_site_number": 96,
+     "eligible_inside_sharing_the_polygon_site_number": 43
+    },
+    "Grabungsschutzgebiet": {
+     "records": 1,
+     "attributes": {
+      "fachbereich": {
+       "Infofläche": 1
+      },
+      "ausweisung": {
+       "Grabungsschutzgebiete": 1
+      },
+      "ausweisung_code": {
+       "5": 1
+      },
+      "siteProtectionClassification": {
+       "archaeological": 1
+      },
+      "siteDesignation.designation.title": {
+       "grabungsschutzgebiet": 1
+      },
+      "legalFoundationDocument.title": {
+       "DSchG ND": 1
+      }
+     },
+     "geometry_types": {
+      "Polygon": 1
+     },
+     "area_ha": {
+      "median": 1033.3641253510812,
+      "p90": 1033.3641253510812,
+      "max": 1033.3641253510812,
+      "sum": 1033.3641253510812
+     },
+     "intersecting_scored_area": 1,
+     "eligible_barrow_centroids_per_polygon": {
+      "0": 0,
+      "1": 0,
+      "2-4": 0,
+      "5-9": 0,
+      ">=10": 1,
+      "max": 89
+     },
+     "all_grabhuegel_centroids_per_polygon": {
+      "0": 0,
+      "1": 0,
+      "2-4": 0,
+      "5-9": 0,
+      ">=10": 1,
+      "max": 89
+     },
+     "eligible_inside_any_polygon": 89,
+     "eligible_inside_any_polygon_plus_30m": 89,
+     "descriptions_present": 1,
+     "descriptions_stating_a_barrow_count": 1,
+     "descriptions_citing_protection_law": 1,
+     "stated_count_vs_individual_records": {
+      "with_stated_count": 1,
+      "stated_equals_records_inside": 0,
+      "stated_more_than_inside": 1,
+      "stated_fewer_than_inside": 0,
+      "sum_stated": 600,
+      "sum_grabhuegel_records_inside": 89
+     },
+     "area_ha_of_polygons_without_any_grabhuegel_record": {
+      "n": 0,
+      "median": null,
+      "max": 0.0
+     },
+     "polygons_with_parsable_site_number": 0,
+     "eligible_inside_sharing_the_polygon_site_number": 0
+    }
+   },
+   "cemeteries_inside_protection_area": 11,
+   "eligible_inside_protection_but_no_cemetery": 26
+  }
+ }
+}

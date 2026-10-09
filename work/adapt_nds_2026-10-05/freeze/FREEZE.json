@@ -1,0 +1,254 @@
+{
+ "schema": "adapt_nds_freeze_v1",
+ "utc": "2026-10-05T04:11:12Z",
+ "packet_sha256": "52b7050638ee2ee0bf7c119af927fe4f18952765026d8219977220f585e28574",
+ "confirm_selection_sha256": "eefd33656ee4e579923d7d031243005b0eade376ed07d8641c60fd46b8e4455e",
+ "pins": {
+  "score_adapt": {
+   "path": "work/adapt_nds_2026-10-05/score_adapt.py",
+   "sha256": "c2ae6c421e65b4571993f2c862a0b848254bb175551a3021114a2a95a8edc4e2"
+  },
+  "region_score": {
+   "path": "work/holdout_region_2026-10/step2/region_score.py",
+   "sha256": "b3337741071da6e85d41849f4f420a71494fc5ebd376c88d1a1933fccbada442"
+  },
+  "hier_uncertainty": {
+   "path": "work/holdout_region_2026-10/step2/hier_uncertainty.py",
+   "sha256": "f73d47b9130147170ce2990d629ea750ea23b1d4d6199edeebd8b68c67809ec4"
+  },
+  "fuse_eval": {
+   "path": "work/fusion_2026-10-03/fuse_eval.py",
+   "sha256": "b6664bf34b6642a53c16846ce313bd7ab116160b889a841f83543b27ed7d790d"
+  },
+  "dev_group_manifest": {
+   "path": "outputs/fresh_region_2026-10-03/step0/GROUP_MANIFEST_PRIVATE.json",
+   "sha256": "70ef0920816f3d656b19cf62b73d43dd12f63105d570fd290751ee35fa6c498c"
+  },
+  "dev_individual_manifest": {
+   "path": "outputs/fresh_region_2026-10-03/step0/INDIVIDUAL_MANIFEST_PRIVATE.json",
+   "sha256": "a97b6124310b22f05d441ae0937aa17386aec0704fa5689841c03124222873d2"
+  },
+  "dev_infer_manifest": {
+   "path": "outputs/fresh_region_2026-10-03/step2/INFER_MANIFEST_PRIVATE.json",
+   "sha256": "c1e1ba018bf1f510baec56331dd65d0c0fa80b6059258f0c65c4cd09c374d305"
+  },
+  "w_fit": {
+   "path": "work/holdout_region_2026-10/chain/candidates/FIT_TABLES_CANDIDATE.json",
+   "sha256": "65c494fd53386957ed1d84c3231221dd5afccb143c3b17383e2072c7854acd15"
+  },
+  "i_fit": {
+   "path": "outputs/hr3_ireland_2026-10-02/step2/FIT_TABLES_PRIVATE.json",
+   "sha256": "9ef37686b732ebf280408f36f36ed088598628a40a6fc25348d1e219319f44fa"
+  },
+  "ls_fit": {
+   "path": "outputs/adapt_nds_2026-10-05/fit/FIT_TABLE_PRIVATE.json",
+   "sha256": "58d6aa16a87f396a04eeb03719e0cd7f87beb872584838fc1c7f49d95b48e28f"
+  },
+  "ls_plan": {
+   "path": "outputs/adapt_nds_2026-10-05/fit/FIT_STAGING_PINNED_PRIVATE.json",
+   "sha256": "f02763a9a4b13247dc665ae0b19732c31a08aa68ab115e8489f40a6dafee0f3c"
+  },
+  "confirm_build": {
+   "path": "work/adapt_nds_2026-10-05/confirm_build.py",
+   "sha256": "c08c477e3ff106589edbcc0caa12cb3803440e7f46cbc0350b5b182fc1336137"
+  },
+  "confirm_plan_lock": {
+   "path": "work/adapt_nds_2026-10-05/CONFIRM_PLAN_LOCK.json",
+   "sha256": "c03a4ad80d8cf36fa108581aba40e764e9dbf8cb0f5a00189ba1a4d981ef40ca"
+  },
+  "confirm_plan": {
+   "path": "outputs/adapt_nds_2026-10-05/confirm/CONFIRM_PLAN_PRIVATE.json",
+   "sha256": "10017548b5a453162039853913c605894f6f52a4ac48274eead1e26d99d26091"
+  },
+  "confirm_labels": {
+   "path": "outputs/adapt_nds_2026-10-05/confirm/CONFIRM_LABELS_PRIVATE.json",
+   "sha256": "cfe3abadd17eec96e27d120447cf77616130666cf746401e1ce4e93f45fb709a"
+  },
+  "confirm_tile_index": {
+   "path": "outputs/adapt_nds_2026-10-05/confirm/TILE_INDEX_PRIVATE.json",
+   "sha256": "7a5c25f7150ab076a4bb328f6a3aed3308e5b8e0a8cf9d4232b566e353529777"
+  },
+  "english_e45_2026092802": {
+   "path": "outputs/adapt_nds_2026-10-05/plans/ENGLISH_E45_2026092802_PRIVATE.json",
+   "sha256": "8937cacffde4c2d43bc70fc5b66573f65220a6df3d60fd46bafeb43e94e69b5c"
+  },
+  "english_e45_2026092803": {
+   "path": "outputs/adapt_nds_2026-10-05/plans/ENGLISH_E45_2026092803_PRIVATE.json",
+   "sha256": "953b19967824647f398c24cd560e885955ab75c808155e421735e7c9a4dd05f3"
+  },
+  "english_e45_2026092804": {
+   "path": "outputs/adapt_nds_2026-10-05/plans/ENGLISH_E45_2026092804_PRIVATE.json",
+   "sha256": "4811c7d29263a41c3a827a341bb5465f9881b77dc15a3c49dbc4eec75abeed3a"
+  }
+ },
+ "models": {
+  "J_2026092802": {
+   "path": "outputs/joint_campaign_2026-10-03/weights/J_2026092802/final.pt",
+   "sha256": "aa2f3f62d7573a1346c374797c24615a3cab18f911ec6c78e868bab3f9b97046",
+   "bytes": 319970119
+  },
+  "J_2026092803": {
+   "path": "outputs/joint_campaign_2026-10-03/weights/J_2026092803/final.pt",
+   "sha256": "3e1626583ff074e47451c2fc635b4f78e76099f00f431ccde854af998986a152",
+   "bytes": 319970119
+  },
+  "J_2026092804": {
+   "path": "outputs/joint_campaign_2026-10-03/weights/J_2026092804/final.pt",
+   "sha256": "58c84f3c959955809608f7fb5316a4406872d130719b9d3c0518704a6d4e063e",
+   "bytes": 319970119
+  },
+  "ADAF_AO": {
+   "path": "work/adaf_head_to_head_2026-09-19/weights/AO_HRNet_SLRM_512px_pretrained_train_12_val_124_with_Transformation.tar",
+   "sha256": "a2232cc15d5849d75c79c35af9b8b72cbd512766b880851c9c72493a36c79dbb",
+   "bytes": 861530273
+  },
+  "ADAF_barrow": {
+   "path": "work/campaign_2026-09-22/adaf_weights/barrow_HRNet_SLRM_512px_pretrained_train_12_val_124_with_Transformation.tar",
+   "sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+   "bytes": 861530273
+  },
+  "CONT": {
+   "path": "outputs/aim_train_audit_2026-09-24/training/CONT/epoch41.pt",
+   "sha256": "91091fc6d3b7640bd300c8f7820626ea4ccc5ea3ee8f9f89425000f958bdc383",
+   "bytes": 320026795
+  }
+ },
+ "start_weights": {
+  "2026092802": {
+   "path": "outputs/joint_campaign_2026-10-03/weights/J_2026092802/final.pt",
+   "sha256": "aa2f3f62d7573a1346c374797c24615a3cab18f911ec6c78e868bab3f9b97046",
+   "bytes": 319970119
+  },
+  "2026092803": {
+   "path": "outputs/joint_campaign_2026-10-03/weights/J_2026092803/final.pt",
+   "sha256": "3e1626583ff074e47451c2fc635b4f78e76099f00f431ccde854af998986a152",
+   "bytes": 319970119
+  },
+  "2026092804": {
+   "path": "outputs/joint_campaign_2026-10-03/weights/J_2026092804/final.pt",
+   "sha256": "58c84f3c959955809608f7fb5316a4406872d130719b9d3c0518704a6d4e063e",
+   "bytes": 319970119
+  }
+ },
+ "dev_references": {
+  "top": "outputs/fresh_region_2026-10-03/step2/chain_runs/run_s1_20261004T174340Z",
+  "session_verified_sha256": "0059f2d4b9449beffe52c0a33c4306e5510ed20255b0b058566eac4042a36dd8",
+  "proposals": {
+   "J_2026092802": "dc13c847d147cbef80db579869b6ceb96b10e3c3c8bc0a44a0e357e146f74315",
+   "J_2026092803": "f8f52d5eb60ff40a9446ccee7ca4cba9528d227abeab091cb2f2cabb75fc0047",
+   "J_2026092804": "e5941d1d713b83d368e4631189cccd0d5bfde1c5099d8ca27341bb1d3b435076",
+   "ADAF_barrow": "c5d790c8f7fe26872ee74ec88cd54aa6046428f8a0338279100b4135e564d2f9",
+   "ADAF_AO": "458010e6992fa5c502297d1351f23ba03f9b6e93de4799806a196f4076f05e48",
+   "CONT": "81b12674308abeef9cbba8b51d7db6577a4a98b1e74bc20e4ef7155af45b0ee9"
+  }
+ },
+ "confirm": {
+  "build_lock": "work/adapt_nds_2026-10-05/CONFIRM_BUILD_LOCK.json",
+  "group_manifest": "outputs/adapt_nds_2026-10-05/confirm/run/GROUP_MANIFEST_PRIVATE.json",
+  "individual_manifest": "outputs/adapt_nds_2026-10-05/confirm/run/INDIVIDUAL_MANIFEST_PRIVATE.json",
+  "infer_manifest": "outputs/adapt_nds_2026-10-05/confirm/run/INFER_MANIFEST_PRIVATE.json",
+  "staging_plan": "outputs/adapt_nds_2026-10-05/confirm/run/STAGING_PLAN_PRIVATE.json",
+  "inside_masks": "outputs/adapt_nds_2026-10-05/confirm/run/INSIDE_MASKS_PRIVATE.npz"
+ },
+ "cu_projection": {
+  "cu_per_h": 8.724,
+  "per_window_base_s": 2.38,
+  "per_model_s": 1.25,
+  "train_arm_s": 509,
+  "confirm_windows_planned": 813,
+  "dev_windows": 717,
+  "sessions": {
+   "1": {
+    "seed": 2026092802,
+    "confirm_models": 8,
+    "setup_s": 1305,
+    "staging_s": {
+     "welsh": 638,
+     "irish": 61,
+     "lower_saxony_fit": 1188,
+     "dev_verden": 305,
+     "confirm": 444
+    },
+    "train_s": 1018,
+    "confirm_pass_s": 10065,
+    "dev_pass_s": 3499,
+    "export_s": 600,
+    "chain_s": 17302,
+    "wall_s": 19207,
+    "wall_cap_s": 21627,
+    "cu": 46.54
+   },
+   "2": {
+    "seed": 2026092803,
+    "confirm_models": 2,
+    "setup_s": 925,
+    "staging_s": {
+     "welsh": 638,
+     "irish": 61,
+     "lower_saxony_fit": 1188,
+     "dev_verden": 305,
+     "confirm": 444
+    },
+    "train_s": 1018,
+    "confirm_pass_s": 3967,
+    "dev_pass_s": 3499,
+    "export_s": 600,
+    "chain_s": 11204,
+    "wall_s": 12729,
+    "wall_cap_s": 14005,
+    "cu": 30.85
+   },
+   "3": {
+    "seed": 2026092804,
+    "confirm_models": 2,
+    "setup_s": 925,
+    "staging_s": {
+     "welsh": 638,
+     "irish": 61,
+     "lower_saxony_fit": 1188,
+     "dev_verden": 305,
+     "confirm": 444
+    },
+    "train_s": 1018,
+    "confirm_pass_s": 3967,
+    "dev_pass_s": 3499,
+    "export_s": 600,
+    "chain_s": 11204,
+    "wall_s": 12729,
+    "wall_cap_s": 14005,
+    "cu": 30.85
+   }
+  },
+  "core_total_cu": 108.24,
+  "ceiling_cu": 120.0,
+  "headroom_cu": 11.76,
+  "optional_wi_dev_seed_2026092802": {
+   "wall_s": 4405,
+   "cu": 10.67,
+   "rule": "dropped first: runs (in session 3, from the verified local seed-02 weights) only if the measured spend of sessions 1-2 plus session 3's projection plus this pass stays within 120 CU with a 10 % margin"
+  },
+  "status": "PASS"
+ },
+ "english_list": {
+  "files": 5648,
+  "digest": "f04e7ab72ef429589328361ac766638923b14cb58cded082715ffca5ca98624b"
+ },
+ "shipped_files": 124,
+ "pinned_files": 170,
+ "smoke": {
+  "receipt": "work/adapt_nds_2026-10-05/SMOKE_RECEIPT.json",
+  "sha256": "ecdd24a8d34f4243120171e46ddcf8ad48cb45d807a9be648d6fb77191be2117",
+  "utc": "2026-10-05T04:09:08Z"
+ },
+ "rules": {
+  "adapt": "ADAPT_GAIN if mean >= +0.03 and lo95 > 0; ADAPT_HARM if mean <= -0.03; else NULL",
+  "milestone": "BEATS_ADAF_BARROW if mean >= +0.02 and lo95 > 0; TRAILS if hi95 < 0; else NOT_DISTINGUISHED",
+  "bootstrap": "cluster x seed, 2,000 draws, seed 20261005"
+ },
+ "attribution": {
+  "terrain": "LGLN (2026), DGM1, CC BY 4.0; modified (resampled to 0.5 m, SLRM)",
+  "register": "Niedersächsisches Landesamt für Denkmalpflege, Denkmalatlas Niedersachsen, CC BY-SA 4.0, modified",
+  "boundaries": "LGLN (2026), Verwaltungsgrenzen, CC BY 4.0"
+ },
+ "pins_freeze_sha256": "4bc5953324e53f3efcf9c7665124c6d4df8053923f87afd874a62923e141846b"
+}

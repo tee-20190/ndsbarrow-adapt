@@ -1,0 +1,51 @@
+{
+ "status": "FROZEN_PHASE_A",
+ "utc": "2026-09-26T04:11:00Z",
+ "note": "Frozen before any VALIDATION terrain fetch, VALIDATION label parse or reservation. The block list is pending Phase B step 0 (see DATA_MANIFEST.json block_list_status); its inputs and rule are frozen here.",
+ "sha256": {
+  "work/validation_cont_2026-09-26/PACKET.md": "7d11e3b27f4a1b37b0a3a7b570a49ef4a575d0d3ec55455ebb79cdcf1f01c3ac",
+  "work/validation_cont_2026-09-26/CONFIG.json": "1450b0bfc9db140a57656186a3511da285d280d634d32e729cfdf8fded31ebce",
+  "work/validation_cont_2026-09-26/DATA_MANIFEST.json": "d1d5c58f49d1832e39c14a98814cea05fc8c4f0c0bb5992fe8e745f606954e99",
+  "decisions/2026-09-26-validation-bucket-reallocation.md": "59496df673654b379294eba564c4015ae18783b625ac0ac5e6cd9a07b24c649b",
+  "work/validation_cont_2026-09-26/vguard.py": "1b20a9229a352d885dd5ce94d3d0da368479946c9f175d1771e010252ee761bf",
+  "work/validation_cont_2026-09-26/derive_blocks.py": "73786f43896bee245d24286b466f101d1bbdc32dc7a32071066f0a0bad398d31",
+  "work/validation_cont_2026-09-26/validation_run.py": "ca145563728e4719d33bee66ea5019fef437129e678ff279996394ecb432411a",
+  "work/validation_cont_2026-09-26/recount.py": "c57fe808b734614ddd687030f3ab3bc7d4a1ffd67ba2960c317465063c49c432",
+  "work/validation_cont_2026-09-26/smoke_check.py": "a6e402af562c9c4489d12c9f572e1534ad336d5cdbe0d7fd6aeaa32d5e2cf57d",
+  "work/validation_cont_2026-09-26/freeze.py": "a91824ca2dd6da5ffab5a804f3d7d4319458c8d245a63d41d604595f8790e68a",
+  "work/validation_cont_2026-09-26/tests/test_guards.py": "3de3eee14ae4ac4f64717591a99af4b753cc277f8f3d9e248e544386712b823b",
+  "outputs/validation_cont_2026-09-26/mosaics/README.md": "9e69bb70f7362927de57bad4398ec2d2ef42c9bf6f8b8355d9af1d13d20875d5",
+  "work/stage2_2026-09-24/stage2_run.py": "97257c5f3a28e540c7e949fc32707765c9d2a241634cc3e2a8e0d35a9cc0d9df",
+  "work/tta_ensemble_2026-09-24/tta_run.py": "07e9566eccf436e30762b82cd567fb77d018d0e5f09fa521486cfacc6bcf8dd2",
+  "work/campaign_2026-09-22/adaf_configs.py": "9eb322234a9dd28a36154849290fa40442a5f0054ad0a6a93bd43576ca63de36",
+  "work/adaf_head_to_head_2026-09-19/adapter.py": "85621f71c93a1aead31ec7eb3d4b78e46ff20fb7f3af24473bb72a58e9547d27",
+  "work/adaf_head_to_head_2026-09-19/vendor/adaf/installation/aitlas-0.0.1-py3-none-any.whl": "be2dbb7e3c39c30a91a79b00f7dc3365320cbc57584a8601e286a8b9c91ab69a",
+  "work/aim_train_audit_2026-09-24/holdout_eval.py": "c817a761f60ca9d61025522637c7080fc7327c24e1acc73f3bd538332cd653e0",
+  "work/campaign_2026-09-22/screen_scorer.py": "ef438f9799545a2f3e908ce8e5b217ce3d780a3788f524924da044d4f82b9432",
+  "verify/v3/v3_frozen_mixture.py": "a1bbf0d4e8e7c67e1d941c5fe5c5a19429d6944c8f2dc3f1c35c631a19bb1f47",
+  "verify/v3/v3_e0099_landscape.py": "32ffb95571907b575e3e352ab9cc99f3215a0839bf0239e1c380a63bb6659f24",
+  "targets/lidar-archaeology/v3_pro/external/adaf_stage1_2026-09-20/scripts/score_staged.py": "aaaf7f1b1bb83389c882d0b86d72a917303a78b655fa249367778bb872a99f6f",
+  "verify/v3/v3_fetch_england.py": "43e8141ec33a904b95e0090714fa9501cb640b591ff2272bf0ec16d9e34659d4",
+  "verify/v3/v3_data.py": "849a8fb726db8a21d8213831035d7762758638d3412cf95bc231a06c91b327a5",
+  "verify/v3/v3_protocol.py": "b62327d48c9c185457fec46326c6da65af3028af2907215a94a9f8b27dc09bdc",
+  "verify/v3/v3_common.py": "b1a4fef38fec1668703afefb0aacaa9865a5b7b8f88f1647eb6acf65fbbc6e7d",
+  "verify/v3/storage_guard.py": "3e042d497fc502ef516740fda2fa23049e423322993230c30c10da11e3e79d94",
+  "work/adaf_head_to_head_2026-09-19/weights/AO_HRNet_SLRM_512px_pretrained_train_12_val_124_with_Transformation.tar": "a2232cc15d5849d75c79c35af9b8b72cbd512766b880851c9c72493a36c79dbb",
+  "outputs/aim_train_audit_2026-09-24/training/CONT/epoch41.pt": "91091fc6d3b7640bd300c8f7820626ea4ccc5ea3ee8f9f89425000f958bdc383",
+  "targets/lidar-archaeology/v3_pro/results/G015_frozen_e0099_validation_eval/labels_VALIDATION.geojson": "f10253ca92eead06cac43484768edeb64e0947988b2d595ad9f0cfdb486e5196",
+  "targets/lidar-archaeology/v3_pro/results/E0097_fixed_e0075_family_validation_eval/labels_VALIDATION.geojson": "69cd44c925e7501093d938d6208681e669b6e114362afe9a0d79e7e892c0cbd9",
+  "targets/lidar-archaeology/v3_pro/SPLIT_v3.json": "ba09992c4eb8373b196c785567863dd6d996c0d2c6e0e84082da1458ef20b73c",
+  "work/adaf_followup_2026-09-19/english/STAGES_26_PLUS_73.json": "a0447a2d3815309d30f6a88da8da61908512cfc7455075c639225285f1661804",
+  "targets/lidar-archaeology/v3_pro/results/E0099_fullcohort_convnext_seed2_screen_eval/labels_SCREEN.geojson": "1700c2a8c9eb63a5e399e446bc53f9542dd4023be35030367894b02c20957e02"
+ },
+ "phase_a_receipts_sha256_recorded_not_enforced": {
+  "work/validation_cont_2026-09-26/receipts/DERIVE_SELFTEST.json": "db24e435271687c628ef80d4cb8892163235a656decd7d06414363b361f1b302",
+  "work/validation_cont_2026-09-26/receipts/SMOKE_CHECK.json": "0f06002776c046bedc373b9c6204250f9265a30426ce619b4e59879ae7d19449",
+  "work/validation_cont_2026-09-26/receipts/RESERVATION_DRYRUN.json": "72af89d54617b1a28ee468fbc4f1f07075f600a017ff072d97d68752dcbc8d42",
+  "work/validation_cont_2026-09-26/receipts/TESTS.xml": "cb4169b3e72fb7f29fa35ecb6df60d65463760ac9eda95f6859629f601be3774",
+  "work/validation_cont_2026-09-26/receipts/COMPRESSION.json": "df6900bd8d2b852c474e6eec8a69a175ee0757590bd5b5a72e18edc55098e04d"
+ },
+ "informational_not_verified": {
+  "targets/lidar-archaeology/v3_pro/LEDGER.jsonl": "12feeff0b22bf420a205fbded45151947321459d4fa78d50b399bc0f1e0b6faa"
+ }
+}

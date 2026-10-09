@@ -1,0 +1,60 @@
+BENCH-1 FUTILITY GATE (G): does F1-adapted J beat F1-adapted ADAF barrow on the D1 setting?
+Rule text drafted 2026-10-07 ~08:10Z (Opus 5.5). READY TO FREEZE; NOT FROZEN; NOT LAUNCHED. Coordinate-free.
+Freeze = this file's sha256 recorded in work/bench1_2026-10-07/gate/FREEZE_G.json with the code hashes listed below,
+committed before any GPU allocation.
+
+Purpose: a launch decision only. It touches no fresh terrain. It also serves as the F1-on-J collapse smoke
+(RECIPE.md: J-lineage starts under F1 are unmeasured). Development evidence (Verden was used by FRESH-1,
+ADAPT-MATCH-0 and to select F1 in D1).
+
+1. Arms
+   J_L (new): start JOINT1-J_2026092803, outputs/joint_campaign_2026-10-03/weights/J_2026092803/final.pt,
+     sha256 3e1626583ff074e47451c2fc635b4f78e76099f00f431ccde854af998986a152.
+   BARROW_L (existing, not retrained): D1-F1_BARROW_L_<seed> scores from work/d1_collapse_2026-10-06/RESULT.json
+     (freeze f323e17e), seeds 2026092805-09:
+       05 0.705556  06 0.694444  07 0.690000  08 0.693333  09 0.715556   mean 0.699778
+     Checkpoints: d9ece1fb..., f2916949..., d7052046..., 61ae1cb0..., 38d14080... (registry; archive k1).
+
+2. Identical inputs (checked in code, run refused otherwise)
+   - FIT: ADAPT-NDS-1 Lower Saxony windows (852 + 852; freeze ba07548b), by hash.
+   - Plan: match_schedule.local_plan at each seed (ADAPT-MATCH-0 / D1); the per-seed draw digest must equal the
+     digest recorded in D1's TRAIN_RESULT for D1F1_BARROW_L_<seed>.
+   - Recipe: F1 via d1_train.terms/update/lr_at (imported, byte-identical to freeze f323e17e); fresh AdamW 1e-4,
+     wd 1e-4, cosine to 1e-6 over 5,116 updates, frozen BatchNorm, batch 1, final weights only; per-update logging
+     and the online detector as RECIPE.md.
+   - Only the start loader differs: J final.pt through ADAPT-NDS-1's J loader (sha256-checked). A CPU unit test shows
+     F1 loss, plan and draws identical for both start kinds on a fixture before freeze.
+   - DEV: Verden, FRESH-1's 717-tile label-free manifest, the same inference path and scorer D1 used for its
+     primaries (score_d1.py primary function, byte-identical).
+
+3. Execution (Colab G4, CLI route, one VM, nothing else running; archive_gate check + storage_guard --peak-gb 2.0)
+   G1: J_L seed 2026092805 training + Verden inference; plus BARROW_L seed 05 first 64 updates retrained and compared
+       with D1's logged curve (first 10 updates within 1e-4: environment identity; this run's weights are discarded).
+   G2: J_L seeds 2026092806-09 training + Verden inference. Starts only after G1 is SESSION_VERIFIED.
+   One bounded waiter per session (SESSION_VERIFIED.json or driver-pid exit; hard timeout 1.5 x projected wall).
+
+4. Collapse (J_L run): (a) zero proposals on the 717 tiles; (b) Verden primary < 0.278 (half the best zero-shot
+   reference on Verden, ADAF barrow 0.556); (c) online detector ON at the end.
+
+5. Frozen rule
+   STOP_COLLAPSE  any J_L run collapsed (G1 collapse stops before G2). BENCH-1 is not launched; a J-start recipe
+                  check (F2 for all arms) needs its own packet.
+   LAUNCH         no collapse AND J_L 5-seed mean Verden primary > 0.699778 (BARROW_L mean at the same seeds).
+   FUTILE         otherwise. BENCH-1 is not launched; D3 (region-in-a-box) starts from ADAF barrow + F1.
+   No early futility stop on one seed. Ties count as FUTILE. Reported: paired per-seed differences, their mean
+   and range, J_L seed SD, proposal counts, final-epoch losses, detector state.
+   The gate result changes nothing in BENCH-1's rules; it only decides whether BENCH-1 launches. On LAUNCH, the five
+   J_L checkpoints become BENCH-1 R1's J_L arm (same FIT, plan, recipe and seeds as the reused D1 ADAF arms).
+
+6. Known bias: F1 was selected on Verden for ADAF starts only, so this comparison leans toward BARROW_L.
+
+7. Resources
+   Projection (D1 units: 8.724 CU/h, 509 s per training, 2.38 s/tile staging + 1.25 s/tile per model, ~1,844 s
+   session overhead): G1 ~12.0 CU (1.4 h), G2 ~22.2 CU (2.6 h); total ~34 CU, expected ~27 at D1's 80 % ratio.
+   Ceiling 45 CU (revision under the budget-revision policy if exceeded, never a rule change).
+   Storage: 5 new checkpoints x 0.32 GB = 1.6 GB, harvested with sha256 before VM release, registered as
+   BENCH1-G-J_L_<seed> (candidate_not_adopted), archived by the established route after G2 verifies.
+
+8. Forecast (subjective, scored at the gate): P(LAUNCH) = 0.25; P(STOP_COLLAPSE) = 0.08; P(FUTILE) = 0.67.
+   Basis: under F1 on Verden adapted AO reached 0.662 and adapted barrow 0.701; J starts between them zero-shot
+   (0.484) and descends from AO.

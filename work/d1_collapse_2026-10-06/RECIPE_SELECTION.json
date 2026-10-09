@@ -1,0 +1,122 @@
+{
+ "schema": "d1_recipe_selection_v1",
+ "utc": "2026-10-06T22:10:09Z",
+ "freeze_sha256": "f323e17e58e996c3f9ea62c5d3a684ea4e05d25be6dc6f76063b4ee05ed86ae6",
+ "rules": [
+  {
+   "recipe": "F1",
+   "collapsed": 0,
+   "mean_primary": 0.7051851851851851,
+   "threshold": 0.5185555555555555,
+   "selected": true
+  }
+ ],
+ "selected": "F1",
+ "next": "confirm",
+ "development_runs": {
+  "D1OLD_BARROW_L_2026092802": {
+   "session": 1,
+   "recipe": "OLD",
+   "arm": "BARROW_L",
+   "seed": 2026092802,
+   "checkpoint_sha256": "905bd2ed3d833f1d0dd4bbb8c0c47f9982bd0d62bf883126a812fef239ca2b5d",
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": 255,
+    "updates_on": 3371,
+    "on_at_end": true,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 1.2387584615916565,
+    "mean_background_loss": 0.05171929949034397,
+    "mean_positive_dice": 0.02507862783747041,
+    "mean_background_sum_p": 64.42415437817795
+   }
+  },
+  "D1F1_BARROW_L_2026092802": {
+   "session": 1,
+   "recipe": "F1",
+   "arm": "BARROW_L",
+   "seed": 2026092802,
+   "checkpoint_sha256": "c2d243945b6fa286c897bc6f401058725bacac846ecc11a63e6a1694229bdff3",
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.43046445925640936,
+    "mean_background_loss": 0.9617633197899091,
+    "mean_positive_dice": 0.6593520831769719,
+    "mean_background_sum_p": 307.04733556783975
+   },
+   "proposals": 3059,
+   "primary": 0.7011111111111111,
+   "collapse_reasons": [],
+   "collapsed": false
+  },
+  "D1F1_BARROW_L_2026092803": {
+   "session": 1,
+   "recipe": "F1",
+   "arm": "BARROW_L",
+   "seed": 2026092803,
+   "checkpoint_sha256": "50358192beef1b217204c075ff3a5b63110bbf1a9cf390776972b8c80684f4a2",
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.4434819461299829,
+    "mean_background_loss": 0.9588933209895165,
+    "mean_positive_dice": 0.6531719515518861,
+    "mean_background_sum_p": 257.70256482893086
+   },
+   "proposals": 2438,
+   "primary": 0.7155555555555555,
+   "collapse_reasons": [],
+   "collapsed": false
+  },
+  "D1F1_BARROW_L_2026092804": {
+   "session": 1,
+   "recipe": "F1",
+   "arm": "BARROW_L",
+   "seed": 2026092804,
+   "checkpoint_sha256": "0b8921074f1298660f7984f609295b9663df98a29775215490d808bd8286204c",
+   "detector": {
+    "window": 256,
+    "dice_below": 0.05,
+    "background_mass_below": 1.0,
+    "first_on": null,
+    "updates_on": 0,
+    "on_at_end": false,
+    "last_update": 5115
+   },
+   "final_epoch": {
+    "mean_positive_loss": 0.42895166912408617,
+    "mean_background_loss": 0.9458539480250958,
+    "mean_positive_dice": 0.6567210581483945,
+    "mean_background_sum_p": 259.54717016858547
+   },
+   "proposals": 2972,
+   "primary": 0.6988888888888889,
+   "collapse_reasons": [],
+   "collapsed": false
+  }
+ },
+ "rule": "PACKET 'Sequence': selected iff 0/3 development BARROW_L runs collapsed and mean primary >= 0.519",
+ "sessions": [
+  "outputs/d1_collapse_2026-10-06/chain_runs/run_s1_20261006T200408Z"
+ ]
+}

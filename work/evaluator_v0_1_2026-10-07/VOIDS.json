@@ -1,0 +1,20 @@
+{
+ "schema": "evaluator_v0_1_void_table_v1",
+ "rule": "A void is an explicit, fixed geometry with a documented reason (SPEC.md section 3), defined before any score under v0.1 and never derived from targets, labels or detector output. An empty table means the evaluated area has no void.",
+ "regions": {
+  "verden": {
+   "manifest_sha256": "a97b6124310b22f05d441ae0937aa17386aec0704fa5689841c03124222873d2",
+   "voids": [],
+   "evidence": "Staged-terrain void gate, D1-COLLAPSE-1 session 3 (lgln_reader.py void): void share 0.0 in all 717 scored windows (275 positive, 442 background); no background rectangle not wholly valid.",
+   "evidence_file": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/v1/results/DEV_VOID.json",
+   "evidence_sha256": "224eac483e5950385924578b5107c2a2bac842670bb572aa4e32f6c6d661796e"
+  },
+  "oldenburg": {
+   "manifest_sha256": "3531675cf1323801f1674ee0448c9ff3099da880ed348e1807bc6b3037b92863",
+   "voids": [],
+   "evidence": "Staged-terrain void gate, ADAPT-NDS-1 session 1 (nds_reader.py void): void share 0.0 in 698 of 699 scored windows (258 positive, 440 background); no background rectangle not wholly valid. The remaining positive window's scored core is a 0.43 m x 419 m sliver (181 m2, an ownership-partition remainder) that holds no 1 m pixel centre, so its void share is undefined; it is not a void. The CONFIRM staging plan pins every DGM1 file by sha256, so a re-staging reads identical bytes or fails.",
+   "evidence_file": "outputs/adapt_nds_2026-10-05/chain_runs/run_s1_20261005T043612Z/v1/results/CONFIRM_VOID.json",
+   "evidence_sha256": "393e191a6370da8d65893d1581428d9fb65ee2082728a08cbb825b9dc77f0301"
+  }
+ }
+}

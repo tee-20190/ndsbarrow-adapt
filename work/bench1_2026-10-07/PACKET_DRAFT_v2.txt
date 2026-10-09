@@ -1,0 +1,323 @@
+BENCH-1 (roadmap D2): does our lineage adapt better than ADAF's public models under the same recipe?
+Packet DRAFT v2, 2026-10-07 (revised 08:00-08:20Z, Opus 5.5, after the critic's review). NOT FROZEN. NOT LAUNCHED.
+Supersedes PACKET_DRAFT.txt (kept for provenance). Changes and reasons: REVISIONS.txt. Coordinate-free.
+
+Capability line: reliable regional adaptation (region-in-a-box, D3) and the roadmap's "Distinctive" level (beat an
+equally adapted public model in >= 2 new regions). The verdict fixes D3's start checkpoint (section 6).
+
+Companion files: FUTILITY_GATE.txt (runs FIRST), DATA_CANDIDATES.json (region evidence), power_sim_v2.py ->
+POWER_SIM_v2.json (feasibility), region_evidence.py. v1 files (PACKET_DRAFT.txt, power_sim.py, POWER_SIM.json) are
+superseded but kept.
+
+
+0. ORDER OF STEPS (each a precondition of the next)
+
+  1. Futility gate G (FUTILITY_GATE.txt): freeze, run, score. FUTILE or STOP_COLLAPSE -> BENCH-1 is not launched.
+  2. FREEZE_RULES: this packet's rules for BOTH regions, including every R2 build rule in section 3.3, frozen and
+     committed. Before any R1 inference.
+  3. R1 build (labels, plan, tile list, locks) and R2 build; VM-side HEAD of every planned SH DGM1 tile.
+  4. FREEZE_R1 (R1 data hashes) -> R1 inference. R1 primaries stay SEALED (no scorer call; proposal counts and
+     detector state only, i.e. collapse conditions (a) and (c)) until FREEZE_R2 exists or R2 is declared blocked
+     by rule 3.4.
+  5. FREEZE_R2 (R2 data hashes; rules byte-identical to FREEZE_RULES) -> R2 training and inference.
+  6. Scoring of both regions, independent recount, verdict.
+
+
+1. QUESTION, HYPOTHESIS, ARMS
+
+Question. Given the same public-register labels, windows, draw plan, 5,116 updates, collapse-safe recipe F1 and
+seeds, does continuing our lineage's deployable checkpoint recover more register barrow groups on untouched terrain
+than continuing ADAF's public barrow or AO model?
+
+Hypothesis (no direction assumed): J's multi-region pretraining survives local adaptation, so J_L ends above the
+better adapted ADAF arm by at least the minimum effect (5.3).
+
+Arms (registry IDs and sha256 from DETECTOR_REGISTRY.json, read 2026-10-07):
+  J_L       start JOINT1-J_2026092803 (S*), sha256 3e1626583ff074e47451c2fc635b4f78e76099f00f431ccde854af998986a152
+  BARROW_L  start ADAF-barrow, sha256 51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216
+  AO_L      start ADAF-AO,     sha256 a2232cc15d5849d75c79c35af9b8b72cbd512766b880851c9c72493a36c79dbb
+Recipe F1 exactly as work/d1_collapse_2026-10-06/RECIPE.md, all-local alternating plan, final weights only,
+mandatory per-update logging and online detector. One fixed start per arm; only the training seed varies.
+Seeds 2026092805-09 (5 per arm per region). Seed k pairs J_L_k, BARROW_L_k and AO_L_k (identical plan and draws).
+
+Checkpoints per region:
+  R1 (same FIT, plan, recipe and seeds as D1; see 3.2): no new training.
+    BARROW_L = D1-F1_BARROW_L_2026092805..09, reused by hash:
+      d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e
+      f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade
+      d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511
+      61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5
+      38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d
+    AO_L = D1-F1_AO_L_2026092805..09, reused by hash:
+      122e13dab8c10c9e4886ad2c446e7a6ccf7f6e34a8ba04ee498f609071b8c4b8
+      8462d11cdc0dc0b156b60535e4f712d25323b8f53a7ff4365153dd01159d6e0c
+      5bc23780595382a00672f27f49aa5ab4afaf89ddb8da4627b5bf8dd15113d65c
+      1d9cebff6da031126f1cb05894e0c3822104581596200c53305e5bd1c977d971
+      356774cc246146bf9d73b521474d39c5afb3e29e0efff8d58f7f538454e51b5c
+    J_L = the gate's BENCH1-G-J_L_2026092805..09 (hashes recorded at gate harvest).
+  R2: all 15 trained new (BENCH1-R2-<arm>_<seed>), all three arms at a seed on one VM in one session.
+
+Zero-shot references (descriptive; scored in each region's first session): S*, ADAF barrow, ADAF AO.
+
+Not included: CONT e41 start; ADAPT-NDS-1 A_NDS (different recipe); OD variants and tumulus-lidar-detector
+(no fine-tuning path; Track Z).
+
+
+2. SEEDS AND REUSE
+
+Seeds 2026092805-09 are the first five of D1's confirmation seeds. In R1 this lets the D1 ADAF weights be reused by
+hash; the gate's J_L runs on the same plan, verified by per-seed draw digest. R2 reuses the seed values but each
+arm is trained anew on R2 FIT, so R1 and R2 models are independent (5.1).
+
+
+3. ELIGIBLE TERRAIN (evidence: DATA_CANDIDATES.json)
+
+Excluded everywhere: sealed TEST, reserved terrain (Bertranges tiles), VALIDATION and buffers; Verden and Oldenburg
+(evaluated); Uelzen, Harburg, Heidekreis (FIT); Lueneburg, Rotenburg (possible owner heath reservation); England,
+Wales, Ireland (J's training regions; ADAF's Irish training data); French evaluated departements.
+
+3.1 Split rule (both regions). Evaluation unit = the whole district, FRESH-1 section 3 design (positive census;
+background 2 km squares in the frozen shuffle order to >= 300 km2 net; 2 km clusters). FIT lies outside the unit.
+The unit is picked from counts and boundaries only. Labels are not overlaid on any pixel before the region's freeze;
+the only pixel read before it is the NODATA validity check.
+
+3.2 R1: Landkreis Osnabrueck (Lower Saxony).
+  - Rule: ADAPT-NDS-1's frozen count rule (CONFIRM_SELECTION.json order) with Oldenburg excluded as evaluated ->
+    rank 2, Osnabrueck. Fails a floor (>= 200 groups after NODATA, >= 150 km2 background) -> Goettingen (rank 3).
+  - Register: Denkmalatlas Niedersachsen (CC BY-SA 4.0): 824 eligible Grabhuegel (FRESH-1 rules 1-4), 320 groups.
+    Terrain: LGLN DGM1 1 m (CC BY 4.0), VM-side fetch.
+  - FIT: ADAPT-NDS-1's 852 + 852 windows (freeze ba07548b), by hash. Identical to D1's FIT, plan (match_schedule.
+    local_plan), recipe (F1) and starts. FIT identity, not evaluation terrain, decides reuse; it holds, so no
+    retraining and no agreement check is needed. Run refused unless each reused checkpoint's sha256 and its D1
+    TRAIN_RESULT draw digest match the registry.
+  - Fixed secondary stratum (R1 only): register height >= 0.5 m (register attribute "Hoehe" parsed by FRESH-1's
+    parse_height; unknown heights are kept in the stratum, as FRESH-1's H2 stratum does; no pixels). 34 % of R1's
+    eligible records are < 0.5 m. The secondary carries its own interval; no verdict rests on it.
+3.3 R2: Kreis Rendsburg-Eckernfoerde (Schleswig-Holstein). Build rules frozen in FREEZE_RULES, before any R1 inference:
+  - Reader: ALSH Denkmalliste CSV (Open-Data-Portal SH, CC0), snapshot fetched once and pinned by sha256; fields
+    objektbezeichnung (type, "|"-separated terms), kreis, geometrie (EWKT, SRID 25832), objektbeschreibung.
+    Records with unparseable geometry or non-25832 SRID: excluded and counted.
+  - Class map: POSITIVE = a term in {"Grabhuegel", "Grabhuegelfeld"} (audit_code/sh_rule.py round_mound, sha256
+    c823f79a...) AND equivalent diameter 4-40 m AND not matching FRESH-1's condition FLAG pattern AND not a
+    duplicate (FRESH-1 rule 4: centroid <= 2 m or IoU >= 0.5). A record carrying any Grosssteingrab term is IGNORE.
+    IGNORE + 30 m: every other record of the list (mottes, Ringwaelle, forts, enclosures, megalithic, positives
+    failing size/flag, all non-primary types). Point geometries: IGNORE + 30 m. Groups: 60 m single linkage.
+  - FIT rule: positive windows = one per eligible positive group in SH Kreise other than Rendsburg-Eckernfoerde whose
+    window footprint lies >= 2 km from the unit boundary and >= 5 km from Lower Saxony; FRESH-1/ADAPT-NDS window
+    geometry and jitter rule; NODATA-failing windows dropped.
+  - Budget formula: N = min(852, number of valid positive FIT windows); N background windows drawn by ADAPT-NDS-1's
+    plan_fit background rule from the same Kreise; 5,116 updates alternating as the local plan, so windows cycle
+    5,116 / (2N) times. N is recorded at FREEZE_R2.
+  - Halo: 2 km between FIT windows and the unit boundary; the unit >= 5 km from every compared system's documented
+    training footprint (rev4 isolation: Lower Saxony FIT 58.9 km, Denmark 23.0 km).
+  - Tile list rule: every SH DGM1 1 km tile intersecting the unit's evaluation frame or any FIT window footprint
+    (+ 256 m), from the official tile index; the list and its URLs pinned by sha256 at FREEZE_R2.
+3.4 R2 access and fallback (decided now; never on R1 results):
+  - VM-side HEAD of every planned SH DGM1 tile before FREEZE_R2 (<= ~1 CU, CPU or G4 VM).
+  - If Rendsburg-Eckernfoerde fails a floor (>= 200 positive groups after NODATA, >= 150 km2 background) while the
+    tiles are reachable: the replacement is the SH Kreis with the most positive groups under 3.3 that lies >= 5 km
+    from Lower Saxony and from any possibly reserved district (on REGION_AUDIT counts this excludes Herzogtum
+    Lauenburg; next are Ostholstein, then Segeberg), recounted under 3.3; FIT rule unchanged.
+  - If SH terrain is unreachable (HEAD failure on > 1 % of planned tiles at two checks >= 24 h apart, or no tile
+    URL scheme found): R2 is BLOCKED. The packet is then reported as "R1-only, not D2": R1 analysed alone, labels
+    R1-ADVANCE / R1-NOT_DISTINGUISHED / R1-INFERIOR, never counted toward the "Distinctive" level.
+3.5 Visibility. Before freeze, register only: R1 heights 10/50/90 % = 0.3/0.6/1.54 m (34 % < 0.5 m; Oldenburg 20 %,
+  Verden 10.5 %); R2 has no audited height attribute (13 % of barrow texts mention ploughing). After each region's
+  freeze, inside the frozen build: model-free SLRM amplitude per group, reported as strata. Nothing is dropped.
+
+
+4. WHAT IS COMPARED
+
+P[X,k,r] = FRESH-1 benchmark primary (barrow-group recall averaged over 0.5, 1, 2 background proposals per km2;
+region_score.py and hier_uncertainty.py byte-identical; reach 15 m; NMS 60 m). Also reported at 4 per km2.
+  m_X,r   = mean over the 5 seeds of P[X,k,r]
+  Cmp_r   = max(m_BARROW_L,r , m_AO_L,r), re-selected inside every bootstrap draw
+  Delta_r = m_J_L,r - Cmp_r ;  Delta = (Delta_R1 + Delta_R2) / 2
+
+
+5. ANALYSIS AND VERDICT (fixed before any output)
+
+5.1 Bootstrap: 20,000 draws; SeedSequence(20261007).spawn(4) = [R1 seeds, R1 clusters, R2 seeds, R2 clusters], all
+  independent. R1 and R2 models are separately trained, so seed indices are drawn independently per region; within
+  a region one seed-index vector per draw is shared by the three arms (paired seeds). 2 km clusters resampled within
+  each region. Seed-variance correction: in each draw an arm's mean is a + sqrt(K/(K-1)) x (s - a), where a is the
+  all-seed mean and s the seed-resampled mean on the draw's clusters (K = 5, factor 1.118). 95 % percentile interval.
+
+5.2 Verdict:
+  ADVANCE-both       Delta >= +0.040, 95 % lower bound > 0, every Delta_r > 0 (point), no collapsed run in any arm.
+  ADVANCE-pooled     Delta >= +0.040, lower bound > 0, every Delta_r >= -0.030, no collapse, but some Delta_r <= 0.
+  INFERIOR           95 % upper bound of Delta < 0.
+  NOT_DISTINGUISHED  otherwise.
+  Only ADVANCE-both counts toward the roadmap's "Distinctive" level. Per-region labels are reported beside it.
+
+5.3 Minimum effect +0.040, tied to the D3 decision. D3 switches its default start from the public, citable ADAF
+  barrow start to our lineage only for a gain worth maintaining a project start: +0.04 recall at fixed burden is
+  about 12 more register groups per 300-group district at the same review load (about +6-7 % relative on the
+  adapted level of ~0.6-0.7). It is not a noise floor: 0.037 (HR1 same-seed rerun) and JOINT-2's 1.1-1.5 points are
+  single-run differences; for 5-seed means the seed noise is smaller (D1 F1 seed SD 0.011-0.020 per run, about
+  0.005-0.009 for a 5-seed mean). A lower bound > 0 with Delta < 0.040 is reported as "positive, below the decision
+  threshold" (NOT_DISTINGUISHED).
+
+5.4 Collapse. Conditions (a) and (c) are D1's; (b) is changed from D1, where each arm had its own reference.
+  (a) zero proposals on the region's evaluation manifest;
+  (b) primary < half of the best zero-shot reference in that region (max of S*, ADAF barrow, ADAF AO zero-shot
+      primaries), the same threshold for every arm;
+  (c) online detector ON at the end.
+  Collapsed runs are scored as they are; no redraw, no drop. Any collapse blocks both ADVANCE labels.
+
+5.5 Recipe reliability (reported, not part of the label): per region, the seeds k with
+  P[J_L,k] > max(P[BARROW_L,k], P[AO_L,k]), out of 5.
+
+5.6 Feasibility (power_sim_v2.py -> POWER_SIM_v2.json; 300 datasets x 1,000 draws per cell; model-based, not a
+  forecast). Complete rule above; displacement (J_L loses comparator hits at rate b, gains at b + delta, cluster SD
+  0.08); independent per-region seed streams; seed term widened; flat-barrow stratum (R1 34 %, R2 assumed 20 %) hit
+  at 0.06 by every arm with no contrast, so the full-pool Delta is carried by the other groups; non-flat comparator
+  hit 0.75; AO_L 0.04 below BARROW_L; seed SD BARROW_L 0.012, AO_L 0.020, J_L 0.02 or 0.05; b 0.05 or 0.10;
+  regional heterogeneity tau 0 or 0.05. Ranges over b and J_L seed SD:
+
+    true Delta | two regions tau 0: ADVANCE (any) | of which -both | INFERIOR | tau 0.05: ADVANCE (any) | INFERIOR
+    -0.06      | 0.000-0.003                    |                | 0.27-0.77| 0.000-0.037            | 0.18-0.63
+    -0.03      | 0.000-0.003                    |                | 0.10-0.29| 0.017-0.056            | 0.14-0.37
+     0.00      | 0.013-0.040 (null false win)   |                | 0.00-0.04| 0.083-0.18             | 0.03-0.11
+    +0.03      | 0.18-0.28                      | 0.18-0.28      | 0.00     | 0.21-0.45              | 0.01-0.05
+    +0.05      | 0.37-0.68                      | 0.37-0.68      | 0.00     | 0.33-0.59              | 0.00-0.03
+    +0.08      | 0.71-0.94                      | 0.70-0.94      | 0.00     | 0.63-0.84              | 0.00
+    +0.12      | 0.89-1.00                      | 0.89-1.00      | 0.00     | 0.80-0.98              | 0.00
+
+  One region (R1-only fallback), tau 0: null false win 0.013-0.053 after the fix (v1, before the fix: 0.023-0.117);
+  +0.05 -> 0.21-0.44; +0.08 -> 0.45-0.80.
+  Reading: gains of +0.03 to +0.05 are often missed; +0.08 or more is usually detected. The null false-win rate is
+  now 0.013-0.040 (two regions) against a nominal one-sided 0.025. Under tau 0.05 a "null" population still gives
+  two fixed regions whose true average differs from 0, so the 0.08-0.18 there are not false wins for those regions.
+  Comparator bias: re-selecting max(BARROW_L, AO_L) in every draw favours the comparator. It raises false INFERIOR
+  verdicts at a true 0: 0.00-0.04 at tau 0 and 0.03-0.11 at tau 0.05. Kept, because it charges selection optimism
+  to the comparator; any INFERIOR is reported with this rate.
+
+5.7 Descriptive: each arm vs each zero-shot reference; J_L - BARROW_L and J_L - AO_L separately; AO_L - BARROW_L;
+  INTERLEAVE(BARROW_L_k, J_L_k) with FUSION-1's convention (unique ids per model, BARROW_L first in ties, saturated
+  scores broken by mean_probability); R1 height >= 0.5 m secondary (fixed); SLRM-amplitude strata; pool sizes;
+  final-epoch losses and background sum p.
+
+
+6. VERDICT -> ACTION (fixed now; "winning comparator" = the arm giving Cmp at the point estimate, pooled over regions
+   by the mean of its two regional means)
+
+  Gate FUTILE        BENCH-1 not launched. D3 starts from ADAF barrow + F1.
+  Gate STOP_COLLAPSE BENCH-1 not launched. D3 starts from ADAF barrow + F1; an F2 (warm-up) J-start check needs its
+                     own packet before any J-start adaptation.
+  ADVANCE-both       D3 starts from S* (JOINT1-J_2026092803) + F1. Counts toward "Distinctive"; D5's teacher
+                     choice is revisited with J_L included.
+  ADVANCE-pooled     D3 default start = the winning comparator's start (ADAF barrow, or ADAF AO if AO_L wins) + F1.
+                     S* + F1 is allowed only in a region-specific D3 packet that re-tests it there. Not "Distinctive".
+  NOT_DISTINGUISHED  D3 starts from the winning comparator's start + F1: ADAF barrow if BARROW_L wins; ADAF AO if
+                     AO_L wins (then J's extra training adds nothing measurable over its own ancestor after adaptation).
+                     The public start is preferred at parity: simpler provenance, no project-specific dependency.
+  INFERIOR           As NOT_DISTINGUISHED; in addition the J lineage is dropped as a regional-adaptation start, and
+                     D5 distillation uses the winning comparator as teacher.
+  R1-only (R2 blocked) R1-ADVANCE: D3 may start from S* + F1 in Lower Saxony only; otherwise as the matching row
+                     above. Never "Distinctive".
+
+
+7. FORECASTS (subjective; fixed now; scored at the result)
+
+External baseline first: ADAF's barrow specialist was ahead of or level with our systems in every barrow setting
+measured: Verden zero-shot 0.556 vs S* 0.484; Oldenburg A - ADAF barrow (unadapted) +0.045 [-0.011, +0.096];
+Ireland ringfort 60.83 vs J 56.67. Under F1 on Verden, adapted barrow reached 0.701 and adapted AO 0.662: adaptation
+erased most of AO's zero-shot deficit. J starts between them and descends from AO.
+  P(gate LAUNCH) = 0.25 (FUTILITY_GATE.txt)
+  Conditional on launch (J_L already beat BARROW_L on Verden, same state as R1):
+    P(ADVANCE-both | launch) = 0.30; P(ADVANCE-pooled | launch) = 0.05; P(NOT_DISTINGUISHED | launch) = 0.50;
+    P(INFERIOR | launch) = 0.15.
+  Unconditional P(ADVANCE-both) ~ 0.075.
+  P(BARROW_L is the winning comparator | launch) = 0.80.
+  P(any ADAF-arm collapse in R2 | launch) = 0.10.
+  P(R2 BLOCKED by 3.4 | launch) = 0.20 (SH portal timed out on 10-05; landing page HTTP 200 on 10-07).
+  P(chain completes within the 240 CU ceiling without a revision | launch) = 0.50.
+
+
+8. RESOURCES AND PROCEDURE
+
+Build (CPU; new code in work/bench1_2026-10-07/, frozen modules imported read-only):
+  gate/: train_g.py (d1_train F1 + J loader; equality test), score_g.py, chain + freeze (FUTILITY_GATE.txt).
+  select_r1.py (re-derives Osnabrueck 824/320), r1_build.py, r2_build.py (3.3 rules), score_bench1.py (section 5;
+  tests: per-region independent seed streams, arm pairing within region, K/(K-1) widening, comparator re-selection;
+  synthetic-proposal dry run), recount_bench1.py written before scoring.
+  Every launch: python verify/v3/archive_gate.py check; then storage_guard run in WSL against
+  /mnt/c/Users/15516/DISCOVERYBREAKTHROUGH/outputs with the session's --peak-gb.
+
+R1 weight restore (reuse by hash): Windows Python
+  python verify/v3/restore_archive.py --manifest outputs/archive_completed_2026-10-07k1/restore-manifest.json \
+    --remote-root <k1 Drive folder> --member outputs/d1_collapse_2026-10-06/weights/D1F1_BARROW_L_<seed>/final.pt
+  and the same with archive k2 for AO_L; seeds 05-09 only. The script refuses a changed bundle or member and needs
+  member bytes + 20 GB free. Reading a member through Drive for desktop hydrates the bundle ZIP (about 3.2 GB per
+  bundle) into the DriveFS cache: restore one bundle at a time, upload members to the VM, verify sha256 on the VM,
+  then reclaim the local restored copies (the archive stays the master).
+
+GPU: Colab G4 via the CLI route, one VM, one heavy job at a time, nothing else running.
+  G1, G2: gate (FUTILITY_GATE.txt).
+  R1-S1: inference of 3 zero-shot references + seed-05 J_L, BARROW_L, AO_L (no training).
+  R1-S2: inference of seeds 06-09, three arms (12 models).
+  R2-S1: seed 05, three trainings + inference of those 3 and the 3 zero-shot references.
+  R2-S2: seeds 06-07; R2-S3: seeds 08-09 (6 trainings + 6 inferences each).
+  HEAD of every planned tile URL before each region's first allocation.
+
+CU projection (D1 units; ~800 evaluation tiles per region assumed):
+  Gate G1 + G2          ~34 CU (ceiling 45)
+  R1-S1 23.6, R1-S2 38.2 ~62 CU (no training)
+  R2-S1..S3             ~89 CU (re-projected at R2 build)
+  SH HEAD check         ~1 CU
+  Total                 ~186 CU projected (~150 expected); ceiling 240 CU; each session 1.25 x its projection.
+  Balance 4,197.33 CU at 07:14Z. Overruns: documented revision under the budget-revision policy, not a stop.
+  G4 wall ~21 h over 7 sessions plus archive rounds.
+
+Storage:
+  - New weights: gate J_L 5 x 0.32 = 1.6 GB; R2 15 x 0.32 = 4.8 GB; R1 none (restored copies are transient).
+  - Session peaks: gate 2.0 GB, R1 1.2 GB (restored members for one session + proposals), R2 2.5 GB. Guard floor
+    20 + peak; plan floor with page-file headroom 20 + 2.5 + 5 = 27.5 GB; restore also needs the DriveFS hydration
+    (~3.2 GB per bundle).
+  - C: free 26.39 GB at ~07:37Z: guard floors met; plan floor 1.1 GB short; R1 restore needs ~4.5 GB of headroom
+    above the reserve. Free space by archiving completed weights (e.g. outputs/adapt_nds_2026-10-05/weights, 0.6 GB)
+    and other completed bulky artifacts, then re-measure.
+  - After every session: sha256 harvest before VM release; SESSION_VERIFIED.json; registry entries; one archive
+    bundle by the established route; guarded reclaim only after verification; archive_gate check before the next.
+
+Monitoring: one bounded waiter per session, completing on <run_top>/SESSION_VERIFIED.json OR driver-pid exit
+(driver log TOP/v1/driver.log per cli_common.sh), hard timeout 1.5 x projected wall. List running tasks first.
+
+Attribution: LGLN DGM1 (CC BY 4.0), Denkmalatlas Niedersachsen (NLD, CC BY-SA 4.0), ALSH Denkmalliste (CC0),
+LVermGeo SH DGM1 (CC BY 4.0), all modified. ADAF weights CC BY-SA 4.0 (code Apache-2.0); every adapted checkpoint
+descends from ADAF weights and carries CC BY-SA 4.0. Masks and manifests stay private.
+
+
+9. LIMITS STATED IN ADVANCE
+
+- Catalogue recovery, not discovery: unregistered barrows count as false alarms.
+- R1 shares state, register and sensor family with FIT (adaptation within a country); R2 is a new state with its
+  own FIT. Two regions cannot support a claim for all regions.
+- F1 was selected on ADAF starts only (D1 development on BARROW_L; confirmation on BARROW_L and AO_L). J-start
+  behaviour under F1 is first measured by the gate. The recipe may suit ADAF starts better; this leans against J_L.
+- The gate and D1's recipe choice both used Verden; R1's J_L arm was not selected on R1 terrain, but R1 J_L is
+  launched only because J_L passed the gate (a launch condition, not a selection among J_L runs: all five are used).
+- One contender start (S*), a selected J seed (about +0.05 above its recipe mean zero-shot in both fresh regions).
+- 5 seeds per arm; seed variance widened by sqrt(K/(K-1)); the null false-win rate stays slightly above nominal.
+- R1 ADAF arms were trained in D1 (2026-10-06/07); R1 J_L in the gate (later VMs). G4 training is "COMPATIBLE",
+  not bit-identical; the gate's 64-update identity check bounds environment drift.
+- Retention outside each region is not measured; all arms are regional specialists by design.
+
+
+10. DEVIATIONS FROM BENCH_PLAN REV 4 (TRACK A)
+
+- Contender J_L under F1 with 100 % local steps, not the A recipe (same recipe for every arm; A recipe collapsed
+  ADAF starts).
+- No snapshot or FIT-fold checkpoint choice (RECIPE.md: final weights only); comparator favoured by max of two
+  adapted ADAF arms re-selected per draw.
+- Specialist fixed to ADAF barrow (barrow class in both regions); 5 seeds; minimum effect +0.040 (D3 decision
+  value) instead of STRONG_WIN's +0.10; two German regions.
+
+
+11. STILL BLOCKED OR OPEN (no owner approval needed for the science or the spend)
+
+- SH DGM1 per-tile URL scheme unknown; the VM-side HEAD check (3.4) cannot run until r2_build.py lists tiles.
+- Disk: +1.1 GB for the plan floor before the gate; ~4.5 GB headroom above the reserve for R1 restores (archive
+  round by the Codex/owner upload route).
+- Lueneburg/Rotenburg reservation status: excluded either way.

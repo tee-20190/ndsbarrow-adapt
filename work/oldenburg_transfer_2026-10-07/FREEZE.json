@@ -1,0 +1,97 @@
+{
+ "schema": "oldenburg_transfer_freeze_v1",
+ "utc": "2026-10-07T22:55:20Z",
+ "name": "a prespecified transfer check on a previously inspected, training-disjoint district that was not used to select this recipe",
+ "files_sha256": {
+  "PACKET.md": "4166de0aa49b65e6ada6fd42a046e99cbd33724874336199652b38ae8fa7e3a2",
+  "INFERENCE_PLAN.md": "64791725f2ac02fbe0d5a520df8c3b14725c67b1314d8dbc23707f7e03109826",
+  "legit.py": "9224d08287494a71be4a1b70f9c031048e18a5aa22d1d4fed1f17da9ba0d0596",
+  "LEGITIMACY.json": "a777f091d393ab0e1c4036799fef9a0f480a5dcf0484bcd80ed933789a821461",
+  "score_oldenburg.py": "91ef709130da9543f16065044400d8fb2eba2d303d0bbfc4d322ea4b187bd285",
+  "cu_projection.py": "fa7e508a1b54da2431ca17dfb298b766a8a30f9091447ebc070c08f7fc14da1d",
+  "CU_PROJECTION.json": "d339c6accb75d8a98b03db9664d6544fa21a299af51030702e17b51702d6efeb",
+  "STORAGE_CHECK.json": "e3e42cdf60a793ff4533f23af6623a460083de114afcca848ca0e3bb90c4b713",
+  "tests/test_gate_reading.py": "52e2ee82bc806cade1195725c8f262e6cac5e124b57b1016f5553c9db2a67757",
+  "TESTS.log": "ab9e11c996e2fcb2c25c3d2565cb9974addd659daf79bf453c1abd0043c7cfdd",
+  "freeze_oldenburg.py": "17e8db26e4e211702acd7d156ad99629332c6c7353a0e6b88eed22526209b90d"
+ },
+ "inputs_sha256": {
+  "outputs/adapt_nds_2026-10-05/confirm/run/INDIVIDUAL_MANIFEST_PRIVATE.json": "3531675cf1323801f1674ee0448c9ff3099da880ed348e1807bc6b3037b92863",
+  "outputs/adapt_nds_2026-10-05/confirm/run/INFER_MANIFEST_PRIVATE.json": "8fce717eea156a9a00ec1bcdea4a936b4b89454c166b1bf4b878f702dc31f411",
+  "outputs/adapt_nds_2026-10-05/confirm/run/STAGING_PLAN_PRIVATE.json": "e37e3e018d722c87f5688c2d75b6fa5306491104113eea7d500114fa0c40a2b0",
+  "outputs/adapt_nds_2026-10-05/confirm/run/INSIDE_MASKS_PRIVATE.npz": "2a47e06455014324a44635b3bda8ae3669f346a5f9b8ec97ed443525c05611b8",
+  "outputs/adapt_nds_2026-10-05/register/denkmale_Oldenburg_20261005T010102Z.geojson": "a3b4e390edf4c5a5399f195ddb0124b6f4901912367347ac5779ca277ea0d18b",
+  "outputs/adapt_nds_2026-10-05/register/supplement_Oldenburg_20261005T010102Z.json": "85c18d7038eac54b7f9acc0bd272ec0669337b8669c51d3441f626eda6ed9ef0",
+  "outputs/adapt_nds_2026-10-05/score/confirm/individual/PROPOSALS_ADAF_barrow_PRIVATE.json": "21421a9c7e99cf337c64467349878e7062571768147a459164b6ddd92b3afef6",
+  "outputs/adapt_nds_2026-10-05/chain_runs/run_s1_20261005T043612Z/v1/results/confirm/PROPOSALS_ADAF_barrow_PRIVATE.json": "77b68e7901ed203248d2c9b68064260484f3bcb898e68510a3f50953e843ba92",
+  "outputs/adapt_nds_2026-10-05/fit/FIT_TABLE_PRIVATE.json": "58d6aa16a87f396a04eeb03719e0cd7f87beb872584838fc1c7f49d95b48e28f",
+  "outputs/adapt_nds_2026-10-05/fit/FIT_STAGING_PINNED_PRIVATE.json": "f02763a9a4b13247dc665ae0b19732c31a08aa68ab115e8489f40a6dafee0f3c",
+  "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/SESSION_VERIFIED.json": "b93ac07c1d79ae68d3b6db3d6d150b7d6f77ad18b83c4f03846e9a898d25bdc4",
+  "work/stage1_d1_v0_2026-10-07/score_v0.py": "2f44fe63eea47e4f211aa5a89e95d01036dfab29e351ff5f3ec584c519e079d8",
+  "work/stage1_d1_v0_2026-10-07/RESULT.json": "3818ac2d9db21c1c14159b8f66b536c8d38a9b254b2387c58fc945174c3a9aa9",
+  "work/holdout_region_2026-10/step2/region_score.py": "b3337741071da6e85d41849f4f420a71494fc5ebd376c88d1a1933fccbada442",
+  "work/next_experiment_2026-09-23/r3_curation.py": "f0aac704d2a74bd03868c6a94950e9a613fa0bc7c0afd9958bd734af201a1b9c",
+  "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/engine.py": "97c9b004a4a6edf9be1017a0a8ff1d80fd989722fb96d0f23ba36d1c297f561e",
+  "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/boot_v0.py": "b611b26e1d3f83d2e1a21e60b38997b84a006757bec1364998a200ef22fbe386",
+  "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/v0data.py": "904853d512da2acc9aa5841a91eb351ad9d09ff3fba850caced5b5556cd239bb",
+  "work/gpt6_pro_collab_2026-10-07/detector_week1/bench_v0.py": "723fdb26c032af827de7eb655a3fc1709a43ee490722363103895af0f3a9ec90",
+  "work/gpt6_pro_collab_2026-10-07/detector_week1/BENCH_V0.json": "c283d37df3c5a8ac9c7d9a6e9d97061326b1dc4c2c93226f0f89c93ed3755f87",
+  "work/evaluator_v0_1_2026-10-07/eval_v01.py": "fbd5818325e02521e9b907d2f1fcebf4a048ed11e149848e776dc0e18b496c90",
+  "work/evaluator_v0_1_2026-10-07/FREEZE.json": "7ed3114de04561dd11fc7b76ceb25baf745956f4d7b09e6e0a92fc870ecfbdbe",
+  "work/d1_verden_descriptive_2026-10-07/desc_verden.py": "174dd947aa7680ff04a8a41edfcdcc412ebb54e3d4c7b4d16ac0d1d1b6b3eebe",
+  "work/hr3_ireland_2026-10-02/step2/chain/infer_irl.py": "f38555510647fa5aae35deadf3a7538ecd882861a6b48fae89f84715abbd5014",
+  "work/adapt_nds_2026-10-05/nds_reader.py": "27359e11517980419e2385a97926533a07de6f4107135815219c37f1aa5ff9ee",
+  "work/fresh_region_2026-10-03/step2/fresh_gates.py": "f0365d8ed03a640027300088a7792ee433aa4b731e9e205dd09456cbfeb2043c",
+  "work/colab_assessment_2026-09-29/env/freeze.txt": "745121450d990c985dbf4d617cc2669ebd88cb9ac470fc8f471530b2a11102c1",
+  "work/campaign_2026-09-22/adaf_weights/barrow_HRNet_SLRM_512px_pretrained_train_12_val_124_with_Transformation.tar": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216"
+ },
+ "d1_checkpoints_sha256": {
+  "D1F1_BARROW_L_2026092805": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e",
+  "D1F1_BARROW_L_2026092806": "f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade",
+  "D1F1_BARROW_L_2026092807": "d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511",
+  "D1F1_BARROW_L_2026092808": "61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5",
+  "D1F1_BARROW_L_2026092809": "38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d",
+  "D1F1_BARROW_L_2026092810": "6b294645c62a074f864b6fe2ab8df4e9796e69b25a9abd6993093b53b78f21a5",
+  "D1F1_BARROW_L_2026092811": "ed12f627ec5975fb7cfde6565f9af6eab7b30b7f89423f49da97c1001bf69229",
+  "D1F1_BARROW_L_2026092812": "5437f281701203d9295e1f3b1da9a80261e2681cdecfe94b51ee4c7e54a815eb",
+  "D1F1_BARROW_L_2026092813": "3a1c2643ef26a336ba8915780328f1af27bf32a52b24905cb3ccb3f19c18a044",
+  "D1F1_BARROW_L_2026092814": "24db9082f55fe2f8cbd45e265b6164d73ec01823858c3ebd4630fe6b0b5f0858"
+ },
+ "deployable_checkpoint": {
+  "name": "D1F1_BARROW_L_2026092805",
+  "sha256": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e",
+  "rule": "earliest run in immutable run-ID order; frozen before any Oldenburg D1 score"
+ },
+ "comparator": {
+  "checkpoint_sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216",
+  "proposals_sha256": "21421a9c7e99cf337c64467349878e7062571768147a459164b6ddd92b3afef6"
+ },
+ "gate": {
+  "b": 0.5,
+  "decoder": "RAW",
+  "mean_diff_min": 0.03,
+  "positive_min": 8,
+  "float_guard": 1e-12
+ },
+ "clear_transfer_improvement": "gate PASS and 2 km joint 95 % lower bound (RAW, b = 0.5) > 0",
+ "bootstrap": {
+  "engine": "v0_uncertainty engine.py + boot_v0.py",
+  "reps": 5000,
+  "master_seed": 20261007,
+  "geography_stream": "geo_oldenburg (spawn_key (0,))",
+  "training_stream": "train_d1 = SeedSequence(20261007).spawn(5)[4], shared with Verden",
+  "grids": [
+   "2km",
+   "4km",
+   "2km_offset1000"
+  ],
+  "primary_grid": "2km"
+ },
+ "legitimacy": "PASS",
+ "tests": "10 passed in 4.72s",
+ "archive_gate": {
+  "utc": "2026-10-07T22:55:20Z",
+  "pending_archives": [],
+  "status": "PASS"
+ }
+}

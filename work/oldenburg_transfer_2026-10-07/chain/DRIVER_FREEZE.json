@@ -1,0 +1,110 @@
+{
+ "schema": "oldenburg_transfer_driver_freeze_v1",
+ "utc": "2026-10-08T00:55:17Z",
+ "packet_freeze_sha256": "19289f9d5c2c7881578792b471e634b180b1e5c5232372eec768fdd77a029b8f",
+ "packet_projection_sha256": "d339c6accb75d8a98b03db9664d6544fa21a299af51030702e17b51702d6efeb",
+ "d1_session_verified_sha256": "b93ac07c1d79ae68d3b6db3d6d150b7d6f77ad18b83c4f03846e9a898d25bdc4",
+ "restore_manifest_sha256": "4ab6f3dde74d8aa1055ba8aabf4370550e1b0049cfe33f5eb09e25340c1e78c8",
+ "checkpoints": {
+  "D1F1_BARROW_L_2026092805": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e",
+  "D1F1_BARROW_L_2026092806": "f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade",
+  "D1F1_BARROW_L_2026092807": "d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511",
+  "D1F1_BARROW_L_2026092808": "61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5",
+  "D1F1_BARROW_L_2026092809": "38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d",
+  "D1F1_BARROW_L_2026092810": "6b294645c62a074f864b6fe2ab8df4e9796e69b25a9abd6993093b53b78f21a5",
+  "D1F1_BARROW_L_2026092811": "ed12f627ec5975fb7cfde6565f9af6eab7b30b7f89423f49da97c1001bf69229",
+  "D1F1_BARROW_L_2026092812": "5437f281701203d9295e1f3b1da9a80261e2681cdecfe94b51ee4c7e54a815eb",
+  "D1F1_BARROW_L_2026092813": "3a1c2643ef26a336ba8915780328f1af27bf32a52b24905cb3ccb3f19c18a044",
+  "D1F1_BARROW_L_2026092814": "24db9082f55fe2f8cbd45e265b6164d73ec01823858c3ebd4630fe6b0b5f0858",
+  "ADAF_barrow": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216"
+ },
+ "smoke_inputs": {
+  "outputs/oldenburg_transfer_2026-10-07/smoke/inputs/SMOKE_CONFIRM_STAGING_PRIVATE.json": "2d1d4cc3f2933b17b1671d9ef4f17c97fa1cfd542ec00a30642090b74c77fca7",
+  "outputs/oldenburg_transfer_2026-10-07/smoke/inputs/SMOKE_CONFIRM_MASKS_PRIVATE.npz": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+  "outputs/oldenburg_transfer_2026-10-07/smoke/inputs/SMOKE_CONFIRM_MANIFEST_PRIVATE.json": "17f8a5a80167a8ca90d2276043f5885fa6a7f03afe295680d2af600b2312e7b9"
+ },
+ "pins": {
+  "outputs/adapt_nds_2026-10-05/confirm/run/INFER_MANIFEST_PRIVATE.json": "8fce717eea156a9a00ec1bcdea4a936b4b89454c166b1bf4b878f702dc31f411",
+  "outputs/adapt_nds_2026-10-05/confirm/run/INSIDE_MASKS_PRIVATE.npz": "2a47e06455014324a44635b3bda8ae3669f346a5f9b8ec97ed443525c05611b8",
+  "outputs/adapt_nds_2026-10-05/confirm/run/STAGING_PLAN_PRIVATE.json": "e37e3e018d722c87f5688c2d75b6fa5306491104113eea7d500114fa0c40a2b0",
+  "outputs/oldenburg_transfer_2026-10-07/smoke/inputs/SMOKE_CONFIRM_MANIFEST_PRIVATE.json": "17f8a5a80167a8ca90d2276043f5885fa6a7f03afe295680d2af600b2312e7b9",
+  "outputs/oldenburg_transfer_2026-10-07/smoke/inputs/SMOKE_CONFIRM_MASKS_PRIVATE.npz": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+  "outputs/oldenburg_transfer_2026-10-07/smoke/inputs/SMOKE_CONFIRM_STAGING_PRIVATE.json": "2d1d4cc3f2933b17b1671d9ef4f17c97fa1cfd542ec00a30642090b74c77fca7",
+  "work/oldenburg_transfer_2026-10-07/CU_PROJECTION.json": "d339c6accb75d8a98b03db9664d6544fa21a299af51030702e17b51702d6efeb",
+  "work/oldenburg_transfer_2026-10-07/FREEZE.json": "19289f9d5c2c7881578792b471e634b180b1e5c5232372eec768fdd77a029b8f",
+  "work/oldenburg_transfer_2026-10-07/chain/bundle_olt.py": "bf1e203de8d6d8d32a75d764ea1ddb499fe6f5895ce42d05383dc644cd68f5e7",
+  "work/oldenburg_transfer_2026-10-07/chain/chain_lib_olt.sh": "faa138717a11b1642eeb88efaf482bf3a081350e4fc176bd2e4d95e007056e37",
+  "work/oldenburg_transfer_2026-10-07/chain/chain_olt_run.sh": "8d77cfb073394706ea24023f1d0dbae638dc42d882754eb5d43a63ac11562e9f",
+  "work/oldenburg_transfer_2026-10-07/chain/chain_olt_smoke.sh": "8596f5e8b8611443122ca661f9dee8822403f1100481f93ee2ccb1f53c746d50",
+  "work/oldenburg_transfer_2026-10-07/chain/driver_olt.sh": "975a6027c45c61cd101204f7600bf1ed19e3f097384ef5ad27a58642de25d807",
+  "work/oldenburg_transfer_2026-10-07/chain/dryrun/dryrun_olt.sh": "14435212c37bb2436e3bb39dde8351ebc0a6b39fd155423e368d69abef22848c",
+  "work/oldenburg_transfer_2026-10-07/chain/dryrun/fake_colab_olt.sh": "c12b0ab46d88ab1d773f3f89dc4866c0427a6be962a2ecf4978135f9b185dbed",
+  "work/oldenburg_transfer_2026-10-07/chain/dryrun/make_dryrun.py": "597b33dec26ab272b8c3aa3d8d3176ab32eeaec05d3335072f0332e27dce107f",
+  "work/oldenburg_transfer_2026-10-07/chain/dryrun/standin_infer.py": "47fda4014fe8c0b7047ee5544b137cf716a6cf303c17fe96b95abda97c77ca71",
+  "work/oldenburg_transfer_2026-10-07/chain/dryrun/standin_py.sh": "408c09b58047dd5514a5ab7833cd0354191c50fd51ea57849aacc7975a3bb63b",
+  "work/oldenburg_transfer_2026-10-07/chain/freeze_olt.py": "30f1c2c190737afa3c3a2f8c4dbdf5c4ec35cc3f1927c13f993ec9a593c5fc2d",
+  "work/oldenburg_transfer_2026-10-07/chain/make_driver_olt.py": "aadebff73940db90cd0b2295379102e11cd7d31e01698eabccab520ad5ef06e9",
+  "work/oldenburg_transfer_2026-10-07/chain/olt_barrier.py": "6ccfa9c97855ace0af5f154de524f8332b345c6e8bf5831a9a57b76d6c101b96",
+  "work/oldenburg_transfer_2026-10-07/chain/olt_common.py": "a10f226b5f85ae443ed610769f41e981f14d46cec5bb7e253319ac1bcb3d7e5b",
+  "work/oldenburg_transfer_2026-10-07/chain/olt_gates.py": "c1a6a81e36798579442ee5ee16fdc2ad002244eac8d9de335489c0738c1f0841",
+  "work/oldenburg_transfer_2026-10-07/chain/olt_prep.py": "8dbdb2fc7525a0b70996d935b05816faa0de4cc26368bc71c3ed45516a7f2e43",
+  "work/oldenburg_transfer_2026-10-07/chain/restore_weights.py": "51ed668169abf4f1bd52e8062e1ea7b43e5eb55f3aa510f20da9e96ac213cb82",
+  "work/oldenburg_transfer_2026-10-07/chain/sessions_olt.py": "54f448e6d8926a9e018692eea05b091f88bcdae54dd2b109e4786820ac321353",
+  "work/oldenburg_transfer_2026-10-07/chain/tests/conftest.py": "e4c0e60556570da602433ec3566e2189a3fa02dc01153da16fdeda9831830056",
+  "work/oldenburg_transfer_2026-10-07/chain/tests/record_tests.py": "4d253c58e8f42aa036b1d2f066a5b6757b815fafa1a89a772506bd23f157c294",
+  "work/oldenburg_transfer_2026-10-07/chain/tests/test_olt.py": "0dd0f4c742402b4c81740ccfd43427c7c7b85b3b1df361d6bf258f340133cdd2",
+  "work/oldenburg_transfer_2026-10-07/chain/vm_job_olt.sh": "0cad6480d3de33f8e33b7244ee6d324db0513498e2b81740212fcc5a2938d214"
+ },
+ "d1_bundle": {
+  "pins_session": "outputs/d1_collapse_2026-10-06/chain_runs/run_s3_20261006T222546Z/PINS_SESSION.json",
+  "sha256": "ae653043d91a35a477582a5509b10fc988b41e7c50cece8fe87613baed4d75e6",
+  "files": 122,
+  "note": "every listed file re-hashed by bundle_olt.d1_list at each check"
+ },
+ "design": {
+  "sessions": {
+   "0": {
+    "kind": "smoke",
+    "models": [
+     "D1F1_BARROW_L_2026092805",
+     "ADAF_barrow"
+    ]
+   },
+   "1": {
+    "kind": "run",
+    "models": [
+     "D1F1_BARROW_L_2026092805",
+     "D1F1_BARROW_L_2026092806",
+     "D1F1_BARROW_L_2026092807",
+     "D1F1_BARROW_L_2026092808",
+     "D1F1_BARROW_L_2026092809",
+     "D1F1_BARROW_L_2026092810",
+     "D1F1_BARROW_L_2026092811",
+     "D1F1_BARROW_L_2026092812",
+     "D1F1_BARROW_L_2026092813",
+     "D1F1_BARROW_L_2026092814",
+     "ADAF_barrow"
+    ]
+   }
+  },
+  "cu_ceiling": {
+   "run": 40.0,
+   "smoke": 5.0
+  },
+  "export_reserve_cu": 1.0,
+  "pass_margin": 1.1,
+  "barrier_s_per_model": 75.0,
+  "t_ack": 900,
+  "weights_sink": "none",
+  "deployable_checkpoint": "D1F1_BARROW_L_2026092805"
+ },
+ "attribution": {
+  "terrain": "LGLN DGM1 (CC BY 4.0), modified",
+  "weights": "ADAF weights CC BY-SA 4.0 (Coz et al. 2026); adapted D1 weights stay CC BY-SA 4.0"
+ },
+ "tests": {
+  "utc": "2026-10-08T00:54:59Z",
+  "passed": 81,
+  "summary": "81 passed in 492.48s (0:08:12)"
+ }
+}

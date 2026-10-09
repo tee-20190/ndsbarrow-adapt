@@ -1,0 +1,2604 @@
+{
+ "england_holdout": {
+  "manifest_sha256": "english_manifest()",
+  "eligible_parts": 506,
+  "background_km2": 33.380179,
+  "scored_km2_union": 93.85206,
+  "by_class_n": {
+   "barrow": 435,
+   "enclosure": 71
+  },
+  "inputs": {
+   "ADAF_AO": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/refs_holdout/HOLDOUT_OBJECTS_ADAF_AO_PRIVATE.json",
+    "sha256": "a322bb21ff5a037619d3c35fa28bd2975b095786b547498c138a9fad857f2516"
+   },
+   "ADAF_barrow": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/refs_holdout/HOLDOUT_OBJECTS_ADAF_barrow_PRIVATE.json",
+    "sha256": "910730a7fdc490c102e7779961fc9940e94c6fc2428d0c98ce2f5699a72528f2"
+   },
+   "ADAF_enclosure": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/refs_holdout/HOLDOUT_OBJECTS_ADAF_enclosure_PRIVATE.json",
+    "sha256": "a7edb81938aba5e0fe2099e4ae2dc957f24df819cbe1fcd25e8e423c860c6831"
+   },
+   "ADAF_ringfort": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/refs_holdout/HOLDOUT_OBJECTS_ADAF_ringfort_PRIVATE.json",
+    "sha256": "8b579f828d9867de6c81ac47940977a3b09af9d8218ef1866ec6f05691a42404"
+   },
+   "CONT": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/refs_holdout/HOLDOUT_OBJECTS_CONT_PRIVATE.json",
+    "sha256": "46eb9eff757bb75cb683084eb5ea7edde4d6f3a85712fd7bd0c7215480e140bc"
+   },
+   "S*": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s4_20261003T192115Z/v1/results/runs/J_2026092803/HOLDOUT_OBJECTS_PRIVATE.json",
+    "sha256": "b44df2807cad5f7a28f448e69e969948c54eb52a49ab7079d7f464116c86d3b6"
+   },
+   "ADAF_AO_gap": {
+    "path": "outputs/campaign_2026-09-22/holdout_diag/AO_holdout/OBJECTS_PRIVATE.json",
+    "sha256": "ee81259fe59adda95e157204ba713a37d4ebfd242f2950d98220d5107d60a49c"
+   },
+   "CONT_gap": {
+    "path": "outputs/counterfactual_2026-09-28/holdout/HOLDOUT_OBJECTS_2026092800_PRIVATE.json#CONT",
+    "sha256": "3fac0cf8019b761e46efce703b129c99682d1f5151c4ca3e9d9e827585f28840"
+   }
+  },
+  "models": {
+   "ADAF_AO": {
+    "kinds": {
+     "0.5": {
+      "HIT": 292,
+      "RANK": 52,
+      "NMS": 7,
+      "MISSING": 155
+     },
+     "1.0": {
+      "HIT": 328,
+      "RANK": 16,
+      "NMS": 7,
+      "MISSING": 155
+     },
+     "2.0": {
+      "HIT": 342,
+      "RANK": 2,
+      "NMS": 7,
+      "MISSING": 155
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 268,
+       "RANK": 44,
+       "NMS": 6,
+       "MISSING": 117
+      },
+      "1.0": {
+       "HIT": 299,
+       "RANK": 13,
+       "NMS": 6,
+       "MISSING": 117
+      },
+      "2.0": {
+       "HIT": 310,
+       "RANK": 2,
+       "NMS": 6,
+       "MISSING": 117
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 24,
+       "RANK": 8,
+       "NMS": 1,
+       "MISSING": 38
+      },
+      "1.0": {
+       "HIT": 29,
+       "RANK": 3,
+       "NMS": 1,
+       "MISSING": 38
+      },
+      "2.0": {
+       "HIT": 32,
+       "RANK": 0,
+       "NMS": 1,
+       "MISSING": 38
+      }
+     }
+    },
+    "pre_nms_parts": 351,
+    "post_nms_parts": 344,
+    "pool": 587,
+    "neg_per_km2": 2.1270107628841655,
+    "recall": {
+     "0.5": 0.5770750988142292,
+     "1.0": 0.6482213438735178,
+     "2.0": 0.6758893280632411
+    },
+    "topk_all_charged_parts": {
+     "0.5": 37,
+     "1.0": 77,
+     "2.0": 154
+    }
+   },
+   "ADAF_barrow": {
+    "kinds": {
+     "0.5": {
+      "HIT": 262,
+      "RANK": 76,
+      "NMS": 7,
+      "MISSING": 161
+     },
+     "1.0": {
+      "HIT": 311,
+      "RANK": 27,
+      "NMS": 7,
+      "MISSING": 161
+     },
+     "2.0": {
+      "HIT": 338,
+      "RANK": 0,
+      "NMS": 7,
+      "MISSING": 161
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 251,
+       "RANK": 71,
+       "NMS": 6,
+       "MISSING": 107
+      },
+      "1.0": {
+       "HIT": 300,
+       "RANK": 22,
+       "NMS": 6,
+       "MISSING": 107
+      },
+      "2.0": {
+       "HIT": 322,
+       "RANK": 0,
+       "NMS": 6,
+       "MISSING": 107
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 11,
+       "RANK": 5,
+       "NMS": 1,
+       "MISSING": 54
+      },
+      "1.0": {
+       "HIT": 11,
+       "RANK": 5,
+       "NMS": 1,
+       "MISSING": 54
+      },
+      "2.0": {
+       "HIT": 16,
+       "RANK": 0,
+       "NMS": 1,
+       "MISSING": 54
+      }
+     }
+    },
+    "pre_nms_parts": 345,
+    "post_nms_parts": 338,
+    "pool": 580,
+    "neg_per_km2": 1.7076001899210906,
+    "recall": {
+     "0.5": 0.5177865612648221,
+     "1.0": 0.6146245059288538,
+     "2.0": 0.6679841897233202
+    },
+    "topk_all_charged_parts": {
+     "0.5": 29,
+     "1.0": 69,
+     "2.0": 151
+    }
+   },
+   "ADAF_enclosure": {
+    "kinds": {
+     "0.5": {
+      "HIT": 97,
+      "RANK": 123,
+      "NMS": 3,
+      "MISSING": 283
+     },
+     "1.0": {
+      "HIT": 152,
+      "RANK": 68,
+      "NMS": 3,
+      "MISSING": 283
+     },
+     "2.0": {
+      "HIT": 206,
+      "RANK": 14,
+      "NMS": 3,
+      "MISSING": 283
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 71,
+       "RANK": 117,
+       "NMS": 3,
+       "MISSING": 244
+      },
+      "1.0": {
+       "HIT": 123,
+       "RANK": 65,
+       "NMS": 3,
+       "MISSING": 244
+      },
+      "2.0": {
+       "HIT": 174,
+       "RANK": 14,
+       "NMS": 3,
+       "MISSING": 244
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 26,
+       "RANK": 6,
+       "NMS": 0,
+       "MISSING": 39
+      },
+      "1.0": {
+       "HIT": 29,
+       "RANK": 3,
+       "NMS": 0,
+       "MISSING": 39
+      },
+      "2.0": {
+       "HIT": 32,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 39
+      }
+     }
+    },
+    "pre_nms_parts": 223,
+    "post_nms_parts": 220,
+    "pool": 467,
+    "neg_per_km2": 2.756126622328778,
+    "recall": {
+     "0.5": 0.191699604743083,
+     "1.0": 0.30039525691699603,
+     "2.0": 0.40711462450592883
+    },
+    "topk_all_charged_parts": {
+     "0.5": 29,
+     "1.0": 55,
+     "2.0": 119
+    }
+   },
+   "ADAF_ringfort": {
+    "kinds": {
+     "0.5": {
+      "HIT": 116,
+      "RANK": 70,
+      "NMS": 3,
+      "MISSING": 317
+     },
+     "1.0": {
+      "HIT": 160,
+      "RANK": 26,
+      "NMS": 3,
+      "MISSING": 317
+     },
+     "2.0": {
+      "HIT": 184,
+      "RANK": 2,
+      "NMS": 3,
+      "MISSING": 317
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 91,
+       "RANK": 65,
+       "NMS": 3,
+       "MISSING": 276
+      },
+      "1.0": {
+       "HIT": 133,
+       "RANK": 23,
+       "NMS": 3,
+       "MISSING": 276
+      },
+      "2.0": {
+       "HIT": 154,
+       "RANK": 2,
+       "NMS": 3,
+       "MISSING": 276
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 25,
+       "RANK": 5,
+       "NMS": 0,
+       "MISSING": 41
+      },
+      "1.0": {
+       "HIT": 27,
+       "RANK": 3,
+       "NMS": 0,
+       "MISSING": 41
+      },
+      "2.0": {
+       "HIT": 30,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 41
+      }
+     }
+    },
+    "pre_nms_parts": 189,
+    "post_nms_parts": 186,
+    "pool": 375,
+    "neg_per_km2": 2.0970528648153746,
+    "recall": {
+     "0.5": 0.22924901185770752,
+     "1.0": 0.31620553359683795,
+     "2.0": 0.36363636363636365
+    },
+    "topk_all_charged_parts": {
+     "0.5": 34,
+     "1.0": 65,
+     "2.0": 117
+    }
+   },
+   "CONT": {
+    "kinds": {
+     "0.5": {
+      "HIT": 370,
+      "RANK": 68,
+      "NMS": 4,
+      "MISSING": 64
+     },
+     "1.0": {
+      "HIT": 392,
+      "RANK": 46,
+      "NMS": 4,
+      "MISSING": 64
+     },
+     "2.0": {
+      "HIT": 405,
+      "RANK": 33,
+      "NMS": 4,
+      "MISSING": 64
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 336,
+       "RANK": 45,
+       "NMS": 4,
+       "MISSING": 50
+      },
+      "1.0": {
+       "HIT": 351,
+       "RANK": 30,
+       "NMS": 4,
+       "MISSING": 50
+      },
+      "2.0": {
+       "HIT": 360,
+       "RANK": 21,
+       "NMS": 4,
+       "MISSING": 50
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 34,
+       "RANK": 23,
+       "NMS": 0,
+       "MISSING": 14
+      },
+      "1.0": {
+       "HIT": 41,
+       "RANK": 16,
+       "NMS": 0,
+       "MISSING": 14
+      },
+      "2.0": {
+       "HIT": 45,
+       "RANK": 12,
+       "NMS": 0,
+       "MISSING": 14
+      }
+     }
+    },
+    "pre_nms_parts": 442,
+    "post_nms_parts": 438,
+    "pool": 1167,
+    "neg_per_km2": 10.994548591246321,
+    "recall": {
+     "0.5": 0.7312252964426877,
+     "1.0": 0.7747035573122529,
+     "2.0": 0.8003952569169961
+    },
+    "topk_all_charged_parts": {
+     "0.5": 45,
+     "1.0": 89,
+     "2.0": 163
+    }
+   },
+   "S*": {
+    "kinds": {
+     "0.5": {
+      "HIT": 358,
+      "RANK": 77,
+      "NMS": 4,
+      "MISSING": 67
+     },
+     "1.0": {
+      "HIT": 378,
+      "RANK": 57,
+      "NMS": 4,
+      "MISSING": 67
+     },
+     "2.0": {
+      "HIT": 409,
+      "RANK": 26,
+      "NMS": 4,
+      "MISSING": 67
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 323,
+       "RANK": 54,
+       "NMS": 4,
+       "MISSING": 54
+      },
+      "1.0": {
+       "HIT": 340,
+       "RANK": 37,
+       "NMS": 4,
+       "MISSING": 54
+      },
+      "2.0": {
+       "HIT": 362,
+       "RANK": 15,
+       "NMS": 4,
+       "MISSING": 54
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 35,
+       "RANK": 23,
+       "NMS": 0,
+       "MISSING": 13
+      },
+      "1.0": {
+       "HIT": 38,
+       "RANK": 20,
+       "NMS": 0,
+       "MISSING": 13
+      },
+      "2.0": {
+       "HIT": 47,
+       "RANK": 11,
+       "NMS": 0,
+       "MISSING": 13
+      }
+     }
+    },
+    "pre_nms_parts": 439,
+    "post_nms_parts": 435,
+    "pool": 1016,
+    "neg_per_km2": 8.088632478573587,
+    "recall": {
+     "0.5": 0.7075098814229249,
+     "1.0": 0.7470355731225297,
+     "2.0": 0.808300395256917
+    },
+    "topk_all_charged_parts": {
+     "0.5": 42,
+     "1.0": 81,
+     "2.0": 161
+    }
+   },
+   "ADAF_AO_gap": {
+    "kinds": {
+     "0.5": {
+      "HIT": 292,
+      "RANK": 52,
+      "NMS": 7,
+      "MISSING": 155
+     },
+     "1.0": {
+      "HIT": 328,
+      "RANK": 16,
+      "NMS": 7,
+      "MISSING": 155
+     },
+     "2.0": {
+      "HIT": 342,
+      "RANK": 2,
+      "NMS": 7,
+      "MISSING": 155
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 268,
+       "RANK": 44,
+       "NMS": 6,
+       "MISSING": 117
+      },
+      "1.0": {
+       "HIT": 299,
+       "RANK": 13,
+       "NMS": 6,
+       "MISSING": 117
+      },
+      "2.0": {
+       "HIT": 310,
+       "RANK": 2,
+       "NMS": 6,
+       "MISSING": 117
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 24,
+       "RANK": 8,
+       "NMS": 1,
+       "MISSING": 38
+      },
+      "1.0": {
+       "HIT": 29,
+       "RANK": 3,
+       "NMS": 1,
+       "MISSING": 38
+      },
+      "2.0": {
+       "HIT": 32,
+       "RANK": 0,
+       "NMS": 1,
+       "MISSING": 38
+      }
+     }
+    },
+    "pre_nms_parts": 351,
+    "post_nms_parts": 344,
+    "pool": 587,
+    "neg_per_km2": 2.1270107628841655,
+    "recall": {
+     "0.5": 0.5770750988142292,
+     "1.0": 0.6482213438735178,
+     "2.0": 0.6758893280632411
+    },
+    "topk_all_charged_parts": {
+     "0.5": 37,
+     "1.0": 77,
+     "2.0": 154
+    }
+   },
+   "CONT_gap": {
+    "kinds": {
+     "0.5": {
+      "HIT": 370,
+      "RANK": 68,
+      "NMS": 4,
+      "MISSING": 64
+     },
+     "1.0": {
+      "HIT": 392,
+      "RANK": 46,
+      "NMS": 4,
+      "MISSING": 64
+     },
+     "2.0": {
+      "HIT": 405,
+      "RANK": 33,
+      "NMS": 4,
+      "MISSING": 64
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 336,
+       "RANK": 45,
+       "NMS": 4,
+       "MISSING": 50
+      },
+      "1.0": {
+       "HIT": 351,
+       "RANK": 30,
+       "NMS": 4,
+       "MISSING": 50
+      },
+      "2.0": {
+       "HIT": 360,
+       "RANK": 21,
+       "NMS": 4,
+       "MISSING": 50
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 34,
+       "RANK": 23,
+       "NMS": 0,
+       "MISSING": 14
+      },
+      "1.0": {
+       "HIT": 41,
+       "RANK": 16,
+       "NMS": 0,
+       "MISSING": 14
+      },
+      "2.0": {
+       "HIT": 45,
+       "RANK": 12,
+       "NMS": 0,
+       "MISSING": 14
+      }
+     }
+    },
+    "pre_nms_parts": 442,
+    "post_nms_parts": 438,
+    "pool": 1167,
+    "neg_per_km2": 10.994548591246321,
+    "recall": {
+     "0.5": 0.7312252964426877,
+     "1.0": 0.7747035573122529,
+     "2.0": 0.8003952569169961
+    },
+    "topk_all_charged_parts": {
+     "0.5": 45,
+     "1.0": 89,
+     "2.0": 163
+    }
+   }
+  },
+  "union": {
+   "models": [
+    "ADAF_AO",
+    "ADAF_barrow",
+    "ADAF_enclosure",
+    "ADAF_ringfort",
+    "CONT",
+    "S*"
+   ],
+   "pre_nms_any": 466,
+   "post_nms_any": 465,
+   "pre_nms_by_class": {
+    "barrow": 405,
+    "enclosure": 61
+   },
+   "hit_any_at_d": {
+    "0.5": 402,
+    "1.0": 424,
+    "2.0": 442
+   },
+   "no_model_pre_nms": 40
+  },
+  "oracle": {
+   "0.5": {
+    "frozen_charge_upper": 466,
+    "frozen_charge_greedy_nms_feasible": 466,
+    "all_charged_K": 46,
+    "all_charged_upper": 83,
+    "all_charged_greedy_nms_feasible": 52,
+    "all_charged_greedy_no_nms": 52
+   },
+   "1.0": {
+    "frozen_charge_upper": 466,
+    "frozen_charge_greedy_nms_feasible": 466,
+    "all_charged_K": 93,
+    "all_charged_upper": 130,
+    "all_charged_greedy_nms_feasible": 99,
+    "all_charged_greedy_no_nms": 99
+   },
+   "2.0": {
+    "frozen_charge_upper": 466,
+    "frozen_charge_greedy_nms_feasible": 466,
+    "all_charged_K": 187,
+    "all_charged_upper": 224,
+    "all_charged_greedy_nms_feasible": 193,
+    "all_charged_greedy_no_nms": 193
+   }
+  }
+ },
+ "wales_dev": {
+  "manifest_sha256": "e0ad8344dbb7be69516be14ee36277cd6f034127e9cee34ba084abb10d19cff2",
+  "eligible_parts": 188,
+  "background_km2": 300.0,
+  "scored_km2_union": 453.100365,
+  "by_class_n": {
+   "barrow": 111,
+   "enclosure": 77
+  },
+  "inputs": {
+   "ADAF_AO": {
+    "path": "outputs/holdout_region_2026-10/chain_runs/t2_s1_20261001T003208Z/v1/results/PROPOSALS_ADAF_AO_PRIVATE.json",
+    "sha256": "2470efa3f32e00148bf54e5dfa9915be2f381efc202e81bfbc5780b9927b53b7"
+   },
+   "ADAF_barrow": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/wales/PROPOSALS_ADAF_barrow_PRIVATE.json",
+    "sha256": "0d38ac8828adba78fb4b008ac0e07dc6cdd76d1476d16e81943fb8844e33e09f"
+   },
+   "ADAF_enclosure": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/wales/PROPOSALS_ADAF_enclosure_PRIVATE.json",
+    "sha256": "babf3e640565cb594acb0ecffda2249993f17b56db5f27765af62f8a0b39df97"
+   },
+   "ADAF_ringfort": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/wales/PROPOSALS_ADAF_ringfort_PRIVATE.json",
+    "sha256": "cc6fa7ca02a13b643b524bfea83c60411cb2b7833283034deaf30f626eeee57e"
+   },
+   "CONT": {
+    "path": "outputs/holdout_region_2026-10/chain_runs/t2_s1_20261001T003208Z/v1/results/PROPOSALS_CONT_PRIVATE.json",
+    "sha256": "5fe8edfaca8b26ffe341c0fca838c4563e882df539e1b0c46a74b78b4f81d6b7"
+   },
+   "S*": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s4_20261003T192115Z/v1/results/wales/PROPOSALS_J_2026092803_PRIVATE.json",
+    "sha256": "327a55a8385b424df62c2e8bf36bce10064ec8ed8f4e5fa46ca6123793e5d4da"
+   }
+  },
+  "models": {
+   "ADAF_AO": {
+    "kinds": {
+     "0.5": {
+      "HIT": 125,
+      "RANK": 11,
+      "NMS": 1,
+      "MISSING": 51
+     },
+     "1.0": {
+      "HIT": 132,
+      "RANK": 4,
+      "NMS": 1,
+      "MISSING": 51
+     },
+     "2.0": {
+      "HIT": 136,
+      "RANK": 0,
+      "NMS": 1,
+      "MISSING": 51
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 78,
+       "RANK": 5,
+       "NMS": 1,
+       "MISSING": 27
+      },
+      "1.0": {
+       "HIT": 81,
+       "RANK": 2,
+       "NMS": 1,
+       "MISSING": 27
+      },
+      "2.0": {
+       "HIT": 83,
+       "RANK": 0,
+       "NMS": 1,
+       "MISSING": 27
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 47,
+       "RANK": 6,
+       "NMS": 0,
+       "MISSING": 24
+      },
+      "1.0": {
+       "HIT": 51,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 24
+      },
+      "2.0": {
+       "HIT": 53,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 24
+      }
+     }
+    },
+    "pre_nms_parts": 137,
+    "post_nms_parts": 136,
+    "pool": 809,
+    "neg_per_km2": 1.4,
+    "recall": {
+     "0.5": 0.6648936170212766,
+     "1.0": 0.7021276595744681,
+     "2.0": 0.723404255319149
+    },
+    "topk_all_charged_parts": {
+     "0.5": 100,
+     "1.0": 128,
+     "2.0": 136
+    }
+   },
+   "ADAF_barrow": {
+    "kinds": {
+     "0.5": {
+      "HIT": 87,
+      "RANK": 19,
+      "NMS": 3,
+      "MISSING": 79
+     },
+     "1.0": {
+      "HIT": 100,
+      "RANK": 6,
+      "NMS": 3,
+      "MISSING": 79
+     },
+     "2.0": {
+      "HIT": 106,
+      "RANK": 0,
+      "NMS": 3,
+      "MISSING": 79
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 80,
+       "RANK": 9,
+       "NMS": 3,
+       "MISSING": 19
+      },
+      "1.0": {
+       "HIT": 87,
+       "RANK": 2,
+       "NMS": 3,
+       "MISSING": 19
+      },
+      "2.0": {
+       "HIT": 89,
+       "RANK": 0,
+       "NMS": 3,
+       "MISSING": 19
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 7,
+       "RANK": 10,
+       "NMS": 0,
+       "MISSING": 60
+      },
+      "1.0": {
+       "HIT": 13,
+       "RANK": 4,
+       "NMS": 0,
+       "MISSING": 60
+      },
+      "2.0": {
+       "HIT": 17,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 60
+      }
+     }
+    },
+    "pre_nms_parts": 109,
+    "post_nms_parts": 106,
+    "pool": 944,
+    "neg_per_km2": 1.6,
+    "recall": {
+     "0.5": 0.4627659574468085,
+     "1.0": 0.5319148936170213,
+     "2.0": 0.5638297872340425
+    },
+    "topk_all_charged_parts": {
+     "0.5": 73,
+     "1.0": 90,
+     "2.0": 106
+    }
+   },
+   "ADAF_enclosure": {
+    "kinds": {
+     "0.5": {
+      "HIT": 58,
+      "RANK": 27,
+      "NMS": 1,
+      "MISSING": 102
+     },
+     "1.0": {
+      "HIT": 71,
+      "RANK": 14,
+      "NMS": 1,
+      "MISSING": 102
+     },
+     "2.0": {
+      "HIT": 85,
+      "RANK": 0,
+      "NMS": 1,
+      "MISSING": 102
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 13,
+       "RANK": 15,
+       "NMS": 1,
+       "MISSING": 82
+      },
+      "1.0": {
+       "HIT": 22,
+       "RANK": 6,
+       "NMS": 1,
+       "MISSING": 82
+      },
+      "2.0": {
+       "HIT": 28,
+       "RANK": 0,
+       "NMS": 1,
+       "MISSING": 82
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 45,
+       "RANK": 12,
+       "NMS": 0,
+       "MISSING": 20
+      },
+      "1.0": {
+       "HIT": 49,
+       "RANK": 8,
+       "NMS": 0,
+       "MISSING": 20
+      },
+      "2.0": {
+       "HIT": 57,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 20
+      }
+     }
+    },
+    "pre_nms_parts": 86,
+    "post_nms_parts": 85,
+    "pool": 891,
+    "neg_per_km2": 1.6966666666666668,
+    "recall": {
+     "0.5": 0.30851063829787234,
+     "1.0": 0.3776595744680851,
+     "2.0": 0.4521276595744681
+    },
+    "topk_all_charged_parts": {
+     "0.5": 48,
+     "1.0": 65,
+     "2.0": 85
+    }
+   },
+   "ADAF_ringfort": {
+    "kinds": {
+     "0.5": {
+      "HIT": 56,
+      "RANK": 26,
+      "NMS": 0,
+      "MISSING": 106
+     },
+     "1.0": {
+      "HIT": 63,
+      "RANK": 19,
+      "NMS": 0,
+      "MISSING": 106
+     },
+     "2.0": {
+      "HIT": 73,
+      "RANK": 9,
+      "NMS": 0,
+      "MISSING": 106
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 10,
+       "RANK": 18,
+       "NMS": 0,
+       "MISSING": 83
+      },
+      "1.0": {
+       "HIT": 15,
+       "RANK": 13,
+       "NMS": 0,
+       "MISSING": 83
+      },
+      "2.0": {
+       "HIT": 21,
+       "RANK": 7,
+       "NMS": 0,
+       "MISSING": 83
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 46,
+       "RANK": 8,
+       "NMS": 0,
+       "MISSING": 23
+      },
+      "1.0": {
+       "HIT": 48,
+       "RANK": 6,
+       "NMS": 0,
+       "MISSING": 23
+      },
+      "2.0": {
+       "HIT": 52,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 23
+      }
+     }
+    },
+    "pre_nms_parts": 82,
+    "post_nms_parts": 82,
+    "pool": 1411,
+    "neg_per_km2": 2.8533333333333335,
+    "recall": {
+     "0.5": 0.2978723404255319,
+     "1.0": 0.3351063829787234,
+     "2.0": 0.3882978723404255
+    },
+    "topk_all_charged_parts": {
+     "0.5": 52,
+     "1.0": 61,
+     "2.0": 72
+    }
+   },
+   "CONT": {
+    "kinds": {
+     "0.5": {
+      "HIT": 114,
+      "RANK": 49,
+      "NMS": 0,
+      "MISSING": 25
+     },
+     "1.0": {
+      "HIT": 126,
+      "RANK": 37,
+      "NMS": 0,
+      "MISSING": 25
+     },
+     "2.0": {
+      "HIT": 139,
+      "RANK": 24,
+      "NMS": 0,
+      "MISSING": 25
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 87,
+       "RANK": 12,
+       "NMS": 0,
+       "MISSING": 12
+      },
+      "1.0": {
+       "HIT": 91,
+       "RANK": 8,
+       "NMS": 0,
+       "MISSING": 12
+      },
+      "2.0": {
+       "HIT": 95,
+       "RANK": 4,
+       "NMS": 0,
+       "MISSING": 12
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 27,
+       "RANK": 37,
+       "NMS": 0,
+       "MISSING": 13
+      },
+      "1.0": {
+       "HIT": 35,
+       "RANK": 29,
+       "NMS": 0,
+       "MISSING": 13
+      },
+      "2.0": {
+       "HIT": 44,
+       "RANK": 20,
+       "NMS": 0,
+       "MISSING": 13
+      }
+     }
+    },
+    "pre_nms_parts": 163,
+    "post_nms_parts": 163,
+    "pool": 5046,
+    "neg_per_km2": 10.92,
+    "recall": {
+     "0.5": 0.6063829787234043,
+     "1.0": 0.6702127659574468,
+     "2.0": 0.7393617021276596
+    },
+    "topk_all_charged_parts": {
+     "0.5": 97,
+     "1.0": 114,
+     "2.0": 132
+    }
+   },
+   "S*": {
+    "kinds": {
+     "0.5": {
+      "HIT": 130,
+      "RANK": 35,
+      "NMS": 0,
+      "MISSING": 23
+     },
+     "1.0": {
+      "HIT": 146,
+      "RANK": 19,
+      "NMS": 0,
+      "MISSING": 23
+     },
+     "2.0": {
+      "HIT": 153,
+      "RANK": 12,
+      "NMS": 0,
+      "MISSING": 23
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 84,
+       "RANK": 17,
+       "NMS": 0,
+       "MISSING": 10
+      },
+      "1.0": {
+       "HIT": 94,
+       "RANK": 7,
+       "NMS": 0,
+       "MISSING": 10
+      },
+      "2.0": {
+       "HIT": 97,
+       "RANK": 4,
+       "NMS": 0,
+       "MISSING": 10
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 46,
+       "RANK": 18,
+       "NMS": 0,
+       "MISSING": 13
+      },
+      "1.0": {
+       "HIT": 52,
+       "RANK": 12,
+       "NMS": 0,
+       "MISSING": 13
+      },
+      "2.0": {
+       "HIT": 56,
+       "RANK": 8,
+       "NMS": 0,
+       "MISSING": 13
+      }
+     }
+    },
+    "pre_nms_parts": 165,
+    "post_nms_parts": 165,
+    "pool": 3870,
+    "neg_per_km2": 8.343333333333334,
+    "recall": {
+     "0.5": 0.6914893617021277,
+     "1.0": 0.776595744680851,
+     "2.0": 0.8138297872340425
+    },
+    "topk_all_charged_parts": {
+     "0.5": 113,
+     "1.0": 134,
+     "2.0": 149
+    }
+   }
+  },
+  "union": {
+   "models": [
+    "ADAF_AO",
+    "ADAF_barrow",
+    "ADAF_enclosure",
+    "ADAF_ringfort",
+    "CONT",
+    "S*"
+   ],
+   "pre_nms_any": 171,
+   "post_nms_any": 171,
+   "pre_nms_by_class": {
+    "barrow": 103,
+    "enclosure": 68
+   },
+   "hit_any_at_d": {
+    "0.5": 152,
+    "1.0": 159,
+    "2.0": 168
+   },
+   "no_model_pre_nms": 17
+  },
+  "oracle": {
+   "0.5": {
+    "frozen_charge_upper": 171,
+    "frozen_charge_greedy_nms_feasible": 171,
+    "all_charged_K": 226,
+    "all_charged_upper": 171,
+    "all_charged_greedy_nms_feasible": 171,
+    "all_charged_greedy_no_nms": 171
+   },
+   "1.0": {
+    "frozen_charge_upper": 171,
+    "frozen_charge_greedy_nms_feasible": 171,
+    "all_charged_K": 453,
+    "all_charged_upper": 171,
+    "all_charged_greedy_nms_feasible": 171,
+    "all_charged_greedy_no_nms": 171
+   },
+   "2.0": {
+    "frozen_charge_upper": 171,
+    "frozen_charge_greedy_nms_feasible": 171,
+    "all_charged_K": 906,
+    "all_charged_upper": 171,
+    "all_charged_greedy_nms_feasible": 171,
+    "all_charged_greedy_no_nms": 171
+   }
+  }
+ },
+ "ireland_dev": {
+  "manifest_sha256": "8dc9ffe24270743d281098a949036d292d05d5d3892910b45e6011a95d902429",
+  "eligible_parts": 160,
+  "background_km2": 156.2525,
+  "scored_km2_union": 232.633091,
+  "by_class_n": {
+   "barrow": 9,
+   "enclosure": 151
+  },
+  "inputs": {
+   "ADAF_AO": {
+    "path": "outputs/hr3_ireland_2026-10-02/step2/chain_runs/run_s1_20261002T235042Z/v1/results/PROPOSALS_ADAF_AO_PRIVATE.json",
+    "sha256": "5bdf3c57211b219cde7625e90e63dee4d55d318983ff3a6f301c1e2100a24eb9"
+   },
+   "ADAF_barrow": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/ireland/PROPOSALS_ADAF_barrow_PRIVATE.json",
+    "sha256": "be0e4b56423a7a8f69b2a4e7bd707dd01df8e02fdbf2043e3dd5d52f569e4bd7"
+   },
+   "ADAF_enclosure": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/ireland/PROPOSALS_ADAF_enclosure_PRIVATE.json",
+    "sha256": "8ed2e3cb2a4ad8c1cd4069880e1825e125e5dd8fba3e493e346001e0cbd7dfe6"
+   },
+   "ADAF_ringfort": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s1_20261003T093950Z/v1/results/ireland/PROPOSALS_ADAF_ringfort_PRIVATE.json",
+    "sha256": "8b6ec91fa4fd9f0ab3f8626d63d4c0d711c4e81029fcd943e2d22c5dbcfab0fa"
+   },
+   "CONT": {
+    "path": "outputs/hr3_ireland_2026-10-02/step2/chain_runs/run_s1_20261002T235042Z/v1/results/PROPOSALS_CONT_PRIVATE.json",
+    "sha256": "838c9309ffb4c7a09af6d9ac9ef47d0a9dfd5694af17fdf8b01a57cc6ed0f873"
+   },
+   "S*": {
+    "path": "outputs/joint_campaign_2026-10-03/chain_runs/run_s4_20261003T192115Z/v1/results/ireland/PROPOSALS_J_2026092803_PRIVATE.json",
+    "sha256": "649cda73789e62f1ce8b3dec593126ad7a7cb03d9eee453131df3bebc67a9e6b"
+   }
+  },
+  "models": {
+   "ADAF_AO": {
+    "kinds": {
+     "0.5": {
+      "HIT": 83,
+      "RANK": 13,
+      "NMS": 0,
+      "MISSING": 64
+     },
+     "1.0": {
+      "HIT": 94,
+      "RANK": 2,
+      "NMS": 0,
+      "MISSING": 64
+     },
+     "2.0": {
+      "HIT": 96,
+      "RANK": 0,
+      "NMS": 0,
+      "MISSING": 64
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 3,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 6
+      },
+      "1.0": {
+       "HIT": 3,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 6
+      },
+      "2.0": {
+       "HIT": 3,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 6
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 80,
+       "RANK": 13,
+       "NMS": 0,
+       "MISSING": 58
+      },
+      "1.0": {
+       "HIT": 91,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 58
+      },
+      "2.0": {
+       "HIT": 93,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 58
+      }
+     }
+    },
+    "pre_nms_parts": 96,
+    "post_nms_parts": 96,
+    "pool": 495,
+    "neg_per_km2": 1.4463768579702725,
+    "recall": {
+     "0.5": 0.51875,
+     "1.0": 0.5875,
+     "2.0": 0.6
+    },
+    "topk_all_charged_parts": {
+     "0.5": 56,
+     "1.0": 79,
+     "2.0": 96
+    }
+   },
+   "ADAF_barrow": {
+    "kinds": {
+     "0.5": {
+      "HIT": 32,
+      "RANK": 7,
+      "NMS": 0,
+      "MISSING": 121
+     },
+     "1.0": {
+      "HIT": 37,
+      "RANK": 2,
+      "NMS": 0,
+      "MISSING": 121
+     },
+     "2.0": {
+      "HIT": 39,
+      "RANK": 0,
+      "NMS": 0,
+      "MISSING": 121
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 4,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 5
+      },
+      "1.0": {
+       "HIT": 4,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 5
+      },
+      "2.0": {
+       "HIT": 4,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 5
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 28,
+       "RANK": 7,
+       "NMS": 0,
+       "MISSING": 116
+      },
+      "1.0": {
+       "HIT": 33,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 116
+      },
+      "2.0": {
+       "HIT": 35,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 116
+      }
+     }
+    },
+    "pre_nms_parts": 39,
+    "post_nms_parts": 39,
+    "pool": 440,
+    "neg_per_km2": 1.2351802371162062,
+    "recall": {
+     "0.5": 0.2,
+     "1.0": 0.23125,
+     "2.0": 0.24375
+    },
+    "topk_all_charged_parts": {
+     "0.5": 24,
+     "1.0": 32,
+     "2.0": 39
+    }
+   },
+   "ADAF_enclosure": {
+    "kinds": {
+     "0.5": {
+      "HIT": 80,
+      "RANK": 24,
+      "NMS": 1,
+      "MISSING": 55
+     },
+     "1.0": {
+      "HIT": 103,
+      "RANK": 1,
+      "NMS": 1,
+      "MISSING": 55
+     },
+     "2.0": {
+      "HIT": 104,
+      "RANK": 0,
+      "NMS": 1,
+      "MISSING": 55
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 2,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 5
+      },
+      "1.0": {
+       "HIT": 3,
+       "RANK": 1,
+       "NMS": 0,
+       "MISSING": 5
+      },
+      "2.0": {
+       "HIT": 4,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 5
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 78,
+       "RANK": 22,
+       "NMS": 1,
+       "MISSING": 50
+      },
+      "1.0": {
+       "HIT": 100,
+       "RANK": 0,
+       "NMS": 1,
+       "MISSING": 50
+      },
+      "2.0": {
+       "HIT": 100,
+       "RANK": 0,
+       "NMS": 1,
+       "MISSING": 50
+      }
+     }
+    },
+    "pre_nms_parts": 105,
+    "post_nms_parts": 104,
+    "pool": 580,
+    "neg_per_km2": 1.7407721476456377,
+    "recall": {
+     "0.5": 0.5,
+     "1.0": 0.64375,
+     "2.0": 0.65
+    },
+    "topk_all_charged_parts": {
+     "0.5": 41,
+     "1.0": 78,
+     "2.0": 103
+    }
+   },
+   "ADAF_ringfort": {
+    "kinds": {
+     "0.5": {
+      "HIT": 86,
+      "RANK": 20,
+      "NMS": 0,
+      "MISSING": 54
+     },
+     "1.0": {
+      "HIT": 100,
+      "RANK": 6,
+      "NMS": 0,
+      "MISSING": 54
+     },
+     "2.0": {
+      "HIT": 106,
+      "RANK": 0,
+      "NMS": 0,
+      "MISSING": 54
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 2,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 7
+      },
+      "1.0": {
+       "HIT": 2,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 7
+      },
+      "2.0": {
+       "HIT": 2,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 7
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 84,
+       "RANK": 20,
+       "NMS": 0,
+       "MISSING": 47
+      },
+      "1.0": {
+       "HIT": 98,
+       "RANK": 6,
+       "NMS": 0,
+       "MISSING": 47
+      },
+      "2.0": {
+       "HIT": 104,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 47
+      }
+     }
+    },
+    "pre_nms_parts": 106,
+    "post_nms_parts": 106,
+    "pool": 675,
+    "neg_per_km2": 2.278363546183261,
+    "recall": {
+     "0.5": 0.5375,
+     "1.0": 0.625,
+     "2.0": 0.6625
+    },
+    "topk_all_charged_parts": {
+     "0.5": 47,
+     "1.0": 83,
+     "2.0": 104
+    }
+   },
+   "CONT": {
+    "kinds": {
+     "0.5": {
+      "HIT": 38,
+      "RANK": 75,
+      "NMS": 0,
+      "MISSING": 47
+     },
+     "1.0": {
+      "HIT": 55,
+      "RANK": 58,
+      "NMS": 0,
+      "MISSING": 47
+     },
+     "2.0": {
+      "HIT": 90,
+      "RANK": 23,
+      "NMS": 0,
+      "MISSING": 47
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 4,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 3
+      },
+      "1.0": {
+       "HIT": 5,
+       "RANK": 1,
+       "NMS": 0,
+       "MISSING": 3
+      },
+      "2.0": {
+       "HIT": 6,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 3
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 34,
+       "RANK": 73,
+       "NMS": 0,
+       "MISSING": 44
+      },
+      "1.0": {
+       "HIT": 50,
+       "RANK": 57,
+       "NMS": 0,
+       "MISSING": 44
+      },
+      "2.0": {
+       "HIT": 84,
+       "RANK": 23,
+       "NMS": 0,
+       "MISSING": 44
+      }
+     }
+    },
+    "pre_nms_parts": 113,
+    "post_nms_parts": 113,
+    "pool": 2163,
+    "neg_per_km2": 8.78065950944785,
+    "recall": {
+     "0.5": 0.2375,
+     "1.0": 0.34375,
+     "2.0": 0.5625
+    },
+    "topk_all_charged_parts": {
+     "0.5": 21,
+     "1.0": 42,
+     "2.0": 79
+    }
+   },
+   "S*": {
+    "kinds": {
+     "0.5": {
+      "HIT": 84,
+      "RANK": 33,
+      "NMS": 0,
+      "MISSING": 43
+     },
+     "1.0": {
+      "HIT": 94,
+      "RANK": 23,
+      "NMS": 0,
+      "MISSING": 43
+     },
+     "2.0": {
+      "HIT": 101,
+      "RANK": 16,
+      "NMS": 0,
+      "MISSING": 43
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 4,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 3
+      },
+      "1.0": {
+       "HIT": 5,
+       "RANK": 1,
+       "NMS": 0,
+       "MISSING": 3
+      },
+      "2.0": {
+       "HIT": 6,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 3
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 80,
+       "RANK": 31,
+       "NMS": 0,
+       "MISSING": 40
+      },
+      "1.0": {
+       "HIT": 89,
+       "RANK": 22,
+       "NMS": 0,
+       "MISSING": 40
+      },
+      "2.0": {
+       "HIT": 95,
+       "RANK": 16,
+       "NMS": 0,
+       "MISSING": 40
+      }
+     }
+    },
+    "pre_nms_parts": 117,
+    "post_nms_parts": 117,
+    "pool": 1875,
+    "neg_per_km2": 7.180685109038255,
+    "recall": {
+     "0.5": 0.525,
+     "1.0": 0.5875,
+     "2.0": 0.63125
+    },
+    "topk_all_charged_parts": {
+     "0.5": 52,
+     "1.0": 83,
+     "2.0": 98
+    }
+   }
+  },
+  "union": {
+   "models": [
+    "ADAF_AO",
+    "ADAF_barrow",
+    "ADAF_enclosure",
+    "ADAF_ringfort",
+    "CONT",
+    "S*"
+   ],
+   "pre_nms_any": 133,
+   "post_nms_any": 133,
+   "pre_nms_by_class": {
+    "barrow": 6,
+    "enclosure": 127
+   },
+   "hit_any_at_d": {
+    "0.5": 112,
+    "1.0": 119,
+    "2.0": 126
+   },
+   "no_model_pre_nms": 27
+  },
+  "oracle": {
+   "0.5": {
+    "frozen_charge_upper": 133,
+    "frozen_charge_greedy_nms_feasible": 132,
+    "all_charged_K": 116,
+    "all_charged_upper": 133,
+    "all_charged_greedy_nms_feasible": 121,
+    "all_charged_greedy_no_nms": 121
+   },
+   "1.0": {
+    "frozen_charge_upper": 133,
+    "frozen_charge_greedy_nms_feasible": 132,
+    "all_charged_K": 232,
+    "all_charged_upper": 133,
+    "all_charged_greedy_nms_feasible": 132,
+    "all_charged_greedy_no_nms": 133
+   },
+   "2.0": {
+    "frozen_charge_upper": 133,
+    "frozen_charge_greedy_nms_feasible": 132,
+    "all_charged_K": 465,
+    "all_charged_upper": 133,
+    "all_charged_greedy_nms_feasible": 132,
+    "all_charged_greedy_no_nms": 133
+   }
+  }
+ },
+ "verden_group": {
+  "manifest_sha256": "70ef0920816f3d656b19cf62b73d43dd12f63105d570fd290751ee35fa6c498c",
+  "eligible_parts": 300,
+  "background_km2": 300.4461,
+  "scored_km2_union": 422.84319333092424,
+  "by_class_n": {
+   "barrow": 300,
+   "enclosure": 0
+  },
+  "inputs": {
+   "ADAF_AO": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/group/PROPOSALS_ADAF_AO_PRIVATE.json",
+    "sha256": "e7dd66967fb179362516bbcc2b626a9e66ff1d56c09c770573bf87f078c83d8a"
+   },
+   "ADAF_barrow": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/group/PROPOSALS_ADAF_barrow_PRIVATE.json",
+    "sha256": "613169e37373d16382554990f1475bcb7f0684c61084c02f75133e21336141a5"
+   },
+   "CONT": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/group/PROPOSALS_CONT_PRIVATE.json",
+    "sha256": "9f8ac46207477748d36eb5463692c23e6c18ef246054ac2a57d94e7bbd4b4379"
+   },
+   "S*": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/group/PROPOSALS_J_2026092803_PRIVATE.json",
+    "sha256": "a0a72505b34217cf20e70cab6c80996e461eed6856350daf6c430f7a67a55dcb"
+   }
+  },
+  "models": {
+   "ADAF_AO": {
+    "kinds": {
+     "0.5": {
+      "HIT": 53,
+      "RANK": 77,
+      "NMS": 0,
+      "MISSING": 170
+     },
+     "1.0": {
+      "HIT": 86,
+      "RANK": 44,
+      "NMS": 0,
+      "MISSING": 170
+     },
+     "2.0": {
+      "HIT": 129,
+      "RANK": 1,
+      "NMS": 0,
+      "MISSING": 170
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 53,
+       "RANK": 77,
+       "NMS": 0,
+       "MISSING": 170
+      },
+      "1.0": {
+       "HIT": 86,
+       "RANK": 44,
+       "NMS": 0,
+       "MISSING": 170
+      },
+      "2.0": {
+       "HIT": 129,
+       "RANK": 1,
+       "NMS": 0,
+       "MISSING": 170
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 130,
+    "post_nms_parts": 130,
+    "pool": 1001,
+    "neg_per_km2": 2.086896784481476,
+    "recall": {
+     "0.5": 0.17666666666666667,
+     "1.0": 0.2866666666666667,
+     "2.0": 0.43
+    },
+    "topk_all_charged_parts": {
+     "0.5": 39,
+     "1.0": 76,
+     "2.0": 124
+    }
+   },
+   "ADAF_barrow": {
+    "kinds": {
+     "0.5": {
+      "HIT": 152,
+      "RANK": 23,
+      "NMS": 0,
+      "MISSING": 125
+     },
+     "1.0": {
+      "HIT": 173,
+      "RANK": 2,
+      "NMS": 0,
+      "MISSING": 125
+     },
+     "2.0": {
+      "HIT": 175,
+      "RANK": 0,
+      "NMS": 0,
+      "MISSING": 125
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 152,
+       "RANK": 23,
+       "NMS": 0,
+       "MISSING": 125
+      },
+      "1.0": {
+       "HIT": 173,
+       "RANK": 2,
+       "NMS": 0,
+       "MISSING": 125
+      },
+      "2.0": {
+       "HIT": 175,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 125
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 175,
+    "post_nms_parts": 175,
+    "pool": 688,
+    "neg_per_km2": 1.0517693523064537,
+    "recall": {
+     "0.5": 0.5066666666666667,
+     "1.0": 0.5766666666666667,
+     "2.0": 0.5833333333333334
+    },
+    "topk_all_charged_parts": {
+     "0.5": 105,
+     "1.0": 155,
+     "2.0": 175
+    }
+   },
+   "CONT": {
+    "kinds": {
+     "0.5": {
+      "HIT": 94,
+      "RANK": 106,
+      "NMS": 2,
+      "MISSING": 98
+     },
+     "1.0": {
+      "HIT": 130,
+      "RANK": 70,
+      "NMS": 2,
+      "MISSING": 98
+     },
+     "2.0": {
+      "HIT": 150,
+      "RANK": 50,
+      "NMS": 2,
+      "MISSING": 98
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 94,
+       "RANK": 106,
+       "NMS": 2,
+       "MISSING": 98
+      },
+      "1.0": {
+       "HIT": 130,
+       "RANK": 70,
+       "NMS": 2,
+       "MISSING": 98
+      },
+      "2.0": {
+       "HIT": 150,
+       "RANK": 50,
+       "NMS": 2,
+       "MISSING": 98
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 202,
+    "post_nms_parts": 200,
+    "pool": 3851,
+    "neg_per_km2": 8.600544323923659,
+    "recall": {
+     "0.5": 0.31333333333333335,
+     "1.0": 0.43333333333333335,
+     "2.0": 0.5
+    },
+    "topk_all_charged_parts": {
+     "0.5": 74,
+     "1.0": 108,
+     "2.0": 140
+    }
+   },
+   "S*": {
+    "kinds": {
+     "0.5": {
+      "HIT": 119,
+      "RANK": 91,
+      "NMS": 0,
+      "MISSING": 90
+     },
+     "1.0": {
+      "HIT": 147,
+      "RANK": 63,
+      "NMS": 0,
+      "MISSING": 90
+     },
+     "2.0": {
+      "HIT": 170,
+      "RANK": 40,
+      "NMS": 0,
+      "MISSING": 90
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 119,
+       "RANK": 91,
+       "NMS": 0,
+       "MISSING": 90
+      },
+      "1.0": {
+       "HIT": 147,
+       "RANK": 63,
+       "NMS": 0,
+       "MISSING": 90
+      },
+      "2.0": {
+       "HIT": 170,
+       "RANK": 40,
+       "NMS": 0,
+       "MISSING": 90
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 210,
+    "post_nms_parts": 210,
+    "pool": 3059,
+    "neg_per_km2": 6.603513908151911,
+    "recall": {
+     "0.5": 0.39666666666666667,
+     "1.0": 0.49,
+     "2.0": 0.5666666666666667
+    },
+    "topk_all_charged_parts": {
+     "0.5": 82,
+     "1.0": 126,
+     "2.0": 155
+    }
+   }
+  },
+  "union": {
+   "models": [
+    "ADAF_AO",
+    "ADAF_barrow",
+    "CONT",
+    "S*"
+   ],
+   "pre_nms_any": 235,
+   "post_nms_any": 235,
+   "pre_nms_by_class": {
+    "barrow": 235,
+    "enclosure": 0
+   },
+   "hit_any_at_d": {
+    "0.5": 173,
+    "1.0": 193,
+    "2.0": 203
+   },
+   "no_model_pre_nms": 65
+  },
+  "oracle": {
+   "0.5": {
+    "frozen_charge_upper": 235,
+    "frozen_charge_greedy_nms_feasible": 235,
+    "all_charged_K": 211,
+    "all_charged_upper": 211,
+    "all_charged_greedy_nms_feasible": 211,
+    "all_charged_greedy_no_nms": 211
+   },
+   "1.0": {
+    "frozen_charge_upper": 235,
+    "frozen_charge_greedy_nms_feasible": 235,
+    "all_charged_K": 422,
+    "all_charged_upper": 235,
+    "all_charged_greedy_nms_feasible": 235,
+    "all_charged_greedy_no_nms": 235
+   },
+   "2.0": {
+    "frozen_charge_upper": 235,
+    "frozen_charge_greedy_nms_feasible": 235,
+    "all_charged_K": 845,
+    "all_charged_upper": 235,
+    "all_charged_greedy_nms_feasible": 235,
+    "all_charged_greedy_no_nms": 235
+   }
+  }
+ },
+ "verden_individual": {
+  "manifest_sha256": "a97b6124310b22f05d441ae0937aa17386aec0704fa5689841c03124222873d2",
+  "eligible_parts": 728,
+  "background_km2": 300.4461,
+  "scored_km2_union": 422.84319333092424,
+  "by_class_n": {
+   "barrow": 728,
+   "enclosure": 0
+  },
+  "inputs": {
+   "ADAF_AO": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/individual/PROPOSALS_ADAF_AO_PRIVATE.json",
+    "sha256": "12df822517d267dc2e24ee11ac00dadd8964d3cbd76301b887c3b3d9a0ff4462"
+   },
+   "ADAF_barrow": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/individual/PROPOSALS_ADAF_barrow_PRIVATE.json",
+    "sha256": "7228b9388d0f0df5f819ffa9c6e4755b9b5e3111bd991644279220916f34ac46"
+   },
+   "CONT": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/individual/PROPOSALS_CONT_PRIVATE.json",
+    "sha256": "f00c08baa9d72cfec943c1dca6dc41190d4416377257e38ba18f39bb3368879c"
+   },
+   "S*": {
+    "path": "outputs/fresh_region_2026-10-03/step2/score/individual/PROPOSALS_J_2026092803_PRIVATE.json",
+    "sha256": "263b59121824e076b86ebe613d26e5d856ea6880f8d4941c3cc187f9bd66b395"
+   }
+  },
+  "models": {
+   "ADAF_AO": {
+    "kinds": {
+     "0.5": {
+      "HIT": 57,
+      "RANK": 107,
+      "NMS": 28,
+      "MISSING": 536
+     },
+     "1.0": {
+      "HIT": 100,
+      "RANK": 64,
+      "NMS": 28,
+      "MISSING": 536
+     },
+     "2.0": {
+      "HIT": 163,
+      "RANK": 1,
+      "NMS": 28,
+      "MISSING": 536
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 57,
+       "RANK": 107,
+       "NMS": 28,
+       "MISSING": 536
+      },
+      "1.0": {
+       "HIT": 100,
+       "RANK": 64,
+       "NMS": 28,
+       "MISSING": 536
+      },
+      "2.0": {
+       "HIT": 163,
+       "RANK": 1,
+       "NMS": 28,
+       "MISSING": 536
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 192,
+    "post_nms_parts": 164,
+    "pool": 1001,
+    "neg_per_km2": 2.086896784481476,
+    "recall": {
+     "0.5": 0.0782967032967033,
+     "1.0": 0.13736263736263737,
+     "2.0": 0.2239010989010989
+    },
+    "topk_all_charged_parts": {
+     "0.5": 43,
+     "1.0": 81,
+     "2.0": 156
+    }
+   },
+   "ADAF_barrow": {
+    "kinds": {
+     "0.5": {
+      "HIT": 201,
+      "RANK": 41,
+      "NMS": 83,
+      "MISSING": 403
+     },
+     "1.0": {
+      "HIT": 240,
+      "RANK": 2,
+      "NMS": 83,
+      "MISSING": 403
+     },
+     "2.0": {
+      "HIT": 242,
+      "RANK": 0,
+      "NMS": 83,
+      "MISSING": 403
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 201,
+       "RANK": 41,
+       "NMS": 83,
+       "MISSING": 403
+      },
+      "1.0": {
+       "HIT": 240,
+       "RANK": 2,
+       "NMS": 83,
+       "MISSING": 403
+      },
+      "2.0": {
+       "HIT": 242,
+       "RANK": 0,
+       "NMS": 83,
+       "MISSING": 403
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 325,
+    "post_nms_parts": 242,
+    "pool": 688,
+    "neg_per_km2": 1.0517693523064537,
+    "recall": {
+     "0.5": 0.2760989010989011,
+     "1.0": 0.32967032967032966,
+     "2.0": 0.3324175824175824
+    },
+    "topk_all_charged_parts": {
+     "0.5": 132,
+     "1.0": 207,
+     "2.0": 242
+    }
+   },
+   "CONT": {
+    "kinds": {
+     "0.5": {
+      "HIT": 113,
+      "RANK": 150,
+      "NMS": 20,
+      "MISSING": 445
+     },
+     "1.0": {
+      "HIT": 162,
+      "RANK": 101,
+      "NMS": 20,
+      "MISSING": 445
+     },
+     "2.0": {
+      "HIT": 188,
+      "RANK": 75,
+      "NMS": 20,
+      "MISSING": 445
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 113,
+       "RANK": 150,
+       "NMS": 20,
+       "MISSING": 445
+      },
+      "1.0": {
+       "HIT": 162,
+       "RANK": 101,
+       "NMS": 20,
+       "MISSING": 445
+      },
+      "2.0": {
+       "HIT": 188,
+       "RANK": 75,
+       "NMS": 20,
+       "MISSING": 445
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 283,
+    "post_nms_parts": 263,
+    "pool": 3851,
+    "neg_per_km2": 8.600544323923659,
+    "recall": {
+     "0.5": 0.15521978021978022,
+     "1.0": 0.22252747252747251,
+     "2.0": 0.25824175824175827
+    },
+    "topk_all_charged_parts": {
+     "0.5": 90,
+     "1.0": 129,
+     "2.0": 175
+    }
+   },
+   "S*": {
+    "kinds": {
+     "0.5": {
+      "HIT": 147,
+      "RANK": 140,
+      "NMS": 21,
+      "MISSING": 420
+     },
+     "1.0": {
+      "HIT": 182,
+      "RANK": 105,
+      "NMS": 21,
+      "MISSING": 420
+     },
+     "2.0": {
+      "HIT": 217,
+      "RANK": 70,
+      "NMS": 21,
+      "MISSING": 420
+     }
+    },
+    "kinds_by_class": {
+     "barrow": {
+      "0.5": {
+       "HIT": 147,
+       "RANK": 140,
+       "NMS": 21,
+       "MISSING": 420
+      },
+      "1.0": {
+       "HIT": 182,
+       "RANK": 105,
+       "NMS": 21,
+       "MISSING": 420
+      },
+      "2.0": {
+       "HIT": 217,
+       "RANK": 70,
+       "NMS": 21,
+       "MISSING": 420
+      }
+     },
+     "enclosure": {
+      "0.5": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "1.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      },
+      "2.0": {
+       "HIT": 0,
+       "RANK": 0,
+       "NMS": 0,
+       "MISSING": 0
+      }
+     }
+    },
+    "pre_nms_parts": 308,
+    "post_nms_parts": 287,
+    "pool": 3059,
+    "neg_per_km2": 6.603513908151911,
+    "recall": {
+     "0.5": 0.20192307692307693,
+     "1.0": 0.25,
+     "2.0": 0.2980769230769231
+    },
+    "topk_all_charged_parts": {
+     "0.5": 104,
+     "1.0": 155,
+     "2.0": 197
+    }
+   }
+  },
+  "union": {
+   "models": [
+    "ADAF_AO",
+    "ADAF_barrow",
+    "CONT",
+    "S*"
+   ],
+   "pre_nms_any": 430,
+   "post_nms_any": 383,
+   "pre_nms_by_class": {
+    "barrow": 430,
+    "enclosure": 0
+   },
+   "hit_any_at_d": {
+    "0.5": 255,
+    "1.0": 305,
+    "2.0": 326
+   },
+   "no_model_pre_nms": 298
+  },
+  "oracle": {
+   "0.5": {
+    "frozen_charge_upper": 430,
+    "frozen_charge_greedy_nms_feasible": 348,
+    "all_charged_K": 211,
+    "all_charged_upper": 357,
+    "all_charged_greedy_nms_feasible": 276,
+    "all_charged_greedy_no_nms": 278
+   },
+   "1.0": {
+    "frozen_charge_upper": 430,
+    "frozen_charge_greedy_nms_feasible": 348,
+    "all_charged_K": 422,
+    "all_charged_upper": 430,
+    "all_charged_greedy_nms_feasible": 348,
+    "all_charged_greedy_no_nms": 430
+   },
+   "2.0": {
+    "frozen_charge_upper": 430,
+    "frozen_charge_greedy_nms_feasible": 348,
+    "all_charged_K": 845,
+    "all_charged_upper": 430,
+    "all_charged_greedy_nms_feasible": 348,
+    "all_charged_greedy_no_nms": 430
+   }
+  }
+ }
+}

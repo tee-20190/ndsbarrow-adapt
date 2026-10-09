@@ -1,0 +1,44 @@
+{
+ "A": {
+  "utc": "2026-09-26T18:31:51Z",
+  "sha256": {
+   "work/seeds_2026-09-26/PACKET.md": "63d28fc64514b20283c517865a33d846b718988b8fa707895b1f547df3ebe6c8",
+   "work/seeds_2026-09-26/seed_train.py": "d58f3d1082eae8934eb0cfb76f5fa7d1b1d0afef30c22ff669369bfd2184154c",
+   "work/seeds_2026-09-26/seed_holdout.py": "f687b8f2c5edf75124712f0f949e6129c510f3d8305959814581840edd27ac9f",
+   "work/seeds_2026-09-26/seed_freeze.py": "f2596099bfea3cb0630aabb64e6282039d25cd8d17a2cca01cd6b9a1eabe50f5",
+   "work/seeds_2026-09-26/run_chain.sh": "56315368924a0d4905bd929f85ace1cab772e6e68214a23325e703976e9155ce",
+   "work/seeds_2026-09-26/tests/test_seeds.py": "02bd72dc5e5dbe38f0c844ee87430b83321d6cf942b43eb07cc50ddbc1f8da37",
+   "outputs/seeds_2026-09-26/SMOKE.json": "c820d9f6dee319f5dc02de69a0959d1db802db0831640d4401f9d7e5b1123f7c",
+   "decisions/2026-09-26-three-seed-confirmation.md": "4cb85f7c0d1781b1142b9f10b57503ad6504db72ba0bb56db46b15fbd5c30159",
+   "work/aim_train_audit_2026-09-24/cont_train.py": "572502ce41b522d11c0dd894e6d3113591d32c595843898f9327e6ab446b05bb",
+   "work/aim_train_audit_2026-09-24/holdout_eval.py": "c817a761f60ca9d61025522637c7080fc7327c24e1acc73f3bd538332cd653e0",
+   "work/campaign_2026-09-22/r2_train.py": "11ef821bce4ff00927880005a658002409ac32742aa28272b0720ac849bc5ddd",
+   "work/campaign_2026-09-22/adaf_configs.py": "9eb322234a9dd28a36154849290fa40442a5f0054ad0a6a93bd43576ca63de36",
+   "work/campaign_2026-09-22/R2_MASKS_MANIFEST_PRIVATE.json": "f44a36bd83eb73083f87ff434efed135fcb35f0c398e942c28192ceccecb3acc",
+   "outputs/campaign_2026-09-22/training/R2_adaf_hrnet_slrm/best.pt": "fbd1cbacdf10c2d2806ec6dc7662196ebeed37416b908bad8f076df3113e7392",
+   "work/tta_ensemble_2026-09-24/tta_run.py": "07e9566eccf436e30762b82cd567fb77d018d0e5f09fa521486cfacc6bcf8dd2",
+   "work/tta_ensemble_2026-09-24/score_holdout.py": "fb835aa2d886de39f5367da9955664b3580d506fc607ff4d2dcbda700d032ce5",
+   "verify/v3/storage_guard.py": "3e042d497fc502ef516740fda2fa23049e423322993230c30c10da11e3e79d94"
+  }
+ },
+ "B": {
+  "utc": "2026-09-26T18:31:52Z",
+  "sha256": {
+   "work/seeds_2026-09-26/seed_validation.py": "8cdaa7f1f5f3e5bfdf729427661d00441f4ea607d32665bfacc9f536c755209c",
+   "work/seeds_2026-09-26/tests/test_seed_validation.py": "1acbf8df3ebf8553d530e1d68f32898218a0d5acf2a4936374d52e9cda9e26df",
+   "work/seeds_2026-09-26/convert_validation_mosaics_wof.py": "f1ea774f36de35f8123a7abcb161ef095f1b06a0048e08a65ee2747d5132605a",
+   "work/seeds_2026-09-26/VALIDATION_MOSAICS_WOF.json": "b6d81762e04641ee7e7180df7b1884a85aeeb2d72ae9cbbc51f464e2de766acc",
+   "decisions/2026-09-26-validation-family-reallocation.md": "a21a3d4eed25af54765cfebf9b04b6bbd9a7b67c986de6733c99e83c1c0b6e3a",
+   "work/validation_cont_2026-09-26/validation_run.py": "aae222b75cae0d0dbab786c847933627eb7b06cdbd4abba7b8104375dced0bb1",
+   "work/validation_cont_2026-09-26/vguard.py": "e57f0e772cb485cb9ee91d096c9cb623ed7cc9dcba736147357e27b8c050bb42",
+   "work/validation_cont_2026-09-26/CONFIG.json": "42eb12fce8dd88d09f101c56d2fce3e3d57ee0b03b33bbbfc8c672bb7a6281b5",
+   "work/validation_cont_2026-09-26/BLOCKS.json": "c2a61b2759fe48ed8c58dc8c440ed9830d7016e49bd2fc607a2bbe599b54dd62",
+   "work/validation_cont_2026-09-26/BLOCKS_RECEIPT.json": "e26dcd62add4719371b4828e810f1757ca1e82e7b11eae8a413b1e85c3e5b6e5",
+   "work/validation_cont_2026-09-26/DATA_MANIFEST.json": "02d070a0a3a9b1ac75b19a5d5f3e4230faf443366c47614c35ba03da9b64f84d",
+   "outputs/validation_cont_2026-09-26/PROPOSALS_LOCK.json": "1a5064d28342c34c4cf2c24b5d223350696e521077e2bb28ed48d89356d6b568",
+   "outputs/validation_cont_2026-09-26/RESULT.json": "dc835d166e0ee0a865904a9820fcbe29f080c39c705709483b14abb375da8942",
+   "outputs/aim_train_audit_2026-09-24/training/CONT/epoch41.pt": "91091fc6d3b7640bd300c8f7820626ea4ccc5ea3ee8f9f89425000f958bdc383",
+   "verify/v3/v3_protocol.py": "b62327d48c9c185457fec46326c6da65af3028af2907215a94a9f8b27dc09bdc"
+  }
+ }
+}
