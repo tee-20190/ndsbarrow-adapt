@@ -8,7 +8,7 @@ This code builds on ADAF (Automatic Detection of Archaeological Features):
   The released code loads the unedited ADAF model definitions and the AiTLAS package distributed with ADAF.
   Neither is redistributed here; both keep their own licence, copyright and licence notices.
 
-Model weights (deposited separately on Zenodo, ZENODO_WEIGHTS_DOI):
+Model weights (not in this repository; a Zenodo deposit is in preparation and its DOI will be added in a later release):
   Every released checkpoint is derived from the ADAF weights and is licensed under CC BY-SA 4.0,
   as required by the ADAF weights licence.
   ADAF weights: CC BY-SA 4.0 (Čož et al. 2026; Zenodo, doi:10.5281/zenodo.15848662).

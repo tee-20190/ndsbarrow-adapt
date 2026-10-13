@@ -303,3 +303,30 @@ other than the correspondence address, tokens, Drive IDs, local absolute paths a
 0. The repository now holds 231 files (`ALLOWLIST.txt` lists 230; it does not list itself).
 
 Post-write check of `LEAK_SCAN.md` and `ALLOWLIST.txt` after this addendum, same rule: 0 hits, 0 unresolved.
+
+## Addendum, 2026-10-13: weights wording and v10 claim ledger
+
+Edits: `README.md`, `NOTICE` and `WITHHELD.md` now say that the weights deposit on Zenodo is in preparation and that
+its DOI will be added in a later release (the `ZENODO_WEIGHTS_DOI` placeholder is gone). The claim ledger
+`work/manuscript_2026-10/CLAIMS_RELEASE.md` was rebuilt for paper version 10 (225 rows) and its scrub log
+`work/manuscript_2026-10/CLAIMS_RELEASE_SCRUB_LOG.md` was added. The ledger is no longer a byte-identical copy of a
+working-repository file, so it is treated as a file written for the release: disposition R-D1 does not apply to it, and
+role words or local paths in it would be unresolved. No other file changed.
+
+Same scanner and rule as above (the 14 classes in "Rule"), run on the five changed files:
+
+| File | Class | Disposition | Hits |
+|---|---|---|---:|
+| `README.md` | `b64_secret` | R-IDENT | 2 (the two ADAF weight-file stems, now lines 90 and 91) |
+| `NOTICE` | | | 0 |
+| `WITHHELD.md` | | | 0 |
+| `work/manuscript_2026-10/CLAIMS_RELEASE.md` | `epsg` | R-CRS | 1 (row C178: DGM1 tile CRS, no coordinate) |
+| `work/manuscript_2026-10/CLAIMS_RELEASE_SCRUB_LOG.md` | | | 0 |
+
+Total hits: 3. Resolved: 3. **Unresolved: 0.** Coordinates, grid references, lead IDs, record IDs tied to leads, emails
+other than the correspondence address, tokens, Drive IDs, sealed-test identifiers, local absolute paths and role words
+in the changed files: 0. The ledger also passed its own scrub checks (scrub log, "Scan output": 0 on every leak check;
+all 56 numeric inspection hits are labelled values, DOIs or hash fragments). The repository now holds 232 files
+(`ALLOWLIST.txt` lists 231; it does not list itself).
+
+Post-write check of `LEAK_SCAN.md` and `ALLOWLIST.txt` after this addendum, same rule: 0 hits, 0 unresolved (scanned after writing; `ALLOWLIST.txt` re-scanned after its final write).

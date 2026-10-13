@@ -6,14 +6,13 @@ the paper:
 > Thomas Shanahan. *Adapting a public LiDAR barrow detector to a new region: specialist-start fine-tuning, an
 > equal-update replay comparison, and evaluation choices that move apparent gains.* Preprint, 2026.
 
-Model weights (54 checkpoints, CC BY-SA 4.0) are deposited separately: **`ZENODO_WEIGHTS_DOI`**.
-`ZENODO_WEIGHTS_DOI` is the one placeholder in this repository; it is replaced by the Zenodo DOI of the weights record at
-release.
+Model weights (54 checkpoints, CC BY-SA 4.0): a deposit on Zenodo is in preparation; its DOI will be added in a later
+release of this repository. Until then the weights are not public.
 
 ## What is here
 
 Every released file sits at the repository-relative path it had in the author's working repository, byte-identical to
-the bytes that produced the paper's numbers. This keeps the SHA-256 values in the freeze files checkable
+the bytes that produced the paper's numbers (exception: the claim ledger, below). This keeps the SHA-256 values in the freeze files checkable
 (`FREEZE_VERIFY.json`). Because the files are unedited, they contain the working vocabulary of the project (role words,
 `_PRIVATE` file names, paths of the original machine); `GLOSSARY.md` explains them.
 
@@ -26,7 +25,7 @@ the bytes that produced the paper's numbers. This keeps the SHA-256 values in th
 | `work/d1_collapse_2026-10-06/d1_train.py` (+ imports, `RECIPE.md`) | D1 training recipe (Section 4.2) |
 | `work/stage2_d1_controls_2026-10-07/s2_train.py` | Stage 2 replay-control trainer (Section 4.3) |
 | `outputs/fresh_region_2026-10-03/`, `outputs/adapt_nds_2026-10-05/` | entity manifests, tile layout, staging plans and inside masks derived from the Denkmalatlas Niedersachsen and LGLN tile indexes (see "Data") |
-| `work/manuscript_2026-10/CLAIMS_RELEASE.md` | claim ledger: every number in the paper with its source file |
+| `work/manuscript_2026-10/CLAIMS_RELEASE.md` | claim ledger for the paper (version 10, preprint version 1): every claim tag [Cnnn] in the paper with its value, source file and status; built for this release from the working ledger, preparation and edits in `work/manuscript_2026-10/CLAIMS_RELEASE_SCRUB_LOG.md` |
 | `FREEZE_VERIFY.json` | every hash pinned by every freeze file, re-checked on the released bytes |
 | `WITHHELD.md` | files referenced or relied on but not released, with size, SHA-256 and reason |
 | `COMMIT_LOG.md` | private commit history restricted to released files (hash, UTC time, subject) |
@@ -77,7 +76,7 @@ Table 6); independent second scorer (`work/independent_rescore_2026-10-09/`, 4.6
   (`NOTICE`). They hold registered monuments, tile layout and sampling cells only; they hold no detector proposals.
   Their names still end in `_PRIVATE` because the code reads them under those names (`GLOSSARY.md`).
 - **Detector proposals are not released.** Unmatched proposals may mark unrecorded archaeological sites. They can be
-  regenerated from the released weights and public terrain (below).
+  regenerated from the trained weights (once deposited) and public terrain (below).
 
 ## Upstream ADAF (not redistributed)
 
@@ -149,7 +148,7 @@ fail-closed replacements from `release_shims/` at those paths in the working cop
 are kept, and any use of the sealed squares or the English fetcher raises. The German inference, training and scoring
 paths do not use them; English mask building and English holdout scoring cannot run from this release.
 
-### Regenerating proposals from public DGM1 and the released weights (Verden example)
+### Regenerating proposals from public DGM1 and the trained weights (Verden example)
 
 ```bash
 P=outputs/fresh_region_2026-10-03
@@ -162,7 +161,7 @@ P=outputs/fresh_region_2026-10-03
   $P/step2/STAGING_PLAN_PRIVATE.json $P/step0/TILE_INDEX_PRIVATE.json $P/step0/TILE_LEDGER_PRIVATE.jsonl \
   WIN_DIR FETCH_LOG.jsonl STAGING_RECEIPT.json \
   --manifest main=$P/step2/INFER_MANIFEST_PRIVATE.json --manifest enclosure=$P/step2/ENCLOSURE_MANIFEST_PRIVATE.json
-# 2. inference + decoder for any checkpoint (NAME=PATH@SHA256; SHA-256 values are in the weights record)
+# 2. inference + decoder for any checkpoint (NAME=PATH@SHA256; SHA-256 values will be listed in the weights deposit)
 "$NDSBARROW_PY" -B work/hr3_ireland_2026-10-02/step2/chain/infer_irl.py run \
   $P/step2/INFER_MANIFEST_PRIVATE.json WIN_DIR OUT --model D1F1_BARROW_L_2026092805=PATH/final.pt@SHA256
 # 3. assemble the per-window outputs into PROPOSALS_<NAME>_PRIVATE.json
@@ -195,7 +194,7 @@ Notes on step 2 (from the reproduction check below):
   to the repository root. To regenerate Verden proposals whose `source` fields equal the original run's, stage the
   windows to and run with `WIN_DIR=$NDSBARROW_ROOT/outputs/d1_collapse_2026-10-06/vm/dev_windows` (the original
   path). Another location gives the same detections with a different `source` string.
-- **Weights needed:** inference with a released checkpoint (`--model NAME=PATH@SHA256`) needs the ADAF code checkout
+- **Weights needed:** inference with one of the paper's checkpoints (`--model NAME=PATH@SHA256`) needs the ADAF code checkout
   and its AiTLAS wheel (model definitions), but not the ADAF `.tar` weights; those are read only when the ADAF models
   themselves are run or used as a training start.
 - **TF32:** the original runs set `NVIDIA_TF32_OVERRIDE=0`, and `irl_common.torch_flags()` also turns TF32 off inside
@@ -266,14 +265,14 @@ Limitations: one checkpoint and seed; 6 tiles, chosen by a fixed rule among tile
 small downloads, and no background tiles; the subset budgets are tiny (K = 2 / 5 / 10), so the pool matching and the
 full-region swap-in are the more informative checks. An existing Python environment with the pinned versions was
 used, so a fresh install from `requirements-lock.txt` was not tested. The checkpoint came from a local copy with its recorded
-SHA-256, not from the Zenodo record. The relative-`WIN_DIR` shim was checked by applying the patch and by
+SHA-256; the weights deposit is still in preparation. The relative-`WIN_DIR` shim was checked by applying the patch and by
 path logic, not by a second GPU run.
 
 ## Licences
 
 - Code written for this project: Apache License 2.0 (`LICENSE`).
 - ADAF code and the AiTLAS package (not included): Apache License 2.0, © 2024 ZRC SAZU (`NOTICE`).
-- Model weights (Zenodo): CC BY-SA 4.0, as derivatives of the ADAF weights.
+- Model weights (Zenodo deposit in preparation): CC BY-SA 4.0, as derivatives of the ADAF weights.
 - Entity manifests derived from the Denkmalatlas Niedersachsen: CC BY-SA 4.0 with attribution (`NOTICE`).
 
 Cite this repository with `CITATION.cff`.
