@@ -1,0 +1,49 @@
+{
+ "invalid": 2,
+ "primary_before_dedup": 1642,
+ "duplicates": 9,
+ "valid_all": 2896,
+ "eval_records_total": 678,
+ "test_sealed_records": 955,
+ "unassigned_records": 0,
+ "dropped_cores_touching_sealed": 2,
+ "dropped_records": 25,
+ "source_sha256": "09545f3a8ddb73bc612e70abfca7bfe4587e02325f7d258497a00184c0c5e055",
+ "kaartbladindex_sha256": "07a90cca967cd2c8f86476f90d74c639944fe98aa7e9f2ee65d04f4500f9b127",
+ "provinces_sha256": "30c573162429848c453f8e7ef5f58392b0936c679a6bc5774aa72976fff98188",
+ "regions": {
+  "DR": {
+   "cores": 12,
+   "candidate_records": 284,
+   "groups60": 85,
+   "tiles": 37,
+   "region_json_sha256": "248c508cdcd75f96da48a0c098e4809b57485265648bf3653fd58eeaeacecba8",
+   "candidates_sha256": "f330d80aab0d99af435579ad3480627f6c067085c2372f000f7e34ebe26a8839"
+  },
+  "NH": {
+   "cores": 4,
+   "candidate_records": 33,
+   "groups60": 21,
+   "tiles": 14,
+   "region_json_sha256": "dd83c3a2b075d595b9d52aeeaeb4485c36c820022263e112cc53d1e78f32ab84",
+   "candidates_sha256": "935064d7750ad971aff0299f1f7eeee437166ba6146c7cf10066c8b55b8f86d1"
+  },
+  "OV": {
+   "cores": 21,
+   "candidate_records": 238,
+   "groups60": 129,
+   "tiles": 63,
+   "region_json_sha256": "b4ac6ea5ad6a311f97723fd0a95591073c41810a380218e68f66dda71f127831",
+   "candidates_sha256": "38b480dab6ceaead400545b6a6c48d9f12e1c04c51fd0b2af90f6fdd52880d6f"
+  },
+  "UT": {
+   "cores": 8,
+   "candidate_records": 98,
+   "groups60": 45,
+   "tiles": 23,
+   "region_json_sha256": "9909f418e713016c292667916a6b9de3c70b89e3b100857a14dc0a15551906c7",
+   "candidates_sha256": "11ecb0ecccee444fe2e9f5cbb49a992020cc884156547c92a44489e206fb73ba"
+  }
+ },
+ "tiles_total": 133
+}

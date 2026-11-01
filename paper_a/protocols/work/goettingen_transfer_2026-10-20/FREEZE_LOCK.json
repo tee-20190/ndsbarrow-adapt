@@ -1,0 +1,5 @@
+{
+ "freeze_sha256": "5e4d13f7ddcd05e233c694dd4608d2edc1492c84ad033cd8e5d66f9d8d070275",
+ "utc": "2026-10-20T11:28:50Z",
+ "statement": "sha256 of FREEZE.json; gt_freeze.py verify rechecks every pin"
+}

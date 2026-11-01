@@ -1,0 +1,365 @@
+{
+ "schema": "gt_freeze_v1",
+ "experiment": "GOETTINGEN-TRANSFER-1",
+ "scope": "full",
+ "utc": "2026-10-20T11:28:50Z",
+ "statement": "Pins only: ROOT-relative paths and sha256 of the packet, the locked plan inputs, the frozen reference code and the D1 and ADAF weights. No coordinates, record ids or tile names.",
+ "pins": {
+  "spec_md": {
+   "path": "work/goettingen_transfer_2026-10-20/SPEC.md",
+   "sha256": "7a38f98264cabd84328694a9bcf7737f2d704ef9995aa99bf0938e699f2449a6"
+  },
+  "gt_selection_json": {
+   "path": "work/goettingen_transfer_2026-10-20/GT_SELECTION.json",
+   "sha256": "ea210b9f451fe6aa302f89b07433513ddccebc539398e7f53c933537489045c4"
+  },
+  "gt_plan_report_json": {
+   "path": "work/goettingen_transfer_2026-10-20/GT_PLAN_REPORT.json",
+   "sha256": "79ef25b062825b362edd941859ddf12e42b4aea7674c7ae3d97c0c3550bd2716"
+  },
+  "gt_plan_lock_json": {
+   "path": "work/goettingen_transfer_2026-10-20/GT_PLAN_LOCK.json",
+   "sha256": "125ddc583871fb8399355bd48f4e8fd723f31bcd1e539e6e6c301a4a9dfbbe14"
+  },
+  "gt_head_summary_json": {
+   "path": "work/goettingen_transfer_2026-10-20/GT_HEAD_SUMMARY.json",
+   "sha256": "c07dbcd6734bfdae2b7684677a265384d63b753500540bfcbae1344a74162e5e"
+  },
+  "gt_build_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_build.py",
+   "sha256": "d9ff606dd875578921192d80d7bb1bc7db55da328a40f07629974cb137c04d81"
+  },
+  "gt_bundle_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_bundle.py",
+   "sha256": "24de64676aa7fdaecf8a6f4b753de89b0595ac84061ddfe3efef1d4a0b9e476a"
+  },
+  "gt_common_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_common.py",
+   "sha256": "7c10e271c3259334bec38b8b89754866e3f0eccd01b3e3db5c15a89f345d1026"
+  },
+  "gt_freeze_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_freeze.py",
+   "sha256": "0f1a010331f91d57e2831de6ed64e09e10e5f971f7bad21d8d523aa922a1193e"
+  },
+  "gt_infer_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_infer.py",
+   "sha256": "731c9cf76c801ca99a82c3cf36562104cb150b92ed22de116074a5a72259c02f"
+  },
+  "gt_legit_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_legit.py",
+   "sha256": "5d4d205f935eb5916a252287c0daa578920c5f8805647616c640197c4d4eccc9"
+  },
+  "gt_prep_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_prep.py",
+   "sha256": "f6b78ee2f1f089a1f0dfffffb865174175008f79dca22574481f182b97b36ba3"
+  },
+  "gt_score_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_score.py",
+   "sha256": "981fcb3921e1af5e0e72f0ca996c8d96317929ed96f31a96cfbe41d510244104"
+  },
+  "gt_vm_job_py": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_vm_job.py",
+   "sha256": "aef0876553f473ac53eaacc11d2af97746086bd635b139c5545873580c117441"
+  },
+  "gt_vm_sh": {
+   "path": "work/goettingen_transfer_2026-10-20/gt_vm.sh",
+   "sha256": "8efe95e35a5585344a5d2c9dbb7079786e17bda41889cde0bcb4eba62d1b7ceb"
+  },
+  "ref_confirm_build_py": {
+   "path": "work/adapt_nds_2026-10-05/confirm_build.py",
+   "sha256": "c08c477e3ff106589edbcc0caa12cb3803440e7f46cbc0350b5b182fc1336137"
+  },
+  "ref_plan_confirm_py": {
+   "path": "work/adapt_nds_2026-10-05/plan_confirm.py",
+   "sha256": "fb2c8ead4581ff75a2641764a060b829a932f533e4aa0f929d453820e4ae3b09"
+  },
+  "ref_nds_common_py": {
+   "path": "work/adapt_nds_2026-10-05/nds_common.py",
+   "sha256": "b58e31f1afa96ea89bdc3218f9e119a54c523e90a70f1b3436b6bbe629d63d56"
+  },
+  "ref_fetch_register_py": {
+   "path": "work/adapt_nds_2026-10-05/fetch_register.py",
+   "sha256": "75bcf8d32f01ece398c5473722d3e232a18bea71bae3236ecd9d926959384a0b"
+  },
+  "ref_head_check_py": {
+   "path": "work/adapt_nds_2026-10-05/head_check.py",
+   "sha256": "e4152569c42b0765ecc9506f13b965c86132cb583e6f4f5f56a6d64d68380041"
+  },
+  "ref_nds_reader_py": {
+   "path": "work/adapt_nds_2026-10-05/nds_reader.py",
+   "sha256": "27359e11517980419e2385a97926533a07de6f4107135815219c37f1aa5ff9ee"
+  },
+  "ref_infer_irl_py": {
+   "path": "work/hr3_ireland_2026-10-02/step2/chain/infer_irl.py",
+   "sha256": "f38555510647fa5aae35deadf3a7538ecd882861a6b48fae89f84715abbd5014"
+  },
+  "ref_fresh_gates_py": {
+   "path": "work/fresh_region_2026-10-03/step2/fresh_gates.py",
+   "sha256": "f0365d8ed03a640027300088a7792ee433aa4b731e9e205dd09456cbfeb2043c"
+  },
+  "ref_hr1_gates_py": {
+   "path": "work/holdout_region_2026-10/chain/gates.py",
+   "sha256": "d04cdd0ba6f80d45383c4d06fc2550df8e4c271a9cc70c8c5181eab75b87ce3a"
+  },
+  "ref_hr1_chain_common_py": {
+   "path": "work/holdout_region_2026-10/chain/common.py",
+   "sha256": "18a137169dd86381f794c8354725b360890a26e8ce737d203643e1ce9b880fcf"
+  },
+  "ref_colab_env_freeze_txt": {
+   "path": "work/colab_assessment_2026-09-29/env/freeze.txt",
+   "sha256": "745121450d990c985dbf4d617cc2669ebd88cb9ac470fc8f471530b2a11102c1"
+  },
+  "ref_hr1_parity_py": {
+   "path": "work/holdout_region_2026-10/chain/parity.py",
+   "sha256": "e9320255763fbd4fba026a484899be7368637c605719789d0fe63a487f28d4e0"
+  },
+  "ref_hr1_region_score_py": {
+   "path": "work/holdout_region_2026-10/step2/region_score.py",
+   "sha256": "b3337741071da6e85d41849f4f420a71494fc5ebd376c88d1a1933fccbada442"
+  },
+  "ref_score_v0_py": {
+   "path": "work/stage1_d1_v0_2026-10-07/score_v0.py",
+   "sha256": "2f44fe63eea47e4f211aa5a89e95d01036dfab29e351ff5f3ec584c519e079d8"
+  },
+  "ref_boot_v0_py": {
+   "path": "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/boot_v0.py",
+   "sha256": "b611b26e1d3f83d2e1a21e60b38997b84a006757bec1364998a200ef22fbe386"
+  },
+  "ref_engine_py": {
+   "path": "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/engine.py",
+   "sha256": "97c9b004a4a6edf9be1017a0a8ff1d80fd989722fb96d0f23ba36d1c297f561e"
+  },
+  "ref_v0data_py": {
+   "path": "work/gpt6_pro_collab_2026-10-07/v0_uncertainty/v0data.py",
+   "sha256": "904853d512da2acc9aa5841a91eb351ad9d09ff3fba850caced5b5556cd239bb"
+  },
+  "ref_bench_v0_py": {
+   "path": "work/gpt6_pro_collab_2026-10-07/detector_week1/bench_v0.py",
+   "sha256": "723fdb26c032af827de7eb655a3fc1709a43ee490722363103895af0f3a9ec90"
+  },
+  "ref_eval_v01_py": {
+   "path": "work/evaluator_v0_1_2026-10-07/eval_v01.py",
+   "sha256": "fbd5818325e02521e9b907d2f1fcebf4a048ed11e149848e776dc0e18b496c90"
+  },
+  "ref_desc_verden_py": {
+   "path": "work/d1_verden_descriptive_2026-10-07/desc_verden.py",
+   "sha256": "174dd947aa7680ff04a8a41edfcdcc412ebb54e3d4c7b4d16ac0d1d1b6b3eebe"
+  },
+  "nds_confirm_selection_json": {
+   "path": "work/adapt_nds_2026-10-05/CONFIRM_SELECTION.json",
+   "sha256": "eefd33656ee4e579923d7d031243005b0eade376ed07d8641c60fd46b8e4455e"
+  },
+  "ex_astra_v2_access_py": {
+   "path": "verify/astra_v2_access.py",
+   "sha256": "f58119e56c9b0884b4dc75a9bc5c5073c1fa2cc07b418dba6de368624afb6440"
+  },
+  "ex_astra_v2_classes_py": {
+   "path": "verify/astra_v2_classes.py",
+   "sha256": "800901ba622dbc3a1cb359ade634df027848000a68f0fb0b925f67cdeeec3c16"
+  },
+  "ex_astra_v2_labels_py": {
+   "path": "verify/astra_v2_labels.py",
+   "sha256": "70f8ca1c33273f21b6e3c12fb75e52ebd1315127ba67dfcab4388c8f87896827"
+  },
+  "ex_v3_init_py": {
+   "path": "verify/v3/__init__.py",
+   "sha256": "1b0b1ec8cbb55fe18cf36e413289ad2ef48d4da37a9c603eb257da97eeabe10e"
+  },
+  "ex_archive_gate_v2_py": {
+   "path": "verify/v3/archive_gate_v2.py",
+   "sha256": "7a505c7b7d05a10c5f202892858d179f7b5513f0592904d9aa3544897849a12d"
+  },
+  "ex_storage_guard_py": {
+   "path": "verify/v3/storage_guard.py",
+   "sha256": "3e042d497fc502ef516740fda2fa23049e423322993230c30c10da11e3e79d94"
+  },
+  "ex_adapter_py": {
+   "path": "work/adaf_head_to_head_2026-09-19/adapter.py",
+   "sha256": "85621f71c93a1aead31ec7eb3d4b78e46ff20fb7f3af24473bb72a58e9547d27"
+  },
+  "ex_aitlas_whl": {
+   "path": "work/adaf_head_to_head_2026-09-19/vendor/adaf/installation/aitlas-0.0.1-py3-none-any.whl",
+   "sha256": "be2dbb7e3c39c30a91a79b00f7dc3365320cbc57584a8601e286a8b9c91ab69a"
+  },
+  "ex_cont_train_py": {
+   "path": "work/aim_train_audit_2026-09-24/cont_train.py",
+   "sha256": "572502ce41b522d11c0dd894e6d3113591d32c595843898f9327e6ab446b05bb"
+  },
+  "ex_holdout_eval_py": {
+   "path": "work/aim_train_audit_2026-09-24/holdout_eval.py",
+   "sha256": "c817a761f60ca9d61025522637c7080fc7327c24e1acc73f3bd538332cd653e0"
+  },
+  "ex_adaf_configs_py": {
+   "path": "work/campaign_2026-09-22/adaf_configs.py",
+   "sha256": "9eb322234a9dd28a36154849290fa40442a5f0054ad0a6a93bd43576ca63de36"
+  },
+  "ex_r2_train_py": {
+   "path": "work/campaign_2026-09-22/r2_train.py",
+   "sha256": "11ef821bce4ff00927880005a658002409ac32742aa28272b0720ac849bc5ddd"
+  },
+  "ex_setup_env_sh": {
+   "path": "work/colab_assessment_2026-09-29/env/setup_env.sh",
+   "sha256": "1d17df267834f0f707b5be0f9dd8e473217df2152ea3e4262074338e1c900405"
+  },
+  "ex_lgln_reader_py": {
+   "path": "work/fresh_region_2026-10-03/step2/lgln_reader.py",
+   "sha256": "f26dca16655a9841e29f10cc4fa9c7e0d03361ce182300a887c1d8dbef2b2832"
+  },
+  "ex_freeze_binding_py": {
+   "path": "work/holdout_region_2026-10/chain/freeze_binding.py",
+   "sha256": "88e6f60e9d12e45667dbc8d49dcd3fd6f8b4f5a2ce5a0abe5c251714134391b9"
+  },
+  "ex_infer_dev_py": {
+   "path": "work/holdout_region_2026-10/chain/infer_dev.py",
+   "sha256": "b8739fbb869b34abd47fce1b2d405411bfcf6f74670a8553762bf937bc129b59"
+  },
+  "ex_hr1_masks_py": {
+   "path": "work/holdout_region_2026-10/chain/masks.py",
+   "sha256": "bf51105952cc5388f91bda8e1182e4ad5817c6113fde3178ea2dba9ac4f8d1ca"
+  },
+  "ex_irl_masks_py": {
+   "path": "work/hr3_ireland_2026-10-02/step2/chain/irl_masks.py",
+   "sha256": "c6f43b5824c4fde97152b32b5223d13d3f5c8e47e9cdc0b057b8815998223fa6"
+  },
+  "ex_tta_run_py": {
+   "path": "work/tta_ensemble_2026-09-24/tta_run.py",
+   "sha256": "07e9566eccf436e30762b82cd567fb77d018d0e5f09fa521486cfacc6bcf8dd2"
+  },
+  "register_snapshot_json": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/register/SNAPSHOT_district_Goettingen_20261020T094137Z.json",
+   "sha256": "77ec1d34b02d19708b6f1f6cf05742603bba5eef981f29c45adb580eea044f3c"
+  },
+  "register_geojson": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/register/denkmale_Goettingen_20261020T094137Z.geojson",
+   "sha256": "e114dcb482dc1e763b7501316977a6477b88238f2418f5fb3ee7151885acddaa"
+  },
+  "register_supplement_json": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/register/supplement_Goettingen_20261020T094137Z.json",
+   "sha256": "8577787c4e8a8d76ccd207fe06f2f3e711e99ae53ef1964e1fee8d950b925cea"
+  },
+  "boundaries_snapshot_json": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/register/SNAPSHOT_boundaries_20261005T005530Z.json",
+   "sha256": "e2ee969c397c361297866350acbdd90869f41dcf72f1a13a57e38d03c56102f5"
+  },
+  "boundaries_gml": {
+   "path": "outputs/adapt_nds_2026-10-05/register/landkreise_all_20261005T005530Z.gml",
+   "sha256": "ec8911119c41831bffd493ae89cd3e222f8e26abca5ad59b742b7bb4286c6dde"
+  },
+  "confirm_labels": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/confirm/CONFIRM_LABELS_PRIVATE.json",
+   "sha256": "7d31d4e8f83b45ad856a4d55637fea8685003b9086000f703cbe04fc129c92af"
+  },
+  "confirm_plan": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/confirm/CONFIRM_PLAN_PRIVATE.json",
+   "sha256": "f4e91a9a870e5948fcf0f59529174cc9436cd81d994736137c0b877e7ba844d2"
+  },
+  "tile_index": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/confirm/TILE_INDEX_PRIVATE.json",
+   "sha256": "5847eb63537f8eb047134fbd3edee52451cff8bb1550aa773ae11d15ef499d64"
+  },
+  "head_ledger": {
+   "path": "outputs/goettingen_transfer_2026-10-20_PRIVATE/HEAD_LEDGER_PRIVATE.json",
+   "sha256": "beef1bbc71c6b381f49a314c3e62223e36bba705654d7d6ddac1b8358931e5e3"
+  },
+  "cl_r2_masks_py": {
+   "path": "work/campaign_2026-09-22/r2_masks.py",
+   "sha256": "79cc707e05a27325ba9ecf08b83075cfbdef1f8ada400947d479556db4d465db"
+  },
+  "cl_prepixel_stats_py": {
+   "path": "work/fresh_region_2026-10-03/prepixel_stats.py",
+   "sha256": "4475b6b1508556c4a26a74ed0998fee3dbff907f9b7eac31f09abd7c50030b19"
+  },
+  "cl_step0_py": {
+   "path": "work/fresh_region_2026-10-03/step0.py",
+   "sha256": "f8efd3dfe9c8581b0f8ce03913aa3fe0186ee08ba3f345d1bfdb37d8816ece63"
+  },
+  "cl_step0_checks_py": {
+   "path": "work/fresh_region_2026-10-03/step0_checks.py",
+   "sha256": "7bd28e6750ad7da3c63b4e2ea56e82c10f982c0ee502479a105cc23156c4502e"
+  },
+  "cl_fresh_common_py": {
+   "path": "work/fresh_region_2026-10-03/step2/fresh_common.py",
+   "sha256": "8ce9560b9bcda2a0491ee14b3cef77696b0eb06af055fb4bd0c978fbf41700b2"
+  },
+  "cl_plan_fresh_py": {
+   "path": "work/fresh_region_2026-10-03/step2/plan_fresh.py",
+   "sha256": "38a5ff9afdee097ffc4eb7f8d5fae9b8db5c0122fca7f5b9ca854f170451629e"
+  },
+  "cl_fuse_eval_py": {
+   "path": "work/fusion_2026-10-03/fuse_eval.py",
+   "sha256": "b6664bf34b6642a53c16846ce313bd7ab116160b889a841f83543b27ed7d790d"
+  },
+  "cl_hier_uncertainty_py": {
+   "path": "work/holdout_region_2026-10/step2/hier_uncertainty.py",
+   "sha256": "f73d47b9130147170ce2990d629ea750ea23b1d4d6199edeebd8b68c67809ec4"
+  },
+  "cl_irl_common_py": {
+   "path": "work/hr3_ireland_2026-10-02/step2/chain/irl_common.py",
+   "sha256": "711df2aecebdb09f92ed13048ed83139cb2ca12e73849e097a2ca4c54603fffb"
+  },
+  "cl_irl_manifest_py": {
+   "path": "work/hr3_ireland_2026-10-02/step2/chain/irl_manifest.py",
+   "sha256": "c5352549ef17fab97df69e9c70e39629160ccdace096fda3af92d9974891fa51"
+  },
+  "cl_vis_common_py": {
+   "path": "work/hr3_ireland_2026-10-02/visibility/vis_common.py",
+   "sha256": "3cc969ea2cb8f687532c3f5d87c679afbc6fef7f69fcef61b47ed88024f9af3f"
+  },
+  "cl_vis_irl_py": {
+   "path": "work/hr3_ireland_2026-10-02/visibility/vis_irl.py",
+   "sha256": "fc7a03209cc548c7cf9800c0337ed23c3e91b24ca18e6df6163a3cc3e3f05efc"
+  },
+  "cl_r3_curation_py": {
+   "path": "work/next_experiment_2026-09-23/r3_curation.py",
+   "sha256": "f0aac704d2a74bd03868c6a94950e9a613fa0bc7c0afd9958bd734af201a1b9c"
+  },
+  "cl_score_holdout_py": {
+   "path": "work/tta_ensemble_2026-09-24/score_holdout.py",
+   "sha256": "fb835aa2d886de39f5367da9955664b3580d506fc607ff4d2dcbda700d032ce5"
+  },
+  "d1_2026092805": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092805.pt",
+   "sha256": "d9ece1fb023d2daf72ab0e5f789b5b89a27af73a28307e6260e4ee2fb5ac501e"
+  },
+  "d1_2026092806": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092806.pt",
+   "sha256": "f291694980fe24843e027b8ad846da08c4f407a0d75c1f3600ee0c5ef4f0bade"
+  },
+  "d1_2026092807": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092807.pt",
+   "sha256": "d705204634fc35751371c37e7fea85600acdd12e2eae15ed22aaf90cf7d73511"
+  },
+  "d1_2026092808": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092808.pt",
+   "sha256": "61ae1cb053a35a6bc427eefeaf7614d299dd8772e7c0d5eb99a47f35ae0762b5"
+  },
+  "d1_2026092809": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092809.pt",
+   "sha256": "38d14080dc98962ea79f31c0fbbfedc96f9bfd121cc1ef82003fe0d3b610563d"
+  },
+  "d1_2026092810": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092810.pt",
+   "sha256": "6b294645c62a074f864b6fe2ab8df4e9796e69b25a9abd6993093b53b78f21a5"
+  },
+  "d1_2026092811": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092811.pt",
+   "sha256": "ed12f627ec5975fb7cfde6565f9af6eab7b30b7f89423f49da97c1001bf69229"
+  },
+  "d1_2026092812": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092812.pt",
+   "sha256": "5437f281701203d9295e1f3b1da9a80261e2681cdecfe94b51ee4c7e54a815eb"
+  },
+  "d1_2026092813": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092813.pt",
+   "sha256": "3a1c2643ef26a336ba8915780328f1af27bf32a52b24905cb3ccb3f19c18a044"
+  },
+  "d1_2026092814": {
+   "path": "work/release_2026-10/weights/batch_01/D1-F1_BARROW_L_2026092814.pt",
+   "sha256": "24db9082f55fe2f8cbd45e265b6164d73ec01823858c3ebd4630fe6b0b5f0858"
+  },
+  "adaf_barrow_tar": {
+   "path": "work/campaign_2026-09-22/adaf_weights/barrow_HRNet_SLRM_512px_pretrained_train_12_val_124_with_Transformation.tar",
+   "sha256": "51b679faf27a6754a1525cec231a7ef1582430d2d6d9e547a39a42622166b216"
+  }
+ }
+}

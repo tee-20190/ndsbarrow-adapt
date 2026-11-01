@@ -1,0 +1,44 @@
+{
+ "invalid": 2,
+ "primary_before_dedup": 1642,
+ "duplicates": 9,
+ "valid_all": 2896,
+ "test_sealed_records": 955,
+ "eval_records_total": 678,
+ "dropped_cores_touching_eval": 2,
+ "dropped_records": 23,
+ "dropped_records_by_province": {
+  "Gelderland": 23
+ },
+ "source_sha256": "09545f3a8ddb73bc612e70abfca7bfe4587e02325f7d258497a00184c0c5e055",
+ "kaartbladindex_sha256": "07a90cca967cd2c8f86476f90d74c639944fe98aa7e9f2ee65d04f4500f9b127",
+ "provinces_sha256": "30c573162429848c453f8e7ef5f58392b0936c679a6bc5774aa72976fff98188",
+ "ot_labels_sha256": "e7cd37700107b8a95be0d9f4c77e9562f184781c25d2e82b78097b1089c77d7f",
+ "regions": {
+  "GE": {
+   "cores": 38,
+   "candidate_records": 722,
+   "groups60": 422,
+   "tiles": 88,
+   "region_json_sha256": "06cf755b6498f899990d659937da3058d1cea6700b3ec2dbc63424c8c7250332",
+   "candidates_sha256": "bf1171769963fc027f70e6f2b45c2fd90d518632b2cf88fa64e2f66c049b212b"
+  },
+  "LI": {
+   "cores": 9,
+   "candidate_records": 112,
+   "groups60": 23,
+   "tiles": 39,
+   "region_json_sha256": "e94cb9743dcbf5c5c50c5157c500165d4c2cb9d001799b19698449befd279e17",
+   "candidates_sha256": "8adf8258b135614e8a194aa783ae7c4fa8cf33d89f833bfc782fbb01ac13b5a6"
+  },
+  "NB": {
+   "cores": 22,
+   "candidate_records": 98,
+   "groups60": 46,
+   "tiles": 62,
+   "region_json_sha256": "0b8c59ed2ca05d47b5c2051508ab961d7c98869cbf8a9b933bbf8f0a9a8958f6",
+   "candidates_sha256": "4ffc22996d01b7312ff192d8fed86b3499de38285d12578a2462d88dc1280645"
+  }
+ },
+ "tiles_total": 188
+}
