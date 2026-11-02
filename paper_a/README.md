@@ -3,8 +3,8 @@
 Release material for the manuscript:
 
 > Thomas Shanahan. *Cross-border recovery of registered burial mounds by an adapted public LiDAR detector at fixed
-> review workloads: a sealed Dutch test, a confirmed Danish system, and seed-level recipe repeatability.* Manuscript
-> in preparation, 2026.
+> review workloads: a sealed Dutch test, a confirmed Danish system, and seed-level recipe repeatability.* Preprint,
+> version 1, Zenodo, 2026. https://doi.org/10.5281/zenodo.23874293
 
 The rest of this repository belongs to the earlier preprint (see the top-level `README.md`). This folder is separate
 and does not change any earlier file.
