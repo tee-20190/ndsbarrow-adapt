@@ -88,9 +88,8 @@ snapshots, record and core lists, fold assignments and proposal files).
 
 ## Weights
 
-The 58 checkpoints used in the paper (18.53 GB; CC BY-SA 4.0, as derivatives of the ADAF weights) are prepared for a
-Zenodo deposit. A DOI is reserved for that deposit, which is unpublished at the time of writing; this README will
-link it once the record is public. Until then the weights are not publicly available. `weights/WEIGHTS_MANIFEST.csv`
+The 58 checkpoints used in the paper (18.53 GB; CC BY-SA 4.0, as derivatives of the ADAF weights) are published on
+Zenodo: https://doi.org/10.5281/zenodo.23862470. `weights/WEIGHTS_MANIFEST.csv`
 lists every file with its SHA-256 and MD5. It is a CSV, not a checksum file; to check a download, run from the folder
 holding the checkpoints and the CSV:
 
@@ -98,7 +97,8 @@ holding the checkpoints and the CSV:
 python3 -c "import csv; [print(r['sha256'] + '  ' + r['release_filename']) for r in csv.DictReader(open('WEIGHTS_MANIFEST.csv', newline=''))]" > weights.sha256
 sha256sum -c weights.sha256
 ```
- Checkpoints trained partly on Danish register labels (§5.6, arm A) are
+
+Checkpoints trained partly on Danish register labels (§5.6, arm A) are
 withheld until the agency has given its view on the geometry licence (`weights/WITHHELD.md`).
 
 ## Data
