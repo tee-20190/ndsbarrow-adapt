@@ -1,0 +1,2176 @@
+{
+ "packet": "OPEN-TRANSFER-1",
+ "verdicts": {
+  "D1": "BEATS_PUBLIC_ADAF",
+  "CONT": "LOSES_TO_PUBLIC_ADAF"
+ },
+ "S": 653,
+ "n_units": 88,
+ "sim_quantiles": [
+  0.3125,
+  99.6875
+ ],
+ "reach_m": 15.0,
+ "primary_budget_per_km2": 5.0,
+ "budgets": [
+  1.0,
+  2.0,
+  5.0,
+  10.0
+ ],
+ "n_boot": 10000,
+ "seed": 20261022,
+ "cell_m": 2000.0,
+ "eval_area_km2": {
+  "DR": 298.126623,
+  "NH": 95.516621,
+  "OV": 480.505883,
+  "UT": 199.515782
+ },
+ "sites_by_region": {
+  "DR": 284,
+  "NH": 33,
+  "OV": 238,
+  "UT": 98
+ },
+ "primary_family": {
+  "D1-ADAF_barrow@matched_workload": {
+   "diff_pts": 11.791730474732006,
+   "x": 373,
+   "y": 296,
+   "ci95_pts": [
+    7.883194756258531,
+    15.430002284014238
+   ],
+   "ci_sim_pts": [
+    6.320023828111651,
+    16.88547596457937
+   ],
+   "x_only": 101,
+   "y_only": 24,
+   "both": 272,
+   "N_per_region": {
+    "DR": 474,
+    "NH": 187,
+    "OV": 717,
+    "UT": 646
+   }
+  },
+  "D1-ADAF_barrow@5.0/km2": {
+   "diff_pts": 22.970903522205205,
+   "x": 446,
+   "y": 296,
+   "ci95_pts": [
+    19.06469199640288,
+    26.537815641235852
+   ],
+   "ci_sim_pts": [
+    17.534169565971748,
+    27.866796529619787
+   ],
+   "x_only": 165,
+   "y_only": 15,
+   "both": 281
+  },
+  "D1-ADAF_AO@matched_workload": {
+   "diff_pts": 53.59877488514548,
+   "x": 405,
+   "y": 55,
+   "ci95_pts": [
+    48.93617021276596,
+    58.69565217391305
+   ],
+   "ci_sim_pts": [
+    46.90779131484191,
+    60.76390636232924
+   ],
+   "x_only": 352,
+   "y_only": 2,
+   "both": 53,
+   "N_per_region": {
+    "DR": 653,
+    "NH": 191,
+    "OV": 1323,
+    "UT": 385
+   }
+  },
+  "D1-ADAF_AO@5.0/km2": {
+   "diff_pts": 59.87748851454824,
+   "x": 446,
+   "y": 55,
+   "ci95_pts": [
+    55.47837384795936,
+    64.81481481481481
+   ],
+   "ci_sim_pts": [
+    53.64808913559942,
+    66.6095890410959
+   ],
+   "x_only": 393,
+   "y_only": 2,
+   "both": 53
+  },
+  "CONT-ADAF_barrow@matched_workload": {
+   "diff_pts": -14.701378254211333,
+   "x": 200,
+   "y": 296,
+   "ci95_pts": [
+    -19.218392098917334,
+    -10.288774529347833
+   ],
+   "ci_sim_pts": [
+    -21.29861997457275,
+    -8.608275779653205
+   ],
+   "x_only": 25,
+   "y_only": 121,
+   "both": 175,
+   "N_per_region": {
+    "DR": 474,
+    "NH": 187,
+    "OV": 717,
+    "UT": 646
+   }
+  },
+  "CONT-ADAF_barrow@5.0/km2": {
+   "diff_pts": -9.03522205206738,
+   "x": 237,
+   "y": 296,
+   "ci95_pts": [
+    -13.650443105359154,
+    -4.328861927546139
+   ],
+   "ci_sim_pts": [
+    -15.629180311944937,
+    -2.4419760282161733
+   ],
+   "x_only": 46,
+   "y_only": 105,
+   "both": 191
+  },
+  "CONT-ADAF_AO@matched_workload": {
+   "diff_pts": 24.19601837672282,
+   "x": 213,
+   "y": 55,
+   "ci95_pts": [
+    19.633932538265196,
+    29.44618541497892
+   ],
+   "ci_sim_pts": [
+    17.83677624862152,
+    31.67998700629281
+   ],
+   "x_only": 167,
+   "y_only": 9,
+   "both": 46,
+   "N_per_region": {
+    "DR": 653,
+    "NH": 191,
+    "OV": 1323,
+    "UT": 385
+   }
+  },
+  "CONT-ADAF_AO@5.0/km2": {
+   "diff_pts": 27.871362940275652,
+   "x": 237,
+   "y": 55,
+   "ci95_pts": [
+    23.38706784838247,
+    33.10583102035613
+   ],
+   "ci_sim_pts": [
+    21.843093613154714,
+    35.15971998259964
+   ],
+   "x_only": 190,
+   "y_only": 8,
+   "both": 47
+  }
+ },
+ "secondary_pairs": {
+  "D1-CONT@5.0/km2": {
+   "diff_pts": 32.00612557427259,
+   "x": 446,
+   "y": 237,
+   "ci95_pts": [
+    27.73497688751926,
+    35.77818200807687
+   ],
+   "ci_sim_pts": [
+    26.034976875679078,
+    37.188461175264386
+   ],
+   "x_only": 223,
+   "y_only": 14,
+   "both": 223
+  },
+  "D1-CONT@matched_workload": {
+   "diff_pts": 32.9249617151608,
+   "x": 452,
+   "y": 237,
+   "ci95_pts": [
+    28.802560050019977,
+    36.634935052941735
+   ],
+   "ci_sim_pts": [
+    27.11711244710098,
+    38.04160549999862
+   ],
+   "x_only": 229,
+   "y_only": 14,
+   "both": 223,
+   "N_per_region": {
+    "DR": 1121,
+    "NH": 510,
+    "OV": 1600,
+    "UT": 1913
+   }
+  },
+  "ADAF_barrow-ADAF_AO@5.0/km2": {
+   "diff_pts": 36.906584992343035,
+   "x": 296,
+   "y": 55,
+   "ci95_pts": [
+    30.66401146014808,
+    43.46158743633276
+   ],
+   "ci_sim_pts": [
+    28.134253251383267,
+    45.909589733918516
+   ],
+   "x_only": 245,
+   "y_only": 4,
+   "both": 51
+  },
+  "ADAF_barrow-ADAF_AO@matched_workload": {
+   "diff_pts": 39.05053598774885,
+   "x": 291,
+   "y": 36,
+   "ci95_pts": [
+    32.51610354885756,
+    45.98789018275917
+   ],
+   "ci_sim_pts": [
+    29.81316247552143,
+    48.59880261518755
+   ],
+   "x_only": 256,
+   "y_only": 1,
+   "both": 35,
+   "N_per_region": {
+    "DR": 474,
+    "NH": 187,
+    "OV": 717,
+    "UT": 385
+   }
+  }
+ },
+ "pooled_recall": {
+  "D1": {
+   "1.0": 0.48545176110260335,
+   "2.0": 0.6064318529862175,
+   "5.0": 0.6830015313935681,
+   "10.0": 0.6921898928024502,
+   "pool": 0.6937212863705973
+  },
+  "CONT": {
+   "1.0": 0.27411944869831545,
+   "2.0": 0.31546707503828486,
+   "5.0": 0.36294027565084225,
+   "10.0": 0.3782542113323124,
+   "pool": 0.3782542113323124
+  },
+  "ADAF_barrow": {
+   "1.0": 0.37519142419601836,
+   "2.0": 0.44716692189892804,
+   "5.0": 0.45329249617151607,
+   "10.0": 0.45329249617151607,
+   "pool": 0.45329249617151607
+  },
+  "ADAF_AO": {
+   "1.0": 0.02450229709035222,
+   "2.0": 0.06891271056661562,
+   "5.0": 0.08422664624808576,
+   "10.0": 0.08422664624808576,
+   "pool": 0.08422664624808576
+  }
+ },
+ "region_equal_weight": {
+  "D1-ADAF_barrow@matched_workload": {
+   "mean_diff_pts": 10.565762796796056,
+   "per_region_diff_pts": {
+    "DR": 14.084507042253522,
+    "NH": 9.090909090909092,
+    "OV": 10.92436974789916,
+    "UT": 8.16326530612245
+   },
+   "regions_positive": 4,
+   "regions_negative": 0
+  },
+  "D1-ADAF_barrow@5.0/km2": {
+   "mean_diff_pts": 19.925777609379217,
+   "per_region_diff_pts": {
+    "DR": 27.816901408450704,
+    "NH": 15.151515151515152,
+    "OV": 21.428571428571427,
+    "UT": 15.306122448979592
+   },
+   "regions_positive": 4,
+   "regions_negative": 0
+  },
+  "D1-ADAF_AO@matched_workload": {
+   "mean_diff_pts": 53.41326031052626,
+   "per_region_diff_pts": {
+    "DR": 50.70422535211268,
+    "NH": 54.54545454545455,
+    "OV": 58.403361344537814,
+    "UT": 50.0
+   },
+   "regions_positive": 4,
+   "regions_negative": 0
+  },
+  "D1-ADAF_AO@5.0/km2": {
+   "mean_diff_pts": 60.43445227002453,
+   "per_region_diff_pts": {
+    "DR": 58.80281690140845,
+    "NH": 60.60606060606061,
+    "OV": 60.08403361344538,
+    "UT": 62.244897959183675
+   },
+   "regions_positive": 4,
+   "regions_negative": 0
+  },
+  "CONT-ADAF_barrow@matched_workload": {
+   "mean_diff_pts": -12.706052331303841,
+   "per_region_diff_pts": {
+    "DR": -15.140845070422536,
+    "NH": -3.0303030303030303,
+    "OV": -14.285714285714286,
+    "UT": -18.367346938775512
+   },
+   "regions_positive": 0,
+   "regions_negative": 4
+  },
+  "CONT-ADAF_barrow@5.0/km2": {
+   "mean_diff_pts": -8.190107028726985,
+   "per_region_diff_pts": {
+    "DR": -8.450704225352112,
+    "NH": 0.0,
+    "OV": -7.983193277310924,
+    "UT": -16.3265306122449
+   },
+   "regions_positive": 0,
+   "regions_negative": 3
+  },
+  "CONT-ADAF_AO@matched_workload": {
+   "mean_diff_pts": 28.465845365034617,
+   "per_region_diff_pts": {
+    "DR": 17.95774647887324,
+    "NH": 42.42424242424242,
+    "OV": 28.991596638655462,
+    "UT": 24.489795918367346
+   },
+   "regions_positive": 4,
+   "regions_negative": 0
+  },
+  "CONT-ADAF_AO@5.0/km2": {
+   "mean_diff_pts": 32.31856763191833,
+   "per_region_diff_pts": {
+    "DR": 22.535211267605632,
+    "NH": 45.45454545454545,
+    "OV": 30.672268907563026,
+    "UT": 30.612244897959183
+   },
+   "regions_positive": 4,
+   "regions_negative": 0
+  }
+ },
+ "groups_primary_budget": {
+  "D1": {
+   "groups_hit": 262,
+   "groups": 280
+  },
+  "CONT": {
+   "groups_hit": 215,
+   "groups": 280
+  },
+  "ADAF_barrow": {
+   "groups_hit": 211,
+   "groups": 280
+  },
+  "ADAF_AO": {
+   "groups_hit": 55,
+   "groups": 280
+  }
+ },
+ "size_primary_budget": {
+  "D1": {
+   "lt200": {
+    "matched": 240,
+    "of": 421
+   },
+   "200_500": {
+    "matched": 203,
+    "of": 226
+   },
+   "ge500": {
+    "matched": 3,
+    "of": 6
+   }
+  },
+  "CONT": {
+   "lt200": {
+    "matched": 83,
+    "of": 421
+   },
+   "200_500": {
+    "matched": 149,
+    "of": 226
+   },
+   "ge500": {
+    "matched": 5,
+    "of": 6
+   }
+  },
+  "ADAF_barrow": {
+   "lt200": {
+    "matched": 107,
+    "of": 421
+   },
+   "200_500": {
+    "matched": 185,
+    "of": 226
+   },
+   "ge500": {
+    "matched": 4,
+    "of": 6
+   }
+  },
+  "ADAF_AO": {
+   "lt200": {
+    "matched": 12,
+    "of": 421
+   },
+   "200_500": {
+    "matched": 41,
+    "of": 226
+   },
+   "ge500": {
+    "matched": 2,
+    "of": 6
+   }
+  }
+ },
+ "scot_score_sha256": "00f1fa3098a6d70bda5ab8a2ab340320589f4ebf668556dca8342183a6756dc7",
+ "code_sha256": "daaa134b39932fb7f47fc25122829b780692466af64ae14c8297b5682a0bbb0a",
+ "inputs_sha256": {
+  "DR/PROPOSALS_D1_PRIVATE.json": "a2bba7f2a2ace3b34ce2ab4838b91e2ee440c814e5ec943c417379433989e67d",
+  "DR/PROPOSALS_CONT_PRIVATE.json": "bdf9026e8d7b7778abe59ad308d7203a19d6dd800a6d8140735a700bd75b0135",
+  "DR/PROPOSALS_ADAF_barrow_PRIVATE.json": "542ba1eea607dc2ccff40eef4edc0d5165172748617b10d35dd9f54daf631d1b",
+  "DR/PROPOSALS_ADAF_AO_PRIVATE.json": "bcdff2aee19e568addd65153f81abd57053af1f9462801d1576dde814dc203ee",
+  "DR/SITES.json": "f330d80aab0d99af435579ad3480627f6c067085c2372f000f7e34ebe26a8839",
+  "DR/PREP.json": "469a8eb2e074522a9208fb367b3c365572da473c6020e92e2e7011532504bd94",
+  "NH/PROPOSALS_D1_PRIVATE.json": "b63a64fa6c53bf72d8fbe4f0c1c2a646ef7f8c723cd9ebebdc0fc04d4347d0ac",
+  "NH/PROPOSALS_CONT_PRIVATE.json": "6fecab739714d4f9cc0a4a2d23b58e9c1e07c17af949d302d11fc79689a07f09",
+  "NH/PROPOSALS_ADAF_barrow_PRIVATE.json": "c5a85f9a8c859f51bd7c8da8a6a271b3dd3e8ac5d56e05e1af175056a19de33f",
+  "NH/PROPOSALS_ADAF_AO_PRIVATE.json": "09244b5ade83ce06e1a6593d48a62acb6c46c2368b3516ac6640bacbaa523bfa",
+  "NH/SITES.json": "935064d7750ad971aff0299f1f7eeee437166ba6146c7cf10066c8b55b8f86d1",
+  "NH/PREP.json": "165ae8c52f5a098e96342cf1d6d5d79acef588592ceb4d764ebe75826597621f",
+  "OV/PROPOSALS_D1_PRIVATE.json": "3d440f6d21151fed9997df9f02df4945aa691cd824a48256c73c34ea50b1d167",
+  "OV/PROPOSALS_CONT_PRIVATE.json": "b1912172c303d95afcb4f5b495ef271fcef7fe32c4d4b7a5098770731f73cf66",
+  "OV/PROPOSALS_ADAF_barrow_PRIVATE.json": "52c350163bc71f6feef5723f34f5f3615641c2a8c2ce5be712ff2fa17dff2206",
+  "OV/PROPOSALS_ADAF_AO_PRIVATE.json": "455845f2f432b3038501bed0bcafea277849f06bb1deb24506538c45ce10b020",
+  "OV/SITES.json": "38b480dab6ceaead400545b6a6c48d9f12e1c04c51fd0b2af90f6fdd52880d6f",
+  "OV/PREP.json": "6efce7708c42134c13759eb2d53a5f9ca7879faec76699607700faad9105e0d0",
+  "UT/PROPOSALS_D1_PRIVATE.json": "22b9c4506bca27cc704de15fcbc17e009cbc01fd9c1674184658b4ffefb73b6a",
+  "UT/PROPOSALS_CONT_PRIVATE.json": "8902a6b3c2bb8101341a905dfafa3efaf4d9cd1641b51fbb76f8cc2f695810c2",
+  "UT/PROPOSALS_ADAF_barrow_PRIVATE.json": "953b9f62972c1d1d7b6a1d99135a6e788fc8319a62bf85d3b74f7367539cd675",
+  "UT/PROPOSALS_ADAF_AO_PRIVATE.json": "28aebf4807472dbb62984ce3a98e23fac32b703c294dd8cba338452d053b3abf",
+  "UT/SITES.json": "11ecb0ecccee444fe2e9f5cbb49a992020cc884156547c92a44489e206fb73ba",
+  "UT/PREP.json": "cd9850be1cfc902f53ac5a22f1109bce80061ddd077d9ccdb12cf86be226c668"
+ },
+ "per_region": {
+  "DR": {
+   "primary_family": {
+    "D1-ADAF_barrow@matched_workload": {
+     "diff_pts": 14.084507042253522,
+     "x": 139,
+     "y": 99,
+     "ci95_pts": [
+      7.434881442781071,
+      19.823974423316415
+     ],
+     "ci_sim_pts": [
+      4.187648719218116,
+      22.130286449250082
+     ],
+     "x_only": 52,
+     "y_only": 12,
+     "both": 87,
+     "N_per_region": {
+      "DR": 474
+     }
+    },
+    "D1-ADAF_barrow@5.0/km2": {
+     "diff_pts": 27.816901408450704,
+     "x": 178,
+     "y": 99,
+     "ci95_pts": [
+      23.076923076923077,
+      31.783014950166113
+     ],
+     "ci_sim_pts": [
+      20.69395463253222,
+      33.33333333333333
+     ],
+     "x_only": 87,
+     "y_only": 8,
+     "both": 91
+    },
+    "D1-ADAF_AO@matched_workload": {
+     "diff_pts": 50.70422535211268,
+     "x": 155,
+     "y": 11,
+     "ci95_pts": [
+      44.51860571348256,
+      59.036144578313255
+     ],
+     "ci_sim_pts": [
+      42.20375971359513,
+      62.81180100196102
+     ],
+     "x_only": 145,
+     "y_only": 1,
+     "both": 10,
+     "N_per_region": {
+      "DR": 653
+     }
+    },
+    "D1-ADAF_AO@5.0/km2": {
+     "diff_pts": 58.80281690140845,
+     "x": 178,
+     "y": 11,
+     "ci95_pts": [
+      52.5065963060686,
+      67.51269035532995
+     ],
+     "ci_sim_pts": [
+      50.82512281282773,
+      70.81793119638587
+     ],
+     "x_only": 168,
+     "y_only": 1,
+     "both": 10
+    },
+    "CONT-ADAF_barrow@matched_workload": {
+     "diff_pts": -15.140845070422536,
+     "x": 56,
+     "y": 99,
+     "ci95_pts": [
+      -21.88679245283019,
+      -9.65892637767638
+     ],
+     "ci_sim_pts": [
+      -24.454521900909,
+      -7.3867337416047025
+     ],
+     "x_only": 9,
+     "y_only": 52,
+     "both": 47,
+     "N_per_region": {
+      "DR": 474
+     }
+    },
+    "CONT-ADAF_barrow@5.0/km2": {
+     "diff_pts": -8.450704225352112,
+     "x": 75,
+     "y": 99,
+     "ci95_pts": [
+      -15.248377208799136,
+      -1.8604218898590825
+     ],
+     "ci_sim_pts": [
+      -18.644004588799472,
+      1.0586864116275563
+     ],
+     "x_only": 21,
+     "y_only": 45,
+     "both": 54
+    },
+    "CONT-ADAF_AO@matched_workload": {
+     "diff_pts": 17.95774647887324,
+     "x": 62,
+     "y": 11,
+     "ci95_pts": [
+      12.048192771084338,
+      26.923515981735154
+     ],
+     "ci_sim_pts": [
+      10.284597617570949,
+      30.756818753142245
+     ],
+     "x_only": 54,
+     "y_only": 3,
+     "both": 8,
+     "N_per_region": {
+      "DR": 653
+     }
+    },
+    "CONT-ADAF_AO@5.0/km2": {
+     "diff_pts": 22.535211267605632,
+     "x": 75,
+     "y": 11,
+     "ci95_pts": [
+      16.58159960875542,
+      31.944649901380668
+     ],
+     "ci_sim_pts": [
+      14.644398321688987,
+      35.53248868254079
+     ],
+     "x_only": 66,
+     "y_only": 2,
+     "both": 9
+    }
+   },
+   "verdicts": {
+    "D1": "BEATS_PUBLIC_ADAF",
+    "CONT": "LOSES_TO_PUBLIC_ADAF"
+   }
+  },
+  "NH": {
+   "primary_family": {
+    "D1-ADAF_barrow@matched_workload": {
+     "diff_pts": 9.090909090909092,
+     "x": 22,
+     "y": 19,
+     "ci95_pts": [
+      -18.181818181818183,
+      21.428571428571427
+     ],
+     "ci_sim_pts": [
+      -36.36363636363637,
+      23.88059701492537
+     ],
+     "x_only": 4,
+     "y_only": 1,
+     "both": 18,
+     "N_per_region": {
+      "NH": 187
+     }
+    },
+    "D1-ADAF_barrow@5.0/km2": {
+     "diff_pts": 15.151515151515152,
+     "x": 24,
+     "y": 19,
+     "ci95_pts": [
+      -13.333333333333334,
+      25.862068965517242
+     ],
+     "ci_sim_pts": [
+      -33.33333333333333,
+      28.57142857142857
+     ],
+     "x_only": 6,
+     "y_only": 1,
+     "both": 18
+    },
+    "D1-ADAF_AO@matched_workload": {
+     "diff_pts": 54.54545454545455,
+     "x": 22,
+     "y": 4,
+     "ci95_pts": [
+      27.27272727272727,
+      67.24137931034483
+     ],
+     "ci_sim_pts": [
+      18.75,
+      70.0
+     ],
+     "x_only": 18,
+     "y_only": 0,
+     "both": 4,
+     "N_per_region": {
+      "NH": 191
+     }
+    },
+    "D1-ADAF_AO@5.0/km2": {
+     "diff_pts": 60.60606060606061,
+     "x": 24,
+     "y": 4,
+     "ci95_pts": [
+      47.05882352941176,
+      67.24137931034483
+     ],
+     "ci_sim_pts": [
+      40.0,
+      70.58823529411765
+     ],
+     "x_only": 20,
+     "y_only": 0,
+     "both": 4
+    },
+    "CONT-ADAF_barrow@matched_workload": {
+     "diff_pts": -3.0303030303030303,
+     "x": 18,
+     "y": 19,
+     "ci95_pts": [
+      -21.052631578947366,
+      10.526315789473683
+     ],
+     "ci_sim_pts": [
+      -28.57142857142857,
+      14.285714285714285
+     ],
+     "x_only": 3,
+     "y_only": 4,
+     "both": 15,
+     "N_per_region": {
+      "NH": 187
+     }
+    },
+    "CONT-ADAF_barrow@5.0/km2": {
+     "diff_pts": 0.0,
+     "x": 19,
+     "y": 19,
+     "ci95_pts": [
+      -10.526315789473683,
+      10.526315789473683
+     ],
+     "ci_sim_pts": [
+      -14.285714285714285,
+      14.285714285714285
+     ],
+     "x_only": 3,
+     "y_only": 3,
+     "both": 16
+    },
+    "CONT-ADAF_AO@matched_workload": {
+     "diff_pts": 42.42424242424242,
+     "x": 18,
+     "y": 4,
+     "ci95_pts": [
+      37.2093023255814,
+      57.14285714285714
+     ],
+     "ci_sim_pts": [
+      35.294117647058826,
+      77.77777777777779
+     ],
+     "x_only": 14,
+     "y_only": 0,
+     "both": 4,
+     "N_per_region": {
+      "NH": 191
+     }
+    },
+    "CONT-ADAF_AO@5.0/km2": {
+     "diff_pts": 45.45454545454545,
+     "x": 19,
+     "y": 4,
+     "ci95_pts": [
+      39.53488372093023,
+      63.63636363636363
+     ],
+     "ci_sim_pts": [
+      37.5,
+      77.77777777777779
+     ],
+     "x_only": 15,
+     "y_only": 0,
+     "both": 4
+    }
+   },
+   "verdicts": {
+    "D1": "NOT_DISTINGUISHED",
+    "CONT": "NOT_DISTINGUISHED"
+   }
+  },
+  "OV": {
+   "primary_family": {
+    "D1-ADAF_barrow@matched_workload": {
+     "diff_pts": 10.92436974789916,
+     "x": 154,
+     "y": 128,
+     "ci95_pts": [
+      5.208236524163569,
+      16.901578553446278
+     ],
+     "ci_sim_pts": [
+      3.366015526182646,
+      19.117980325887444
+     ],
+     "x_only": 32,
+     "y_only": 6,
+     "both": 122,
+     "N_per_region": {
+      "OV": 717
+     }
+    },
+    "D1-ADAF_barrow@5.0/km2": {
+     "diff_pts": 21.428571428571427,
+     "x": 179,
+     "y": 128,
+     "ci95_pts": [
+      14.748201438848922,
+      28.74040354330708
+     ],
+     "ci_sim_pts": [
+      12.196914017131242,
+      31.376421543572654
+     ],
+     "x_only": 55,
+     "y_only": 4,
+     "both": 124
+    },
+    "D1-ADAF_AO@matched_workload": {
+     "diff_pts": 58.403361344537814,
+     "x": 175,
+     "y": 36,
+     "ci95_pts": [
+      50.204081632653065,
+      66.83187554506746
+     ],
+     "ci_sim_pts": [
+      46.52945796619962,
+      70.61880714408936
+     ],
+     "x_only": 139,
+     "y_only": 0,
+     "both": 36,
+     "N_per_region": {
+      "OV": 1323
+     }
+    },
+    "D1-ADAF_AO@5.0/km2": {
+     "diff_pts": 60.08403361344538,
+     "x": 179,
+     "y": 36,
+     "ci95_pts": [
+      51.515151515151516,
+      68.72315528634361
+     ],
+     "ci_sim_pts": [
+      48.148148148148145,
+      72.09302325581395
+     ],
+     "x_only": 143,
+     "y_only": 0,
+     "both": 36
+    },
+    "CONT-ADAF_barrow@matched_workload": {
+     "diff_pts": -14.285714285714286,
+     "x": 94,
+     "y": 128,
+     "ci95_pts": [
+      -21.429386823222437,
+      -6.572385130454866
+     ],
+     "ci_sim_pts": [
+      -24.452248636410413,
+      -3.910614525139665
+     ],
+     "x_only": 7,
+     "y_only": 41,
+     "both": 87,
+     "N_per_region": {
+      "OV": 717
+     }
+    },
+    "CONT-ADAF_barrow@5.0/km2": {
+     "diff_pts": -7.983193277310924,
+     "x": 109,
+     "y": 128,
+     "ci95_pts": [
+      -15.072636300897171,
+      0.5780346820809248
+     ],
+     "ci_sim_pts": [
+      -17.78367527630213,
+      3.9437185836782858
+     ],
+     "x_only": 15,
+     "y_only": 34,
+     "both": 94
+    },
+    "CONT-ADAF_AO@matched_workload": {
+     "diff_pts": 28.991596638655462,
+     "x": 105,
+     "y": 36,
+     "ci95_pts": [
+      21.655988264205828,
+      37.06920767144518
+     ],
+     "ci_sim_pts": [
+      19.061955574912893,
+      40.71086514939714
+     ],
+     "x_only": 73,
+     "y_only": 4,
+     "both": 32,
+     "N_per_region": {
+      "OV": 1323
+     }
+    },
+    "CONT-ADAF_AO@5.0/km2": {
+     "diff_pts": 30.672268907563026,
+     "x": 109,
+     "y": 36,
+     "ci95_pts": [
+      23.555509641873275,
+      38.72345640383813
+     ],
+     "ci_sim_pts": [
+      20.8955223880597,
+      41.9547151317984
+     ],
+     "x_only": 77,
+     "y_only": 4,
+     "both": 32
+    }
+   },
+   "verdicts": {
+    "D1": "BEATS_PUBLIC_ADAF",
+    "CONT": "LOSES_TO_PUBLIC_ADAF"
+   }
+  },
+  "UT": {
+   "primary_family": {
+    "D1-ADAF_barrow@matched_workload": {
+     "diff_pts": 8.16326530612245,
+     "x": 58,
+     "y": 50,
+     "ci95_pts": [
+      0.9706404032860345,
+      16.666666666666664
+     ],
+     "ci_sim_pts": [
+      -1.8141380016380013,
+      20.448512341153453
+     ],
+     "x_only": 13,
+     "y_only": 5,
+     "both": 45,
+     "N_per_region": {
+      "UT": 646
+     }
+    },
+    "D1-ADAF_barrow@5.0/km2": {
+     "diff_pts": 15.306122448979592,
+     "x": 65,
+     "y": 50,
+     "ci95_pts": [
+      7.475889838934181,
+      23.387525737817423
+     ],
+     "ci_sim_pts": [
+      4.773208562271062,
+      26.54855751129514
+     ],
+     "x_only": 17,
+     "y_only": 2,
+     "both": 48
+    },
+    "D1-ADAF_AO@matched_workload": {
+     "diff_pts": 50.0,
+     "x": 53,
+     "y": 4,
+     "ci95_pts": [
+      40.20618556701031,
+      60.60686653771759
+     ],
+     "ci_sim_pts": [
+      36.21753771551724,
+      64.88651883266243
+     ],
+     "x_only": 50,
+     "y_only": 1,
+     "both": 3,
+     "N_per_region": {
+      "UT": 385
+     }
+    },
+    "D1-ADAF_AO@5.0/km2": {
+     "diff_pts": 62.244897959183675,
+     "x": 65,
+     "y": 4,
+     "ci95_pts": [
+      53.44827586206896,
+      70.40816326530613
+     ],
+     "ci_sim_pts": [
+      50.0,
+      73.48100490196065
+     ],
+     "x_only": 62,
+     "y_only": 1,
+     "both": 3
+    },
+    "CONT-ADAF_barrow@matched_workload": {
+     "diff_pts": -18.367346938775512,
+     "x": 32,
+     "y": 50,
+     "ci95_pts": [
+      -33.60016393442623,
+      -5.194245409762659
+     ],
+     "ci_sim_pts": [
+      -39.67578338806787,
+      -1.3568452380953075
+     ],
+     "x_only": 6,
+     "y_only": 24,
+     "both": 26,
+     "N_per_region": {
+      "UT": 646
+     }
+    },
+    "CONT-ADAF_barrow@5.0/km2": {
+     "diff_pts": -16.3265306122449,
+     "x": 34,
+     "y": 50,
+     "ci95_pts": [
+      -32.089782568638284,
+      -2.666666666666667
+     ],
+     "ci_sim_pts": [
+      -38.24865235065394,
+      1.4492753623188406
+     ],
+     "x_only": 7,
+     "y_only": 23,
+     "both": 27
+    },
+    "CONT-ADAF_AO@matched_workload": {
+     "diff_pts": 24.489795918367346,
+     "x": 28,
+     "y": 4,
+     "ci95_pts": [
+      15.729935794542534,
+      34.44444444444444
+     ],
+     "ci_sim_pts": [
+      12.391186096686901,
+      39.914870689654926
+     ],
+     "x_only": 26,
+     "y_only": 2,
+     "both": 2,
+     "N_per_region": {
+      "UT": 385
+     }
+    },
+    "CONT-ADAF_AO@5.0/km2": {
+     "diff_pts": 30.612244897959183,
+     "x": 34,
+     "y": 4,
+     "ci95_pts": [
+      21.367521367521366,
+      40.42612957207744
+     ],
+     "ci_sim_pts": [
+      17.927008217340266,
+      45.11218705715608
+     ],
+     "x_only": 32,
+     "y_only": 2,
+     "both": 2
+    }
+   },
+   "verdicts": {
+    "D1": "NOT_DISTINGUISHED",
+    "CONT": "LOSES_TO_PUBLIC_ADAF"
+   }
+  }
+ },
+ "arms": {
+  "DR": {
+   "D1": {
+    "pool": 1121,
+    "pool_per_km2": 3.760147244548502,
+    "budgets": {
+     "1.0": {
+      "N_budget": 298,
+      "N_taken": 298,
+      "matched": 115,
+      "recall": 0.40492957746478875,
+      "precision_lb": 0.3859060402684564,
+      "share_within_reach": 0.3859060402684564
+     },
+     "2.0": {
+      "N_budget": 596,
+      "N_taken": 596,
+      "matched": 153,
+      "recall": 0.5387323943661971,
+      "precision_lb": 0.25671140939597314,
+      "share_within_reach": 0.25671140939597314
+     },
+     "5.0": {
+      "N_budget": 1491,
+      "N_taken": 1121,
+      "matched": 178,
+      "recall": 0.6267605633802817,
+      "precision_lb": 0.15878679750223015,
+      "share_within_reach": 0.15878679750223015
+     },
+     "10.0": {
+      "N_budget": 2981,
+      "N_taken": 1121,
+      "matched": 178,
+      "recall": 0.6267605633802817,
+      "precision_lb": 0.15878679750223015,
+      "share_within_reach": 0.15878679750223015
+     }
+    },
+    "whole_pool": {
+     "matched": 178,
+     "recall": 0.6267605633802817,
+     "precision_lb": 0.15878679750223015
+    }
+   },
+   "CONT": {
+    "pool": 2081,
+    "pool_per_km2": 6.98025550036167,
+    "budgets": {
+     "1.0": {
+      "N_budget": 298,
+      "N_taken": 298,
+      "matched": 50,
+      "recall": 0.176056338028169,
+      "precision_lb": 0.16778523489932887,
+      "share_within_reach": 0.16778523489932887
+     },
+     "2.0": {
+      "N_budget": 596,
+      "N_taken": 596,
+      "matched": 60,
+      "recall": 0.2112676056338028,
+      "precision_lb": 0.10067114093959731,
+      "share_within_reach": 0.10067114093959731
+     },
+     "5.0": {
+      "N_budget": 1491,
+      "N_taken": 1491,
+      "matched": 75,
+      "recall": 0.2640845070422535,
+      "precision_lb": 0.05030181086519115,
+      "share_within_reach": 0.05030181086519115
+     },
+     "10.0": {
+      "N_budget": 2981,
+      "N_taken": 2081,
+      "matched": 78,
+      "recall": 0.2746478873239437,
+      "precision_lb": 0.03748197981739548,
+      "share_within_reach": 0.03748197981739548
+     }
+    },
+    "whole_pool": {
+     "matched": 78,
+     "recall": 0.2746478873239437,
+     "precision_lb": 0.03748197981739548
+    }
+   },
+   "ADAF_barrow": {
+    "pool": 474,
+    "pool_per_km2": 1.5899284513077518,
+    "budgets": {
+     "1.0": {
+      "N_budget": 298,
+      "N_taken": 298,
+      "matched": 79,
+      "recall": 0.27816901408450706,
+      "precision_lb": 0.2651006711409396,
+      "share_within_reach": 0.2651006711409396
+     },
+     "2.0": {
+      "N_budget": 596,
+      "N_taken": 474,
+      "matched": 99,
+      "recall": 0.3485915492957746,
+      "precision_lb": 0.2088607594936709,
+      "share_within_reach": 0.2088607594936709
+     },
+     "5.0": {
+      "N_budget": 1491,
+      "N_taken": 474,
+      "matched": 99,
+      "recall": 0.3485915492957746,
+      "precision_lb": 0.2088607594936709,
+      "share_within_reach": 0.2088607594936709
+     },
+     "10.0": {
+      "N_budget": 2981,
+      "N_taken": 474,
+      "matched": 99,
+      "recall": 0.3485915492957746,
+      "precision_lb": 0.2088607594936709,
+      "share_within_reach": 0.2088607594936709
+     }
+    },
+    "whole_pool": {
+     "matched": 99,
+     "recall": 0.3485915492957746,
+     "precision_lb": 0.2088607594936709
+    }
+   },
+   "ADAF_AO": {
+    "pool": 653,
+    "pool_per_km2": 2.1903444698395824,
+    "budgets": {
+     "1.0": {
+      "N_budget": 298,
+      "N_taken": 298,
+      "matched": 2,
+      "recall": 0.007042253521126761,
+      "precision_lb": 0.006711409395973154,
+      "share_within_reach": 0.006711409395973154
+     },
+     "2.0": {
+      "N_budget": 596,
+      "N_taken": 596,
+      "matched": 10,
+      "recall": 0.035211267605633804,
+      "precision_lb": 0.016778523489932886,
+      "share_within_reach": 0.016778523489932886
+     },
+     "5.0": {
+      "N_budget": 1491,
+      "N_taken": 653,
+      "matched": 11,
+      "recall": 0.03873239436619718,
+      "precision_lb": 0.016845329249617153,
+      "share_within_reach": 0.016845329249617153
+     },
+     "10.0": {
+      "N_budget": 2981,
+      "N_taken": 653,
+      "matched": 11,
+      "recall": 0.03873239436619718,
+      "precision_lb": 0.016845329249617153,
+      "share_within_reach": 0.016845329249617153
+     }
+    },
+    "whole_pool": {
+     "matched": 11,
+     "recall": 0.03873239436619718,
+     "precision_lb": 0.016845329249617153
+    }
+   },
+   "S": 284
+  },
+  "NH": {
+   "D1": {
+    "pool": 510,
+    "pool_per_km2": 5.339384859520941,
+    "budgets": {
+     "1.0": {
+      "N_budget": 96,
+      "N_taken": 96,
+      "matched": 19,
+      "recall": 0.5757575757575758,
+      "precision_lb": 0.19791666666666666,
+      "share_within_reach": 0.19791666666666666
+     },
+     "2.0": {
+      "N_budget": 191,
+      "N_taken": 191,
+      "matched": 22,
+      "recall": 0.6666666666666666,
+      "precision_lb": 0.11518324607329843,
+      "share_within_reach": 0.11518324607329843
+     },
+     "5.0": {
+      "N_budget": 478,
+      "N_taken": 478,
+      "matched": 24,
+      "recall": 0.7272727272727273,
+      "precision_lb": 0.0502092050209205,
+      "share_within_reach": 0.0502092050209205
+     },
+     "10.0": {
+      "N_budget": 955,
+      "N_taken": 510,
+      "matched": 24,
+      "recall": 0.7272727272727273,
+      "precision_lb": 0.047058823529411764,
+      "share_within_reach": 0.047058823529411764
+     }
+    },
+    "whole_pool": {
+     "matched": 24,
+     "recall": 0.7272727272727273,
+     "precision_lb": 0.047058823529411764
+    }
+   },
+   "CONT": {
+    "pool": 826,
+    "pool_per_km2": 8.647709596008427,
+    "budgets": {
+     "1.0": {
+      "N_budget": 96,
+      "N_taken": 96,
+      "matched": 18,
+      "recall": 0.5454545454545454,
+      "precision_lb": 0.1875,
+      "share_within_reach": 0.1875
+     },
+     "2.0": {
+      "N_budget": 191,
+      "N_taken": 191,
+      "matched": 18,
+      "recall": 0.5454545454545454,
+      "precision_lb": 0.09424083769633508,
+      "share_within_reach": 0.09424083769633508
+     },
+     "5.0": {
+      "N_budget": 478,
+      "N_taken": 478,
+      "matched": 19,
+      "recall": 0.5757575757575758,
+      "precision_lb": 0.0397489539748954,
+      "share_within_reach": 0.0397489539748954
+     },
+     "10.0": {
+      "N_budget": 955,
+      "N_taken": 826,
+      "matched": 20,
+      "recall": 0.6060606060606061,
+      "precision_lb": 0.024213075060532687,
+      "share_within_reach": 0.024213075060532687
+     }
+    },
+    "whole_pool": {
+     "matched": 20,
+     "recall": 0.6060606060606061,
+     "precision_lb": 0.024213075060532687
+    }
+   },
+   "ADAF_barrow": {
+    "pool": 187,
+    "pool_per_km2": 1.9577744484910118,
+    "budgets": {
+     "1.0": {
+      "N_budget": 96,
+      "N_taken": 96,
+      "matched": 17,
+      "recall": 0.5151515151515151,
+      "precision_lb": 0.17708333333333334,
+      "share_within_reach": 0.17708333333333334
+     },
+     "2.0": {
+      "N_budget": 191,
+      "N_taken": 187,
+      "matched": 19,
+      "recall": 0.5757575757575758,
+      "precision_lb": 0.10160427807486631,
+      "share_within_reach": 0.10160427807486631
+     },
+     "5.0": {
+      "N_budget": 478,
+      "N_taken": 187,
+      "matched": 19,
+      "recall": 0.5757575757575758,
+      "precision_lb": 0.10160427807486631,
+      "share_within_reach": 0.10160427807486631
+     },
+     "10.0": {
+      "N_budget": 955,
+      "N_taken": 187,
+      "matched": 19,
+      "recall": 0.5757575757575758,
+      "precision_lb": 0.10160427807486631,
+      "share_within_reach": 0.10160427807486631
+     }
+    },
+    "whole_pool": {
+     "matched": 19,
+     "recall": 0.5757575757575758,
+     "precision_lb": 0.10160427807486631
+    }
+   },
+   "ADAF_AO": {
+    "pool": 191,
+    "pool_per_km2": 1.99965197680098,
+    "budgets": {
+     "1.0": {
+      "N_budget": 96,
+      "N_taken": 96,
+      "matched": 1,
+      "recall": 0.030303030303030304,
+      "precision_lb": 0.010416666666666666,
+      "share_within_reach": 0.010416666666666666
+     },
+     "2.0": {
+      "N_budget": 191,
+      "N_taken": 191,
+      "matched": 4,
+      "recall": 0.12121212121212122,
+      "precision_lb": 0.020942408376963352,
+      "share_within_reach": 0.020942408376963352
+     },
+     "5.0": {
+      "N_budget": 478,
+      "N_taken": 191,
+      "matched": 4,
+      "recall": 0.12121212121212122,
+      "precision_lb": 0.020942408376963352,
+      "share_within_reach": 0.020942408376963352
+     },
+     "10.0": {
+      "N_budget": 955,
+      "N_taken": 191,
+      "matched": 4,
+      "recall": 0.12121212121212122,
+      "precision_lb": 0.020942408376963352,
+      "share_within_reach": 0.020942408376963352
+     }
+    },
+    "whole_pool": {
+     "matched": 4,
+     "recall": 0.12121212121212122,
+     "precision_lb": 0.020942408376963352
+    }
+   },
+   "S": 33
+  },
+  "OV": {
+   "D1": {
+    "pool": 1600,
+    "pool_per_km2": 3.3298239555581053,
+    "budgets": {
+     "1.0": {
+      "N_budget": 481,
+      "N_taken": 481,
+      "matched": 140,
+      "recall": 0.5882352941176471,
+      "precision_lb": 0.2910602910602911,
+      "share_within_reach": 0.2910602910602911
+     },
+     "2.0": {
+      "N_budget": 961,
+      "N_taken": 961,
+      "matched": 168,
+      "recall": 0.7058823529411765,
+      "precision_lb": 0.17481789802289283,
+      "share_within_reach": 0.17481789802289283
+     },
+     "5.0": {
+      "N_budget": 2403,
+      "N_taken": 1600,
+      "matched": 179,
+      "recall": 0.7521008403361344,
+      "precision_lb": 0.111875,
+      "share_within_reach": 0.111875
+     },
+     "10.0": {
+      "N_budget": 4805,
+      "N_taken": 1600,
+      "matched": 179,
+      "recall": 0.7521008403361344,
+      "precision_lb": 0.111875,
+      "share_within_reach": 0.111875
+     }
+    },
+    "whole_pool": {
+     "matched": 179,
+     "recall": 0.7521008403361344,
+     "precision_lb": 0.111875
+    }
+   },
+   "CONT": {
+    "pool": 3637,
+    "pool_per_km2": 7.569106078978018,
+    "budgets": {
+     "1.0": {
+      "N_budget": 481,
+      "N_taken": 481,
+      "matched": 87,
+      "recall": 0.36554621848739494,
+      "precision_lb": 0.18087318087318088,
+      "share_within_reach": 0.18087318087318088
+     },
+     "2.0": {
+      "N_budget": 961,
+      "N_taken": 961,
+      "matched": 100,
+      "recall": 0.42016806722689076,
+      "precision_lb": 0.1040582726326743,
+      "share_within_reach": 0.1040582726326743
+     },
+     "5.0": {
+      "N_budget": 2403,
+      "N_taken": 2403,
+      "matched": 109,
+      "recall": 0.4579831932773109,
+      "precision_lb": 0.04535996670828132,
+      "share_within_reach": 0.04535996670828132
+     },
+     "10.0": {
+      "N_budget": 4805,
+      "N_taken": 3637,
+      "matched": 110,
+      "recall": 0.46218487394957986,
+      "precision_lb": 0.030244707176244157,
+      "share_within_reach": 0.030244707176244157
+     }
+    },
+    "whole_pool": {
+     "matched": 110,
+     "recall": 0.46218487394957986,
+     "precision_lb": 0.030244707176244157
+    }
+   },
+   "ADAF_barrow": {
+    "pool": 717,
+    "pool_per_km2": 1.4921773600844759,
+    "budgets": {
+     "1.0": {
+      "N_budget": 481,
+      "N_taken": 481,
+      "matched": 116,
+      "recall": 0.48739495798319327,
+      "precision_lb": 0.24116424116424118,
+      "share_within_reach": 0.24116424116424118
+     },
+     "2.0": {
+      "N_budget": 961,
+      "N_taken": 717,
+      "matched": 128,
+      "recall": 0.5378151260504201,
+      "precision_lb": 0.17852161785216178,
+      "share_within_reach": 0.17852161785216178
+     },
+     "5.0": {
+      "N_budget": 2403,
+      "N_taken": 717,
+      "matched": 128,
+      "recall": 0.5378151260504201,
+      "precision_lb": 0.17852161785216178,
+      "share_within_reach": 0.17852161785216178
+     },
+     "10.0": {
+      "N_budget": 4805,
+      "N_taken": 717,
+      "matched": 128,
+      "recall": 0.5378151260504201,
+      "precision_lb": 0.17852161785216178,
+      "share_within_reach": 0.17852161785216178
+     }
+    },
+    "whole_pool": {
+     "matched": 128,
+     "recall": 0.5378151260504201,
+     "precision_lb": 0.17852161785216178
+    }
+   },
+   "ADAF_AO": {
+    "pool": 1323,
+    "pool_per_km2": 2.753348183252108,
+    "budgets": {
+     "1.0": {
+      "N_budget": 481,
+      "N_taken": 481,
+      "matched": 12,
+      "recall": 0.05042016806722689,
+      "precision_lb": 0.02494802494802495,
+      "share_within_reach": 0.02494802494802495
+     },
+     "2.0": {
+      "N_budget": 961,
+      "N_taken": 961,
+      "matched": 27,
+      "recall": 0.1134453781512605,
+      "precision_lb": 0.02809573361082206,
+      "share_within_reach": 0.02809573361082206
+     },
+     "5.0": {
+      "N_budget": 2403,
+      "N_taken": 1323,
+      "matched": 36,
+      "recall": 0.15126050420168066,
+      "precision_lb": 0.027210884353741496,
+      "share_within_reach": 0.027210884353741496
+     },
+     "10.0": {
+      "N_budget": 4805,
+      "N_taken": 1323,
+      "matched": 36,
+      "recall": 0.15126050420168066,
+      "precision_lb": 0.027210884353741496,
+      "share_within_reach": 0.027210884353741496
+     }
+    },
+    "whole_pool": {
+     "matched": 36,
+     "recall": 0.15126050420168066,
+     "precision_lb": 0.027210884353741496
+    }
+   },
+   "S": 238
+  },
+  "UT": {
+   "D1": {
+    "pool": 2380,
+    "pool_per_km2": 11.928880894244246,
+    "budgets": {
+     "1.0": {
+      "N_budget": 200,
+      "N_taken": 200,
+      "matched": 43,
+      "recall": 0.4387755102040816,
+      "precision_lb": 0.215,
+      "share_within_reach": 0.215
+     },
+     "2.0": {
+      "N_budget": 399,
+      "N_taken": 399,
+      "matched": 53,
+      "recall": 0.5408163265306123,
+      "precision_lb": 0.13283208020050125,
+      "share_within_reach": 0.13283208020050125
+     },
+     "5.0": {
+      "N_budget": 998,
+      "N_taken": 998,
+      "matched": 65,
+      "recall": 0.6632653061224489,
+      "precision_lb": 0.06513026052104208,
+      "share_within_reach": 0.06513026052104208
+     },
+     "10.0": {
+      "N_budget": 1995,
+      "N_taken": 1995,
+      "matched": 71,
+      "recall": 0.7244897959183674,
+      "precision_lb": 0.03558897243107769,
+      "share_within_reach": 0.03558897243107769
+     }
+    },
+    "whole_pool": {
+     "matched": 72,
+     "recall": 0.7346938775510204,
+     "precision_lb": 0.030252100840336135
+    }
+   },
+   "CONT": {
+    "pool": 1913,
+    "pool_per_km2": 9.588213928861027,
+    "budgets": {
+     "1.0": {
+      "N_budget": 200,
+      "N_taken": 200,
+      "matched": 24,
+      "recall": 0.24489795918367346,
+      "precision_lb": 0.12,
+      "share_within_reach": 0.12
+     },
+     "2.0": {
+      "N_budget": 399,
+      "N_taken": 399,
+      "matched": 28,
+      "recall": 0.2857142857142857,
+      "precision_lb": 0.07017543859649122,
+      "share_within_reach": 0.07017543859649122
+     },
+     "5.0": {
+      "N_budget": 998,
+      "N_taken": 998,
+      "matched": 34,
+      "recall": 0.3469387755102041,
+      "precision_lb": 0.03406813627254509,
+      "share_within_reach": 0.03406813627254509
+     },
+     "10.0": {
+      "N_budget": 1995,
+      "N_taken": 1913,
+      "matched": 39,
+      "recall": 0.3979591836734694,
+      "precision_lb": 0.020386826973340304,
+      "share_within_reach": 0.020386826973340304
+     }
+    },
+    "whole_pool": {
+     "matched": 39,
+     "recall": 0.3979591836734694,
+     "precision_lb": 0.020386826973340304
+    }
+   },
+   "ADAF_barrow": {
+    "pool": 646,
+    "pool_per_km2": 3.2378390998662954,
+    "budgets": {
+     "1.0": {
+      "N_budget": 200,
+      "N_taken": 200,
+      "matched": 33,
+      "recall": 0.336734693877551,
+      "precision_lb": 0.165,
+      "share_within_reach": 0.165
+     },
+     "2.0": {
+      "N_budget": 399,
+      "N_taken": 399,
+      "matched": 46,
+      "recall": 0.46938775510204084,
+      "precision_lb": 0.11528822055137844,
+      "share_within_reach": 0.11528822055137844
+     },
+     "5.0": {
+      "N_budget": 998,
+      "N_taken": 646,
+      "matched": 50,
+      "recall": 0.5102040816326531,
+      "precision_lb": 0.07739938080495357,
+      "share_within_reach": 0.07739938080495357
+     },
+     "10.0": {
+      "N_budget": 1995,
+      "N_taken": 646,
+      "matched": 50,
+      "recall": 0.5102040816326531,
+      "precision_lb": 0.07739938080495357,
+      "share_within_reach": 0.07739938080495357
+     }
+    },
+    "whole_pool": {
+     "matched": 50,
+     "recall": 0.5102040816326531,
+     "precision_lb": 0.07739938080495357
+    }
+   },
+   "ADAF_AO": {
+    "pool": 385,
+    "pool_per_km2": 1.9296719093630397,
+    "budgets": {
+     "1.0": {
+      "N_budget": 200,
+      "N_taken": 200,
+      "matched": 1,
+      "recall": 0.01020408163265306,
+      "precision_lb": 0.005,
+      "share_within_reach": 0.005
+     },
+     "2.0": {
+      "N_budget": 399,
+      "N_taken": 385,
+      "matched": 4,
+      "recall": 0.04081632653061224,
+      "precision_lb": 0.01038961038961039,
+      "share_within_reach": 0.01038961038961039
+     },
+     "5.0": {
+      "N_budget": 998,
+      "N_taken": 385,
+      "matched": 4,
+      "recall": 0.04081632653061224,
+      "precision_lb": 0.01038961038961039,
+      "share_within_reach": 0.01038961038961039
+     },
+     "10.0": {
+      "N_budget": 1995,
+      "N_taken": 385,
+      "matched": 4,
+      "recall": 0.04081632653061224,
+      "precision_lb": 0.01038961038961039,
+      "share_within_reach": 0.01038961038961039
+     }
+    },
+    "whole_pool": {
+     "matched": 4,
+     "recall": 0.04081632653061224,
+     "precision_lb": 0.01038961038961039
+    }
+   },
+   "S": 98
+  }
+ },
+ "sensitivity_reach": {
+  "10.0": {
+   "primary_family": {
+    "D1-ADAF_barrow@matched_workload": {
+     "diff_pts": 11.0260336906585,
+     "x": 365,
+     "y": 293,
+     "ci95_pts": [
+      7.2182983069017785,
+      14.497068916213895
+     ],
+     "ci_sim_pts": [
+      5.62886700931108,
+      15.979882724489947
+     ],
+     "x_only": 96,
+     "y_only": 24,
+     "both": 269,
+     "N_per_region": {
+      "DR": 474,
+      "NH": 187,
+      "OV": 717,
+      "UT": 646
+     }
+    },
+    "D1-ADAF_barrow@5.0/km2": {
+     "diff_pts": 22.2052067381317,
+     "x": 438,
+     "y": 293,
+     "ci95_pts": [
+      18.297789873000163,
+      25.849360423637695
+     ],
+     "ci_sim_pts": [
+      16.784638431205988,
+      27.2098116160168
+     ],
+     "x_only": 160,
+     "y_only": 15,
+     "both": 278
+    },
+    "D1-ADAF_AO@matched_workload": {
+     "diff_pts": 52.373660030627875,
+     "x": 397,
+     "y": 55,
+     "ci95_pts": [
+      47.61904761904761,
+      57.58483525082993
+     ],
+     "ci_sim_pts": [
+      45.71390743365941,
+      59.74535307304314
+     ],
+     "x_only": 344,
+     "y_only": 2,
+     "both": 53,
+     "N_per_region": {
+      "DR": 653,
+      "NH": 191,
+      "OV": 1323,
+      "UT": 385
+     }
+    },
+    "D1-ADAF_AO@5.0/km2": {
+     "diff_pts": 58.65237366003063,
+     "x": 438,
+     "y": 55,
+     "ci95_pts": [
+      54.02115963039237,
+      63.7769714358044
+     ],
+     "ci_sim_pts": [
+      52.1672358971805,
+      65.66159107183539
+     ],
+     "x_only": 385,
+     "y_only": 2,
+     "both": 53
+    },
+    "CONT-ADAF_barrow@matched_workload": {
+     "diff_pts": -15.926493108728943,
+     "x": 189,
+     "y": 293,
+     "ci95_pts": [
+      -20.523177646123656,
+      -11.467737511048801
+     ],
+     "ci_sim_pts": [
+      -22.562126606011983,
+      -9.666503575281398
+     ],
+     "x_only": 22,
+     "y_only": 126,
+     "both": 167,
+     "N_per_region": {
+      "DR": 474,
+      "NH": 187,
+      "OV": 717,
+      "UT": 646
+     }
+    },
+    "CONT-ADAF_barrow@5.0/km2": {
+     "diff_pts": -10.413476263399694,
+     "x": 225,
+     "y": 293,
+     "ci95_pts": [
+      -15.058019976498239,
+      -5.574884331981494
+     ],
+     "ci_sim_pts": [
+      -17.105451544670476,
+      -3.7788881529483525
+     ],
+     "x_only": 43,
+     "y_only": 111,
+     "both": 182
+    },
+    "CONT-ADAF_AO@matched_workload": {
+     "diff_pts": 22.358346094946402,
+     "x": 201,
+     "y": 55,
+     "ci95_pts": [
+      17.68941460526774,
+      27.629597293462837
+     ],
+     "ci_sim_pts": [
+      15.9555467585693,
+      29.84505986335782
+     ],
+     "x_only": 155,
+     "y_only": 9,
+     "both": 46,
+     "N_per_region": {
+      "DR": 653,
+      "NH": 191,
+      "OV": 1323,
+      "UT": 385
+     }
+    },
+    "CONT-ADAF_AO@5.0/km2": {
+     "diff_pts": 26.033690658499236,
+     "x": 225,
+     "y": 55,
+     "ci95_pts": [
+      21.388028838045017,
+      31.38307578816586
+     ],
+     "ci_sim_pts": [
+      19.82799665474298,
+      33.56260154697084
+     ],
+     "x_only": 178,
+     "y_only": 8,
+     "both": 47
+    }
+   },
+   "verdicts": {
+    "D1": "BEATS_PUBLIC_ADAF",
+    "CONT": "LOSES_TO_PUBLIC_ADAF"
+   },
+   "pooled_recall": {
+    "D1": {
+     "1.0": 0.47473200612557426,
+     "2.0": 0.5941807044410413,
+     "5.0": 0.6707503828483921,
+     "10.0": 0.6799387442572741,
+     "pool": 0.6814701378254211
+    },
+    "CONT": {
+     "1.0": 0.25880551301684535,
+     "2.0": 0.2986217457886677,
+     "5.0": 0.3445635528330781,
+     "10.0": 0.35987748851454826,
+     "pool": 0.35987748851454826
+    },
+    "ADAF_barrow": {
+     "1.0": 0.3721286370597244,
+     "2.0": 0.442572741194487,
+     "5.0": 0.44869831546707506,
+     "10.0": 0.44869831546707506,
+     "pool": 0.44869831546707506
+    },
+    "ADAF_AO": {
+     "1.0": 0.02450229709035222,
+     "2.0": 0.06891271056661562,
+     "5.0": 0.08422664624808576,
+     "10.0": 0.08422664624808576,
+     "pool": 0.08422664624808576
+    }
+   }
+  },
+  "25.0": {
+   "primary_family": {
+    "D1-ADAF_barrow@matched_workload": {
+     "diff_pts": 11.944869831546708,
+     "x": 374,
+     "y": 296,
+     "ci95_pts": [
+      8.032697140122053,
+      15.6140496590313
+     ],
+     "ci_sim_pts": [
+      6.435432940967904,
+      17.122241392679854
+     ],
+     "x_only": 94,
+     "y_only": 16,
+     "both": 280,
+     "N_per_region": {
+      "DR": 474,
+      "NH": 187,
+      "OV": 717,
+      "UT": 646
+     }
+    },
+    "D1-ADAF_barrow@5.0/km2": {
+     "diff_pts": 23.124042879019907,
+     "x": 447,
+     "y": 296,
+     "ci95_pts": [
+      19.210977701543737,
+      26.732805633504526
+     ],
+     "ci_sim_pts": [
+      17.61453109638259,
+      28.04309790443164
+     ],
+     "x_only": 157,
+     "y_only": 6,
+     "both": 290
+    },
+    "D1-ADAF_AO@matched_workload": {
+     "diff_pts": 53.59877488514548,
+     "x": 406,
+     "y": 56,
+     "ci95_pts": [
+      48.86930259702363,
+      58.7894063600352
+     ],
+     "ci_sim_pts": [
+      46.70353565922286,
+      60.90133201813399
+     ],
+     "x_only": 352,
+     "y_only": 2,
+     "both": 54,
+     "N_per_region": {
+      "DR": 653,
+      "NH": 191,
+      "OV": 1323,
+      "UT": 385
+     }
+    },
+    "D1-ADAF_AO@5.0/km2": {
+     "diff_pts": 59.87748851454824,
+     "x": 447,
+     "y": 56,
+     "ci95_pts": [
+      55.38837478311163,
+      64.83184250764525
+     ],
+     "ci_sim_pts": [
+      53.56648003745917,
+      66.82356618690895
+     ],
+     "x_only": 393,
+     "y_only": 2,
+     "both": 54
+    },
+    "CONT-ADAF_barrow@matched_workload": {
+     "diff_pts": -12.557427258805513,
+     "x": 214,
+     "y": 296,
+     "ci95_pts": [
+      -16.286192403486925,
+      -8.91080788751144
+     ],
+     "ci_sim_pts": [
+      -17.91900068376839,
+      -7.526484291550332
+     ],
+     "x_only": 18,
+     "y_only": 100,
+     "both": 196,
+     "N_per_region": {
+      "DR": 474,
+      "NH": 187,
+      "OV": 717,
+      "UT": 646
+     }
+    },
+    "CONT-ADAF_barrow@5.0/km2": {
+     "diff_pts": -6.431852986217458,
+     "x": 254,
+     "y": 296,
+     "ci95_pts": [
+      -10.271955055249762,
+      -2.3289615361607945
+     ],
+     "ci_sim_pts": [
+      -11.87257826330431,
+      -0.5427381034279432
+     ],
+     "x_only": 40,
+     "y_only": 82,
+     "both": 214
+    },
+    "CONT-ADAF_AO@matched_workload": {
+     "diff_pts": 26.339969372128635,
+     "x": 228,
+     "y": 56,
+     "ci95_pts": [
+      21.380195992227303,
+      31.794319448891045
+     ],
+     "ci_sim_pts": [
+      19.501773109243697,
+      33.95938883065455
+     ],
+     "x_only": 181,
+     "y_only": 9,
+     "both": 47,
+     "N_per_region": {
+      "DR": 653,
+      "NH": 191,
+      "OV": 1323,
+      "UT": 385
+     }
+    },
+    "CONT-ADAF_AO@5.0/km2": {
+     "diff_pts": 30.321592649310873,
+     "x": 254,
+     "y": 56,
+     "ci95_pts": [
+      25.434206004896698,
+      35.834616677536786
+     ],
+     "ci_sim_pts": [
+      23.72921574999323,
+      37.84029049742459
+     ],
+     "x_only": 206,
+     "y_only": 8,
+     "both": 48
+    }
+   },
+   "verdicts": {
+    "D1": "BEATS_PUBLIC_ADAF",
+    "CONT": "LOSES_TO_PUBLIC_ADAF"
+   },
+   "pooled_recall": {
+    "D1": {
+     "1.0": 0.48545176110260335,
+     "2.0": 0.6079632465543645,
+     "5.0": 0.6845329249617151,
+     "10.0": 0.6937212863705973,
+     "pool": 0.6952526799387443
+    },
+    "CONT": {
+     "1.0": 0.29249617151607965,
+     "2.0": 0.33690658499234305,
+     "5.0": 0.3889739663093415,
+     "10.0": 0.4058192955589586,
+     "pool": 0.4058192955589586
+    },
+    "ADAF_barrow": {
+     "1.0": 0.37519142419601836,
+     "2.0": 0.44716692189892804,
+     "5.0": 0.45329249617151607,
+     "10.0": 0.45329249617151607,
+     "pool": 0.45329249617151607
+    },
+    "ADAF_AO": {
+     "1.0": 0.02450229709035222,
+     "2.0": 0.06891271056661562,
+     "5.0": 0.08575803981623277,
+     "10.0": 0.08575803981623277,
+     "pool": 0.08575803981623277
+    }
+   }
+  }
+ },
+ "recount": {
+  "verdict": "AGREE",
+  "mismatches": []
+ },
+ "result_score_sha256": "dd5cbfb016b7b917ad4c45fb7f064c7b9274217a4a631e2d29adf78c444aea12",
+ "freeze_commit": "721663442aa8341127408870bb0d054d4c13b544"
+}

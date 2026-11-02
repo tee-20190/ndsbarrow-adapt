@@ -1,0 +1,133 @@
+{
+ "hits_sha_matches": true,
+ "recount": {
+  "A1|all": {
+   "points": [
+    5.329,
+    4.3911,
+    6.267
+   ],
+   "match": true
+  },
+  "A1|large": {
+   "points": [
+    6.8443,
+    5.6977,
+    7.991
+   ],
+   "match": true
+  },
+  "A1|isolated": {
+   "points": [
+    5.3309,
+    4.1365,
+    6.5254
+   ],
+   "match": true
+  },
+  "A1|strong_grouped": {
+   "points": [
+    6.0804,
+    4.5685,
+    7.5923
+   ],
+   "match": true
+  },
+  "A2|all": {
+   "points": [
+    4.5705,
+    3.5941,
+    5.5468
+   ],
+   "match": true
+  },
+  "A2|large": {
+   "points": [
+    6.5112,
+    5.3303,
+    7.6921
+   ],
+   "match": true
+  },
+  "A2|isolated": {
+   "points": [
+    5.1878,
+    4.033,
+    6.3427
+   ],
+   "match": true
+  },
+  "A2|strong_grouped": {
+   "points": [
+    5.0754,
+    3.3951,
+    6.7557
+   ],
+   "match": true
+  }
+ },
+ "kept_2km2": {
+  "S_D|plain": {
+   "kept": 8330,
+   "budget": 8339,
+   "underfilled_cores": 1
+  },
+  "S_D|prox": {
+   "kept": 8330,
+   "budget": 8339,
+   "underfilled_cores": 1
+  },
+  "incumbent|plain": {
+   "kept": 8331,
+   "budget": 8339,
+   "underfilled_cores": 2
+  },
+  "incumbent|prox": {
+   "kept": 8331,
+   "budget": 8339,
+   "underfilled_cores": 2
+  },
+  "S_D1|plain": {
+   "kept": 8339,
+   "budget": 8339,
+   "underfilled_cores": 0
+  },
+  "S_D1|prox": {
+   "kept": 8339,
+   "budget": 8339,
+   "underfilled_cores": 0
+  },
+  "ADAF_barrow|plain": {
+   "kept": 8307,
+   "budget": 8339,
+   "underfilled_cores": 5
+  },
+  "ADAF_barrow|prox": {
+   "kept": 8307,
+   "budget": 8339,
+   "underfilled_cores": 5
+  }
+ },
+ "reach_descriptive": {
+  "R10": {
+   "S_D": 4412,
+   "incumbent": 4123,
+   "A1_points": [
+    5.481,
+    4.509,
+    6.452
+   ]
+  },
+  "R25": {
+   "S_D": 4449,
+   "incumbent": 4166,
+   "A1_points": [
+    5.367,
+    4.416,
+    6.318
+   ]
+  }
+ },
+ "all_recount_match": true,
+ "code_sha256": "be1351119e4c2af32de66d0bbfe085eb41629b8fff7abb3d7ea8ce3bf9299426"
+}

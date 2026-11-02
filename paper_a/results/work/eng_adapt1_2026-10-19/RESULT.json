@@ -1,0 +1,826 @@
+{
+ "verdict": "LOSES",
+ "complete": true,
+ "england": {
+  "A1": {
+   "comparator": "ADAF_barrow",
+   "n_by_stratum": {
+    "G": 401,
+    "H": 1368,
+    "W": 1282
+   },
+   "D_mean": -5.2,
+   "D_by_seed": [
+    1.0,
+    -13.0,
+    -3.0,
+    2.0,
+    -13.0
+   ],
+   "positive_seeds": 2,
+   "n_seeds": 5,
+   "ci_adj": [
+    -45.6,
+    38.4
+   ],
+   "ci95": [
+    -41.0,
+    32.405
+   ],
+   "verdict": "NOT_DISTINGUISHED",
+   "per_county": {
+    "G": {
+     "D_mean": 7.2,
+     "D_by_seed": [
+      8.0,
+      13.0,
+      6.0,
+      6.0,
+      3.0
+     ],
+     "positive_seeds": 5,
+     "n_seeds": 5,
+     "ci_adj": [
+      -14.6,
+      37.4
+     ],
+     "ci95": [
+      -12.6,
+      33.205
+     ]
+    },
+    "H": {
+     "D_mean": -1.0,
+     "D_by_seed": [
+      4.0,
+      -5.0,
+      -1.0,
+      2.0,
+      -5.0
+     ],
+     "positive_seeds": 2,
+     "n_seeds": 5,
+     "ci_adj": [
+      -26.6,
+      22.003
+     ],
+     "ci95": [
+      -23.0,
+      19.4
+     ]
+    },
+    "W": {
+     "D_mean": -11.4,
+     "D_by_seed": [
+      -11.0,
+      -21.0,
+      -8.0,
+      -6.0,
+      -11.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -33.2,
+      9.8
+     ],
+     "ci95": [
+      -30.005,
+      7.2
+     ]
+    }
+   },
+   "found": {
+    "G": {
+     "EB_mean": 36.2,
+     "comparator": 29,
+     "n": 401,
+     "short_comparator": false,
+     "short_EB": false
+    },
+    "H": {
+     "EB_mean": 141.0,
+     "comparator": 142,
+     "n": 1368,
+     "short_comparator": false,
+     "short_EB": false
+    },
+    "W": {
+     "EB_mean": 125.6,
+     "comparator": 137,
+     "n": 1282,
+     "short_comparator": false,
+     "short_EB": false
+    }
+   }
+  },
+  "A2": {
+   "comparator": "CONT",
+   "n_by_stratum": {
+    "G": 290,
+    "H": 945,
+    "W": 955
+   },
+   "D_mean": -56.8,
+   "D_by_seed": [
+    -54.0,
+    -60.0,
+    -53.0,
+    -53.0,
+    -64.0
+   ],
+   "positive_seeds": 0,
+   "n_seeds": 5,
+   "ci_adj": [
+    -92.403,
+    -21.6
+   ],
+   "ci95": [
+    -87.8,
+    -26.0
+   ],
+   "verdict": "LOSES",
+   "per_county": {
+    "G": {
+     "D_mean": -2.0,
+     "D_by_seed": [
+      -1.0,
+      0.0,
+      -3.0,
+      -1.0,
+      -5.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -18.8,
+      17.8
+     ],
+     "ci95": [
+      -16.6,
+      15.4
+     ]
+    },
+    "H": {
+     "D_mean": -38.2,
+     "D_by_seed": [
+      -42.0,
+      -34.0,
+      -37.0,
+      -38.0,
+      -40.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -64.6,
+      -14.8
+     ],
+     "ci95": [
+      -61.2,
+      -17.8
+     ]
+    },
+    "W": {
+     "D_mean": -16.6,
+     "D_by_seed": [
+      -11.0,
+      -26.0,
+      -13.0,
+      -14.0,
+      -19.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -34.4,
+      0.8
+     ],
+     "ci95": [
+      -32.0,
+      -1.4
+     ]
+    }
+   },
+   "found": {
+    "G": {
+     "EB_mean": 27.0,
+     "comparator": 29,
+     "n": 290,
+     "short_comparator": false,
+     "short_EB": false
+    },
+    "H": {
+     "EB_mean": 119.8,
+     "comparator": 158,
+     "n": 945,
+     "short_comparator": false,
+     "short_EB": false
+    },
+    "W": {
+     "EB_mean": 112.4,
+     "comparator": 129,
+     "n": 955,
+     "short_comparator": false,
+     "short_EB": false
+    }
+   }
+  },
+  "verdict": "LOSES",
+  "loses_on": [
+   "A2"
+  ],
+  "deployable_EB_05": {
+   "arm": "EB_05",
+   "A1": {
+    "D_mean": 1.0,
+    "D_by_seed": [
+     1.0
+    ],
+    "positive_seeds": 1,
+    "n_seeds": 1,
+    "ci_adj": [
+     -39.0,
+     47.0
+    ],
+    "ci95": [
+     -35.0,
+     40.0
+    ]
+   },
+   "A2": {
+    "D_mean": -54.0,
+    "D_by_seed": [
+     -54.0
+    ],
+    "positive_seeds": 0,
+    "n_seeds": 1,
+    "ci_adj": [
+     -96.0,
+     -11.0
+    ],
+    "ci95": [
+     -90.0,
+     -17.0
+    ]
+   }
+  },
+  "secondary": {
+   "A2_density": {
+    "0.5": {
+     "D_mean": -45.8,
+     "D_by_seed": [
+      -42.0,
+      -77.0,
+      -31.0,
+      -35.0,
+      -44.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -69.803,
+      -23.0
+     ],
+     "ci95": [
+      -66.4,
+      -26.0
+     ]
+    },
+    "2.0": {
+     "D_mean": -70.6,
+     "D_by_seed": [
+      -62.0,
+      -84.0,
+      -67.0,
+      -70.0,
+      -70.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -112.6,
+      -34.797
+     ],
+     "ci95": [
+      -107.0,
+      -39.0
+     ]
+    }
+   },
+   "A1_fixed_budget": {
+    "0.5": {
+     "D_mean": -7.8,
+     "D_by_seed": [
+      -4.0,
+      -39.0,
+      7.0,
+      3.0,
+      -6.0
+     ],
+     "positive_seeds": 2,
+     "n_seeds": 5,
+     "ci_adj": [
+      -40.4,
+      21.803
+     ],
+     "ci95": [
+      -36.6,
+      18.4
+     ]
+    },
+    "1.0": {
+     "D_mean": -18.8,
+     "D_by_seed": [
+      -16.0,
+      -22.0,
+      -15.0,
+      -15.0,
+      -26.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -54.4,
+      14.4
+     ],
+     "ci95": [
+      -49.8,
+      10.2
+     ]
+    },
+    "2.0": {
+     "D_mean": 50.4,
+     "D_by_seed": [
+      59.0,
+      37.0,
+      54.0,
+      51.0,
+      51.0
+     ],
+     "positive_seeds": 5,
+     "n_seeds": 5,
+     "ci_adj": [
+      7.2,
+      101.6
+     ],
+     "ci95": [
+      12.195,
+      94.4
+     ]
+    }
+   },
+   "barrow_class_A1": {
+    "D_mean": -12.0,
+    "D_by_seed": [
+     -4.0,
+     -21.0,
+     -11.0,
+     -5.0,
+     -19.0
+    ],
+    "positive_seeds": 0,
+    "n_seeds": 5,
+    "ci_adj": [
+     -43.2,
+     17.8
+    ],
+    "ci95": [
+     -38.6,
+     14.005
+    ],
+    "labels_in_class": {
+     "G": 141,
+     "H": 717,
+     "W": 620
+    }
+   },
+   "NHLE_A1": {
+    "within_50m": {
+     "D_mean": -23.6,
+     "D_by_seed": [
+      -24.0,
+      -27.0,
+      -23.0,
+      -16.0,
+      -28.0
+     ],
+     "positive_seeds": 0,
+     "n_seeds": 5,
+     "ci_adj": [
+      -47.4,
+      -2.2
+     ],
+     "ci95": [
+      -44.6,
+      -5.195
+     ]
+    },
+    "beyond_50m": {
+     "D_mean": 18.4,
+     "D_by_seed": [
+      25.0,
+      14.0,
+      20.0,
+      18.0,
+      15.0
+     ],
+     "positive_seeds": 5,
+     "n_seeds": 5,
+     "ci_adj": [
+      -12.402,
+      51.0
+     ],
+     "ci95": [
+      -8.8,
+      46.6
+     ]
+    }
+   },
+   "chance": {
+    "A1_n_ADAF": {
+     "G": {
+      "mean": 16.725,
+      "p2.5": 7.0,
+      "p97.5": 29.025
+     },
+     "H": {
+      "mean": 23.21,
+      "p2.5": 14.975,
+      "p97.5": 33.025
+     },
+     "W": {
+      "mean": 20.095,
+      "p2.5": 10.975,
+      "p97.5": 33.0
+     }
+    },
+    "A2_1.0": {
+     "G": {
+      "mean": 12.575,
+      "p2.5": 4.975,
+      "p97.5": 24.025
+     },
+     "H": {
+      "mean": 15.875,
+      "p2.5": 9.0,
+      "p97.5": 23.025
+     },
+     "W": {
+      "mean": 15.27,
+      "p2.5": 8.0,
+      "p97.5": 25.025
+     }
+    },
+    "A2_0.5": {
+     "G": {
+      "mean": 6.19,
+      "p2.5": 1.0,
+      "p97.5": 16.0
+     },
+     "H": {
+      "mean": 8.06,
+      "p2.5": 3.0,
+      "p97.5": 14.0
+     },
+     "W": {
+      "mean": 7.595,
+      "p2.5": 2.0,
+      "p97.5": 14.0
+     }
+    },
+    "A2_2.0": {
+     "G": {
+      "mean": 24.24,
+      "p2.5": 13.0,
+      "p97.5": 37.075
+     },
+     "H": {
+      "mean": 30.82,
+      "p2.5": 22.0,
+      "p97.5": 43.0
+     },
+     "W": {
+      "mean": 29.17,
+      "p2.5": 19.0,
+      "p97.5": 42.0
+     }
+    }
+   }
+  }
+ },
+ "confirmation_WF": {
+  "status": "COMPLETE",
+  "cells_expected": 58,
+  "cells_used": 58,
+  "eligible_km2": 1345.972,
+  "primary_labels_in_use": 2087,
+  "primary_labels_all": 2087,
+  "C1": {
+   "comparator": "ADAF_barrow",
+   "n": 1636,
+   "short_comparator": false,
+   "D_mean": 2.4,
+   "D_by_seed": [
+    3.0,
+    -8.0,
+    12.0,
+    3.0,
+    2.0
+   ],
+   "positive_seeds": 4,
+   "n_seeds": 5,
+   "lb_one_sided_95": -14.8,
+   "ub_one_sided_95": 19.8,
+   "pass": false,
+   "found": {
+    "WF": {
+     "EB_mean": 275.4,
+     "comparator": 273,
+     "n": 1636,
+     "short_comparator": false,
+     "short_EB": false
+    }
+   }
+  },
+  "C2": {
+   "comparator": "CONT",
+   "n": 1346,
+   "short_comparator": false,
+   "D_mean": -26.4,
+   "D_by_seed": [
+    -18.0,
+    -32.0,
+    -19.0,
+    -30.0,
+    -33.0
+   ],
+   "positive_seeds": 0,
+   "n_seeds": 5,
+   "lb_one_sided_95": -48.2,
+   "ub_one_sided_95": -5.2,
+   "pass": false,
+   "found": {
+    "WF": {
+     "EB_mean": 259.6,
+     "comparator": 286,
+     "n": 1346,
+     "short_comparator": false,
+     "short_EB": false
+    }
+   }
+  },
+  "chance": {
+   "C1_n_ADAF": {
+    "WF": {
+     "mean": 34.935,
+     "p2.5": 22.0,
+     "p97.5": 51.0
+    }
+   },
+   "C2_1.0": {
+    "WF": {
+     "mean": 28.71,
+     "p2.5": 18.0,
+     "p97.5": 43.0
+    }
+   }
+  }
+ },
+ "claims": {
+  "barrow": "NOT_SUPPORTED",
+  "cont": "NOT_SUPPORTED",
+  "section2_verdict": "LOSES",
+  "C1_pass": false,
+  "C2_pass": false
+ },
+ "oldenburg": {
+  "N": 959,
+  "total_scored_km2": 451.1169,
+  "K": {
+   "0.5": 225,
+   "1.0": 451,
+   "2.0": 902
+  },
+  "B1_locality": {
+   "gate": {
+    "mean_diff": 0.04671532846715328,
+    "positive": 10,
+    "per_seed": [
+     0.035453597497393116,
+     0.03545359749739313,
+     0.045881126173096975,
+     0.058394160583941604,
+     0.04066736183524505,
+     0.04692387904066736,
+     0.05318039624608967,
+     0.04692387904066736,
+     0.057351407716371205,
+     0.04692387904066736
+    ],
+    "pass": true
+   },
+   "joint_lb_RAW_0.5": 0.023692613745849907,
+   "joint_ci95_RAW": {
+    "0.5": [
+     0.023692613745849907,
+     0.08215934280485304
+    ],
+    "1.0": [
+     0.033606405328088645,
+     0.11607516125179164
+    ],
+    "2.0": [
+     0.08022319624390828,
+     0.16896551724137926
+    ],
+    "mean3": [
+     0.046922536634602434,
+     0.12026701178568232
+    ]
+   }
+  },
+  "B2_nonlocal": {
+   "gate": {
+    "mean_diff": -0.008133472367049014,
+    "positive": 1,
+    "per_seed": [
+     0.0031282586027111536,
+     -0.005213764337851937,
+     -0.005213764337851937,
+     -0.02085505735140772,
+     -0.006256517205422321,
+     -0.011470281543274244,
+     -0.013555787278415013,
+     -0.0031282586027111675,
+     -0.012513034410844628,
+     -0.006256517205422321
+    ],
+    "pass": false
+   }
+  },
+  "verdict": {
+   "B1_locality": "LOCAL_GAIN",
+   "B2_nonlocal": "NO_NONLOCAL_GAIN",
+   "reading": "The A011 gain needs local register labels"
+  },
+  "deployable_EB_05": {
+   "B1_recall_diff_by_b": {
+    "0.5": 0.035453597497393116,
+    "1.0": 0.043795620437956206,
+    "2.0": 0.10010427528675706
+   },
+   "B1_geography_ci95_RAW": {
+    "0.5": [
+     0.014349454329202621,
+     0.05758445349726456
+    ],
+    "1.0": [
+     0.023233478134124727,
+     0.07727342442833239
+    ],
+    "2.0": [
+     0.07008751132430181,
+     0.13815386737711555
+    ],
+    "mean3": [
+     0.038586871530221285,
+     0.0876664543500691
+    ]
+   },
+   "B2_diff_by_b": {
+    "0.5": 0.0031282586027111536,
+    "1.0": -0.015641293013555796,
+    "2.0": -0.05630865484880085
+   }
+  },
+  "supply_RAW": {
+   "EB_05": 4785,
+   "EB_06": 3549,
+   "EB_07": 5283,
+   "EB_08": 3918,
+   "EB_09": 4145,
+   "EB_10": 4841,
+   "EB_11": 6473,
+   "EB_12": 4649,
+   "EB_13": 5407,
+   "EB_14": 5009
+  },
+  "collapse_flag": false
+ },
+ "counts": {
+  "cells_expected": 92,
+  "cells_used": {
+   "G": 12,
+   "H": 40,
+   "W": 40
+  },
+  "cells_missing": 0,
+  "primary_labels_in_use": {
+   "G": 670,
+   "H": 2031,
+   "W": 1080
+  },
+  "primary_labels_all": {
+   "G": 670,
+   "H": 2031,
+   "W": 1080
+  },
+  "labels_lost": 0,
+  "eligible_km2": {
+   "G": 290.245,
+   "H": 945.425,
+   "W": 954.845
+  },
+  "list_lengths": {
+   "CONT": {
+    "G": 3018,
+    "H": 9436,
+    "W": 9246
+   },
+   "ADAF_barrow": {
+    "G": 401,
+    "H": 1368,
+    "W": 1282
+   },
+   "EB_05": {
+    "G": 2732,
+    "H": 9050,
+    "W": 8065
+   },
+   "EB_06": {
+    "G": 2261,
+    "H": 6684,
+    "W": 5820
+   },
+   "EB_07": {
+    "G": 2830,
+    "H": 10933,
+    "W": 10349
+   },
+   "EB_08": {
+    "G": 2319,
+    "H": 7741,
+    "W": 6750
+   },
+   "EB_09": {
+    "G": 2754,
+    "H": 8769,
+    "W": 7726
+   }
+  },
+  "nhle_annotation": {
+   "status": "COMPUTED",
+   "nhle_polygons_in_region": 615
+  }
+ },
+ "parity_with_saved_ENG_OPS": {
+  "CONT": {
+   "cells_compared": 92,
+   "cells_identical": 77,
+   "cells_differing": 15
+  },
+  "ADAF_barrow": {
+   "cells_compared": 92,
+   "cells_identical": 86,
+   "cells_differing": 6
+  }
+ },
+ "meta": {
+  "utc": "2026-10-20T09:05:22Z",
+  "mode": "RUN",
+  "boot_seed": 20261026,
+  "boot_n": 10000,
+  "wf_boot_seed": 20261027,
+  "wf_chance_seed": 20261028,
+  "england_arms": [
+   "EB_05",
+   "EB_06",
+   "EB_07",
+   "EB_08",
+   "EB_09"
+  ],
+  "oldenburg_arms": 10,
+  "wf_inputs_pinned": {
+   "AREA_WF.json": "49964c629ce4c129132ba6d914b1f3ea9cde6825e0c7a4f0374adc03404e7c76",
+   "EXCL_WF_PRIVATE.json": "e2943b227a5cec162b25f866d550e9648de375ebd96152990642e20af27400d0",
+   "LABELS_WF_PRIVATE.json": "23675670a440340a0a1f934876c727f02321abb882e8c31bc8088fe08c91e7a6"
+  },
+  "code_sha256": {
+   "ea_score.py": "003a7432a2ecd6c89c6e42cd4772a7766e2ba53306c60ae640cfdbcf620d9f02",
+   "ea_fresh.py (wf_terrain, unchanged builder)": "6ceb24783f2736d47c974331429d8ada67e5b4a4ccd13c001fac85099bb5aecb",
+   "eo2_common.py": "0bfbd8308c3d60b3202fdf1041b76a8d4170c13bff06f57d34d261324ca05ade",
+   "eo2_score.py": "6ddda5bbc35a546619c9d92d966539388a83d4323f8d871e647eeae28ee2d399",
+   "eo3_common.py": "9924c7d5e003a9155a5a42e04e41ff4315cf8cca67ca74f1dca0b1ceeb1ba32e",
+   "eo3_score.py": "d3c4bc2ff7ec73aed1d9602072b289dfd6ba0ca1edd205d6e5c86c8bedc85a5b",
+   "score_oldenburg.py": "91ef709130da9543f16065044400d8fb2eba2d303d0bbfc4d322ea4b187bd285",
+   "score_v0.py": "2f44fe63eea47e4f211aa5a89e95d01036dfab29e351ff5f3ec584c519e079d8",
+   "eo2b_score.py": "cb1a12e115bd345da2f20cfffff83effba4f8db57fdc6361dc83d54e28d12b99",
+   "lens_audit.py (exploratory, unpinned)": "900f32458064c037e06ef62ee7d63227a8718f2c2ad29927e568f42df1f236b0",
+   "nhle_scheduled_monuments.geojson (exploratory input)": "106cf74eca30b3a836f51cd36e69381f15085ca4406bb0e76a8f7565e706672d"
+  },
+  "eng_dir": "infer",
+  "old_dir": "run",
+  "eb_checkpoint_source": "pins_file"
+ }
+}

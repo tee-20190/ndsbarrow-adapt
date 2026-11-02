@@ -1,0 +1,785 @@
+{
+ "packet": "CONFIRM-D stage A (FREEZE 3cd5a9682; addenda SEQ-1)",
+ "tag": "JW",
+ "plumbing_only": false,
+ "reach_m": 15.0,
+ "cores": 171,
+ "N": {
+  "all": 5273,
+  "small": 1941,
+  "large": 3302,
+  "size_unknown": 30,
+  "isolated": 2795,
+  "grouped": 2478,
+  "strong_grouped": 1990
+ },
+ "B_total_2km2": 8339,
+ "A1": {
+  "contrast": {
+   "n": 5273,
+   "cores": 171,
+   "seeds": 1,
+   "delta": 0.053290347051014604,
+   "delta_by_seed": [
+    0.053290347051014604
+   ],
+   "se2_core": 2.2899683630798498e-05,
+   "var_seed_observed": 0.0,
+   "var_seed_used": 0.0,
+   "lower": 0.043911038727045534,
+   "upper": 0.06266965537498367,
+   "seed_term": "none (fixed systems)",
+   "se": 0.004785361389780138,
+   "delta_points": 5.329034705101461,
+   "lower_points": 4.391103872704553,
+   "upper_points": 6.2669655374983675
+  },
+  "guards": {
+   "large": {
+    "n": 3302,
+    "cores": 171,
+    "seeds": 1,
+    "delta": 0.06844336765596608,
+    "delta_by_seed": [
+     0.06844336765596608
+    ],
+    "se2_core": 3.4226778080504514e-05,
+    "var_seed_observed": 0.0,
+    "var_seed_used": 0.0,
+    "lower": 0.05697665100846553,
+    "upper": 0.07991008430346662,
+    "seed_term": "none (fixed systems)",
+    "se": 0.00585036563647987,
+    "delta_points": 6.844336765596608,
+    "lower_points": 5.697665100846553,
+    "upper_points": 7.991008430346662,
+    "label": "PASS"
+   },
+   "isolated": {
+    "n": 2795,
+    "cores": 171,
+    "seeds": 1,
+    "delta": 0.05330948121645796,
+    "delta_by_seed": [
+     0.05330948121645796
+    ],
+    "se2_core": 3.713673013670143e-05,
+    "var_seed_observed": 0.0,
+    "var_seed_used": 0.0,
+    "lower": 0.04136525824076163,
+    "upper": 0.06525370419215429,
+    "seed_term": "none (fixed systems)",
+    "se": 0.006093991314130783,
+    "delta_points": 5.330948121645796,
+    "lower_points": 4.136525824076163,
+    "upper_points": 6.525370419215429,
+    "label": "PASS"
+   },
+   "strong_grouped": {
+    "n": 1990,
+    "cores": 170,
+    "seeds": 1,
+    "delta": 0.06080402010050251,
+    "delta_by_seed": [
+     0.06080402010050251
+    ],
+    "se2_core": 5.950377999161656e-05,
+    "var_seed_observed": 0.0,
+    "var_seed_used": 0.0,
+    "lower": 0.04568483621988931,
+    "upper": 0.07592320398111571,
+    "seed_term": "none (fixed systems)",
+    "se": 0.007713869326843472,
+    "delta_points": 6.080402010050251,
+    "lower_points": 4.568483621988931,
+    "upper_points": 7.592320398111571,
+    "label": "PASS"
+   }
+  },
+  "label": "CONFIRMED"
+ },
+ "A1_block10km": {
+  "n": 5273,
+  "cores": 100,
+  "seeds": 1,
+  "delta": 0.053290347051014604,
+  "delta_by_seed": [
+   0.053290347051014604
+  ],
+  "se2_core": 3.025567542422128e-05,
+  "var_seed_observed": 0.0,
+  "var_seed_used": 0.0,
+  "lower": 0.042509335841035806,
+  "upper": 0.0640713582609934,
+  "seed_term": "none (fixed systems)",
+  "se": 0.005500515923458569,
+  "delta_points": 5.329034705101461,
+  "lower_points": 4.2509335841035805,
+  "upper_points": 6.40713582609934,
+  "cluster": "10 km blocks"
+ },
+ "recall_points": {
+  "S_D|plain|1": {
+   "all": 64.821,
+   "small": 47.038,
+   "large": 75.863,
+   "size_unknown": 0.0,
+   "isolated": 68.873,
+   "grouped": 60.25,
+   "strong_grouped": 67.286
+  },
+  "S_D|prox|1": {
+   "all": 63.797,
+   "small": 49.047,
+   "large": 73.047,
+   "size_unknown": 0.0,
+   "isolated": 60.465,
+   "grouped": 67.554,
+   "strong_grouped": 73.417
+  },
+  "S_D|plain|2": {
+   "all": 84.449,
+   "small": 71.819,
+   "large": 92.58,
+   "size_unknown": 6.667,
+   "isolated": 88.587,
+   "grouped": 79.782,
+   "strong_grouped": 86.03
+  },
+  "S_D|prox|2": {
+   "all": 84.222,
+   "small": 71.767,
+   "large": 92.217,
+   "size_unknown": 10.0,
+   "isolated": 86.011,
+   "grouped": 82.203,
+   "strong_grouped": 87.889
+  },
+  "S_D|plain|5": {
+   "all": 89.456,
+   "small": 80.319,
+   "large": 95.488,
+   "size_unknown": 16.667,
+   "isolated": 93.703,
+   "grouped": 84.665,
+   "strong_grouped": 90.201
+  },
+  "S_D|prox|5": {
+   "all": 89.456,
+   "small": 80.268,
+   "large": 95.518,
+   "size_unknown": 16.667,
+   "isolated": 93.56,
+   "grouped": 84.826,
+   "strong_grouped": 90.302
+  },
+  "S_D|plain|20": {
+   "all": 90.252,
+   "small": 81.762,
+   "large": 95.881,
+   "size_unknown": 20.0,
+   "isolated": 94.454,
+   "grouped": 85.513,
+   "strong_grouped": 90.804
+  },
+  "S_D|prox|20": {
+   "all": 90.252,
+   "small": 81.762,
+   "large": 95.881,
+   "size_unknown": 20.0,
+   "isolated": 94.454,
+   "grouped": 85.513,
+   "strong_grouped": 90.804
+  },
+  "incumbent|plain|1": {
+   "all": 58.126,
+   "small": 45.286,
+   "large": 66.202,
+   "size_unknown": 0.0,
+   "isolated": 64.401,
+   "grouped": 51.049,
+   "strong_grouped": 56.382
+  },
+  "incumbent|prox|1": {
+   "all": 57.861,
+   "small": 47.501,
+   "large": 64.476,
+   "size_unknown": 0.0,
+   "isolated": 57.245,
+   "grouped": 58.555,
+   "strong_grouped": 63.266
+  },
+  "incumbent|plain|2": {
+   "all": 78.229,
+   "small": 68.47,
+   "large": 84.615,
+   "size_unknown": 6.667,
+   "isolated": 83.148,
+   "grouped": 72.68,
+   "strong_grouped": 78.141
+  },
+  "incumbent|prox|2": {
+   "all": 78.892,
+   "small": 68.882,
+   "large": 85.373,
+   "size_unknown": 13.333,
+   "isolated": 80.68,
+   "grouped": 76.877,
+   "strong_grouped": 81.809
+  },
+  "incumbent|plain|5": {
+   "all": 86.118,
+   "small": 77.589,
+   "large": 91.763,
+   "size_unknown": 16.667,
+   "isolated": 90.411,
+   "grouped": 81.275,
+   "strong_grouped": 86.784
+  },
+  "incumbent|prox|5": {
+   "all": 86.194,
+   "small": 77.743,
+   "large": 91.793,
+   "size_unknown": 16.667,
+   "isolated": 90.376,
+   "grouped": 81.477,
+   "strong_grouped": 86.935
+  },
+  "incumbent|plain|20": {
+   "all": 87.237,
+   "small": 79.289,
+   "large": 92.52,
+   "size_unknown": 20.0,
+   "isolated": 91.306,
+   "grouped": 82.647,
+   "strong_grouped": 87.839
+  },
+  "incumbent|prox|20": {
+   "all": 87.237,
+   "small": 79.289,
+   "large": 92.52,
+   "size_unknown": 20.0,
+   "isolated": 91.306,
+   "grouped": 82.647,
+   "strong_grouped": 87.839
+  },
+  "S_D1|plain|1": {
+   "all": 58.411,
+   "small": 49.253,
+   "large": 64.325,
+   "size_unknown": 0.0,
+   "isolated": 64.043,
+   "grouped": 52.058,
+   "strong_grouped": 56.231
+  },
+  "S_D1|prox|1": {
+   "all": 57.538,
+   "small": 50.283,
+   "large": 62.296,
+   "size_unknown": 3.333,
+   "isolated": 56.064,
+   "grouped": 59.201,
+   "strong_grouped": 62.965
+  },
+  "S_D1|plain|2": {
+   "all": 78.93,
+   "small": 69.191,
+   "large": 85.312,
+   "size_unknown": 6.667,
+   "isolated": 83.936,
+   "grouped": 73.285,
+   "strong_grouped": 78.593
+  },
+  "S_D1|prox|2": {
+   "all": 79.651,
+   "small": 70.376,
+   "large": 85.706,
+   "size_unknown": 13.333,
+   "isolated": 80.823,
+   "grouped": 78.329,
+   "strong_grouped": 82.814
+  },
+  "S_D1|plain|5": {
+   "all": 87.427,
+   "small": 79.134,
+   "large": 92.913,
+   "size_unknown": 20.0,
+   "isolated": 91.342,
+   "grouped": 83.01,
+   "strong_grouped": 87.94
+  },
+  "S_D1|prox|5": {
+   "all": 87.559,
+   "small": 79.392,
+   "large": 92.974,
+   "size_unknown": 20.0,
+   "isolated": 91.27,
+   "grouped": 83.374,
+   "strong_grouped": 88.241
+  },
+  "S_D1|plain|20": {
+   "all": 88.925,
+   "small": 81.195,
+   "large": 94.094,
+   "size_unknown": 20.0,
+   "isolated": 92.594,
+   "grouped": 84.786,
+   "strong_grouped": 89.548
+  },
+  "S_D1|prox|20": {
+   "all": 88.925,
+   "small": 81.195,
+   "large": 94.094,
+   "size_unknown": 20.0,
+   "isolated": 92.594,
+   "grouped": 84.786,
+   "strong_grouped": 89.548
+  },
+  "D_101|plain|1": {
+   "all": 65.086,
+   "small": 45.595,
+   "large": 77.135,
+   "size_unknown": 0.0,
+   "isolated": 69.553,
+   "grouped": 60.048,
+   "strong_grouped": 67.588
+  },
+  "D_101|prox|1": {
+   "all": 64.1,
+   "small": 47.038,
+   "large": 74.712,
+   "size_unknown": 0.0,
+   "isolated": 61.896,
+   "grouped": 66.586,
+   "strong_grouped": 73.216
+  },
+  "D_101|plain|2": {
+   "all": 84.146,
+   "small": 70.634,
+   "large": 92.762,
+   "size_unknown": 10.0,
+   "isolated": 88.73,
+   "grouped": 78.975,
+   "strong_grouped": 85.779
+  },
+  "D_101|prox|2": {
+   "all": 83.975,
+   "small": 70.891,
+   "large": 92.338,
+   "size_unknown": 10.0,
+   "isolated": 86.297,
+   "grouped": 81.356,
+   "strong_grouped": 87.387
+  },
+  "D_101|plain|5": {
+   "all": 88.868,
+   "small": 78.98,
+   "large": 95.336,
+   "size_unknown": 16.667,
+   "isolated": 93.238,
+   "grouped": 83.939,
+   "strong_grouped": 89.799
+  },
+  "D_101|prox|5": {
+   "all": 88.887,
+   "small": 78.825,
+   "large": 95.457,
+   "size_unknown": 16.667,
+   "isolated": 93.059,
+   "grouped": 84.181,
+   "strong_grouped": 90.0
+  },
+  "D_101|plain|20": {
+   "all": 89.494,
+   "small": 80.062,
+   "large": 95.669,
+   "size_unknown": 20.0,
+   "isolated": 93.703,
+   "grouped": 84.746,
+   "strong_grouped": 90.503
+  },
+  "D_101|prox|20": {
+   "all": 89.494,
+   "small": 80.062,
+   "large": 95.669,
+   "size_unknown": 20.0,
+   "isolated": 93.703,
+   "grouped": 84.746,
+   "strong_grouped": 90.503
+  },
+  "D_202|plain|1": {
+   "all": 64.138,
+   "small": 48.841,
+   "large": 73.713,
+   "size_unknown": 0.0,
+   "isolated": 67.728,
+   "grouped": 60.089,
+   "strong_grouped": 66.382
+  },
+  "D_202|prox|1": {
+   "all": 63.057,
+   "small": 50.335,
+   "large": 71.108,
+   "size_unknown": 0.0,
+   "isolated": 60.0,
+   "grouped": 66.505,
+   "strong_grouped": 71.608
+  },
+  "D_202|plain|2": {
+   "all": 83.311,
+   "small": 71.303,
+   "large": 91.066,
+   "size_unknown": 6.667,
+   "isolated": 87.37,
+   "grouped": 78.733,
+   "strong_grouped": 84.171
+  },
+  "D_202|prox|2": {
+   "all": 83.425,
+   "small": 71.664,
+   "large": 91.005,
+   "size_unknown": 10.0,
+   "isolated": 85.689,
+   "grouped": 80.872,
+   "strong_grouped": 85.93
+  },
+  "D_202|plain|5": {
+   "all": 87.521,
+   "small": 77.537,
+   "large": 94.034,
+   "size_unknown": 16.667,
+   "isolated": 91.843,
+   "grouped": 82.647,
+   "strong_grouped": 87.739
+  },
+  "D_202|prox|5": {
+   "all": 87.445,
+   "small": 77.331,
+   "large": 94.034,
+   "size_unknown": 16.667,
+   "isolated": 91.556,
+   "grouped": 82.809,
+   "strong_grouped": 87.789
+  },
+  "D_202|plain|20": {
+   "all": 87.939,
+   "small": 78.156,
+   "large": 94.306,
+   "size_unknown": 20.0,
+   "isolated": 92.165,
+   "grouped": 83.172,
+   "strong_grouped": 88.04
+  },
+  "D_202|prox|20": {
+   "all": 87.939,
+   "small": 78.156,
+   "large": 94.306,
+   "size_unknown": 20.0,
+   "isolated": 92.165,
+   "grouped": 83.172,
+   "strong_grouped": 88.04
+  },
+  "D_303|plain|1": {
+   "all": 66.072,
+   "small": 44.307,
+   "large": 79.467,
+   "size_unknown": 0.0,
+   "isolated": 70.089,
+   "grouped": 61.542,
+   "strong_grouped": 69.497
+  },
+  "D_303|prox|1": {
+   "all": 64.404,
+   "small": 46.11,
+   "large": 75.742,
+   "size_unknown": 0.0,
+   "isolated": 61.109,
+   "grouped": 68.119,
+   "strong_grouped": 74.623
+  },
+  "D_303|plain|2": {
+   "all": 84.62,
+   "small": 72.179,
+   "large": 92.641,
+   "size_unknown": 6.667,
+   "isolated": 89.66,
+   "grouped": 78.935,
+   "strong_grouped": 85.377
+  },
+  "D_303|prox|2": {
+   "all": 83.937,
+   "small": 71.252,
+   "large": 92.035,
+   "size_unknown": 13.333,
+   "isolated": 86.118,
+   "grouped": 81.477,
+   "strong_grouped": 87.186
+  },
+  "D_303|plain|5": {
+   "all": 89.057,
+   "small": 80.062,
+   "large": 95.003,
+   "size_unknown": 16.667,
+   "isolated": 93.739,
+   "grouped": 83.777,
+   "strong_grouped": 89.196
+  },
+  "D_303|prox|5": {
+   "all": 89.02,
+   "small": 80.165,
+   "large": 94.882,
+   "size_unknown": 16.667,
+   "isolated": 93.488,
+   "grouped": 83.979,
+   "strong_grouped": 89.347
+  },
+  "D_303|plain|20": {
+   "all": 89.721,
+   "small": 81.298,
+   "large": 95.336,
+   "size_unknown": 16.667,
+   "isolated": 94.454,
+   "grouped": 84.383,
+   "strong_grouped": 89.749
+  },
+  "D_303|prox|20": {
+   "all": 89.721,
+   "small": 81.298,
+   "large": 95.336,
+   "size_unknown": 16.667,
+   "isolated": 94.454,
+   "grouped": 84.383,
+   "strong_grouped": 89.749
+  },
+  "D1_07|plain|1": {
+   "all": 58.581,
+   "small": 46.574,
+   "large": 66.172,
+   "size_unknown": 0.0,
+   "isolated": 62.898,
+   "grouped": 53.713,
+   "strong_grouped": 59.246
+  },
+  "D1_07|prox|1": {
+   "all": 57.956,
+   "small": 47.553,
+   "large": 64.567,
+   "size_unknown": 3.333,
+   "isolated": 55.599,
+   "grouped": 60.613,
+   "strong_grouped": 65.477
+  },
+  "D1_07|plain|2": {
+   "all": 79.025,
+   "small": 68.212,
+   "large": 86.008,
+   "size_unknown": 10.0,
+   "isolated": 83.363,
+   "grouped": 74.132,
+   "strong_grouped": 79.849
+  },
+  "D1_07|prox|2": {
+   "all": 78.741,
+   "small": 69.14,
+   "large": 85.009,
+   "size_unknown": 10.0,
+   "isolated": 79.642,
+   "grouped": 77.724,
+   "strong_grouped": 82.412
+  },
+  "D1_07|plain|5": {
+   "all": 86.535,
+   "small": 78.31,
+   "large": 92.035,
+   "size_unknown": 13.333,
+   "isolated": 90.698,
+   "grouped": 81.84,
+   "strong_grouped": 86.683
+  },
+  "D1_07|prox|5": {
+   "all": 86.763,
+   "small": 78.516,
+   "large": 92.247,
+   "size_unknown": 16.667,
+   "isolated": 90.555,
+   "grouped": 82.486,
+   "strong_grouped": 87.487
+  },
+  "D1_07|plain|20": {
+   "all": 88.185,
+   "small": 80.268,
+   "large": 93.459,
+   "size_unknown": 20.0,
+   "isolated": 92.308,
+   "grouped": 83.535,
+   "strong_grouped": 88.392
+  },
+  "D1_07|prox|20": {
+   "all": 88.185,
+   "small": 80.268,
+   "large": 93.459,
+   "size_unknown": 20.0,
+   "isolated": 92.308,
+   "grouped": 83.535,
+   "strong_grouped": 88.392
+  },
+  "ADAF_barrow|plain|1": {
+   "all": 45.439,
+   "small": 20.247,
+   "large": 60.66,
+   "size_unknown": 0.0,
+   "isolated": 51.234,
+   "grouped": 38.902,
+   "strong_grouped": 45.678
+  },
+  "ADAF_barrow|prox|1": {
+   "all": 43.694,
+   "small": 22.514,
+   "large": 56.541,
+   "size_unknown": 0.0,
+   "isolated": 44.079,
+   "grouped": 43.261,
+   "strong_grouped": 48.392
+  },
+  "ADAF_barrow|plain|2": {
+   "all": 72.16,
+   "small": 55.178,
+   "large": 82.798,
+   "size_unknown": 0.0,
+   "isolated": 77.889,
+   "grouped": 65.698,
+   "strong_grouped": 72.764
+  },
+  "ADAF_barrow|prox|2": {
+   "all": 70.396,
+   "small": 52.55,
+   "large": 81.526,
+   "size_unknown": 0.0,
+   "isolated": 73.131,
+   "grouped": 67.312,
+   "strong_grouped": 73.92
+  },
+  "ADAF_barrow|plain|5": {
+   "all": 79.253,
+   "small": 65.791,
+   "large": 87.765,
+   "size_unknown": 13.333,
+   "isolated": 85.295,
+   "grouped": 72.437,
+   "strong_grouped": 79.045
+  },
+  "ADAF_barrow|prox|5": {
+   "all": 79.329,
+   "small": 65.688,
+   "large": 87.947,
+   "size_unknown": 13.333,
+   "isolated": 85.188,
+   "grouped": 72.72,
+   "strong_grouped": 79.397
+  },
+  "ADAF_barrow|plain|20": {
+   "all": 79.708,
+   "small": 66.203,
+   "large": 88.25,
+   "size_unknown": 13.333,
+   "isolated": 85.796,
+   "grouped": 72.841,
+   "strong_grouped": 79.497
+  },
+  "ADAF_barrow|prox|20": {
+   "all": 79.708,
+   "small": 66.203,
+   "large": 88.25,
+   "size_unknown": 13.333,
+   "isolated": 85.796,
+   "grouped": 72.841,
+   "strong_grouped": 79.497
+  }
+ },
+ "A2": {
+  "contrast": {
+   "n": 5273,
+   "cores": 171,
+   "seeds": 1,
+   "delta": 0.04570453252417978,
+   "delta_by_seed": [
+    0.04570453252417978
+   ],
+   "se2_core": 2.481597462216229e-05,
+   "var_seed_observed": 0.0,
+   "var_seed_used": 0.0,
+   "lower": 0.035940668119729124,
+   "upper": 0.05546839692863044,
+   "seed_term": "none (fixed systems)",
+   "se": 0.0049815634716585,
+   "delta_points": 4.570453252417979,
+   "lower_points": 3.5940668119729127,
+   "upper_points": 5.546839692863044
+  },
+  "guards": {
+   "large": {
+    "n": 3302,
+    "cores": 171,
+    "seeds": 1,
+    "delta": 0.06511205330102968,
+    "delta_by_seed": [
+     0.06511205330102968
+    ],
+    "se2_core": 3.630313033506523e-05,
+    "var_seed_observed": 0.0,
+    "var_seed_used": 0.0,
+    "lower": 0.05330264580127819,
+    "upper": 0.07692146080078116,
+    "seed_term": "none (fixed systems)",
+    "se": 0.006025207908036471,
+    "delta_points": 6.5112053301029675,
+    "lower_points": 5.330264580127819,
+    "upper_points": 7.692146080078116,
+    "label": "PASS"
+   },
+   "isolated": {
+    "n": 2795,
+    "cores": 171,
+    "seeds": 1,
+    "delta": 0.0518783542039356,
+    "delta_by_seed": [
+     0.0518783542039356
+    ],
+    "se2_core": 3.471678071088136e-05,
+    "var_seed_observed": 0.0,
+    "var_seed_used": 0.0,
+    "lower": 0.04032984846600908,
+    "upper": 0.06342685994186212,
+    "seed_term": "none (fixed systems)",
+    "se": 0.005892094764248226,
+    "delta_points": 5.18783542039356,
+    "lower_points": 4.032984846600908,
+    "upper_points": 6.342685994186212,
+    "label": "PASS"
+   },
+   "strong_grouped": {
+    "n": 1990,
+    "cores": 170,
+    "seeds": 1,
+    "delta": 0.05075376884422111,
+    "delta_by_seed": [
+     0.05075376884422111
+    ],
+    "se2_core": 7.349630109703892e-05,
+    "var_seed_observed": 0.0,
+    "var_seed_used": 0.0,
+    "lower": 0.03395069203387519,
+    "upper": 0.06755684565456702,
+    "seed_term": "none (fixed systems)",
+    "se": 0.008572998372625467,
+    "delta_points": 5.075376884422111,
+    "lower_points": 3.395069203387519,
+    "upper_points": 6.7556845654567015,
+    "label": "PASS"
+   }
+  },
+  "label": "CONFIRMED"
+ },
+ "code_sha256": "c60884b6217f85c48892b4117b9de57893d2379412e2a7c7e0b2d2d5fd04743a",
+ "private_hits_sha256": "7196b48d0bd7d9fcc58976439760fb0fa1bd75dfc5c4e986d35cf4875d5f5519"
+}
