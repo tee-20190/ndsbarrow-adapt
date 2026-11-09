@@ -22,3 +22,32 @@ preferred-citation:
     - family-names: Shanahan
       given-names: Thomas
   year: 2026
+  doi: "10.5281/zenodo.23352619"
+  url: "https://doi.org/10.5281/zenodo.23352619"
+  notes: "Preprint, not peer reviewed."
+references:
+  - type: article
+    title: "Cross-border recovery of registered burial mounds by an adapted public LiDAR detector at fixed review workloads: a sealed Dutch test, a confirmed Danish system, and seed-level recipe repeatability"
+    authors:
+      - family-names: Shanahan
+        given-names: Thomas
+    year: 2026
+    doi: "10.5281/zenodo.23874293"
+    notes: "Preprint, not peer reviewed; code in paper_a/."
+  - type: data
+    title: "Model weights for 'Cross-border recovery of registered burial mounds by an adapted public LiDAR detector' (58 checkpoints)"
+    authors:
+      - family-names: Shanahan
+        given-names: Thomas
+    year: 2026
+    doi: "10.5281/zenodo.23862470"
+    license: CC-BY-SA-4.0
+  - type: data
+    title: "ADAF machine learning model weights"
+    authors:
+      - family-names: Kostovska
+        given-names: Ana
+      - name: "et al."
+    year: 2025
+    doi: "10.5281/zenodo.15848663"
+    license: CC-BY-SA-4.0

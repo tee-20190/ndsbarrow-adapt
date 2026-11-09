@@ -1,0 +1,26 @@
+1. Released file integrity (paper_a/MANIFEST.sha256)
+  [PASS] results/work/open_transfer_test_2026-10-22/RESULT_TEST.json sha256 197b6e61534d8239...
+  [PASS] results/work/confirm_d_2026-10-25/RESULT_A1.json sha256 ae18bf37b0a90419...
+
+2. Dutch sealed test: D1 vs public ADAF barrow model, matched workload
+  registered barrows S = 932; regions sum = 932; evaluated area = 1,641.1 km2; spatial units = 153
+  D1 hits = both 473 + only-D1 150 = 623  (66.8 %)
+  ADAF hits = both 473 + only-ADAF 43 = 516  (55.4 %)
+  difference = +11.48 points
+  stored simultaneous 95 % interval (cluster bootstrap, n_boot=10000): +7.4 to +15.5 points
+  [PASS] regional site counts sum to S
+  [PASS] recomputed hit counts equal stored x=623, y=516
+  [PASS] recomputed difference equals stored 11.4807
+  [PASS] stored interval contains the estimate and excludes zero
+  [PASS] stored verdict D1 = BEATS_PUBLIC_ADAF
+
+3. Extra check, not the paper's method: exact sign test on discordant pairs 150 vs 43: two-sided p = 4.4e-15
+
+4. Denmark CONFIRM-D stage A (171 unseen cores, 5,273 protected barrows, 2 proposals/km2)
+  S_D + PROX: 84.2 % = 4441.03 of 5,273
+  [PASS] S_D + PROX recall equals a whole number of barrows (4441) within the stored rounding
+  ADAF barrow plain: 72.2 % = 3805.00 of 5,273
+  [PASS] ADAF barrow plain recall equals a whole number of barrows (3805) within the stored rounding
+
+Scope: registered-monument recall at fixed review workloads, not discovery precision.
+Result: ALL CHECKS PASS

@@ -4,10 +4,21 @@ Code, frozen evaluation protocols, per-run aggregate results, register-derived e
 the paper:
 
 > Thomas Shanahan. *Adapting a public LiDAR barrow detector to a new region: specialist-start fine-tuning, an
-> equal-update replay comparison, and evaluation choices that move apparent gains.* Preprint, 2026.
+> equal-update replay comparison, and evaluation choices that move apparent gains.* Preprint (not peer reviewed),
+> Zenodo, 2026. https://doi.org/10.5281/zenodo.23352619
 
-Model weights (54 checkpoints, CC BY-SA 4.0): a deposit on Zenodo is in preparation; its DOI will be added in a later
-release of this repository. Until then the weights are not public.
+**Model weights (status 2026-11-08).** The paper's text promises a deposit of 54 checkpoints. That deposit was not
+published. The public weights record is https://doi.org/10.5281/zenodo.23862470 (58 checkpoints, CC BY-SA 4.0),
+made for the later preprint in `paper_a/` (https://doi.org/10.5281/zenodo.23874293). It contains 11 of this paper's
+54 checkpoints, matched by SHA-256: the ten D1 seeds `D1-F1_BARROW_L_2026092805` to `...14` (including the designated
+D1 checkpoint, seed 2026092805, used in the Verden example and the reproduction check below) and `CONT-e41`. The other
+43 (F1 all-objects, Stage 2 replay controls, ADAPT-NDS-1, BENCH-1, joint starts, recipe-selection and old-recipe runs)
+are not public. `WEIGHTS_STATUS.md` lists all 54 with their status. Older wording below and in `WITHHELD.md` that says
+the deposit is "in preparation" is superseded by this paragraph.
+
+Later work: `paper_a/` holds the code, frozen protocols and aggregate results of the November 2026 preprint
+(https://doi.org/10.5281/zenodo.23874293, not peer reviewed); see `paper_a/README.md`. `demo/` holds a small
+CPU-only demonstration that recomputes published headline numbers from released aggregate files.
 
 ## What is here
 
@@ -76,7 +87,7 @@ Table 6); independent second scorer (`work/independent_rescore_2026-10-09/`, 4.6
   (`NOTICE`). They hold registered monuments, tile layout and sampling cells only; they hold no detector proposals.
   Their names still end in `_PRIVATE` because the code reads them under those names (`GLOSSARY.md`).
 - **Detector proposals are not released.** Unmatched proposals may mark unrecorded archaeological sites. They can be
-  regenerated from the trained weights (once deposited) and public terrain (below).
+  regenerated from the deposited checkpoints (see the weights paragraph at the top) and public terrain (below).
 
 ## Upstream ADAF (not redistributed)
 
@@ -161,7 +172,7 @@ P=outputs/fresh_region_2026-10-03
   $P/step2/STAGING_PLAN_PRIVATE.json $P/step0/TILE_INDEX_PRIVATE.json $P/step0/TILE_LEDGER_PRIVATE.jsonl \
   WIN_DIR FETCH_LOG.jsonl STAGING_RECEIPT.json \
   --manifest main=$P/step2/INFER_MANIFEST_PRIVATE.json --manifest enclosure=$P/step2/ENCLOSURE_MANIFEST_PRIVATE.json
-# 2. inference + decoder for any checkpoint (NAME=PATH@SHA256; SHA-256 values will be listed in the weights deposit)
+# 2. inference + decoder for any checkpoint (NAME=PATH@SHA256; SHA-256 values are in paper_a/weights/WEIGHTS_MANIFEST.csv)
 "$NDSBARROW_PY" -B work/hr3_ireland_2026-10-02/step2/chain/infer_irl.py run \
   $P/step2/INFER_MANIFEST_PRIVATE.json WIN_DIR OUT --model D1F1_BARROW_L_2026092805=PATH/final.pt@SHA256
 # 3. assemble the per-window outputs into PROPOSALS_<NAME>_PRIVATE.json
@@ -265,14 +276,15 @@ Limitations: one checkpoint and seed; 6 tiles, chosen by a fixed rule among tile
 small downloads, and no background tiles; the subset budgets are tiny (K = 2 / 5 / 10), so the pool matching and the
 full-region swap-in are the more informative checks. An existing Python environment with the pinned versions was
 used, so a fresh install from `requirements-lock.txt` was not tested. The checkpoint came from a local copy with its recorded
-SHA-256; the weights deposit is still in preparation. The relative-`WIN_DIR` shim was checked by applying the patch and by
+SHA-256; the weights deposit was then still in preparation (it is now public for this checkpoint: doi:10.5281/zenodo.23862470). The relative-`WIN_DIR` shim was checked by applying the patch and by
 path logic, not by a second GPU run.
 
 ## Licences
 
 - Code written for this project: Apache License 2.0 (`LICENSE`).
 - ADAF code and the AiTLAS package (not included): Apache License 2.0, © 2024 ZRC SAZU (`NOTICE`).
-- Model weights (Zenodo deposit in preparation): CC BY-SA 4.0, as derivatives of the ADAF weights.
+- Model weights (Zenodo, doi:10.5281/zenodo.23862470; 11 of this paper's 54 checkpoints, `WEIGHTS_STATUS.md`): CC BY-SA
+  4.0, as derivatives of the ADAF weights (Kostovska et al. 2025, doi:10.5281/zenodo.15848663).
 - Entity manifests derived from the Denkmalatlas Niedersachsen: CC BY-SA 4.0 with attribution (`NOTICE`).
 
 Cite this repository with `CITATION.cff`.
