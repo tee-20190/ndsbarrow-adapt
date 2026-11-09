@@ -18,7 +18,8 @@ the deposit is "in preparation" is superseded by this paragraph.
 
 Later work: `paper_a/` holds the code, frozen protocols and aggregate results of the November 2026 preprint
 (https://doi.org/10.5281/zenodo.23874293, not peer reviewed); see `paper_a/README.md`. `demo/` holds a small
-CPU-only demonstration that recomputes published headline numbers from released aggregate files.
+CPU-only aggregate-results verification demo: it recomputes published headline numbers from released aggregate
+files and checks their hashes. It does not run detection.
 
 ## What is here
 

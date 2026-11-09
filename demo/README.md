@@ -1,4 +1,6 @@
-# Demo: recompute two published headline numbers on a laptop CPU
+# Aggregate-results verification demo (laptop CPU)
+
+This demo verifies published numbers from released aggregate files. It does not run detection.
 
 `recompute_headlines.py` reads two released aggregate result files of the November 2026 preprint
 (`paper_a/`, https://doi.org/10.5281/zenodo.23874293, not peer reviewed), checks their SHA-256 against
@@ -7,10 +9,8 @@
 - **Dutch sealed test** (D1 vs the public ADAF barrow model at matched review workload): the hit counts 623 and 516 of
   932 registered barrows from the paired counts (both / only D1 / only ADAF), recall, and the +11.5-point difference.
   The stored simultaneous 95 % interval (+7.4 to +15.5 points) is printed and checked for consistency, not recomputed.
-- **Denmark CONFIRM-D stage A**: S_D + PROX 84.2 % vs ADAF barrow plain 72.2 % of 5,273 protected barrows on 171 unseen
+- **Denmark CONFIRM-D stage A** (the later two-checkpoint system S_D + PROX, not the D1 checkpoint above): S_D + PROX 84.2 % vs ADAF barrow plain 72.2 % of 5,273 protected barrows on 171 unseen
   cores at 2 proposals/km², each checked to equal a whole number of barrows.
-
-It also prints one extra check that is not the paper's method (an exact sign test on the discordant pairs).
 
 ## Why this demo and not inference
 
@@ -22,12 +22,12 @@ and two small files already in this repository. The inference route is documente
 
 ## Setup and command
 
-Requirements: Python 3.9 or newer (tested on 3.12.14 and 3.14.7), no packages, no network. From the repository root:
+Requirements: Python 3 (tested on 3.12.14 and 3.14.7; written for 3.9+), no packages, no network. From the repository root:
 
 ```bash
 git clone https://github.com/tee-20190/ndsbarrow-adapt
 cd ndsbarrow-adapt
-python demo/recompute_headlines.py
+python demo/recompute_headlines.py      # use python3 on macOS/Linux if python is not found
 ```
 
 Expected output: `demo/expected_output.txt`. The last line is `Result: ALL CHECKS PASS` and the exit status is 0; any
@@ -43,7 +43,6 @@ identical to `expected_output.txt`. Also exit 0 under Windows Python 3.14.7. A c
   the cluster-bootstrap interval: that needs per-site hits, which are not released (`paper_a/README.md`, "Data").
 - The numbers are registered-monument recall at a fixed review workload, not discovery precision. Unmatched proposals
   are not counted as false positives or as discoveries.
-- The sign test ignores spatial clustering and is shown only as a sanity check; the paper's interval is the reference.
 
 ## Attribution and licences
 

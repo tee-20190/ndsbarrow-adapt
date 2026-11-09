@@ -1,5 +1,5 @@
 # ALLOWLIST: every file in this repository with its SHA-256 (format: sha256, two spaces, path).
-# 231 files, 30,139,926 bytes; this file itself is not listed.
+# 231 files, 30,139,998 bytes; this file itself is not listed.
 705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da  .gitattributes
 edd70f9e19e7a6aaed499e63f0f286d0470c0f7333cedaec294ad49697bd416c  CITATION.cff
 9fd83d500e17c7c3383578611b44ca419679b456186c7df3e9cab8bd5487acf7  COMMIT_LOG.md
@@ -9,7 +9,7 @@ edd70f9e19e7a6aaed499e63f0f286d0470c0f7333cedaec294ad49697bd416c  CITATION.cff
 c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4  LICENSE
 9a918038c5e7e11d00df142b8d2ae3967c5b2dbb22336c60ac1c36ee1506c4d3  NOTICE
 d4de36dcb1992102991c92b6713e116cd9fc4af57afc605fbd782d65a5ae448a  PATH_SHIM.patch
-1cbf697cd930b6f8a3563f11f8ea8103baaeafd4806f0fc03b400a7e0c3b8503  README.md
+93041db4ef14b37ea0fa229625db44a18361ce11811cbbd0a9768a28dac737bc  README.md
 78265a951fc861c9c0d49e1e67ab873e4527b4979dc9ad862288b3c16dbdcb0f  WITHHELD.md
 a4c5269c17950bd2a3f3d5525c10e995f5825430433f3195fe23c8d01e9ad591  outputs/adapt_nds_2026-10-05/confirm/run/GROUP_MANIFEST_PRIVATE.json
 3531675cf1323801f1674ee0448c9ff3099da880ed348e1807bc6b3037b92863  outputs/adapt_nds_2026-10-05/confirm/run/INDIVIDUAL_MANIFEST_PRIVATE.json

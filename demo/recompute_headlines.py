@@ -1,4 +1,6 @@
-"""Recompute two published headline numbers from the released aggregate result files.
+"""Aggregate-results verification demo: recompute two published headline numbers from released aggregate files.
+
+It verifies arithmetic and file integrity only. It does not run detection or scoring.
 
 Standard library only; runs on any laptop CPU in well under a second. No terrain, register geometry,
 coordinates, weights or network access is needed or used.
@@ -12,9 +14,8 @@ Steps:
     against the values stored in the file. The stored 95 % simultaneous interval comes from a cluster
     bootstrap over 153 spatial units; it needs per-site hits, which are not released, so it is printed
     as stored, not recomputed.
- 3. As an extra sanity check that is NOT the paper's method, run an exact two-sided sign test on the
-    discordant pairs (ignores spatial clustering, so it is less conservative than the paper's interval).
- 4. Denmark CONFIRM-D stage A: read S_D + PROX and ADAF-barrow plain recall at 2 proposals/km2 and check
+ 3. Denmark CONFIRM-D stage A (the later two-checkpoint system S_D + PROX, not the D1 checkpoint of
+    step 2): read S_D + PROX and ADAF-barrow plain recall at 2 proposals/km2 and check
     that each equals a whole number of the 5,273 protected barrows within the stored 3-decimal rounding.
 Exit status 0 only if every check passes.
 """
@@ -22,7 +23,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import math
 import sys
 from pathlib import Path
 
@@ -48,12 +48,6 @@ def manifest() -> dict[str, str]:
     return rows
 
 
-def sign_test_two_sided(a: int, b: int) -> float:
-    n, k = a + b, min(a, b)
-    tail = sum(math.comb(n, i) for i in range(k + 1)) / 2 ** n
-    return min(1.0, 2 * tail)
-
-
 def main() -> int:
     pins = manifest()
     print('1. Released file integrity (paper_a/MANIFEST.sha256)')
@@ -74,21 +68,17 @@ def main() -> int:
     print(f'  ADAF hits = both {r["both"]} + only-ADAF {r["y_only"]} = {y}  ({100 * y / S:.1f} %)')
     print(f'  difference = {diff:+.2f} points')
     lo, hi = r['ci_sim_pts']
-    print(f'  stored simultaneous 95 % interval (cluster bootstrap, n_boot={d["n_boot"]}): {lo:+.1f} to {hi:+.1f} points')
+    print(f'  stored (not recomputed) simultaneous 95 % interval (cluster bootstrap, n_boot={d["n_boot"]}): {lo:+.1f} to {hi:+.1f} points')
     check(sum(d['sites_by_region'].values()) == S, 'regional site counts sum to S')
     check((x, y) == (r['x'], r['y']), f'recomputed hit counts equal stored x={r["x"]}, y={r["y"]}')
     check(abs(diff - r['diff_pts']) < 1e-9, f'recomputed difference equals stored {r["diff_pts"]:.4f}')
     check(lo < diff < hi and lo > 0, 'stored interval contains the estimate and excludes zero')
     check(d['verdicts']['D1'] == 'BEATS_PUBLIC_ADAF', f'stored verdict D1 = {d["verdicts"]["D1"]}')
 
-    p = sign_test_two_sided(r['x_only'], r['y_only'])
-    print(f'\n3. Extra check, not the paper\'s method: exact sign test on discordant pairs '
-          f'{r["x_only"]} vs {r["y_only"]}: two-sided p = {p:.1e}')
-
     k = json.loads((PA / DANISH).read_text(encoding='utf-8'))
     N = k['N']['all']
     sd, adaf = k['recall_points']['S_D|prox|2']['all'], k['recall_points']['ADAF_barrow|plain|2']['all']
-    print(f'\n4. Denmark CONFIRM-D stage A ({k["cores"]} unseen cores, {N:,} protected barrows, 2 proposals/km2)')
+    print(f'\n3. Denmark CONFIRM-D stage A, later system S_D + PROX vs ADAF ({k["cores"]} unseen cores, {N:,} protected barrows, 2 proposals/km2)')
     for name, v in (('S_D + PROX', sd), ('ADAF barrow plain', adaf)):
         hits = v * N / 100
         print(f'  {name}: {v:.1f} % = {hits:.2f} of {N:,}')
